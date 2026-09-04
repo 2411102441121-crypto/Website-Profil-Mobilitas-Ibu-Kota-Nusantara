@@ -16,3 +16,6 @@ uploads/*
 # === File Ekstra / Backup Lokal ===
 *.bak
 *.sql
+
+# Mengabaikan file sensitif / password
+generate_password.php
