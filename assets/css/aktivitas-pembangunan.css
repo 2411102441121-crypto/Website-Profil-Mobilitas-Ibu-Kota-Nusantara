@@ -1,0 +1,206 @@
+/* =========================================
+   AKTIVITAS PEMBANGUNAN
+========================================= */
+
+.development-activity-section {
+    padding: 45px 20px 80px;
+    background: #ffffff;
+    min-height: 100vh;
+}
+
+.development-container {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+
+/* HEADER */
+
+.development-heading {
+    text-align: center;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.development-heading h1 {
+    margin: 0 0 10px;
+    color: #111;
+    font-family: 'Sutasoma Display', sans-serif !important;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.development-heading p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+    font-family: 'Sutasoma Text', sans-serif !important;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* GRID */
+
+.development-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px 24px;
+}
+
+
+/* CARD */
+
+.development-card {
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 9px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.10);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.development-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+
+/* IMAGE */
+
+.development-image {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.development-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.development-card:hover .development-image img {
+    transform: scale(1.04);
+}
+
+
+/* CONTENT */
+
+.development-content {
+    min-height: 145px;
+    padding: 13px 15px 15px;
+    color: #fff;
+}
+
+.development-content time {
+    display: block;
+    margin-bottom: 7px;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: 'Sutasoma Text', sans-serif !important;
+    font-size: 7px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.development-content h2 {
+    margin: 0 0 13px;
+    color: #000000;
+    font-family: 'Sutasoma Display', sans-serif !important;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.development-content a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #000000;
+    font-family: 'Sutasoma Text', sans-serif !important;
+    font-size: 8px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.development-content a span {
+    font-size: 11px;
+    transition: transform 0.2s ease;
+}
+
+.development-content a:hover span {
+    transform: translateX(4px);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .development-container {
+        max-width: 650px;
+    }
+
+    .development-heading h1 {
+        font-size: 30px;
+    }
+
+    .development-grid {
+        gap: 16px;
+    }
+
+    .development-image {
+        height: 140px;
+    }
+
+    .development-content h2 {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .development-activity-section {
+        padding: 35px 15px 60px;
+    }
+
+    .development-heading h1 {
+        font-size: 27px;
+    }
+
+    .development-heading p {
+        font-size: 11px;
+    }
+
+    .development-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .development-image {
+        height: 190px;
+    }
+
+    .development-content {
+        min-height: auto;
+    }
+
+    .development-content h2 {
+        font-size: 16px;
+    }
+
+    .development-content time {
+        font-size: 8px;
+    }
+
+    .development-content a {
+        font-size: 10px;
+    }
+
+}

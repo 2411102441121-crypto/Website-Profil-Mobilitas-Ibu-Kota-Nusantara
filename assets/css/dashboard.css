@@ -1,0 +1,43 @@
+/* Custom CSS styling untuk Dashboard CMS OIKN */
+:root {
+  --primary-green: #1b3e2b;
+  --primary-green-hover: #143021;
+  --body-bg: #f9fafb;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--body-bg);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Base custom classes */
+.bg-oikn-green {
+  background-color: var(--primary-green);
+}
+
+.bg-oikn-green:hover {
+  background-color: var(--primary-green-hover);
+}
+
+.border-oikn-green {
+  border-color: var(--primary-green);
+}

@@ -1,0 +1,658 @@
+/* assets/css/style.css */
+:root {
+    --ikn-green-dark: #1e3d2f;
+    --ikn-green-card: #274d3c;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #333;
+    background-color: #fdfdfd;
+}
+
+/* Navbar */
+.nav-link { color: #333; font-weight: 500; margin: 0 8px; }
+.nav-link.active { font-weight: 700; border-bottom: none !important; box-shadow: none !important; }
+.brand-title { color: var(--ikn-green-dark); font-weight: 700; }
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/assets/images/hero-bg.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 120px 0 80px;
+}
+.hero-title { font-size: 2.8rem; font-weight: 700; line-height: 1.2; }
+.hero-subtitle { font-size: 0.95rem; opacity: 0.9; max-width: 750px; line-height: 1.6; }
+
+.btn-hero {
+    background-color: var(--ikn-green-dark);
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 24px;
+    border: none;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+.btn-hero-active { background-color: #ffffff; color: #111; font-weight: 600; }
+
+/* Stats Card */
+.stats-card {
+    background-color: var(--ikn-green-card);
+    color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    height: 100%;
+}
+.stats-number { font-size: 2.2rem; font-weight: 700; margin-bottom: 8px; }
+.stats-desc { font-size: 0.85rem; opacity: 0.85; line-height: 1.4; }
+
+/* Prinsip Cards */
+.prinsip-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    background: #fff;
+}
+.prinsip-card img { height: 200px; object-fit: cover; width: 100%; }
+
+/* Banner Dokumen */
+.dark-banner {
+    background-color: var(--ikn-green-dark);
+    color: #fff;
+    border-radius: 16px;
+    padding: 40px;
+}
+
+/* Accordion FAQ */
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: var(--ikn-green-dark);
+    box-shadow: none;
+}
+.accordion-item { border-radius: 8px !important; margin-bottom: 12px; border: 1px solid #ddd; }
+
+/* =========================================
+   BAGIAN AKTIVITAS
+========================================= */
+
+.aktivitas-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 70px;
+}
+
+/* Judul */
+
+.aktivitas-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.aktivitas-header h1 {
+    color: var(--ikn-green-dark);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.aktivitas-header p {
+    max-width: 850px;
+    margin: 0 auto;
+    color: #333;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+
+/* Layout utama */
+
+.aktivitas-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+
+/* =========================================
+   BERITA UTAMA
+========================================= */
+
+.aktivitas-featured {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #ddd;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.aktivitas-featured img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.aktivitas-featured::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.05)
+    );
+}
+
+
+/* Tulisan berita utama */
+
+.aktivitas-featured-overlay {
+    position: absolute;
+    z-index: 2;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    color: #fff;
+}
+
+.aktivitas-badge {
+    display: inline-block;
+    background: var(--ikn-green-card);
+    color: #fff;
+    padding: 4px 9px;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.aktivitas-featured-overlay h2 {
+    margin: 0 0 5px;
+    color: #fff;
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.aktivitas-featured-overlay p {
+    max-width: 90%;
+    margin: 0;
+    color: #fff;
+    font-size: 0.7rem;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   BERITA DI SEBELAH KANAN
+========================================= */
+
+.aktivitas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.aktivitas-card {
+    background: var(--ikn-green-dark);
+    color: #fff;
+    border-radius: 5px;
+    padding: 14px 15px;
+    min-height: 105px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+    transition: 0.25s ease;
+}
+
+.aktivitas-card:hover {
+    transform: translateY(-3px);
+    background: var(--ikn-green-card);
+}
+
+.aktivitas-date {
+    font-size: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    color: #e5eee8;
+}
+
+.aktivitas-card h3 {
+    margin: 0 0 7px;
+    color: #fff;
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.aktivitas-card p {
+    margin: 0;
+    color: #e8eee9;
+    font-size: 0.65rem;
+    line-height: 1.45;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .aktivitas-content {
+        grid-template-columns: 1fr;
+    }
+
+    .aktivitas-featured {
+        height: 380px;
+    }
+
+    .aktivitas-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================
+   HP
+========================================= */
+
+@media (max-width: 600px) {
+
+    .aktivitas-section {
+        padding: 30px 15px 50px;
+    }
+
+    .aktivitas-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .aktivitas-header p {
+        font-size: 0.75rem;
+    }
+
+    .aktivitas-featured {
+        height: 300px;
+    }
+
+    .aktivitas-list {
+        grid-template-columns: 1fr;
+    }
+
+    .aktivitas-card {
+        min-height: auto;
+    }
+}
+
+.activity-section {
+    background: #fdfdfd;
+    padding: 50px 0 80px;
+}
+
+.activity-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* JUDUL */
+.activity-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.activity-heading h1 {
+    color: #204420;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.activity-heading p {
+    max-width: 850px;
+    margin: 0 auto;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* GRID UTAMA */
+.activity-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* =========================
+   BERITA UTAMA
+========================= */
+
+.activity-featured-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    min-height: 430px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.activity-image-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    overflow: hidden;
+}
+
+.activity-image-wrap img {
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.activity-featured-card:hover img {
+    transform: scale(1.04);
+}
+
+/* Overlay gambar */
+.activity-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.82),
+        rgba(0, 0, 0, 0.15)
+    );
+    z-index: 1;
+}
+
+/* Isi berita utama */
+.activity-featured-content {
+    position: absolute;
+    z-index: 2;
+    left: 30px;
+    right: 30px;
+    bottom: 28px;
+    color: #fff;
+}
+
+.activity-badge {
+    display: inline-block;
+    background: #204420;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.activity-featured-content h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    line-height: 1.2;
+}
+
+.activity-featured-content p {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 700px;
+}
+
+/* =========================
+   BERITA KANAN
+========================= */
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.activity-small-card {
+    background: #204420;
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.activity-small-card:hover {
+    background: #274d3c;
+    transform: translateY(-3px);
+}
+
+.activity-small-content time {
+    display: block;
+    color: #dce8df;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.activity-small-content h3 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 8px;
+}
+
+.activity-small-content p {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-featured-card {
+        min-height: 380px;
+    }
+
+    .activity-image-wrap,
+    .activity-image-wrap img {
+        min-height: 380px;
+    }
+
+    .activity-list {
+        gap: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .activity-section {
+        padding: 35px 15px 60px;
+    }
+
+    .activity-heading h1 {
+        font-size: 1.8rem;
+    }
+
+    .activity-heading p {
+        font-size: 0.85rem;
+    }
+
+    .activity-featured-card {
+        min-height: 320px;
+    }
+
+    .activity-image-wrap,
+    .activity-image-wrap img {
+        min-height: 320px;
+    }
+
+    .activity-featured-content {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .activity-featured-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .activity-featured-content p {
+        font-size: 0.8rem;
+    }
+}
+
+/* =========================================
+   AKTIVITAS LAINNYA
+========================================= */
+
+.other-activities {
+    margin-top: 55px;
+    padding-bottom: 30px;
+}
+
+/* Judul */
+.other-activities-heading {
+    text-align: center;
+    margin-bottom: 22px;
+    border-top: 1px solid #d9d9d9;
+    padding-top: 12px;
+}
+
+.other-activities-heading h2 {
+    margin: 0;
+    color: #204420;
+    font-family: 'Sutasoma Display', sans-serif !important;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+/* Grid 2 kolom */
+.other-activities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 28px;
+}
+
+/* Card */
+.other-activity-card {
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+    transition: all 0.25s ease;
+}
+
+.other-activity-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Gambar */
+.other-activity-image {
+    width: 100%;
+    height: 180px;
+    
+    overflow: hidden;
+}
+
+.other-activity-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+}
+
+.other-activity-card:hover .other-activity-image img {
+    transform: scale(1.04);
+}
+
+/* Isi */
+.other-activity-content {
+    padding: 14px 12px 15px;
+}
+
+.other-activity-content h3 {
+    margin: 0 0 7px;
+    color: #222;
+    font-family: 'Sutasoma Display', sans-serif !important;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.other-activity-content p {
+    margin: 0 0 12px;
+    color: #555;
+    font-size: 0.65rem;
+    line-height: 1.5;
+}
+
+/* Link */
+.other-activity-content a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #222;
+    text-decoration: none;
+    font-size: 0.62rem;
+    font-weight: 700;
+}
+
+.other-activity-content a span {
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+.other-activity-content a:hover {
+    color: #204420;
+}
+
+.other-activity-content a:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .other-activities {
+        margin-top: 40px;
+    }
+
+    .other-activities-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .other-activity-image {
+        height: 180px;
+    }
+
+}
+

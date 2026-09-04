@@ -1,0 +1,224 @@
+/* =========================================
+   AKTIVITAS OLAHRAGA
+========================================= */
+
+.sport-activity-section {
+    padding: 45px 20px 80px;
+    background: #f9f9fc;
+    min-height: 100vh;
+}
+
+.sport-container {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.sport-heading {
+    text-align: center;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.sport-heading h1 {
+    margin: 0 0 10px;
+    color: #111;
+    font-family: 'Sutasoma Display', sans-serif !important;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.sport-heading p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+    font-family: 'Sutasoma Text', sans-serif !important;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.sport-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px 24px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.sport-card {
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 9px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.10);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sport-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.sport-image {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.sport-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.sport-card:hover .sport-image img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.sport-content {
+    min-height: 145px;
+    padding: 13px 15px 15px;
+    color: #ffffff;
+}
+
+.sport-content time {
+    display: block;
+    margin-bottom: 7px;
+    color: #070707;
+    font-family: 'Sutasoma Text', sans-serif !important;
+    font-size: 7px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.sport-content h2 {
+    margin: 0 0 13px;
+    color: #070707;
+    font-family: 'Sutasoma Display', sans-serif !important;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.sport-content a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    color: #070707;
+    font-family: 'Sutasoma Text', sans-serif !important;
+    font-size: 8px;
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+.sport-content a span {
+    font-size: 11px;
+    transition: transform 0.2s ease;
+}
+
+.sport-content a:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .sport-container {
+        max-width: 650px;
+    }
+
+    .sport-heading h1 {
+        font-size: 30px;
+    }
+
+    .sport-grid {
+        gap: 16px;
+    }
+
+    .sport-image {
+        height: 140px;
+    }
+
+    .sport-content h2 {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .sport-activity-section {
+        padding: 35px 15px 60px;
+    }
+
+    .sport-heading {
+        margin-bottom: 25px;
+    }
+
+    .sport-heading h1 {
+        font-size: 27px;
+    }
+
+    .sport-heading p {
+        font-size: 11px;
+    }
+
+    .sport-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .sport-image {
+        height: 190px;
+    }
+
+    .sport-content {
+        min-height: auto;
+    }
+
+    .sport-content h2 {
+        font-size: 16px;
+    }
+
+    .sport-content time {
+        font-size: 8px;
+    }
+
+    .sport-content a {
+        font-size: 10px;
+    }
+
+}

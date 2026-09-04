@@ -1,0 +1,726 @@
+/* =========================================
+   MOBILITAS AKTIF
+========================================= */
+
+.active-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 20px 80px;
+    color: #17231c;
+    background: #f7f9f7;
+    box-sizing: border-box;
+}
+
+.active-page * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.active-header {
+    margin-bottom: 20px;
+}
+
+.breadcrumb {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #e5f3eb;
+    color: #28683d;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.active-header h1 {
+    margin: 0 0 8px;
+    font-family: "Sutasoma Display", Georgia, serif;
+    font-size: 40px;
+    line-height: 1.15;
+    color: #172a1d;
+}
+
+.active-header p {
+    max-width: 850px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #68736d;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.active-hero {
+    position: relative;
+    height: 370px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 20px;
+    background: #ddd;
+}
+
+.active-hero img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 80px 28px 25px;
+    color: white;
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, .78)
+    );
+}
+
+.hero-overlay span {
+    display: inline-block;
+    margin-bottom: 7px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: #d4f4df;
+}
+
+.hero-overlay h2 {
+    margin: 0 0 5px;
+    font-size: 23px;
+}
+
+.hero-overlay p {
+    max-width: 750px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.active-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: white;
+    border: 1px solid #e3e8e4;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    margin-top: -1px;
+    padding: 14px 10px;
+}
+
+.stat-item {
+    text-align: center;
+    border-right: 1px solid #e8ece9;
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-item strong {
+    display: block;
+    font-size: 12px;
+    color: #315f3e;
+}
+
+.stat-item span {
+    display: block;
+    margin-top: 3px;
+    font-size: 9px;
+    color: #87918b;
+}
+
+
+/* =========================================
+   MAP
+========================================= */
+
+.corridor-map {
+    margin-top: 20px;
+    background: white;
+    border: 1px solid #e2e8e4;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.section-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.section-top h2 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.section-top p {
+    margin: 4px 0 0;
+    font-size: 9px;
+    color: #8a938d;
+}
+
+.map-badge {
+    white-space: nowrap;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #eaf8f0;
+    color: #319263;
+    font-size: 8px;
+}
+
+.map-image {
+    margin-top: 10px;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.map-image img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    display: block;
+}
+
+.map-footer {
+    margin-top: 8px;
+    font-size: 9px;
+    color: #83908a;
+}
+
+
+/* =========================================
+   PRIORITY
+========================================= */
+
+.priority-section {
+    margin-top: 25px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.section-title h2 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.section-title p {
+    margin: 3px 0 0;
+    font-size: 9px;
+    color: #89928d;
+}
+
+.corridor-filter {
+    display: flex;
+    gap: 4px;
+    padding: 3px;
+    border: 1px solid #e1e7e3;
+    background: #f1f5f2;
+    border-radius: 6px;
+}
+
+.corridor-filter button {
+    border: none;
+    background: transparent;
+    padding: 7px 10px;
+    border-radius: 4px;
+    font-size: 8px;
+    color: #69746d;
+    cursor: pointer;
+}
+
+.corridor-filter button.active {
+    background: white;
+    color: #205d37;
+    box-shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+
+.corridor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.corridor-card {
+    display: flex;
+    gap: 9px;
+    min-height: 115px;
+    padding: 12px;
+    background: white;
+    border: 1px solid #dfe7e1;
+    border-radius: 7px;
+}
+
+.corridor-code {
+    width: 23px;
+    height: 23px;
+    flex: 0 0 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #205a32;
+    border-radius: 4px;
+    color: white;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.corridor-card h3 {
+    margin: 0 0 8px;
+    font-size: 11px;
+    line-height: 1.3;
+}
+
+.corridor-card p {
+    margin: 3px 0;
+    font-size: 8px;
+    line-height: 1.4;
+    color: #69736c;
+}
+
+.corridor-card strong {
+    color: #37433c;
+}
+
+
+/* =========================================
+   BIKE BANNER
+========================================= */
+
+.bike-banner {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+    padding: 16px;
+    background: linear-gradient(
+        100deg,
+        #086447,
+        #154e25
+    );
+    border-radius: 10px;
+    color: white;
+}
+
+.bike-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.1);
+    border-radius: 7px;
+    flex: 0 0 auto;
+}
+
+.bike-content {
+    flex: 1;
+}
+
+.bike-content > span {
+    font-size: 8px;
+    color: #7de0b4;
+    font-weight: 700;
+}
+
+.bike-content h2 {
+    margin: 4px 0;
+    font-size: 13px;
+}
+
+.bike-content p {
+    margin: 0;
+    max-width: 700px;
+    font-size: 8px;
+    line-height: 1.45;
+    color: #c8ded3;
+}
+
+.bike-button {
+    flex: 0 0 auto;
+    padding: 10px 14px;
+    border-radius: 7px;
+    background: white;
+    color: #245f35;
+    text-decoration: none;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   FEATURE LAYOUT
+========================================= */
+
+.feature-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   PRINCIPLE
+========================================= */
+
+.principle-card {
+    padding: 18px;
+    border-radius: 10px;
+    background: #194f27;
+    color: white;
+}
+
+.green-label {
+    display: inline-block;
+    padding: 5px 9px;
+    background: rgba(81,199,133,.2);
+    border-radius: 20px;
+    color: #8de0ac;
+    font-size: 8px;
+}
+
+.principle-card h2 {
+    margin: 13px 0 8px;
+    font-size: 16px;
+}
+
+.principle-number {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.principle-number small {
+    font-size: 8px;
+    font-weight: 400;
+}
+
+.principle-card > p {
+    margin: 10px 0;
+    font-size: 9px;
+    line-height: 1.6;
+    color: #d0dfd3;
+}
+
+.principle-route {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 8px;
+    border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.principle-route strong,
+.principle-route small {
+    display: block;
+}
+
+.principle-route strong {
+    font-size: 9px;
+}
+
+.principle-route small {
+    margin-top: 2px;
+    color: #a9c5af;
+    font-size: 7px;
+}
+
+.route-button {
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+    padding: 9px;
+    border-radius: 6px;
+    background: #2bd29b;
+    color: #073b20;
+    text-decoration: none;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.features-card {
+    padding: 16px;
+    background: white;
+    border: 1px solid #e0e7e2;
+    border-radius: 10px;
+}
+
+.features-card > h2 {
+    margin: 0 0 13px;
+    font-size: 14px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+}
+
+.feature-item {
+    display: flex;
+    gap: 9px;
+    padding: 11px;
+    background: #f7f9fa;
+    border-radius: 7px;
+    border: 1px solid #edf0ef;
+}
+
+.feature-item.full {
+    grid-column: span 2;
+}
+
+.feature-icon {
+    width: 25px;
+    height: 25px;
+    flex: 0 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eaf8f1;
+    border-radius: 6px;
+    font-size: 11px;
+}
+
+.feature-item h3 {
+    margin: 0 0 4px;
+    font-size: 9px;
+    color: #314138;
+}
+
+.feature-item p {
+    margin: 0;
+    font-size: 7.5px;
+    line-height: 1.4;
+    color: #88928d;
+}
+
+.eco-note {
+    margin-top: 9px;
+    padding: 8px 10px;
+    border: 1px solid #cdeedf;
+    border-radius: 6px;
+    color: #547466;
+    background: #f0fbf5;
+    font-size: 8px;
+}
+
+.eco-note strong {
+    float: right;
+    color: #34744d;
+}
+
+
+/* =========================================
+   CONNECTIVITY
+========================================= */
+
+.connectivity-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+    padding: 14px;
+    background: white;
+    border: 1px solid #dfe6e1;
+    border-radius: 9px;
+}
+
+.connectivity-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #edf9f2;
+    border-radius: 50%;
+}
+
+.connectivity-card h2 {
+    margin: 0;
+    font-size: 11px;
+}
+
+.connectivity-card p {
+    margin: 3px 0 0;
+    font-size: 8px;
+    color: #8a938d;
+}
+
+.connectivity-card a {
+    margin-left: auto;
+    color: #315e3b;
+    text-decoration: none;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   ETHICS
+========================================= */
+
+.ethics-section {
+    margin-top: 25px;
+    padding: 18px;
+    background: white;
+    border: 1px solid #dfe6e1;
+    border-radius: 10px;
+}
+
+.ethics-section > h2 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.ethics-intro {
+    margin: 4px 0 15px;
+    color: #89928d;
+    font-size: 8px;
+}
+
+.ethics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.ethics-item {
+    display: flex;
+    gap: 9px;
+}
+
+.ethics-item > span {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #255b32;
+    border-radius: 50%;
+    color: white;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.ethics-item h3 {
+    margin: 1px 0 5px;
+    font-size: 9px;
+}
+
+.ethics-item p {
+    margin: 0;
+    color: #737d77;
+    font-size: 7.5px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .corridor-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .ethics-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .active-page {
+        padding: 25px 12px 50px;
+    }
+
+    .active-header h1 {
+        font-size: 32px;
+    }
+
+    .active-hero {
+        height: 300px;
+    }
+
+    .active-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .stat-item {
+        border-right: none;
+    }
+
+    .section-title,
+    .section-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .corridor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bike-banner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .bike-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-item.full {
+        grid-column: span 1;
+    }
+
+    .connectivity-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .connectivity-card a {
+        margin-left: 0;
+    }
+
+}
