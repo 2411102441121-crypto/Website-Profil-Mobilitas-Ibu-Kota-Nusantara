@@ -478,6 +478,27 @@ ob_start();
         margin: 8px 0;
     }
 
+    /* PENGATURAN GAMBAR IKON DALAM FLOW SEAMLESS */
+    .flow-step-white .operator-icon-box,
+    .flow-step-dark .operator-icon-box {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 6px; /* Memberi ruang agar gambar tidak menempel ke tepi */
+    }
+
+    .flow-step-white .operator-icon-box img,
+    .flow-step-dark .operator-icon-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
     /* EFEK SCROLL HALUS SAAT DIKLIK */
     html {
         scroll-behavior: smooth;
@@ -560,7 +581,7 @@ ob_start();
         </div>
     </div>
 
-    <hr class="my-5" style="border-color: #e9ecef;">
+    <hr class="my-4" style="border-color: #e9ecef;">
 
     <!-- ================= GAMBAR 2: KONEKTIVITAS & DETAIL RUTE ================= -->
     <div class="mb-5 text-center">
@@ -837,8 +858,11 @@ ob_start();
 
             <div class="col-lg-6">
                 <div class="d-flex flex-column gap-1">
+                    <!-- 1. Bus Antarkota -->
                     <div class="flow-step-white">
-                        <div class="operator-icon-box" style="width:40px; height:40px; font-size:1rem;"><i class="fas fa-bus"></i></div>
+                        <div class="operator-icon-box">
+                            <img src="<?= $base_url; ?>assets/images/antarkota/ikon_bus.png" alt="Bus Antarkota" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3448/3448339.png';">
+                        </div>
                         <div>
                             <h6 class="fw-medium text-dark mb-0" style="font-family: 'Sutasoma Text', sans-serif !important; font-size:0.93rem;">Bus Antarkota</h6>
                             <span class="text-muted small">Layanan Regional</span>
@@ -847,8 +871,11 @@ ob_start();
 
                     <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
 
+                    <!-- 2. Simpul/Terminal IKN -->
                     <div class="flow-step-white">
-                        <div class="operator-icon-box" style="width:40px; height:40px; font-size:1rem;"><i class="fas fa-network-wired"></i></div>
+                        <div class="operator-icon-box">
+                            <img src="<?= $base_url; ?>assets/images/antarkota/ikon_simpul.png" alt="Simpul/Terminal IKN" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2885/2885440.png';">
+                        </div>
                         <div>
                             <h6 class="fw-medium text-dark mb-0" style="font-family: 'Sutasoma Text', sans-serif !important; font-size:0.93rem;">Simpul/Terminal IKN</h6>
                             <span class="text-muted small">Titik Transit</span>
@@ -857,8 +884,11 @@ ob_start();
 
                     <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
 
+                    <!-- 3. Bus Perkotaan -->
                     <div class="flow-step-white">
-                        <div class="operator-icon-box" style="width:40px; height:40px; font-size:1rem;"><i class="fas fa-car-side"></i></div>
+                        <div class="operator-icon-box">
+                            <img src="<?= $base_url; ?>assets/images/antarkota/ikon_bus.png" alt="Bus Perkotaan" onerror="this.src='https://cdn-icons-png.flaticon.com/512/1048/1048314.png';">
+                        </div>
                         <div>
                             <h6 class="fw-medium text-dark mb-0" style="font-family: 'Sutasoma Text', sans-serif !important; font-size:0.93rem;">Bus Perkotaan</h6>
                             <span class="text-muted small">Intra-city IKN</span>
@@ -867,8 +897,11 @@ ob_start();
 
                     <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
 
+                    <!-- 4. Tujuan Akhir -->
                     <div class="flow-step-dark">
-                        <div class="operator-icon-box" style="width:40px; height:40px; font-size:1rem; background:rgba(255,255,255,0.15); color:#fff;"><i class="fas fa-flag"></i></div>
+                        <div class="operator-icon-box" style="background:rgba(255,255,255,0.15);">
+                            <img src="<?= $base_url; ?>assets/images/antarkota/ikon_bangunan2.png" alt="Tujuan Akhir" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149060.png';">
+                        </div>
                         <div>
                             <h6 class="fw-medium text-white mb-0" style="font-family: 'Sutasoma Text', sans-serif !important; font-size:0.93rem;">Tujuan Akhir</h6>
                             <span class="text-white-50 small">Kawasan Nusantara</span>

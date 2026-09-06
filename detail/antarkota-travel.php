@@ -23,13 +23,21 @@ ob_start();
         border-radius: 20px;
         padding: 6px 16px;
         font-size: 0.78rem;
-        font-weight: 600;
+        font-weight: 400;
         letter-spacing: 0.5px;
         display: inline-flex;
         align-items: center;
         gap: 6px;
         text-transform: uppercase;
         margin-bottom: 20px;
+    }
+
+    /* Ukuran Foto/Gambar Kecil di Dalam Badge */
+    .hero-badge-pill img {
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
+        border-radius: 3px; /* Opsional, beri efek rounded kecil jika gambarnya persegi */
     }
 
     .hero-title-travel {
@@ -135,7 +143,7 @@ ob_start();
 
     /* AKSES TRAVEL CARDS */
     .access-card-teal {
-        background-color: #e8f0eb;
+        background-color: #E1ECEA;
         border-radius: 16px;
         padding: 28px 24px;
         height: 100%;
@@ -158,7 +166,7 @@ ob_start();
     .access-card-title {
         font-family: 'Sutasoma Display', serif, sans-serif !important;
         font-size: 1.3rem;
-        font-weight: 700;
+        font-weight: 600;
         color: #1a2e1a;
         margin-bottom: 8px;
     }
@@ -168,7 +176,7 @@ ob_start();
         background-color: #d1e2d6;
         color: #204420;
         font-size: 0.72rem;
-        font-weight: 600;
+        font-weight: 500;
         padding: 4px 10px;
         border-radius: 6px;
         margin-bottom: 16px;
@@ -197,7 +205,7 @@ ob_start();
     .operator-card-icon {
         width: 48px;
         height: 48px;
-        background-color: #e8f0eb;
+        background-color: #E1ECEA;
         color: #204420;
         border-radius: 12px;
         display: flex;
@@ -205,6 +213,16 @@ ob_start();
         justify-content: center;
         font-size: 1.3rem;
         margin-bottom: 20px;
+        overflow: hidden; /* Mencegah gambar meluap dari sudut rounded */
+        padding: 8px;     /* Ruang napas agar gambar tidak menempel ke tepi */
+    }
+
+    /* PENGATURAN GAMBAR/FOTO DI DALAM WADAH IKON OPERATOR */
+    .operator-card-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
     }
 
     .operator-card-title {
@@ -233,9 +251,24 @@ ob_start();
         border-top: 1px dashed #e2e8f0;
     }
 
+    /* Efek Hover Judul Operator Travel */
+    .operator-card-box {
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .operator-card-box:hover {
+        transform: translateY(-4px);
+        border-color: #b8cabf;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .operator-card-box:hover .operator-card-title {
+        color: #204420 !important; /* Judul menyala hijau tua saat kartu di-hover */
+    }
+
     /* TITIK JEMPUT AREA CARDS */
     .pickup-area-card {
-        background-color: #e8f0eb;
+        background-color: #E1ECEA;
         border-radius: 14px;
         padding: 20px 24px;
         margin-bottom: 16px;
@@ -253,6 +286,7 @@ ob_start();
     }
 
     .pickup-area-desc {
+        font-family: 'Sutasoma Text', serif, sans-serif !important;
         font-size: 0.85rem;
         color: #4a5568;
         margin-bottom: 0;
@@ -261,18 +295,18 @@ ob_start();
 
     /* SIDEBAR SEBELUM BERANGKAT (GREEN DARK) */
     .before-travel-sidebar {
-        background-color: #1b381b;
+        background-color: #204420;
         color: #ffffff;
         border-radius: 20px;
         padding: 32px 28px;
-        height: 100%;
+        height: auto;
     }
 
     .before-travel-item {
         display: flex;
         align-items: flex-start;
-        gap: 12px;
-        margin-bottom: 18px;
+        gap: 14px;
+        margin-bottom: 20px;
     }
 
     .before-travel-item:last-child {
@@ -280,15 +314,15 @@ ob_start();
     }
 
     .before-travel-item i {
-        color: #a3c9a8;
-        font-size: 1.1rem;
-        margin-top: 3px;
+        color: #82A77C;
+        font-size: 1.15rem;
+        margin-top: 2px;
         flex-shrink: 0;
     }
 
     .before-travel-item p {
-        font-size: 0.85rem;
-        color: #e2e8f0;
+        font-size: 0.88rem;
+        color: #82A77C;
         line-height: 1.6;
         margin-bottom: 0;
     }
@@ -325,20 +359,29 @@ ob_start();
         font-size: 1.25rem;
     }
 
+    /* Pengaturan gambar/foto di dalam lingkaran alur perjalanan */
+    .flow-icon-circle img {
+        width: 26px;
+        height: 26px;
+        object-fit: contain;
+        display: block;
+    }
+
     .flow-icon-dark {
-        background-color: #1b381b;
+        background-color: #204420;
         color: #ffffff;
     }
 
     .flow-icon-accent {
-        background-color: #c0ebc7;
+        background-color: #82A77C;
         color: #1b381b;
     }
 
     .flow-step-num {
-        font-weight: 700;
+        font-family: 'Sutasoma Text', serif, sans-serif !important;
+        font-weight: 600;
         font-size: 0.95rem;
-        color: #1a2e1a;
+        color: #000000;
         margin-bottom: 4px;
     }
 
@@ -348,19 +391,47 @@ ob_start();
         margin-bottom: 0;
     }
 
+    .flow-step-item {
+    transition: transform 0.25s ease;
+    cursor: pointer;
+    }
+
+    .flow-step-item:hover {
+        transform: translateY(-4px);
+    }
+
+    .flow-step-item:hover .flow-icon-circle {
+        transform: scale(1.1);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    .flow-step-item:hover .flow-step-num {
+        color: #204420;
+    }
+
     /* INFORMASI LAYANAN UMUM CARDS */
     .general-info-card {
-        background-color: #e8f0eb;
+        background-color: #E1ECEA;
         border-radius: 16px;
         padding: 24px;
         height: 100%;
         border: 1px solid #d4e3d8;
     }
 
+    /* Pengaturan gambar/foto untuk Informasi Layanan Umum */
     .general-info-icon {
-        color: #204420;
-        font-size: 1.3rem;
+        width: 24px;
+        height: 24px;
         margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+    }
+
+    .general-info-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
     }
 
     .general-info-title {
@@ -379,23 +450,42 @@ ob_start();
 
     /* INTEGRASI DENGAN MOBILITAS IKN CARD */
     .integration-ikn-box {
-        background-color: #e8f0eb;
+        background-color: #E1ECEA;
         border-radius: 24px;
         padding: 48px 40px;
     }
 
+    /* PENGATURAN DESKRIPSI BESAR/KECIL TEKS */
+    .integration-ikn-desc {
+        font-size: 0.92rem; /* Atur besar kecil huruf deskripsi di sini (misal: 0.88rem - 1rem) */
+        color: #4a5568;
+        line-height: 1.7;
+        max-width: 750px;
+        margin-bottom: 32px;
+    }
+
+    /* KOTAK IKON */
     .integration-item-icon {
         width: 44px;
         height: 44px;
-        background-color: #ffffff;
-        color: #204420;
+        background-color: #ffffff; /* Latar belakang putih seperti desain awal */
         border-radius: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.1rem;
+        flex-shrink: 0;
+        overflow: hidden;
+        padding: 8px;              /* Memberi ruang napas gambar agar tidak nempel ke tepi */
         margin-bottom: 16px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    /* SASAR LANGSUNG TAG <img> DI DALAM .integration-item-icon */
+    .integration-item-icon img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain;
+        display: block;
     }
 
     /* EFEK SCROLL HALUS & OFFSET */
@@ -417,7 +507,8 @@ ob_start();
         <!-- Teks Sisi Kiri -->
         <div class="col-lg-5">
             <div class="hero-badge-pill">
-                <i class="fas fa-bus"></i> Layanan Antarkota
+                <img src="<?= $base_url; ?>assets/images/antarkota/ikon_kendaraan.png" alt="Ikon Layanan Antarkota" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3448/3448339.png';">
+                <span>Layanan Antarkota</span>
             </div>
             <h1 class="hero-title-travel">Travel</h1>
             <p class="hero-desc-travel">
@@ -444,23 +535,23 @@ ob_start();
                     </div>
                 </div>
                 <div class="col">
-                    <div class="thumb-gallery-box" onclick="changeHeroImage(this, '<?= $base_url; ?>assets/images/antarkota/bus_sinarjaya.jpeg', 1)">
-                        <img src="<?= $base_url; ?>assets/images/antarkota/bus_sinarjaya.jpeg" alt="Thumb 2">
+                    <div class="thumb-gallery-box" onclick="changeHeroImage(this, '<?= $base_url; ?>assets/images/antarkota/travel.jpeg', 1)">
+                        <img src="<?= $base_url; ?>assets/images/antarkota/travel.jpeg" alt="Thumb 2">
                     </div>
                 </div>
                 <div class="col">
-                    <div class="thumb-gallery-box" onclick="changeHeroImage(this, '<?= $base_url; ?>assets/images/antarkota/sams_sepinggan.jpeg', 2)">
-                        <img src="<?= $base_url; ?>assets/images/antarkota/sams_sepinggan.jpeg" alt="Thumb 3">
+                    <div class="thumb-gallery-box" onclick="changeHeroImage(this, '<?= $base_url; ?>assets/images/antarkota/travel3.jpg', 2)">
+                        <img src="<?= $base_url; ?>assets/images/antarkota/travel3.jpg" alt="Thumb 3">
                     </div>
                 </div>
                 <div class="col">
-                    <div class="thumb-gallery-box" onclick="changeHeroImage(this, '<?= $base_url; ?>assets/images/antarkota/apt_pranoto.jpeg', 3)">
-                        <img src="<?= $base_url; ?>assets/images/antarkota/apt_pranoto.jpeg" alt="Thumb 4">
+                    <div class="thumb-gallery-box" onclick="changeHeroImage(this, '<?= $base_url; ?>assets/images/antarkota/travel2.jpg', 3)">
+                        <img src="<?= $base_url; ?>assets/images/antarkota/travel2.jpg" alt="Thumb 4">
                     </div>
                 </div>
                 <div class="col">
-                    <div class="thumb-gallery-box" onclick="changeHeroImage(this, '<?= $base_url; ?>assets/images/antarkota/VVIP_IKN.jpeg', 4)">
-                        <img src="<?= $base_url; ?>assets/images/antarkota/VVIP_IKN.jpeg" alt="Thumb 5">
+                    <div class="thumb-gallery-box" onclick="changeHeroImage(this, '<?= $base_url; ?>assets/images/antarkota/travel4.jpg', 4)">
+                        <img src="<?= $base_url; ?>assets/images/antarkota/travel4.jpg" alt="Thumb 5">
                     </div>
                 </div>
             </div>
@@ -468,7 +559,7 @@ ob_start();
     </div>
 
     <!-- TENTANG LAYANAN -->
-    <div class="mb-5 tentang-layanan-wrapper">
+    <div class="mb-4 tentang-layanan-wrapper">
         <h5 class="fw-semibold mb-2 d-flex align-items-center gap-2 text-dark fs-5">
             <i class="far fa-circle-question text-muted"></i> Tentang Layanan
         </h5>
@@ -479,10 +570,10 @@ ob_start();
         </div>
     </div>
 
-    <hr class="my-5" style="border-color: #e9ecef;">
+    <hr class="my-4" style="border-color: #e9ecef;">
 
     <!-- ================= GAMBAR 2: AKSES TRAVEL & PILIHAN LAYANAN ================= -->
-    <div class="mb-5">
+    <div class="mb-4">
         <h2 class="fw-bold text-dark fs-2 mb-1" style="font-family: 'Sutasoma Display', serif;">Akses Travel Menuju IKN</h2>
         <p class="text-muted small mb-4">Perjalanan dari berbagai kota di sekitar IKN melalui jaringan jalan darat.</p>
 
@@ -502,7 +593,7 @@ ob_start();
             <!-- Balikpapan -> IKN -->
             <div class="col-lg-4 col-md-6">
                 <div class="access-card-teal shadow-sm">
-                    <div class="access-card-icon"><i class="fas fa-bus"></i></div>
+                    <div class="access-card-icon"><i class="fas fa-route"></i></div>
                     <h5 class="access-card-title">Balikpapan &rarr; IKN</h5>
                     <span class="access-badge">Akses Regional</span>
                     <p class="access-card-desc">
@@ -514,7 +605,7 @@ ob_start();
             <!-- Penajam -> IKN -->
             <div class="col-lg-4 col-md-6">
                 <div class="access-card-teal shadow-sm">
-                    <div class="access-card-icon"><i class="fas fa-location-arrow"></i></div>
+                    <div class="access-card-icon"><i class="fas fa-route"></i></div>
                     <h5 class="access-card-title">Penajam &rarr; IKN</h5>
                     <span class="access-badge">Akses Lokal</span>
                     <p class="access-card-desc">
@@ -526,30 +617,18 @@ ob_start();
     </div>
 
     <!-- PILIHAN LAYANAN TRAVEL -->
-    <div id="layanan-travel" class="mb-5 pt-3">
+    <div id="layanan-travel" class="mb-4 pt-3">
         <h2 class="fw-bold text-dark fs-2 mb-1" style="font-family: 'Sutasoma Display', serif;">Pilihan Layanan Travel</h2>
         <p class="text-muted small mb-4">Berbagai operator penyedia layanan perjalanan menuju kawasan IKN.</p>
 
         <div class="row g-4 mb-2">
-            <!-- Sinar Jaya -->
-            <div class="col-lg-3 col-md-6">
-                <div class="operator-card-box">
-                    <div>
-                        <div class="operator-card-icon"><i class="fas fa-shuttle-van"></i></div>
-                        <h5 class="operator-card-title">Sinar Jaya</h5>
-                        <p class="operator-card-desc">Layanan transportasi antarmoda resmi menggunakan bus medium yang nyaman dengan titik keberangkatan terpusat.</p>
-                    </div>
-                    <div class="operator-time-info">
-                        <i class="far fa-clock text-muted"></i> Tersedia Setiap Hari
-                    </div>
-                </div>
-            </div>
-
             <!-- Cititrans -->
             <div class="col-lg-3 col-md-6">
                 <div class="operator-card-box">
                     <div>
-                        <div class="operator-card-icon"><i class="fas fa-shuttle-van"></i></div>
+                        <div class="operator-card-icon">
+                            <img src="<?= $base_url; ?>assets/images/antarkota/ikon_kendaraan.png" alt="Cititrans" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3448/3448339.png';">
+                        </div>
                         <h5 class="operator-card-title">Cititrans</h5>
                         <p class="operator-card-desc">Shuttle eksekutif menggunakan armada van modern dengan pilihan waktu keberangkatan terjadwal dan berkala.</p>
                     </div>
@@ -563,7 +642,9 @@ ob_start();
             <div class="col-lg-3 col-md-6">
                 <div class="operator-card-box">
                     <div>
-                        <div class="operator-card-icon"><i class="fas fa-shuttle-van"></i></div>
+                        <div class="operator-card-icon">
+                            <img src="<?= $base_url; ?>assets/images/antarkota/ikon_kendaraan.png" alt="Delina Trans" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3448/3448339.png';">
+                        </div>
                         <h5 class="operator-card-title">Delina Trans</h5>
                         <p class="operator-card-desc">Layanan travel reguler dengan sistem jemput antar pintu (door-to-door) untuk rute antarkota di Kalimantan Timur.</p>
                     </div>
@@ -577,7 +658,9 @@ ob_start();
             <div class="col-lg-3 col-md-6">
                 <div class="operator-card-box">
                     <div>
-                        <div class="operator-card-icon"><i class="fas fa-shuttle-van"></i></div>
+                        <div class="operator-card-icon">
+                            <img src="<?= $base_url; ?>assets/images/antarkota/ikon_kendaraan.png" alt="Travel Lokal Jasa" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3448/3448339.png';">
+                        </div>
                         <h5 class="operator-card-title">Travel Lokal Jasa</h5>
                         <p class="operator-card-desc">Pilihan travel lokal konvensional dengan cakupan titik penjemputan dan area layanan yang lebih luas.</p>
                     </div>
@@ -590,7 +673,7 @@ ob_start();
         <small class="text-muted fst-italic" style="font-size:0.75rem;">*Ketersediaan armada, jadwal, dan tarif mengikuti ketentuan masing-masing operator penyedia layanan.</small>
     </div>
 
-    <hr class="my-5" style="border-color: #e9ecef;">
+    <hr class="my-4" style="border-color: #e9ecef;">
 
     <!-- ================= GAMBAR 3: TITIK JEMPUT & ALUR PERJALANAN ================= -->
     <div id="titik-jemput" class="row g-4 mb-5">
@@ -605,12 +688,12 @@ ob_start();
             </div>
 
             <div class="pickup-area-card shadow-sm">
-                <h6 class="pickup-area-title"><i class="fas fa-building"></i> Area Balikpapan</h6>
+                <h6 class="pickup-area-title"><i class="fas fa-city"></i> Area Balikpapan</h6>
                 <p class="pickup-area-desc">Keberangkatan dapat diakses dari Bandara SAMS Sepinggan, Terminal Batu Ampar, atau lokasi pool operator tersebar di Balikpapan.</p>
             </div>
 
             <div class="pickup-area-card shadow-sm">
-                <h6 class="pickup-area-title"><i class="fas fa-map-marker-alt"></i> Area Penajam</h6>
+                <h6 class="pickup-area-title"><i class="fas fa-building"></i> Area Penajam</h6>
                 <p class="pickup-area-desc">Tersedia titik-titik penjemputan di area Penajam Paser Utara untuk akses yang lebih dekat menuju Sepaku.</p>
             </div>
         </div>
@@ -618,8 +701,7 @@ ob_start();
         <!-- Kolom Kanan: Sebelum Berangkat (Hijau Tua) -->
         <div class="col-lg-5">
             <div class="before-travel-sidebar shadow">
-                <h5 class="fw-semibold mb-4 text-white fs-6">Sebelum Berangkat</h5>
-
+                <h5 class="fw-semibold mb-4" style="color: #82A77C; font-size: 1.2rem;">Sebelum Berangkat</h5>
                 <div class="before-travel-item">
                     <i class="far fa-check-circle"></i>
                     <p>Khusus travel door-to-door, konfirmasi titik jemput 24 jam sebelum keberangkatan. Untuk airport shuttle, pastikan e-tiket sudah dipesan sebelum jadwal armada jalan.</p>
@@ -649,7 +731,9 @@ ob_start();
 
         <div class="flow-travel-grid">
             <div class="flow-step-item">
-                <div class="flow-icon-circle flow-icon-dark"><i class="fas fa-location-dot"></i></div>
+                <div class="flow-icon-circle flow-icon-dark">
+                    <img src="<?= $base_url; ?>assets/images/antarkota/lokasi.png" alt="Kota Asal" onerror="this.src='https://cdn-icons-png.flaticon.com/512/684/684908.png';">
+                </div>
                 <h6 class="flow-step-num">1. Kota Asal</h6>
                 <p class="flow-step-sub">Samarinda / Balikpapan / Penajam</p>
             </div>
@@ -661,59 +745,75 @@ ob_start();
             </div>
 
             <div class="flow-step-item">
-                <div class="flow-icon-circle flow-icon-accent"><i class="fas fa-shuttle-van"></i></div>
+                <div class="flow-icon-circle flow-icon-accent">
+                    <img src="<?= $base_url; ?>assets/images/antarkota/ikon_kendaraan.png" alt="Perjalanan Darat" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3448/3448339.png';">
+                </div>
                 <h6 class="flow-step-num">3. Perjalanan Darat</h6>
                 <p class="flow-step-sub">Via jalan tol atau arteri</p>
             </div>
 
             <div class="flow-step-item">
-                <div class="flow-icon-circle flow-icon-dark"><i class="fas fa-map"></i></div>
+                <div class="flow-icon-circle flow-icon-dark"><i class="fas fa-building"></i></div>
                 <h6 class="flow-step-num">4. Sepaku</h6>
                 <p class="flow-step-sub">Area penyangga utama IKN</p>
             </div>
 
             <div class="flow-step-item">
-                <div class="flow-icon-circle flow-icon-dark"><i class="fas fa-landmark"></i></div>
+                <div class="flow-icon-circle flow-icon-dark">
+                    <img src="<?= $base_url; ?>assets/images/antarkota/ikon_bangunan2.png" alt="Kawasan IKN" onerror="this.src='https://cdn-icons-png.flaticon.com/512/149/149060.png';">
+                </div>
                 <h6 class="flow-step-num">5. Kawasan IKN</h6>
                 <p class="flow-step-sub">Tujuan Perjalanan</p>
             </div>
         </div>
     </div>
 
-    <hr class="my-5" style="border-color: #e9ecef;">
+    <hr class="my-4" style="border-color: #e9ecef;">
 
     <!-- ================= GAMBAR 4: INFORMASI LAYANAN UMUM & INTEGRASI ================= -->
-    <div class="mb-5">
+    <div class="mb-4">
         <h2 class="fw-bold text-dark fs-2 mb-4" style="font-family: 'Sutasoma Display', serif;">Informasi Layanan Umum</h2>
 
         <div class="row g-4">
+            <!-- 1. Titik Jemput -->
             <div class="col-lg-3 col-md-6">
                 <div class="general-info-card shadow-sm">
-                    <div class="general-info-icon"><i class="fas fa-location-dot"></i></div>
+                    <div class="general-info-icon">
+                        <img src="<?= $base_url; ?>assets/images/antarkota/lokasi2.png" alt="Titik Jemput" onerror="this.src='https://cdn-icons-png.flaticon.com/512/684/684908.png';">
+                    </div>
                     <h6 class="general-info-title">Titik Jemput</h6>
                     <p class="general-info-desc">Penjemputan disesuaikan dengan area yang dilayani masing-masing operator, baik door-to-door maupun point-to-point.</p>
                 </div>
             </div>
 
+            <!-- 2. Jadwal -->
             <div class="col-lg-3 col-md-6">
                 <div class="general-info-card shadow-sm">
-                    <div class="general-info-icon"><i class="far fa-calendar-alt"></i></div>
+                    <div class="general-info-icon">
+                        <img src="<?= $base_url; ?>assets/images/antarkota/ikon_jadwal.png" alt="Jadwal" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2693/2693507.png';">
+                    </div>
                     <h6 class="general-info-title">Jadwal</h6>
                     <p class="general-info-desc">Sebagian besar layanan beroperasi setiap hari dengan pilihan keberangkatan yang luas, mulai dari dini hari hingga larut malam.</p>
                 </div>
             </div>
 
+            <!-- 3. Pemesanan -->
             <div class="col-lg-3 col-md-6">
                 <div class="general-info-card shadow-sm">
-                    <div class="general-info-icon"><i class="fas fa-ticket"></i></div>
+                    <div class="general-info-icon">
+                        <img src="<?= $base_url; ?>assets/images/antarkota/ikon_pemesanan.png" alt="Pemesanan" onerror="this.src='https://cdn-icons-png.flaticon.com/512/1018/1018610.png';">
+                    </div>
                     <h6 class="general-info-title">Pemesanan</h6>
                     <p class="general-info-desc">Pemesanan tiket dapat dilakukan melalui aplikasi, situs web resmi operator, atau langsung di loket.</p>
                 </div>
             </div>
 
+            <!-- 4. Tarif -->
             <div class="col-lg-3 col-md-6">
                 <div class="general-info-card shadow-sm">
-                    <div class="general-info-icon"><i class="fas fa-wallet"></i></div>
+                    <div class="general-info-icon">
+                        <img src="<?= $base_url; ?>assets/images/antarkota/ikon_Rp.png" alt="Tarif" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2170/2170153.png';">
+                    </div>
                     <h6 class="general-info-title">Tarif</h6>
                     <p class="general-info-desc">Biaya perjalanan bervariasi bergantung pada operator, jenis layanan (eksekutif/reguler), dan jarak tempuh.</p>
                 </div>
@@ -722,28 +822,34 @@ ob_start();
     </div>
 
     <!-- INTEGRASI DENGAN MOBILITAS IKN -->
-    <div class="integration-ikn-box my-5 shadow-sm">
+    <div class="integration-ikn-box my-4 shadow-sm">
         <h2 class="fw-bold text-dark fs-2 mb-2" style="font-family: 'Sutasoma Display', serif;">Integrasi dengan Mobilitas IKN</h2>
-        <p class="text-secondary small mb-5" style="max-width: 750px; line-height: 1.7;">
+        <p class="text-secondary small mb-6" style="max-width: 750px; line-height: 1.7;">
             Layanan travel antarkota menjadi bagian dari konektivitas menuju IKN dan dapat terhubung dengan sistem transportasi di kawasan Ibu Kota Nusantara.
         </p>
 
         <div class="row g-4">
             <div class="col-md-4">
-                <div class="integration-item-icon"><i class="fas fa-compass"></i></div>
-                <h6 class="fw-bold text-dark mb-2" style="font-size: 1rem;">Konektivitas Regional</h6>
+                <div class="integration-item-icon">
+                    <img src="<?= $base_url; ?>assets/images/antarkota/ikon_konektivitas.png" alt="Konektivitas Regional" class="operator-icon-img">
+                </div>
+                <h6 class="fw-semibold text-dark mb-2" style="font-size: 1rem;">Konektivitas Regional</h6>
                 <p class="text-muted small mb-0" style="line-height: 1.6;">Menghubungkan kota-kota dan simpul transportasi di sekitar IKN.</p>
             </div>
 
             <div class="col-md-4">
-                <div class="integration-item-icon"><i class="fas fa-network-wired"></i></div>
-                <h6 class="fw-bold text-dark mb-2" style="font-size: 1rem;">Simpul Transportasi</h6>
+                <div class="integration-item-icon">
+                    <img src="<?= $base_url; ?>assets/images/antarkota/ikon_simpul.png" alt="Simpul Transportasi" class="operator-icon-img">
+                </div>
+                <h6 class="fw-semibold text-dark mb-2" style="font-size: 1rem;">Simpul Transportasi</h6>
                 <p class="text-muted small mb-0" style="line-height: 1.6;">Perjalanan dapat terhubung dengan simpul transportasi untuk melanjutkan perjalanan menuju KIPP.</p>
             </div>
 
             <div class="col-md-4">
-                <div class="integration-item-icon"><i class="fas fa-bus"></i></div>
-                <h6 class="fw-bold text-dark mb-2" style="font-size: 1rem;">Perjalanan Lanjutan</h6>
+                <div class="integration-item-icon">
+                    <img src="<?= $base_url; ?>assets/images/antarkota/ikon_kendaraan.png" alt="Perjalanan Lanjutan" class="operator-icon-img">
+                </div>
+                <h6 class="fw-semibold text-dark mb-2" style="font-size: 1rem;">Perjalanan Lanjutan</h6>
                 <p class="text-muted small mb-0" style="line-height: 1.6;">Akses mudah berpindah ke transportasi perkotaan IKN.</p>
             </div>
         </div>
@@ -755,10 +861,10 @@ ob_start();
 <script>
     const heroImages = [
         "<?= $base_url; ?>assets/images/antarkota/travel_cititrans.png",
-        "<?= $base_url; ?>assets/images/antarkota/bus_sinarjaya.jpeg",
-        "<?= $base_url; ?>assets/images/antarkota/sams_sepinggan.jpeg",
-        "<?= $base_url; ?>assets/images/antarkota/apt_pranoto.jpeg",
-        "<?= $base_url; ?>assets/images/antarkota/VVIP_IKN.jpeg"
+        "<?= $base_url; ?>assets/images/antarkota/travel.jpeg",
+        "<?= $base_url; ?>assets/images/antarkota/travel3.jpg",
+        "<?= $base_url; ?>assets/images/antarkota/travel2.jpg",
+        "<?= $base_url; ?>assets/images/antarkota/travel4.jpg"
     ];
 
     let currentImageIndex = 0;
