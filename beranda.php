@@ -74,8 +74,8 @@ ob_start();
 
     .btn-green-ikn {
         font-family: 'Sutasoma Display', sans-serif;
-        background-color: #204420;
-        color: white;
+        background-color: #ffffff;
+        color: #1d1d1d;
         border: 1px solid #2e6e2e;
         border-radius: 8px;
         padding: 10px 24px;
@@ -84,18 +84,6 @@ ob_start();
         transition: all 0.2s ease;
     }
     .btn-green-ikn:hover { background-color: #204420; color: white; }
-
-    .btn-white-ikn {
-        font-family: 'Sutasoma Display', sans-serif;
-        background-color: #ffffff;
-        color: #1d1d1d;
-        border-radius: 8px;
-        padding: 10px 24px;
-        font-weight: 500;
-        text-decoration: none;
-        transition: all 0.2s ease;
-    }
-    .btn-white-ikn:hover { background-color: #ebebeb; color: #1d1d1d; }
 
     /* Green Stats Container- VISI */
     .stats-banner {
@@ -623,7 +611,7 @@ ob_start();
                 
                 <div class="d-flex flex-wrap gap-3">
                     <a href="pages/antarkota.php" class="btn btn-green-ikn">Layanan Antarkota</a>
-                    <a href="pages/intrakota.php" class="btn btn-white-ikn">Layanan Intrakota</a>
+                    <a href="pages/intrakota.php" class="btn btn-green-ikn">Layanan Intrakota</a>
                     <a href="#siap-menjelajahi" class="btn btn-green-ikn">Akses Lingkara</a>
                 </div>
             </div>
@@ -666,7 +654,7 @@ ob_start();
 <!-- SECTION 2: PRINSIP PEMBANGUNAN -->
 <section class="py-5 bg-light">
     <div class="container py-4">
-        <h2 class="text-center fw-bold mb-5 fs-2" style="letter-spacing: 2px;">PRINSIP PEMBANGUNAN</h2>
+        <h2 class="text-center fw-bold mb-5 fs-3" style="letter-spacing: 2px;">Prinsip Pembangunan</h2>
         <div class="row g-4">
             <!-- Kota Hutan -->
             <div class="col-md-4">
@@ -824,7 +812,7 @@ ob_start();
 <!-- SECTION 4: DOKUMEN BANNER & FAQ -->
 <section class="green-section-banner">
     <div class="container text-center">
-        <h2 class="fw-bold mb-3 fs-1">Dokumen &amp; Sumber Daya</h2>
+        <h2 class="fw-bold mb-3 fs-2">Dokumen &amp; Sumber Daya</h2>
         <p class="text-white-80 mx-auto mb-4" style="max-width: 800px; font-size: 1rem;">
             Akses dokumen resmi, dataset, serta referensi pengembangan Kota Cerdas dan Mobilitas Cerdas Nusantara untuk mendukung riset, pembelajaran, dan publikasi.
         </p>

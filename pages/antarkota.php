@@ -30,12 +30,14 @@ ob_start();
     body, html {
         margin: 0 !important;
         padding: 0 !important;
+        background-color: #f8f9fa !important;
     }
 
     /* Jika di base.php ada pembungkus seperti <main>, .content, atau .container-fluid */
     main, .main-content, .content, #content {
         padding-top: 0 !important;
         margin-top: 0 !important;
+        background-color: #f8f9fa !important;
     }
 
 
@@ -114,7 +116,7 @@ ob_start();
         background-color: #ffffff;
         color: #204420;
         font-family: 'Sutasoma Display', sans-serif;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 0.9rem;
         border-radius: 12px;
         padding: 12px 28px;
@@ -128,7 +130,7 @@ ob_start();
         transform: translateY(-2px);
     }
 
-    .btn-hero-trans {
+    /* .btn-hero-trans {
         background-color: #8AAF6A;
         color: #000000;
         font-family: 'Sutasoma Display', sans-serif;
@@ -144,7 +146,7 @@ ob_start();
         background-color: #ffffff;
         color: #204420;
         transform: translateY(-2px);
-    }
+    } */
 
     /* STYLE KARTU & SEKSI LAINNYA */
     .stat-card-white {
@@ -617,7 +619,7 @@ ob_start();
                 </p>
                 <div class="d-flex gap-3 flex-wrap">
                     <a href="#infrastruktur" class="btn-hero-white">Lihat Infrastruktur</a>
-                    <a href="#layanan-terpadu" class="btn-hero-trans">Jelajahi Moda Transportasi</a>
+                    <a href="#layanan-terpadu" class="btn-hero-white">Jelajahi Moda Transportasi</a>
                 </div>
             </div>
 
@@ -675,9 +677,8 @@ ob_start();
         </div>
 
         <div class="text-center mb-5">
-            <h2 class="section-title-gold mb-1">RUTE PERJALANAN</h2>
-            <p class="section-subtitle-rute">Cara Menuju Nusantara</p>
-        </div>
+           <h2 class="fw-bold mb-3 fs-2">Rute Perjalanan</h2>
+            <p class="mx-auto mb-4" style="max-width: 800px; color: #808080; font-size: 1rem;">Cara Menuju Nusantara</div>
 
         <div class="row g-4">
             <!-- JALUR UDARA -->
@@ -788,11 +789,11 @@ ob_start();
 </section>
 
 <!-- INFRASTRUKTUR KONEKTIVITAS -->
-<section id="infrastruktur" class="py-5 bg-white">
-    <div class="container py-3">
-        <div class="mb-5">
-            <h2 class="section-title-gold mb-1">INFRASTRUKTUR KONEKTIVITAS</h2>
-            <p class="section-subtitle-rute">Jaringan Utama</p>
+<section id="infrastruktur" class="py-6 bg-light">
+    <div class="container py-1">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3 fs-2">Infrastruktur Konektivitas</h2>
+            <p class="mx-auto mb-4" style="max-width: 800px; color: #808080; font-size: 1rem;">Jaringan Utama</p>
         </div>
         
         <div class="row g-4">
@@ -866,11 +867,11 @@ ob_start();
 </section>
 
 <!-- LAYANAN TERPADU MODA TRANSPORTASI -->
-<section id="layanan-terpadu" class="pt-5 pb-2 bg-light">
+<section id="layanan-terpadu" class="pt-5 pb-5 bg-light">
     <div class="container pt-3 pb-0">
         <div class="text-center mb-5">
-            <h2 class="section-title-gold mb-1">LAYANAN TERPADU</h2>
-            <p class="section-subtitle-rute">Moda Transportasi Antarkota</p>
+            <h2 class="fw-bold mb-3 fs-2">Layanan Terpadu</h2>
+            <p class="mx-auto mb-4" style="max-width: 800px; color: #808080; font-size: 1rem;">Moda Transportasi Antarkota</p>
         </div>
 
         <div class="mb-5">
@@ -1071,7 +1072,7 @@ ob_start();
         </div>
 
         <!-- KELOMPOK PARK AND RIDE -->
-        <div class="mb-5">
+        <div class="mb-4">
             <h5 class="sub-category-title mb-3">
                 <img src="<?= $base_url; ?>assets/images/antarkota/ikon_pnr.jpg" alt="Ikon Park and Ride" class="sub-category-icon-img" onerror="this.src='https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=100&q=80';">
                 <span>Park and Ride</span>
@@ -1116,11 +1117,11 @@ ob_start();
 </section>
 
         <!-- VISUALISASI PETA KONEKTIVITAS -->
-        <section class="pt-4 pb-5 bg-white">
-            <div class="container py-3">
+        <section class="pt-6 pb-5 bg-light">
+            <div class="container py-2">
                 <div class="text-center mb-4">
-                    <h2 class="section-title-gold fs-2 mb-1">VISUALISASI KONEKTIVITAS</h2>
-                    <p class="section-subtitle-rute">Peta Konektivitas Regional</p>
+                    <h2 class="fw-bold mb-3 fs-2">Visualisasi Konektivitas</h2>
+                    <p class="mx-auto mb-4" style="max-width: 800px; color: #808080; font-size: 1rem;">Peta Konektivitas Regional</p>
                 </div>
                 <div class="bg-light p-4 rounded-4 text-center border shadow-sm">
                     <img src="<?= $base_url; ?>assets/images/antarkota/peta_antarkota.jpg" alt="Peta Konektivitas" class="img-fluid rounded-3 mb-3" style="max-height: 600px;" onerror="this.src='https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=80';">
