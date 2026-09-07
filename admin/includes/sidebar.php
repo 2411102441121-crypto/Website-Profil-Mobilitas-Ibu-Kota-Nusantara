@@ -4,143 +4,171 @@ $base_url = '/ikn-mobility/admin/';
 $current_uri = $_SERVER['REQUEST_URI'];
 ?>
 <style>
-    .sidebar-wrapper {
-        width: 260px;
-        min-width: 260px;
-        background-color: #1b4327;
-        color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 100vh;
-        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    /* Reset khusus area sidebar agar tidak terpengaruh CSS Halaman/Framework */
+    .ikn-sidebar-wrapper,
+    .ikn-sidebar-wrapper * {
+        box-sizing: border-box !important;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    }
+
+    .ikn-sidebar-wrapper {
+        position: fixed !important; /* Mengunci posisi sidebar di layar */
+        top: 0 !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        width: 260px !important;
+        min-width: 260px !important;
+        max-width: 260px !important;
+        height: 100vh !important; /* Memenuhi tinggi layar */
+        background-color: #1b4327 !important;
+        color: #ffffff !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        z-index: 9999 !important; /* Memastikan di atas elemen lain */
+        overflow-y: auto !important; /* Mencegah terpotong jika layar pendek */
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05) !important;
     }
     
-    .sidebar-brand {
-        padding: 15px 20px;
+    .ikn-sidebar-brand {
+        padding: 20px 16px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
-    .sidebar-menu {
-        list-style: none;
-        padding: 16px 12px;
-        margin: 0;
+    .ikn-sidebar-brand img {
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: 48px !important;
+        display: block !important;
     }
 
-    .sidebar-menu li {
-        margin-bottom: 4px;
+    .ikn-sidebar-menu {
+        list-style: none !important;
+        padding: 8px 12px !important;
+        margin: 0 !important;
     }
 
-    .sidebar-link {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 10px 16px;
-        color: #d1d5db;
-        text-decoration: none;
-        font-size: 0.875rem;
-        font-weight: 500;
-        border-radius: 8px;
-        transition: all 0.2s ease;
-        position: relative;
+    .ikn-sidebar-menu li {
+        margin-bottom: 4px !important;
+        list-style: none !important;
     }
 
-    .sidebar-link:hover {
-        color: #ffffff;
-        background-color: rgba(255, 255, 255, 0.08);
+    .ikn-sidebar-link {
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+        height: 44px !important;
+        padding: 0 16px !important;
+        color: #d1d5db !important;
+        text-decoration: none !important;
+        font-size: 14px !important;
+        line-height: 1 !important;
+        font-weight: 500 !important;
+        border-radius: 8px !important;
+        transition: background-color 0.2s ease, color 0.2s ease !important;
+        position: relative !important;
     }
 
-    .sidebar-link.active {
-        color: #ffffff;
-        background-color: rgba(255, 255, 255, 0.18);
-        font-weight: 600;
+    .ikn-sidebar-link:hover {
+        color: #ffffff !important;
+        background-color: rgba(255, 255, 255, 0.08) !important;
+        text-decoration: none !important;
     }
 
-    .sidebar-link.active::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 6px;
-        bottom: 6px;
-        width: 4px;
-        background-color: #ffffff;
-        border-radius: 0 4px 4px 0;
+    .ikn-sidebar-link.active {
+        color: #ffffff !important;
+        background-color: rgba(255, 255, 255, 0.18) !important;
+        font-weight: 600 !important;
     }
 
-    .sidebar-icon {
-        width: 20px;
-        text-align: center;
-        font-size: 1rem;
+    /* Indikator Aktif (Garis Putih Kiri) */
+    .ikn-sidebar-link.active::before {
+        content: "" !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: 8px !important;
+        bottom: 8px !important;
+        width: 4px !important;
+        background-color: #ffffff !important;
+        border-radius: 0 4px 4px 0 !important;
     }
 
-    .sidebar-footer {
-        padding: 16px 12px 24px 12px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    .ikn-sidebar-icon {
+        width: 20px !important;
+        height: 20px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 16px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .ikn-sidebar-footer {
+        padding: 16px 12px 24px 12px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
 </style>
 
-<aside class="sidebar-wrapper">
+<aside class="ikn-sidebar-wrapper">
     <div>
-        <!-- Logo / Brand Header -->
-        <div class="sidebar-brand d-flex align-items-center gap-3">
-            <!-- Logo / Brand Header -->
-            <div class="sidebar-brand d-flex align-items-center justify-content-center">
+        <div class="ikn-sidebar-brand">
             <img src="/ikn-mobility/assets/images/logo/04%20Otorita%20Ibu%20Kota%20Nusantara-05-HorizontalColorDiapositive.png" 
-                alt="Otorita Ibu Kota Nusantara" 
-                style="max-width: 100%; height: auto; max-height: 48px;">
-            </div>
+                 alt="Otorita Ibu Kota Nusantara">
         </div>
 
-        <!-- Menu Navigation -->
-        <ul class="sidebar-menu">
+        <ul class="ikn-sidebar-menu">
             <li>
                 <a href="<?= $base_url ?>dashboard.php" 
-                   class="sidebar-link <?= (strpos($current_uri, 'dashboard.php') !== false) ? 'active' : '' ?>">
-                    <i class="fa-solid fa-border-all sidebar-icon"></i>
+                   class="ikn-sidebar-link <?= (strpos($current_uri, 'dashboard.php') !== false) ? 'active' : '' ?>">
+                    <i class="fa-solid fa-border-all ikn-sidebar-icon"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li>
                 <a href="<?= $base_url ?>beranda/index.php" 
-                   class="sidebar-link <?= (strpos($current_uri, '/beranda/') !== false) ? 'active' : '' ?>">
-                    <i class="fa-solid fa-location-dot sidebar-icon"></i>
+                   class="ikn-sidebar-link <?= (strpos($current_uri, '/beranda/') !== false) ? 'active' : '' ?>">
+                    <i class="fa-solid fa-location-dot ikn-sidebar-icon"></i>
                     <span>Beranda</span>
                 </a>
             </li>
             <li>
                 <a href="<?= $base_url ?>antarkota/index.php" 
-                   class="sidebar-link <?= (strpos($current_uri, '/antarkota/') !== false) ? 'active' : '' ?>">
-                    <i class="fa-solid fa-bus sidebar-icon"></i>
+                   class="ikn-sidebar-link <?= (strpos($current_uri, '/antarkota/') !== false) ? 'active' : '' ?>">
+                    <i class="fa-solid fa-bus ikn-sidebar-icon"></i>
                     <span>Layanan Antarkota</span>
                 </a>
             </li>
             <li>
                 <a href="<?= $base_url ?>intrakota/index.php" 
-                   class="sidebar-link <?= (strpos($current_uri, '/intrakota/') !== false) ? 'active' : '' ?>">
-                    <i class="fa-solid fa-car-side sidebar-icon"></i>
+                   class="ikn-sidebar-link <?= (strpos($current_uri, '/intrakota/') !== false) ? 'active' : '' ?>">
+                    <i class="fa-solid fa-car-side ikn-sidebar-icon"></i>
                     <span>Layanan Intrakota</span>
                 </a>
             </li>
             <li>
                 <a href="<?= $base_url ?>aktivitas/index.php" 
-                   class="sidebar-link <?= (strpos($current_uri, '/aktivitas/') !== false) ? 'active' : '' ?>">
-                    <i class="fa-solid fa-clock-rotate-left sidebar-icon"></i>
+                   class="ikn-sidebar-link <?= (strpos($current_uri, '/aktivitas/') !== false) ? 'active' : '' ?>">
+                    <i class="fa-solid fa-clock-rotate-left ikn-sidebar-icon"></i>
                     <span>Aktivitas</span>
                 </a>
             </li>
             <li>
                 <a href="<?= $base_url ?>tentang/index.php" 
-                   class="sidebar-link <?= (strpos($current_uri, '/tentang/') !== false) ? 'active' : '' ?>">
-                    <i class="fa-regular fa-circle-question sidebar-icon"></i>
+                   class="ikn-sidebar-link <?= (strpos($current_uri, '/tentang/') !== false) ? 'active' : '' ?>">
+                    <i class="fa-regular fa-circle-question ikn-sidebar-icon"></i>
                     <span>Tentang</span>
                 </a>
             </li>
         </ul>
     </div>
 
-    <!-- Bottom Footer / Logout -->
-    <div class="sidebar-footer">
-        <a href="<?= $base_url ?>logout.php" class="sidebar-link text-white-50">
-            <i class="fa-solid fa-right-from-bracket sidebar-icon"></i>
+    <div class="ikn-sidebar-footer">
+        <a href="<?= $base_url ?>logout.php" class="ikn-sidebar-link">
+            <i class="fa-solid fa-right-from-bracket ikn-sidebar-icon"></i>
             <span>Logout</span>
         </a>
     </div>

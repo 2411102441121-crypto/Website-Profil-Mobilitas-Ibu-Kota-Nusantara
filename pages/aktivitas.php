@@ -16,8 +16,8 @@ $q_recent = mysqli_query($koneksi, "SELECT * FROM aktivitas WHERE status = 'Publ
 ob_start();
 ?>
 
-<section class="py-5 bg-light">
-    <div class="container py-4">
+<section class="pt-3 pb-5 bg-light">
+    <div class="container pt-2 pb-4">
 
         <!-- =========================
              BAGIAN BERITA UTAMA
@@ -106,69 +106,68 @@ ob_start();
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
 
                 <!-- OLAHRAGA -->
-                <div class="col">
-                    <article class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                        <div class="ratio ratio-16x9">
-                            <img src="../assets/images/aktivitas/olahraga.jpg" class="object-fit-cover" alt="Olahraga">
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h3 class="h5 card-title fw-bold mb-2">Olahraga</h3>
-                            <p class="card-text text-secondary small mb-4 flex-grow-1">Berbagai kegiatan olahraga yang diselenggarakan untuk mendukung aktivitas dan kebugaran di IKN.</p>
-                            <a href="/ikn-mobility/detail/aktivitas-olahraga.php?cat=Olahraga" class="text-primary text-decoration-none fw-semibold small mt-auto">
-                                Baca lebih lanjut <span class="ms-1">&rarr;</span>
-                            </a>
-                        </div>
-                    </article>
-                </div>
+<div class="col">
+    <article class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+        <div class="ratio ratio-16x9">
+            <img src="../assets/images/aktivitas/olahraga.jpg" class="object-fit-cover" alt="Olahraga">
+        </div>
+        <div class="card-body p-4 d-flex flex-column">
+            <h3 class="h5 card-title fw-bold mb-2">Olahraga</h3>
+            <p class="card-text text-secondary small mb-4 flex-grow-1">Berbagai kegiatan olahraga yang diselenggarakan untuk mendukung aktivitas dan kebugaran di IKN.</p>
+            <a href="/ikn-mobility/detail/aktivitas-olahraga.php?cat=Olahraga" class="text-decoration-none fw-semibold small mt-auto" style="color: #204420;">
+                Baca lebih lanjut <span class="ms-1">&rarr;</span>
+            </a>
+        </div>
+    </article>
+</div>
 
-                <!-- PEMBANGUNAN -->
-                <div class="col">
-                    <article class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                        <div class="ratio ratio-16x9">
-                            <img src="../assets/images/aktivitas/pembangunan.jpg" class="object-fit-cover" alt="Pembangunan">
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h3 class="h5 card-title fw-bold mb-2">Pembangunan</h3>
-                            <p class="card-text text-secondary small mb-4 flex-grow-1">Perkembangan pembangunan kawasan, infrastruktur, dan fasilitas pendukung di IKN.</p>
-                            <a href="/ikn-mobility/detail/aktivitas-olahraga.php?cat=Pembangunan" class="text-primary text-decoration-none fw-semibold small mt-auto">
-                                Baca lebih lanjut <span class="ms-1">&rarr;</span>
-                            </a>
-                        </div>
-                    </article>
-                </div>
+<!-- PEMBANGUNAN -->
+<div class="col">
+    <article class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+        <div class="ratio ratio-16x9">
+            <img src="../assets/images/aktivitas/pembangunan.jpg" class="object-fit-cover" alt="Pembangunan">
+        </div>
+        <div class="card-body p-4 d-flex flex-column">
+            <h3 class="h5 card-title fw-bold mb-2">Pembangunan</h3>
+            <p class="card-text text-secondary small mb-4 flex-grow-1">Perkembangan pembangunan kawasan, infrastruktur, dan fasilitas pendukung di IKN.</p>
+            <a href="/ikn-mobility/detail/aktivitas-olahraga.php?cat=Pembangunan" class="text-decoration-none fw-semibold small mt-auto" style="color: #204420;">
+                Baca lebih lanjut <span class="ms-1">&rarr;</span>
+            </a>
+        </div>
+    </article>
+</div>
 
-                <!-- KEGIATAN & MASYARAKAT -->
-                <div class="col">
-                    <article class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                        <div class="ratio ratio-16x9">
-                            <img src="../assets/images/aktivitas/masyarakat.jpg" class="object-fit-cover" alt="Kegiatan dan Masyarakat">
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h3 class="h5 card-title fw-bold mb-2">Kegiatan &amp; Masyarakat</h3>
-                            <p class="card-text text-secondary small mb-4 flex-grow-1">Berbagai kegiatan, acara, dan aktivitas masyarakat yang berlangsung di IKN.</p>
-                            <a href="/ikn-mobility/detail/aktivitas-olahraga.php?cat=Kegiatan%20%26%20Masyarakat" class="text-primary text-decoration-none fw-semibold small mt-auto">
-                                Baca lebih lanjut <span class="ms-1">&rarr;</span>
-                            </a>
-                        </div>
-                    </article>
-                </div>
+<!-- KEGIATAN & MASYARAKAT -->
+<div class="col">
+    <article class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+        <div class="ratio ratio-16x9">
+            <img src="../assets/images/aktivitas/masyarakat.jpg" class="object-fit-cover" alt="Kegiatan dan Masyarakat">
+        </div>
+        <div class="card-body p-4 d-flex flex-column">
+            <h3 class="h5 card-title fw-bold mb-2">Kegiatan &amp; Masyarakat</h3>
+            <p class="card-text text-secondary small mb-4 flex-grow-1">Berbagai kegiatan, acara, dan aktivitas masyarakat yang berlangsung di IKN.</p>
+            <a href="/ikn-mobility/detail/aktivitas-olahraga.php?cat=Kegiatan%20%26%20Masyarakat" class="text-decoration-none fw-semibold small mt-auto" style="color: #204420;">
+                Baca lebih lanjut <span class="ms-1">&rarr;</span>
+            </a>
+        </div>
+    </article>
+</div>
 
-                <!-- TRANSPORTASI -->
-                <div class="col">
-                    <article class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                        <div class="ratio ratio-16x9">
-                            <img src="../assets/images/aktivitas/transportasi.jpg" class="object-fit-cover" alt="Transportasi">
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h3 class="h5 card-title fw-bold mb-2">Transportasi</h3>
-                            <p class="card-text text-secondary small mb-4 flex-grow-1">Perkembangan moda, layanan, dan fasilitas transportasi untuk mendukung mobilitas di IKN.</p>
-                            <a href="/ikn-mobility/detail/aktivitas-olahraga.php?cat=Transportasi" class="text-primary text-decoration-none fw-semibold small mt-auto">
-                                Baca lebih lanjut <span class="ms-1">&rarr;</span>
-                            </a>
-                        </div>
-                    </article>
-                </div>
-
+<!-- TRANSPORTASI -->
+<div class="col">
+    <article class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+        <div class="ratio ratio-16x9">
+            <img src="../assets/images/aktivitas/transportasi.jpg" class="object-fit-cover" alt="Transportasi">
+        </div>
+        <div class="card-body p-4 d-flex flex-column">
+            <h3 class="h5 card-title fw-bold mb-2">Transportasi</h3>
+            <p class="card-text text-secondary small mb-4 flex-grow-1">Perkembangan moda, layanan, dan fasilitas transportasi untuk mendukung mobilitas di IKN.</p>
+            <a href="/ikn-mobility/detail/aktivitas-olahraga.php?cat=Transportasi" class="text-decoration-none fw-semibold small mt-auto" style="color: #204420;">
+                Baca lebih lanjut <span class="ms-1">&rarr;</span>
+            </a>
+        </div>
+    </article>
+</div>
             </div>
 
         </section>
