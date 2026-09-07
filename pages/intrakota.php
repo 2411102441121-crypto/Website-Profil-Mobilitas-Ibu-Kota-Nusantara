@@ -28,13 +28,13 @@ ob_start();
             </p>
 
             <div class="intrakota-actions">
-                <a href="#alur-perjalanan" class="intrakota-btn intrakota-btn-primary">
+                <a href="#moda-layanan" class="intrakota-btn intrakota-btn-primary">
                     Jelajahi Moda &amp; Layanan
                     <i class="fas fa-chevron-right" aria-hidden="true"></i>
                 </a>
 
-                <a href="#alur-perjalanan" class="intrakota-btn intrakota-btn-secondary">
-                    Lihat Peta Mobilitas
+                <a href="#logistik-perkotaan" class="intrakota-btn intrakota-btn-secondary">
+                    Lihat Logistik Perkotaan
                 </a>
             </div>
         </div>
@@ -51,7 +51,11 @@ ob_start();
                     <!-- 1. TEMPAT ASAL -->
                     <div class="intrakota-step">
                         <div class="intrakota-step-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11L12 4L20 11"/><path d="M4 11V20H9.5V14H14.5V20H20V11"/></svg>
+                            <img
+                                src="../assets/images/intrakota/icon-tempat-asal.png"
+                                alt="Tempat Asal"
+                                loading="lazy"
+                            >
                         </div>
                         <p class="intrakota-step-name">Tempat Asal</p>
                         <p class="intrakota-step-sub">Titik Awal</p>
@@ -64,7 +68,11 @@ ob_start();
                     <!-- 2. MIKROMOBILITAS -->
                     <div class="intrakota-step">
                         <div class="intrakota-step-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="17" r="3.3"/><circle cx="16" cy="17" r="3.3"/><path d="M6 13.5H13.5L16 10.5"/><path d="M16 17L13.5 13.5"/></svg>
+                            <img
+                                src="../assets/images/intrakota/icon-mikromobilitas.png"
+                                alt="Mikromobilitas"
+                                loading="lazy"
+                            >
                         </div>
                         <p class="intrakota-step-name">Mikromobilitas</p>
                         <p class="intrakota-step-sub">First Mile</p>
@@ -77,10 +85,11 @@ ob_start();
                     <!-- 3. TITIK TRANSFER -->
                     <div class="intrakota-step active">
                         <div class="intrakota-step-icon">
-                            <div class="intrakota-transfer-icon">
-                                <i class="fas fa-bus-simple" aria-hidden="true"></i>
-                                <span class="intrakota-clock-badge"><i class="fas fa-clock" aria-hidden="true"></i></span>
-                            </div>
+                            <img
+                                src="../assets/images/intrakota/icon-titik-transfer.png"
+                                alt="Titik Transfer"
+                                loading="lazy"
+                            >
                         </div>
                         <p class="intrakota-step-name">Titik Transfer</p>
                         <p class="intrakota-step-sub">Bus Interchange Station</p>
@@ -93,7 +102,11 @@ ob_start();
                     <!-- 4. BUS PERKOTAAN -->
                     <div class="intrakota-step">
                         <div class="intrakota-step-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 9H15.5C18 9 20 11 20 13.5V16.3H3.5V9Z"/><path d="M4 12.4H19.7"/><path d="M4 16.3c1 1.6 2.6 1.6 3.6 0M12.4 16.3c1 1.6 2.6 1.6 3.6 0"/><circle cx="7.2" cy="17.9" r="1.35" fill="currentColor" stroke="none"/><circle cx="16.8" cy="17.9" r="1.35" fill="currentColor" stroke="none"/></svg>
+                            <img
+                                src="../assets/images/intrakota/icon-bus-perkotaan.png"
+                                alt="Bus Perkotaan"
+                                loading="lazy"
+                            >
                         </div>
                         <p class="intrakota-step-name">Bus Perkotaan</p>
                         <p class="intrakota-step-sub">
@@ -108,7 +121,11 @@ ob_start();
                     <!-- 5. TUJUAN -->
                     <div class="intrakota-step">
                         <div class="intrakota-step-icon">
-                            <i class="fas fa-city" aria-hidden="true"></i>
+                            <img
+                                src="../assets/images/intrakota/icon-tujuan.png"
+                                alt="Tujuan"
+                                loading="lazy"
+                            >
                         </div>
                         <p class="intrakota-step-name">Tujuan</p>
                         <p class="intrakota-step-sub">Last Mile</p>
@@ -230,7 +247,7 @@ ob_start();
     <!-- =========================
      MODA & LAYANAN
     ========================== -->
-<section class="intrakota-moda">
+<section class="intrakota-moda" id="moda-layanan">
 
     <div class="intrakota-moda-container">
 
@@ -273,8 +290,9 @@ ob_start();
                         umum utama di kawasan IKN.
                     </p>
 
-                    <a href="../detail/bus-perkotaan.php" class="btn">
+                    <a href="../detail/bus-perkotaan.php" class="intrakota-detail-link">
                         Lihat Detail
+                        <span>&rarr;</span>
                     </a>
 
                 </div>
@@ -309,8 +327,9 @@ ob_start();
                         perjalanan.
                     </p>
 
-                    <a href="../detail/mobilitas-aktif.php" class="btn">
+                    <a href="../detail/mobilitas-aktif.php" class="intrakota-detail-link">
                         Lihat Detail
+                        <span>&rarr;</span>
                     </a>
 
                 </div>
@@ -345,8 +364,9 @@ ob_start();
                         listrik, dan layanan berbagi sepeda atau skuter.
                     </p>
 
-                    <a href="../detail/mikromobilitas.php" class="btn">
+                    <a href="../detail/mikromobilitas.php" class="intrakota-detail-link">
                         Lihat Detail
+                        <span>&rarr;</span>
                     </a>
 
                 </div>
@@ -401,6 +421,18 @@ ob_start();
                     Simpul perpindahan antarkota ke intrakota.
                 </p>
 
+                <button
+                    type="button"
+                    class="intrakota-transfer-toggle"
+                    id="simpulToggleBtn"
+                    aria-expanded="false"
+                    aria-controls="simpulWrapper"
+                    onclick="toggleSimpulSection()"
+                >
+                    Lihat Selengkapnya
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+
             </div>
 
 
@@ -425,6 +457,8 @@ ob_start();
      SKEMA ALIRAN MODA & PEMETAAN LOKASI
 ========================================= -->
 <section class="intrakota-simpul">
+
+    <div class="intrakota-simpul-wrapper" id="simpulWrapper">
 
     <div class="intrakota-simpul-container">
 
@@ -499,21 +533,35 @@ ob_start();
 
         </div>
 
-    </div>
+    </div><!-- /.intrakota-simpul-container -->
+
+    </div><!-- /.intrakota-simpul-wrapper -->
 
 </section>
 
 <!-- =========================================================
      DETAIL HALTE BUS
-     TARUH DI BAWAH SECTION "MODA & LAYANAN"
+     Bagian hero "Halte Bus" bisa diklik untuk membuka
+     (accordion slide-down) konten "Halte sebagai Akses
+     Mobilitas" beserta "IKNOW Mobile & E-Kios Nusantara"
+     di bawahnya. Diletakkan di bawah section "MODA & LAYANAN".
 ========================================================= -->
 
 <section class="intrakota-halte">
 
     <div class="intrakota-halte-container">
 
-        <!-- BAGIAN ATAS -->
-        <div class="intrakota-halte-hero">
+        <!-- BAGIAN ATAS (PEMICU KLIK / TIDAK BERUBAH TAMPILAN) -->
+        <div
+            class="intrakota-halte-hero"
+            id="halteHero"
+            role="button"
+            tabindex="0"
+            aria-expanded="false"
+            aria-controls="halteWrapper"
+            onclick="toggleHalteSection()"
+            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleHalteSection();}"
+        >
 
             <div class="intrakota-halte-image">
                 <img
@@ -534,470 +582,493 @@ ob_start();
                     Titik akses layanan Bus Perkotaan di kawasan IKN.
                 </p>
 
-            </div>
-
-        </div>
-
-
-        <!-- BAGIAN INFORMASI -->
-        <div class="intrakota-halte-card">
-
-            <!-- KIRI -->
-            <div class="intrakota-halte-content">
-
-                <h2>Halte sebagai Akses Mobilitas</h2>
-
-                <p class="intrakota-halte-intro">
-                    Halte Bus menjadi bagian dari jaringan mobilitas perkotaan
-                    yang mendukung akses pengguna menuju layanan Bus Perkotaan
-                    serta perjalanan lanjutan di dalam kawasan IKN.
-                </p>
-
-
-                <!-- ITEM 1 -->
-                <div class="intrakota-halte-feature">
-
-                    <div class="intrakota-halte-feature-icon">
-                        <i class="fas fa-bus"></i>
-                    </div>
-
-                    <div>
-                        <h3>Titik Naik dan Turun</h3>
-
-                        <p>
-                            Menjadi titik akses penumpang untuk menggunakan
-                            layanan Bus Perkotaan.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <!-- ITEM 2 -->
-                <div class="intrakota-halte-feature">
-
-                    <div class="intrakota-halte-feature-icon">
-                        <i class="fas fa-rotate"></i>
-                    </div>
-
-                    <div>
-                        <h3>Terhubung dalam Jaringan Perjalanan</h3>
-
-                        <p>
-                            Mendukung keterhubungan perjalanan antarhalte,
-                            simpul transportasi, dan kawasan tujuan.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <!-- ITEM 3 -->
-                <div class="intrakota-halte-feature">
-
-                    <div class="intrakota-halte-feature-icon">
-                        <i class="fas fa-person-walking"></i>
-                    </div>
-
-                    <div>
-                        <h3>Mendukung First Mile dan Last Mile</h3>
-
-                        <p>
-                            Memudahkan perjalanan pengguna dari titik asal
-                            menuju layanan transportasi dan dari halte
-                            menuju tujuan akhir.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- KANAN -->
-            <div class="intrakota-halte-photo">
-
-                <img
-                    src="../assets/images/intrakota/halte_akses.jpeg"
-                    alt="Halte Bus Kawasan IKN"
-                >
+                <span class="intrakota-halte-toggle-hint">
+                    Lihat Selengkapnya
+                    <i class="fas fa-chevron-down"></i>
+                </span>
 
             </div>
 
         </div>
 
     </div>
+    <!-- /.intrakota-halte-container (hero) -->
 
-</section>
+    <!-- BAGIAN YANG MUNCUL SAAT DIKLIK -->
+    <div class="intrakota-halte-wrapper" id="halteWrapper">
+    <div class="intrakota-halte-wrapper-inner">
 
-<!-- =========================================================
-     IKNOW MOBILE + E-KIOS NUSANTARA
-     ========================================================= -->
+        <div class="intrakota-halte-container">
 
-<section class="iknow-ekios-section">
+            <!-- BAGIAN INFORMASI -->
+            <div class="intrakota-halte-card">
 
-    <div class="iknow-ekios-container">
+                <!-- KIRI -->
+                <div class="intrakota-halte-content">
 
-    <div class="iknow-ekios-row">
+                    <h2>Halte sebagai Akses Mobilitas</h2>
 
-        <!-- =====================================================
-             CARD IKNOW MOBILE
-             ===================================================== -->
-
-        <div class="ik-card">
-
-            <!-- HEADER -->
-            <div class="ik-card-header">
-
-                <div class="ik-card-brand">
-
-                    <!-- FOTO LOGO IKNOW -->
-                    <img
-                        src="../assets/images/beranda/Icon IKN_Square.png"
-                        alt="IKNOW Mobile"
-                        class="iknow-logo-photo"
-                    >
-
-                    <div>
-                        <div class="ik-card-title-row">
-                            <h3 class="ik-card-title">
-                                IKNOW Mobile
-                            </h3>
-                        </div>
-
-                        <p class="ik-card-subtitle">
-                            Portal Genggam Pintar Warga & Pelancong IKN
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="ik-card-badges">
-
-                    <span class="ik-badge ik-badge-dot">
-                        Online Sync
-                    </span>
-
-                </div>
-
-            </div>
+                    <p class="intrakota-halte-intro">
+                        Halte Bus menjadi bagian dari jaringan mobilitas perkotaan
+                        yang mendukung akses pengguna menuju layanan Bus Perkotaan
+                        serta perjalanan lanjutan di dalam kawasan IKN.
+                    </p>
 
 
-            <!-- GREEN CONTENT -->
-            <div class="ik-card-green">
+                    <!-- ITEM 1 -->
+                    <div class="intrakota-halte-feature">
 
-                <!-- GAMBAR HP -->
-                <div class="ik-card-image">
-
-                <img
-                    src="../assets/images/intrakota/IKNOW.png"
-                    alt="IKNOW Mobile App"
-                    class="iknow-phone-image"
-                >
-
-                </div>
-
-
-                <!-- FITUR -->
-                <div class="ik-card-features">
-
-                    <div class="ik-feature">
-
-                        <span class="ik-feature-icon">
-                            <i class="fas fa-qrcode"></i>
-                        </span>
-
-                        <span>
-                            <strong>Izin Akses KIPP & QR Pass</strong><br>
-                            Reservasi instan kunjungan Titik Nol, Plaza
-                            Seremoni & Istana Negara.
-                        </span>
-
-                    </div>
-
-
-                    <div class="ik-feature">
-
-                        <span class="ik-feature-icon">
+                        <div class="intrakota-halte-feature-icon">
                             <i class="fas fa-bus"></i>
-                        </span>
+                        </div>
 
-                        <span>
-                            <strong>Live Transit Autonomous Bus (ART)</strong><br>
-                            Pantau posisi armada, estimasi tiba halte,
-                            dan integrasi feeder mikro.
-                        </span>
+                        <div>
+                            <h3>Titik Naik dan Turun</h3>
 
-                    </div>
-
-
-                    <div class="ik-feature">
-
-                        <span class="ik-feature-icon">
-                            <i class="fas fa-triangle-exclamation"></i>
-                        </span>
-
-                        <span>
-                            <strong>Tombol Darurat Terkoneksi 112</strong><br>
-                            Kirim lokasi presisi ke Smart Command
-                            Center IKN dalam 3 detik.
-                        </span>
+                            <p>
+                                Menjadi titik akses penumpang untuk menggunakan
+                                layanan Bus Perkotaan.
+                            </p>
+                        </div>
 
                     </div>
 
 
-                    <div class="ik-feature">
+                    <!-- ITEM 2 -->
+                    <div class="intrakota-halte-feature">
 
-                        <span class="ik-feature-icon">
-                            <i class="fas fa-leaf"></i>
-                        </span>
+                        <div class="intrakota-halte-feature-icon">
+                            <i class="fas fa-rotate"></i>
+                        </div>
 
-                        <span>
-                            <strong>Telemetri Lingkungan & AQI</strong><br>
-                            Indeks kualitas udara PM2.5 aktual dan
-                            tingkat kelembapan kanopi.
-                        </span>
+                        <div>
+                            <h3>Terhubung dalam Jaringan Perjalanan</h3>
+
+                            <p>
+                                Mendukung keterhubungan perjalanan antarhalte,
+                                simpul transportasi, dan kawasan tujuan.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- ITEM 3 -->
+                    <div class="intrakota-halte-feature">
+
+                        <div class="intrakota-halte-feature-icon">
+                            <i class="fas fa-person-walking"></i>
+                        </div>
+
+                        <div>
+                            <h3>Mendukung First Mile dan Last Mile</h3>
+
+                            <p>
+                                Memudahkan perjalanan pengguna dari titik asal
+                                menuju layanan transportasi dan dari halte
+                                menuju tujuan akhir.
+                            </p>
+                        </div>
 
                     </div>
 
                 </div>
 
-            </div>
 
+                <!-- KANAN -->
+                <div class="intrakota-halte-photo">
 
-            <!-- FOOTER -->
-            <div class="ik-card-footer">
-
-                <div class="ik-store-buttons">
-
-                    <!-- GOOGLE PLAY -->
-                    <a
-                        href="https://play.google.com/store/apps/details?id=com.ikn.smartcity&hl=id"
-                        target="_blank"
-                        class="ik-store-btn"
+                    <img
+                        src="../assets/images/intrakota/halte_akses.jpeg"
+                        alt="Halte Bus Kawasan IKN"
                     >
-
-                        <img src="../assets/images/beranda/OIP.png" class="ik-store-icon" alt="Google Play">
-
-                        <div>
-                            <span class="ik-store-small">
-                                Download di
-                            </span>
-
-                            <span class="ik-store-name">
-                                Google Play
-                            </span>
-                        </div>
-
-                    </a>
-
-
-                    <!-- APP STORE -->
-                    <a
-                        href="https://apps.apple.com/id/app/iknow/id6477182949"
-                        target="_blank"
-                        class="ik-store-btn"
-                    >
-
-                        <i class="fab fa-apple"></i>
-
-                        <div>
-                            <span class="ik-store-small">
-                                Tersedia di
-                            </span>
-
-                            <span class="ik-store-name">
-                                App Store
-                            </span>
-                        </div>
-
-                    </a>
 
                 </div>
 
             </div>
 
         </div>
+        <!-- /.intrakota-halte-container (halte-card) -->
 
+        <!-- =========================================================
+             IKNOW MOBILE + E-KIOS NUSANTARA
+             (Struktur & CSS TIDAK DIUBAH sama sekali — container-nya
+             sendiri, tidak dibatasi lebar 1000px milik halte-container,
+             supaya tampilannya kembali sama seperti sebelumnya)
+        ========================================================= -->
 
-        <!-- =====================================================
-             CARD E-KIOS NUSANTARA
-             ===================================================== -->
+        <section class="iknow-ekios-section">
 
-        <div class="ik-card">
+                <div class="iknow-ekios-container">
 
-            <!-- HEADER -->
-            <div class="ik-card-header">
+                <div class="iknow-ekios-row">
 
-                <div class="ik-card-brand">
+                    <!-- =====================================================
+                         CARD IKNOW MOBILE
+                         ===================================================== -->
 
-                    <!-- ICON E-KIOS -->
-                    <div
-                        style="
-                            width:38px;
-                            height:38px;
-                            border-radius:7px;
-                            background:#204b25;
-                            color:#fff;
-                            display:flex;
-                            align-items:center;
-                            justify-content:center;
-                            flex-shrink:0;
-                        "
-                    >
-                        <i class="fas fa-desktop"></i>
-                    </div>
+                    <div class="ik-card">
 
-                    <div>
+                        <!-- HEADER -->
+                        <div class="ik-card-header">
 
-                        <div class="ik-card-title-row">
-                            <h3 class="ik-card-title">
-                                E-Kios Nusantara
-                            </h3>
+                            <div class="ik-card-brand">
 
-                            <span class="ik-badge ik-badge-dot ik-badge-inline">
-                                Totem Publik
-                            </span>
+                                <!-- FOTO LOGO IKNOW -->
+                                <img
+                                    src="../assets/images/beranda/Icon IKN_Square.png"
+                                    alt="IKNOW Mobile"
+                                    class="iknow-logo-photo"
+                                >
+
+                                <div>
+                                    <div class="ik-card-title-row">
+                                        <h3 class="ik-card-title">
+                                            IKNOW Mobile
+                                        </h3>
+                                    </div>
+
+                                    <p class="ik-card-subtitle">
+                                        Portal Genggam Pintar Warga & Pelancong IKN
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="ik-card-badges">
+
+                                <span class="ik-badge ik-badge-dot">
+                                    Online Sync
+                                </span>
+
+                            </div>
+
                         </div>
 
-                        <p class="ik-card-subtitle">
-                            Anjungan Layanan Sentuh & Informasi Ruang Terbuka
-                        </p>
 
-                    </div>
+                        <!-- GREEN CONTENT -->
+                        <div class="ik-card-green">
 
-                </div>
+                            <!-- GAMBAR HP -->
+                            <div class="ik-card-image">
 
+                            <img
+                                src="../assets/images/intrakota/IKNOW.png"
+                                alt="IKNOW Mobile App"
+                                class="iknow-phone-image"
+                            >
 
-                <div class="ik-card-badges">
-
-                    <span class="ik-badge ik-badge-dot">
-                        Layar Sentuh 55"
-                    </span>
-
-                </div>
-
-            </div>
+                            </div>
 
 
-            <!-- GREEN CONTENT -->
-            <div class="ik-card-green">
+                            <!-- FITUR -->
+                            <div class="ik-card-features">
 
-                <!-- FOTO E-KIOS -->
-                <div class="ik-card-image ekios-image-wrap">
+                                <div class="ik-feature">
 
-                <img
-                    src="../assets/images/intrakota/ekios.jpeg"
-                    alt="E-Kios Nusantara"
-                    class="ekios-photo"
-                >
+                                    <span class="ik-feature-icon">
+                                        <i class="fas fa-qrcode"></i>
+                                    </span>
 
-                    <div class="ekios-caption">
-                        <div class="ekios-caption-row">
-                            <span class="ekios-caption-title">Titik E-Kios 01</span>
-                            <span class="ekios-caption-dot">Aktif 24 Jam</span>
+                                    <span>
+                                        <strong>Izin Akses KIPP & QR Pass</strong><br>
+                                        Reservasi instan kunjungan Titik Nol, Plaza
+                                        Seremoni & Istana Negara.
+                                    </span>
+
+                                </div>
+
+
+                                <div class="ik-feature">
+
+                                    <span class="ik-feature-icon">
+                                        <i class="fas fa-bus"></i>
+                                    </span>
+
+                                    <span>
+                                        <strong>Live Transit Autonomous Bus (ART)</strong><br>
+                                        Pantau posisi armada, estimasi tiba halte,
+                                        dan integrasi feeder mikro.
+                                    </span>
+
+                                </div>
+
+
+                                <div class="ik-feature">
+
+                                    <span class="ik-feature-icon">
+                                        <i class="fas fa-triangle-exclamation"></i>
+                                    </span>
+
+                                    <span>
+                                        <strong>Tombol Darurat Terkoneksi 112</strong><br>
+                                        Kirim lokasi presisi ke Smart Command
+                                        Center IKN dalam 3 detik.
+                                    </span>
+
+                                </div>
+
+
+                                <div class="ik-feature">
+
+                                    <span class="ik-feature-icon">
+                                        <i class="fas fa-leaf"></i>
+                                    </span>
+
+                                    <span>
+                                        <strong>Telemetri Lingkungan & AQI</strong><br>
+                                        Indeks kualitas udara PM2.5 aktual dan
+                                        tingkat kelembapan kanopi.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
                         </div>
-                        <div class="ekios-caption-sub">
-                            <i class="fas fa-location-dot"></i>
-                            Sumbu Kebangsaan Barat
+
+
+                        <!-- FOOTER -->
+                        <div class="ik-card-footer">
+
+                            <div class="ik-store-buttons">
+
+                                <!-- GOOGLE PLAY -->
+                                <a
+                                    href="https://play.google.com/store/apps/details?id=com.ikn.smartcity&hl=id"
+                                    target="_blank"
+                                    class="ik-store-btn"
+                                >
+
+                                    <img src="../assets/images/beranda/OIP.png" class="ik-store-icon" alt="Google Play">
+
+                                    <div>
+                                        <span class="ik-store-small">
+                                            Download di
+                                        </span>
+
+                                        <span class="ik-store-name">
+                                            Google Play
+                                        </span>
+                                    </div>
+
+                                </a>
+
+
+                                <!-- APP STORE -->
+                                <a
+                                    href="https://apps.apple.com/id/app/iknow/id6477182949"
+                                    target="_blank"
+                                    class="ik-store-btn"
+                                >
+
+                                    <i class="fab fa-apple"></i>
+
+                                    <div>
+                                        <span class="ik-store-small">
+                                            Tersedia di
+                                        </span>
+
+                                        <span class="ik-store-name">
+                                            App Store
+                                        </span>
+                                    </div>
+
+                                </a>
+
+                            </div>
+
                         </div>
+
+                    </div>
+
+
+                    <!-- =====================================================
+                         CARD E-KIOS NUSANTARA
+                         ===================================================== -->
+
+                    <div class="ik-card">
+
+                        <!-- HEADER -->
+                        <div class="ik-card-header">
+
+                            <div class="ik-card-brand">
+
+                                <!-- ICON E-KIOS -->
+                                <div
+                                    style="
+                                        width:38px;
+                                        height:38px;
+                                        border-radius:7px;
+                                        background:#204b25;
+                                        color:#fff;
+                                        display:flex;
+                                        align-items:center;
+                                        justify-content:center;
+                                        flex-shrink:0;
+                                    "
+                                >
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+
+                                <div>
+
+                                    <div class="ik-card-title-row">
+                                        <h3 class="ik-card-title">
+                                            E-Kios Nusantara
+                                        </h3>
+
+                                        <span class="ik-badge ik-badge-dot ik-badge-inline">
+                                            Totem Publik
+                                        </span>
+                                    </div>
+
+                                    <p class="ik-card-subtitle">
+                                        Anjungan Layanan Sentuh & Informasi Ruang Terbuka
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="ik-card-badges">
+
+                                <span class="ik-badge ik-badge-dot">
+                                    Layar Sentuh 55"
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- GREEN CONTENT -->
+                        <div class="ik-card-green">
+
+                            <!-- FOTO E-KIOS -->
+                            <div class="ik-card-image ekios-image-wrap">
+
+                            <img
+                                src="../assets/images/intrakota/ekios.jpeg"
+                                alt="E-Kios Nusantara"
+                                class="ekios-photo"
+                            >
+
+                                <div class="ekios-caption">
+                                    <div class="ekios-caption-row">
+                                        <span class="ekios-caption-title">Titik E-Kios 01</span>
+                                        <span class="ekios-caption-dot">Aktif 24 Jam</span>
+                                    </div>
+                                    <div class="ekios-caption-sub">
+                                        <i class="fas fa-location-dot"></i>
+                                        Sumbu Kebangsaan Barat
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <!-- FITUR -->
+                            <div class="ik-card-features">
+
+                                <div class="ik-feature">
+
+                                    <span class="ik-feature-icon">
+                                        <i class="fas fa-hand-pointer"></i>
+                                    </span>
+
+                                    <span>
+                                        <strong>Tap e-KTP & Identitas Nusantara</strong><br>
+                                        Autentikasi cepat layanan kependudukan
+                                        dan cetak dokumen kilat.
+                                    </span>
+
+                                </div>
+
+
+                                <div class="ik-feature">
+
+                                    <span class="ik-feature-icon">
+                                        <i class="fas fa-wifi"></i>
+                                    </span>
+
+                                    <span>
+                                        <strong>Hotspot Wi-Fi 6 Publik Bebas Kuota</strong><br>
+                                        Konektivitas serat optik 100 Mbps radius
+                                        30 meter dari anjungan.
+                                    </span>
+
+                                </div>
+
+
+                                <div class="ik-feature">
+
+                                    <span class="ik-feature-icon">
+                                        <i class="fas fa-compass"></i>
+                                    </span>
+
+                                    <span>
+                                        <strong>Wayfinding & Peta 3D Interaktif</strong><br>
+                                        Panduan rute pejalan kaki, lift, ramp,
+                                        dan gedung kementerian.
+                                    </span>
+
+                                </div>
+
+
+                                <div class="ik-feature">
+
+                                    <span class="ik-feature-icon">
+                                        <i class="fas fa-headset"></i>
+                                    </span>
+
+                                    <span>
+                                        <strong>Asisten Suara AI Multibahasa</strong><br>
+                                        Mendukung Bahasa Indonesia, Inggris,
+                                        dan dialek lokal Kalimantan.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- FOOTER -->
+                        <div class="ik-card-footer ekios-card-footer">
+
+                            <div class="ekios-footer-buttons">
+
+                                <a href="#" class="ekios-btn ekios-btn-solid">
+                                    <i class="fas fa-location-crosshairs"></i>
+                                    Cari Halte Terdekat
+                                </a>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
                 </div>
-
-
-                <!-- FITUR -->
-                <div class="ik-card-features">
-
-                    <div class="ik-feature">
-
-                        <span class="ik-feature-icon">
-                            <i class="fas fa-hand-pointer"></i>
-                        </span>
-
-                        <span>
-                            <strong>Tap e-KTP & Identitas Nusantara</strong><br>
-                            Autentikasi cepat layanan kependudukan
-                            dan cetak dokumen kilat.
-                        </span>
-
-                    </div>
-
-
-                    <div class="ik-feature">
-
-                        <span class="ik-feature-icon">
-                            <i class="fas fa-wifi"></i>
-                        </span>
-
-                        <span>
-                            <strong>Hotspot Wi-Fi 6 Publik Bebas Kuota</strong><br>
-                            Konektivitas serat optik 100 Mbps radius
-                            30 meter dari anjungan.
-                        </span>
-
-                    </div>
-
-
-                    <div class="ik-feature">
-
-                        <span class="ik-feature-icon">
-                            <i class="fas fa-compass"></i>
-                        </span>
-
-                        <span>
-                            <strong>Wayfinding & Peta 3D Interaktif</strong><br>
-                            Panduan rute pejalan kaki, lift, ramp,
-                            dan gedung kementerian.
-                        </span>
-
-                    </div>
-
-
-                    <div class="ik-feature">
-
-                        <span class="ik-feature-icon">
-                            <i class="fas fa-headset"></i>
-                        </span>
-
-                        <span>
-                            <strong>Asisten Suara AI Multibahasa</strong><br>
-                            Mendukung Bahasa Indonesia, Inggris,
-                            dan dialek lokal Kalimantan.
-                        </span>
-
-                    </div>
-
                 </div>
 
-            </div>
-
-
-            <!-- FOOTER -->
-            <div class="ik-card-footer ekios-card-footer">
-
-                <div class="ekios-footer-buttons">
-
-                    <a href="#" class="ekios-btn ekios-btn-solid">
-                        <i class="fas fa-location-crosshairs"></i>
-                        Cari Halte Terdekat
-                    </a>
-
-                </div>
-
-            </div>
+            </section>
+            <!-- /iknow-ekios-section -->
 
         </div>
-
-    </div>
-    </div>
+        <!-- /.intrakota-halte-wrapper-inner -->
+        </div>
+        <!-- /.intrakota-halte-wrapper -->
 
 </section>
 <!-- =========================================================
      LOGISTIK PERKOTAAN
 ========================================================= -->
 
-<section class="intrakota-logistik">
+<section class="intrakota-logistik" id="logistik-perkotaan">
 
     <div class="intrakota-logistik-container">
 
@@ -1769,6 +1840,50 @@ ob_start();
 </section>
 
 </div>
+
+<script>
+function toggleSimpulSection() {
+    const wrapper = document.getElementById('simpulWrapper');
+    const btn = document.getElementById('simpulToggleBtn');
+    const isOpen = wrapper.classList.toggle('open');
+
+    btn.classList.toggle('active', isOpen);
+    btn.setAttribute('aria-expanded', isOpen);
+
+    if (isOpen) {
+        wrapper.style.maxHeight = wrapper.scrollHeight + 'px';
+    } else {
+        wrapper.style.maxHeight = '0px';
+    }
+}
+
+function toggleHalteSection() {
+    const wrapper = document.getElementById('halteWrapper');
+    const hero = document.getElementById('halteHero');
+    const isOpen = wrapper.classList.toggle('open');
+
+    hero.classList.toggle('active', isOpen);
+    hero.setAttribute('aria-expanded', isOpen);
+
+    if (isOpen) {
+        wrapper.style.maxHeight = wrapper.scrollHeight + 'px';
+    } else {
+        wrapper.style.maxHeight = '0px';
+    }
+}
+
+window.addEventListener('resize', () => {
+    const simpulWrapper = document.getElementById('simpulWrapper');
+    if (simpulWrapper && simpulWrapper.classList.contains('open')) {
+        simpulWrapper.style.maxHeight = simpulWrapper.scrollHeight + 'px';
+    }
+
+    const halteWrapper = document.getElementById('halteWrapper');
+    if (halteWrapper && halteWrapper.classList.contains('open')) {
+        halteWrapper.style.maxHeight = halteWrapper.scrollHeight + 'px';
+    }
+});
+</script>
 
 <?php
 $content = ob_get_clean();

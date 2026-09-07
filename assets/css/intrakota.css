@@ -3,6 +3,15 @@
    Dibuat mengikuti tampilan referensi yang diberikan.
    ========================================================= */
 
+/* Reset margin bawaan browser pada html & body
+   (default body punya margin ~8px yang menyebabkan celah
+   putih di sekeliling halaman, termasuk di bawah hero). */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
 @font-face {
     font-family: 'Sutasoma Display';
     src: url('../fonts/ttf/SutasomaDisplay-Regular.ttf') format('truetype');
@@ -67,10 +76,15 @@
 ========================= */
 
 .intrakota-hero {
+    /* Sesuaikan --nav-height dengan tinggi navbar/header situs Anda
+       (cek lewat Inspect Element -> pilih elemen navbar -> lihat "Height"
+       di panel Computed/Box Model). */
+    --nav-height: 70px;
+
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    height: 100vh;
+    min-height: calc(100vh - var(--nav-height));
+    height: calc(100vh - var(--nav-height));
 
     display: flex;
     align-items: center;
@@ -220,8 +234,8 @@
 @media (max-width: 992px) {
 
     .intrakota-hero {
-        min-height: 85vh;
-        height: 85vh;
+        min-height: calc(100vh - var(--nav-height));
+        height: calc(100vh - var(--nav-height));
 
         background-position: center center;
     }
@@ -241,8 +255,8 @@
 @media (max-width: 576px) {
 
     .intrakota-hero {
-        min-height: 760px;
-        height: 760px;
+        min-height: calc(100vh - var(--nav-height));
+        height: calc(100vh - var(--nav-height));
 
         background-position: center center;
     }
@@ -279,7 +293,12 @@
 }
 
 
-/* SEMUA BUTTON */
+/* =========================================================
+   SEMUA BUTTON (HERO)
+   STATE NORMAL: PUTIH, TEKS HIJAU
+   STATE HOVER: HIJAU, TEKS PUTIH (kembali putih saat kursor lepas)
+========================================================= */
+
 .intrakota-btn {
     display: inline-flex;
 
@@ -294,7 +313,7 @@
 
     border-radius: 8px;
 
-    border: 1px solid var(--intra-green-light);
+    border: 1px solid #ffffff;
 
     text-decoration: none;
 
@@ -305,8 +324,8 @@
 
     font-weight: 600;
 
-    background: var(--intra-green-light);
-    color: #ffffff;
+    background: #ffffff;
+    color: var(--intra-green-light);
 
     box-shadow: 0 5px 14px rgba(0,0,0,.12);
 
@@ -316,55 +335,16 @@
         transform .2s ease,
         box-shadow .2s ease,
         background-color .2s ease,
-        color .2s ease;
+        color .2s ease,
+        border-color .2s ease;
 }
 
 
-/* HOVER - TETAP HIJAU */
-.intrakota-btn:hover {
+/* HOVER - PUTIH -> HIJAU, kembali putih otomatis saat kursor dilepas */
+.intrakota-btn:hover,
+.intrakota-btn:focus-visible {
     transform: translateY(-1px);
 
-    background: #245d2e;
-
-    color: #ffffff;
-
-    border-color: #245d2e;
-}
-
-
-/* =========================================================
-   SETELAH DIKLIK
-   HIJAU -> PUTIH
-========================================================= */
-
-.intrakota-btn.active {
-    background: #ffffff;
-
-    color: #204420;
-
-    border-color: #ffffff;
-
-    box-shadow: 0 5px 14px rgba(0,0,0,.12);
-}
-
-
-/* HOVER SAAT SUDAH AKTIF */
-.intrakota-btn.active:hover {
-    background: #ffffff;
-
-    color: #204420;
-
-    border-color: #ffffff;
-}
-
-
-/* =========================================================
-   PRIMARY & SECONDARY
-   KEDUANYA SAMA-SAMA HIJAU
-========================================================= */
-
-.intrakota-btn-primary,
-.intrakota-btn-secondary {
     background: var(--intra-green-light);
 
     color: #ffffff;
@@ -373,25 +353,31 @@
 }
 
 
-/* HOVER KEDUANYA */
-.intrakota-btn-primary:hover,
-.intrakota-btn-secondary:hover {
-    background: #245d2e;
+/* =========================================================
+   PRIMARY & SECONDARY
+   MENGIKUTI STATE HOVER YANG SAMA DENGAN DI ATAS
+========================================================= */
 
-    color: #ffffff;
+.intrakota-btn-primary,
+.intrakota-btn-secondary {
+    background: #ffffff;
 
-    border-color: #245d2e;
+    color: var(--intra-green-light);
+
+    border-color: #ffffff;
 }
 
 
-/* ACTIVE KEDUANYA */
-.intrakota-btn-primary.active,
-.intrakota-btn-secondary.active {
-    background: #ffffff;
+/* HOVER KEDUANYA */
+.intrakota-btn-primary:hover,
+.intrakota-btn-secondary:hover,
+.intrakota-btn-primary:focus-visible,
+.intrakota-btn-secondary:focus-visible {
+    background: var(--intra-green-light);
 
-    color: #204420;
+    color: #ffffff;
 
-    border-color: #ffffff;
+    border-color: var(--intra-green-light);
 }
 
 /* =========================
@@ -437,6 +423,13 @@
     text-align: center;
 }
 
+/* =========================================================
+   ICON BOX (FOTO)
+   Sekarang menampilkan foto ikon asli (img), bukan SVG/Font Awesome
+   berwarna via currentColor. Box hanya berfungsi sebagai bingkai
+   ukuran + radius; foto sudah membawa warna latarnya sendiri.
+========================================================= */
+
 .intrakota-step-icon {
     width: 74px;
     height: 74px;
@@ -444,6 +437,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     border: 1px solid #dfe4df;
     border-radius: 8px;
     background: rgba(255,255,255,.96);
@@ -452,6 +446,15 @@
     font-size: 24px;
 }
 
+.intrakota-step-icon img {
+    width: 78%;
+    height: 78%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+/* Fallback (kalau masih ada ikon svg/fa lama di tempat lain) */
 .intrakota-step-icon svg {
     width: 30px;
     height: 30px;
@@ -494,6 +497,8 @@
     color: #fff;
 }
 
+/* Step aktif: box sedikit lebih besar dan berwarna hijau solid,
+   icon-nya diputihkan dengan filter supaya kontras. */
 .intrakota-step.active .intrakota-step-icon {
     width: 78px;
     height: 78px;
@@ -503,6 +508,12 @@
     background: var(--intra-green);
     color: #fff;
     box-shadow: 0 6px 15px rgba(31,77,39,.18);
+}
+
+.intrakota-step.active .intrakota-step-icon img {
+    filter: brightness(0) invert(1);
+    width: 62%;
+    height: 62%;
 }
 
 .intrakota-step-arrow {
@@ -549,7 +560,6 @@
 .intrakota-mobility {
     width: 100%;
     background: #f8f9f7;
-    padding: 55px 0 70px;
 }
 
 .intrakota-mobility-container {
@@ -565,7 +575,7 @@
 
     text-align: center;
 
-    color: #263f2a;
+    color: #000000;
 
     font-family: 'Sutasoma Display', Georgia, serif;
 
@@ -795,7 +805,7 @@
 .intrakota-moda {
     width: 100%;
     background: #f8f9f7;
-    padding: 70px 0 80px;
+    padding: 50px 0 80px;
 }
 
 .intrakota-moda-container {
@@ -1132,29 +1142,7 @@
     position: relative;
     min-height: 258px;
     padding-right: 30px;
-}
-
-.intrakota-transfer-toggle {
-    position: absolute;
-    top: 2px;
-    right: 2px;
-
-    width: 16px;
-    height: 16px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 0;
-    border: none;
-    border-radius: 2px;
-
-    background: #edf0f4;
-    color: #40454a;
-
-    font-size: 9px;
-    cursor: pointer;
+    cursor: default;
 }
 
 .intrakota-transfer-icon {
@@ -1201,6 +1189,52 @@
 }
 
 
+/* =========================================================
+   TOMBOL TOGGLE (ACCORDION) - SKEMA ALIRAN MODA
+========================================================= */
+
+.intrakota-transfer-toggle {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 22px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 0;
+
+    background: none;
+    color: var(--intra-green);
+
+    font-family: 'Sutasoma Text', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: color .2s ease, gap .2s ease;
+}
+
+.intrakota-transfer-toggle:hover {
+    color: var(--intra-green-light);
+    gap: 10px;
+}
+
+.intrakota-transfer-toggle i {
+    font-size: 12px;
+
+    transition: transform .3s ease;
+}
+
+.intrakota-transfer-toggle.active i {
+    transform: rotate(180deg);
+}
+
+
 /* =========================
    GAMBAR
 ========================= */
@@ -1232,9 +1266,23 @@
 
 .intrakota-simpul {
     width: 100%;
-    padding: 0 0 70px;
     background: #ffffff;
     box-sizing: border-box;
+}
+
+
+/* =========================================================
+   WRAPPER COLLAPSIBLE (ACCORDION)
+   Tertutup secara default (max-height: 0), akan meluas
+   dengan animasi slide-down saat class "open" ditambahkan
+   lewat JavaScript (toggleSimpulSection()).
+========================================================= */
+
+.intrakota-simpul-wrapper {
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height .5s ease;
 }
 
 .intrakota-simpul-container {
@@ -1482,12 +1530,60 @@
 }
 
 /* =========================================================
+   ACCORDION HALTE BUS
+   Bagian "Halte Bus" (foto hero + judul) berfungsi sebagai
+   pemicu klik. Saat diklik, wrapper di bawahnya (berisi
+   "Halte sebagai Akses Mobilitas" + IKNOW Mobile & E-Kios)
+   akan meluas dengan animasi slide-down, mengikuti pola
+   yang sama dengan accordion Skema Aliran Moda di atas.
+========================================================= */
+
+.intrakota-halte-hero {
+    cursor: pointer;
+    user-select: none;
+}
+
+.intrakota-halte-toggle-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    margin-top: 14px;
+
+    color: var(--intra-green);
+
+    font-family: 'Sutasoma Text', Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.intrakota-halte-toggle-hint i {
+    font-size: 11px;
+    transition: transform .3s ease;
+}
+
+.intrakota-halte-hero.active .intrakota-halte-toggle-hint i {
+    transform: rotate(180deg);
+}
+
+.intrakota-halte-wrapper {
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height .5s ease;
+}
+
+.intrakota-halte-wrapper-inner {
+    padding-top: 60px;
+}
+
+/* =========================================================
    DETAIL HALTE BUS
 ========================================================= */
 
 .intrakota-halte {
     width: 100%;
-    padding: 65px 0 75px;
+    padding: 65px 0 1px;
     background: #ffffff;
 }
 
@@ -2357,7 +2453,7 @@
 
 .intrakota-logistik {
     width: 100%;
-    padding: 35px 0 70px;
+    padding: 35px 0 10px;
     background: #ffffff;
     box-sizing: border-box;
 }
@@ -2484,6 +2580,7 @@
     font-family: "Sutasoma Text", Arial, sans-serif;
 
     font-size: 15px;
+
     line-height: 1.65;
 }
 
@@ -2697,7 +2794,7 @@
 
 .intrakota-koridor {
     width: 100%;
-    padding: 65px 0 70px;
+    padding: 25px 0 0px;
     background: #ffffff;
     box-sizing: border-box;
 }
@@ -2705,6 +2802,7 @@
 .intrakota-koridor-container {
     width: min(1120px, calc(100% - 44px));
     margin: 0 auto;
+    padding: 20px 0 0px;
 }
 
 
@@ -3246,7 +3344,7 @@
 
 .intrakota-teknologi {
     width: 100%;
-    padding: 65px 0 75px;
+    padding: 25px 0 25px;
 
     background: #ffffff;
 
@@ -3979,10 +4077,6 @@
         padding: 0 0 28px;
     }
 
-    .intrakota-transfer-toggle {
-        display: none;
-    }
-
     .intrakota-transfer-card-title {
         font-size: 25px;
     }
@@ -4075,7 +4169,7 @@
 ========================= */
 @media (max-width: 991.98px) {
     .intrakota-hero {
-        min-height: 455px;
+        min-height: calc(100vh - var(--nav-height));
         background-position: 58% center;
     }
 
@@ -4097,7 +4191,7 @@
     }
 
     .intrakota-hero {
-        min-height: 500px;
+        min-height: calc(100vh - var(--nav-height));
         background-position: 61% center;
     }
 
@@ -4141,8 +4235,8 @@
 ========================= */
 @media (max-width: 1024px) {
     .intrakota-hero {
-        min-height: 500px;
-        height: 500px;
+        min-height: calc(100vh - var(--nav-height));
+        height: calc(100vh - var(--nav-height));
         background-position: center center;
     }
 
@@ -4250,8 +4344,8 @@
 ========================= */
 @media (max-width: 850px) {
     .intrakota-hero {
-        min-height: 480px;
-        height: 480px;
+        min-height: calc(100vh - var(--nav-height));
+        height: calc(100vh - var(--nav-height));
     }
 
     .intrakota-hero-inner {
@@ -4298,10 +4392,6 @@
     .intrakota-transfer-info {
         min-height: 0;
         padding: 0 0 26px;
-    }
-
-    .intrakota-transfer-toggle {
-        display: none;
     }
 
     .intrakota-transfer-image-wrap {
@@ -4364,8 +4454,8 @@
 
     /* HERO */
     .intrakota-hero {
-        min-height: 500px;
-        height: 500px;
+        min-height: calc(100vh - var(--nav-height));
+        height: calc(100vh - var(--nav-height));
         background-position: 61% center;
     }
 
@@ -4623,10 +4713,6 @@
         padding: 0 0 25px;
     }
 
-    .intrakota-transfer-toggle {
-        display: none;
-    }
-
     .intrakota-transfer-icon {
         width: 38px;
         height: 38px;
@@ -4871,8 +4957,8 @@
 ========================= */
 @media (max-width: 430px) {
     .intrakota-hero {
-        min-height: 500px;
-        height: 500px;
+        min-height: calc(100vh - var(--nav-height));
+        height: calc(100vh - var(--nav-height));
     }
 
     .intrakota-title {
