@@ -18,11 +18,15 @@
 /* ======================================== PROFIL KEDEPUTIAN ======================================== */
 
 .profil-section { padding-top: 4px; }
-.profil-image { width: calc(100% - 110px); height: 360px; margin: 0 auto 30px; overflow: hidden; background: #ddd; }
-.profil-image img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .profil-copy { width: calc(100% - 110px); margin: 0 auto; }
 .profil-copy h3 { margin: 0 0 6px; font-family: 'Sutasoma Display', sans-serif !important; font-size: 22px; font-weight: 600; }
 .profil-pasal { margin: 0 0 8px; font-family: 'Sutasoma Text', sans-serif !important; font-size: 16px; line-height: 1.5; }
+/* FOTO PROFIL */
+
+.profil-image { width:1166px; max-width:100%; height:auto; aspect-ratio:1166 / 504; margin:0 auto 30px; padding:12px; background:#fffffe; border-radius:16px; box-sizing:border-box; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,.12); }
+
+.profil-image img { width:100%; height:100%; display:block; object-fit:cover; border-radius:9px; }
+
 .fungsi-list { margin: 0; padding-left: 21px; font-family: 'Sutasoma Text', sans-serif !important; font-size: 15px; line-height: 1.65; }
 .fungsi-list li { padding-left: 3px; margin-bottom: 4px; }
 .tugas-title { margin-top: 40px !important; }
@@ -91,6 +95,11 @@
 
 .contact-icon { width:42px; min-width:42px; height:42px; display:flex; align-items:center; justify-content:center; overflow:visible; }
 .contact-icon img { width:25px; height:25px; display:block; object-fit:contain; transform:translateY(-0px); }
+
+/* PETA NUSANTARA */
+.contact-map { width:370px !important; height:250px !important; flex-shrink:0 !important; margin-left:auto !important; border-radius:8px !important; overflow:hidden !important; }
+
+.contact-map iframe { width:100% !important; height:100% !important; border:0 !important; display:block !important; }
 
 /* ======================================== GLOSARIUM ======================================== */
 

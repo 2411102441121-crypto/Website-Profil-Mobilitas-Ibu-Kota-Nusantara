@@ -252,11 +252,13 @@ ob_start();
 
                     </div>
                 </div>
-               <div class="contact-map">
-    <a href="https://petanusantara.id/peta-ikn" target="_blank">
-        <img src="../assets/images/tentang/peta.jpeg" alt="Peta IKN">
-    </a>
-</div>
+              <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps?q=Kawasan+Inti+Pusat+Pemerintahan+IKN&output=embed"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+                </div>
     </div>
 
 <?php
