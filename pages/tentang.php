@@ -219,38 +219,6 @@ ob_start();
                             <p>ikn.go.id</p>
                         </div>
                     </div>
-
-                   <div class="contact-social">
-
-                        <!-- SHARE -->
-                        <span>
-                            <svg viewBox="0 0 24 24">
-                                <circle cx="6" cy="12" r="2.5"/>
-                                <circle cx="18" cy="6" r="2.5"/>
-                                <circle cx="18" cy="18" r="2.5"/>
-                                <path d="M8.2 10.8L15.8 7.2"/>
-                                <path d="M8.2 13.2L15.8 16.8"/>
-                            </svg>
-                        </span>
-
-                        <!-- MEDIA / APERTURE -->
-                        <span>
-                            <svg viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="9"/>
-                                <path d="M12 5l4 7-4 7-4-7z"/>
-                                <path d="M5 12h7l7-4"/>
-                            </svg>
-                        </span>
-
-                        <!-- PLAY -->
-                        <span>
-                            <svg viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="9"/>
-                                <path d="M10 8l6 4-6 4z"/>
-                            </svg>
-                        </span>
-
-                    </div>
                 </div>
               <div class="contact-map">
                     <iframe

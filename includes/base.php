@@ -423,6 +423,10 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?= (strpos($current_page, 'aktivitas') !== false) ? 'active' : ''; ?>" href="<?= $base_url; ?>pages/aktivitas.php">Aktivitas</a>
+               
+                <li class="nav-item">
+                    <a class="nav-link <?= ($current_page == 'peta.php') ? 'active' : ''; ?>" href="<?= $base_url; ?>pages/peta.php"> Peta</a>
+
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?= ($current_page == 'tentang.php') ? 'active' : ''; ?>" href="<?= $base_url; ?>pages/tentang.php">Tentang</a>
@@ -487,6 +491,11 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
 
                         <?php if ($current_page != 'aktivitas.php'): ?>
                             <li><a href="<?= $base_url; ?>pages/aktivitas.php" class="text-white-50 text-decoration-none">Aktivitas</a></li>
+                        <?php endif; ?>
+
+
+                        <?php if ($current_page != 'peta.php'): ?>
+                            <li><a href="<?= $base_url; ?>pages/peta.php" class="text-white-50 text-decoration-none">Peta</a></li>
                         <?php endif; ?>
 
                         <?php if ($current_page != 'tentang.php'): ?>
