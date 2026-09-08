@@ -819,7 +819,7 @@ body {
 ========================= */
 
 .intrakota-moda-title {
-    margin: 0 0 10px;
+    margin: 10 0 10px;
 
     text-align: center;
 
@@ -1268,6 +1268,7 @@ body {
     width: 100%;
     background: #ffffff;
     box-sizing: border-box;
+    padding: 0 0 60px;
 }
 
 
@@ -1583,7 +1584,7 @@ body {
 
 .intrakota-halte {
     width: 100%;
-    padding: 65px 0 1px;
+    padding: 0 0 1px;
     background: #ffffff;
 }
 
@@ -1603,7 +1604,7 @@ body {
     align-items: center;
     gap: 40px;
 
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .intrakota-halte-image {
@@ -2486,12 +2487,47 @@ body {
     object-position: center center;
 }
 
+/* =========================================================
+   SLIDESHOW FOTO UTAMA LOGISTIK
+   Beberapa foto ditumpuk pada posisi yang sama dan
+   bergantian tampil (fade) memakai class "active" yang
+   dipindah otomatis oleh JavaScript (lihat file JS/PHP).
+   Layout, ukuran, dan overlay TIDAK berubah — foto hanya
+   ditumpuk absolute di dalam kotak .intrakota-logistik-photo
+   yang sudah ada.
+========================================================= */
+
+.intrakota-logistik-slide {
+    position: absolute;
+    inset: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    opacity: 0;
+    z-index: 0;
+
+    transition: opacity 1.2s ease;
+}
+
+.intrakota-logistik-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
 
 /* OVERLAY PUTIH DI BAGIAN KIRI */
 
 .intrakota-logistik-photo-overlay {
     position: absolute;
     inset: 0;
+
+    z-index: 2;
 
     background:
         linear-gradient(
@@ -2513,7 +2549,7 @@ body {
     top: 95px;
     left: 55px;
 
-    z-index: 2;
+    z-index: 3;
 
     width: 470px;
 }
@@ -2673,6 +2709,7 @@ body {
     font-family: "Sutasoma Text", Arial, sans-serif;
 
     font-size: 13px;
+
     line-height: 1.7;
 }
 
@@ -2755,6 +2792,90 @@ body {
 
     .intrakota-logistik-flow-arrow {
         font-size: 16px;
+    }
+}
+
+
+/* =========================================================
+   LOGISTIK PERKOTAAN - RESPONSIVE MOBILE
+   Foto + judul overlay dan card info (3 kolom di desktop)
+   diubah jadi 1 kolom vertikal di layar kecil supaya tidak
+   melebar ke kanan / terpotong.
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .intrakota-logistik-photo {
+        height: 560px;
+    }
+
+    .intrakota-logistik-photo-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255,255,255,.97) 0%,
+                rgba(255,255,255,.93) 42%,
+                rgba(255,255,255,.55) 68%,
+                rgba(255,255,255,0) 100%
+            );
+    }
+
+    .intrakota-logistik-heading {
+        top: 26px;
+        left: 20px;
+
+        width: calc(100% - 40px);
+    }
+
+    .intrakota-logistik-heading h2 {
+        font-size: 25px;
+    }
+
+    .intrakota-logistik-heading p {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .intrakota-logistik-info-card {
+        grid-template-columns: 1fr;
+
+        width: calc(100% - 32px);
+
+        margin: -40px auto 0;
+
+        padding: 22px;
+
+        gap: 22px;
+
+        border-radius: 18px;
+    }
+
+    .intrakota-logistik-info-item {
+        padding: 0;
+    }
+
+    .intrakota-logistik-info-item + .intrakota-logistik-info-item {
+        border-left: none;
+        border-top: 1px solid #e1e5e1;
+
+        padding-top: 20px;
+        margin-top: 0;
+    }
+
+    .intrakota-logistik-description {
+        width: calc(100% - 32px);
+    }
+
+}
+
+@media (max-width: 430px) {
+
+    .intrakota-logistik-photo {
+        height: 620px;
+    }
+
+    .intrakota-logistik-heading h2 {
+        font-size: 22px;
     }
 }
 
@@ -3157,7 +3278,7 @@ body {
 
     font-family: "Sutasoma Text", Arial, sans-serif;
 
-    font-size: 10px;
+    font-size: 13px;
 
     line-height: 1.65;
 }
@@ -3203,7 +3324,7 @@ body {
 
     font-family: "Sutasoma Text", Arial, sans-serif;
 
-    font-size: 8.5px;
+    font-size: 12px;
 
     line-height: 1.5;
 }
@@ -3531,7 +3652,7 @@ body {
 
     font-family: "Sutasoma Text", Arial, sans-serif;
 
-    font-size: 9px;
+    font-size: 13px;
 
     line-height: 1.7;
 }
@@ -3598,7 +3719,7 @@ body {
 
     font-family: "Sutasoma Text", Arial, sans-serif;
 
-    font-size: 9px;
+    font-size: 13px;
 
     line-height: 1.7;
 }
@@ -3612,7 +3733,7 @@ body {
 
     font-family: "Sutasoma Text", Arial, sans-serif;
 
-    font-size: 8px;
+    font-size: 12px;
 
     line-height: 1.65;
 }
@@ -3660,7 +3781,7 @@ body {
 
     font-family: "Sutasoma Text", Arial, sans-serif;
 
-    font-size: 9px;
+    font-size: 12px;
 
     font-weight: 600;
 }
@@ -3703,7 +3824,7 @@ body {
 
     font-family: "Sutasoma Text", Arial, sans-serif;
 
-    font-size: 7px;
+    font-size: 12px;
 
     line-height: 1;
 
@@ -3751,7 +3872,7 @@ body {
 
     font-family: "Sutasoma Text", Arial, sans-serif;
 
-    font-size: 9px;
+    font-size: 13px;
 
     line-height: 1.65;
 }
@@ -3810,7 +3931,7 @@ body {
 
     font-family: "Sutasoma Text", Arial, sans-serif;
 
-    font-size: 9px;
+    font-size: 13px;
 
     line-height: 1.65;
 }
@@ -3870,7 +3991,7 @@ body {
 
     font-family: "Sutasoma Text", Arial, sans-serif;
 
-    font-size: 8px;
+    font-size: 12px;
 
     line-height: 1.2;
 
@@ -5039,5 +5160,174 @@ body {
 
     .intrakota-logistik-content h3 {
         font-size: 22px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .intrakota-atcs {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* GRID UTAMA: 3 kolom untuk menampung kartu-kartu kecil berdampingan */
+    .intrakota-teknologi-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    /* KARTU BESAR: ATCS, MaaS & Smart Parking, Command Center -> tetap full-width */
+    .intrakota-atcs,
+    .intrakota-teknologi-maas,
+    .intrakota-teknologi-command {
+        grid-column: span 3;
+    }
+
+    /* ATCS: teks tetap di atas, gambar di bawah (bukan kanan-kiri) */
+    .intrakota-atcs {
+        grid-template-columns: 1fr;
+    }
+
+    .intrakota-atcs-content {
+        padding: 16px;
+    }
+
+    .intrakota-atcs-image {
+        height: 180px;
+        min-height: 180px;
+    }
+
+    /* KARTU KECIL: IoT, AI & Analitik Data, ETLE, EPS -> 1 dari 3 kolom (berdampingan) */
+    .intrakota-teknologi-card.iot-card,
+    .intrakota-teknologi-card:nth-child(3),
+    .intrakota-teknologi-card:nth-child(4),
+    .intrakota-teknologi-card:nth-child(5) {
+        grid-column: span 1 !important;
+        min-height: 150px;
+        padding: 12px;
+    }
+
+    .intrakota-teknologi-card .intrakota-teknologi-icon {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 8px;
+        font-size: 12px;
+    }
+
+    .intrakota-teknologi-card h3 {
+        margin-bottom: 6px;
+        font-size: 11px;
+        line-height: 1.25;
+    }
+
+    .intrakota-teknologi-card p {
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+    .intrakota-teknologi-tags {
+        gap: 4px;
+        margin-top: 6px;
+    }
+
+    .intrakota-teknologi-tags span {
+        padding: 3px 6px;
+        font-size: 8px;
+    }
+
+    .intrakota-teknologi-badge {
+        margin-top: 10px;
+        gap: 4px;
+        font-size: 9px;
+    }
+
+    /* EPS adalah kartu ke-4 (sisa) dalam grid 3 kolom, jadi ia
+       sendirian di baris terakhir. Supaya tidak menyisakan ruang
+       kosong di kanan, lebarkan penuh 1 baris. */
+    .intrakota-teknologi-card:nth-child(5) {
+        grid-column: span 3 !important;
+    }
+
+    .intrakota-teknologi-card:nth-child(5) .intrakota-teknologi-tags {
+        flex-wrap: wrap;
+    }
+}
+
+/* LAYAR SANGAT SEMPIT: turunkan jadi 2 kolom supaya kartu kecil tidak terlalu sesak */
+@media (max-width: 400px) {
+
+    .intrakota-teknologi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intrakota-atcs,
+    .intrakota-teknologi-maas,
+    .intrakota-teknologi-command {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .intrakota-koridor-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .intrakota-koridor-card {
+        min-height: auto;
+        padding: 16px 14px;
+        border-radius: 14px;
+    }
+
+    .intrakota-koridor-icon {
+        width: 34px;
+        height: 34px;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    .intrakota-koridor-card h3 {
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+
+    .intrakota-koridor-card h4 {
+        min-height: auto;
+        margin-bottom: 7px;
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+    .intrakota-koridor-card > p {
+        min-height: auto;
+        margin-bottom: 10px;
+        font-size: 9px;
+        line-height: 1.55;
+    }
+
+    .intrakota-koridor-tags {
+        gap: 4px;
+    }
+
+    .intrakota-koridor-tags span {
+        padding: 4px 8px;
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .intrakota-koridor {
+        padding-bottom: 20px;
+    }
+
+    .intrakota-transfer {
+        padding-top: 15px;
+    }
+
+    .intrakota-transfer-heading {
+        margin-bottom: 22px;
     }
 }

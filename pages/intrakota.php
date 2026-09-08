@@ -182,7 +182,6 @@ ob_start();
                     </div>
                 </a>
 
-
                 <!-- MOBILITAS AKTIF -->
                 <a href="#" class="intrakota-mobility-card">
 
@@ -244,130 +243,186 @@ ob_start();
 
     </section>
 
-    <!-- =========================
-     MODA & LAYANAN
-    ========================== -->
-<section class="intrakota-moda" id="moda-layanan">
 
-    <div class="intrakota-moda-container">
+<!-- =========================================================
+     SISTEM KORIDOR PERKOTAAN IKN
+========================================================= -->
+<section class="intrakota-koridor">
 
-        <h2 class="intrakota-moda-title">
-            Moda &amp; Layanan
-        </h2>
+    <div class="intrakota-koridor-container">
 
-        <p class="intrakota-moda-description">
-            Beragam pilihan mobilitas dirancang untuk mendukung perjalanan masyarakat
-            di dalam kawasan perkotaan IKN.
-        </p>
+        <!-- JUDUL -->
+        <div class="intrakota-koridor-heading">
+
+            <h2>
+                Sistem Koridor Perkotaan IKN
+            </h2>
+
+            <p>
+                Jaringan pergerakan yang mengatur mobilitas orang dan distribusi
+                barang berdasarkan hierarki koridor, mulai dari skala regional
+                hingga pergerakan internal kawasan.
+            </p>
+
+        </div>
 
 
-        <div class="intrakota-moda-grid">
+        <!-- KARTU KORIDOR -->
+        <div class="intrakota-koridor-grid">
 
-            <!-- =========================
-                 BUS PERKOTAAN
-            ========================== -->
-            <div class="intrakota-moda-card">
 
-                <div class="intrakota-moda-image">
-                    <img
-                        src="../assets/images/intrakota/bus_perkotaan.jpeg"
-                        alt="Bus Perkotaan"
-                    >
+            <!-- REGIONAL -->
+            <div class="intrakota-koridor-card">
+
+                <div class="intrakota-koridor-icon">
+                    <i class="fas fa-globe-asia"></i>
                 </div>
 
-                <div class="intrakota-moda-content">
+                <h3>
+                    Regional
+                </h3>
 
-                    <div class="intrakota-moda-icon">
-                        <i class="fas fa-bus"></i>
-                    </div>
+                <h4>
+                    IKN ↔ GATEWAY, KPIKN &amp;<br>
+                    DAERAH MITRA
+                </h4>
 
-                    <h3>
-                        Bus Perkotaan
-                    </h3>
+                <p>
+                    Menghubungkan kawasan IKN dengan Gateway, KPIKN, dan Daerah
+                    Mitra untuk mendukung pergerakan regional.
+                </p>
 
-                    <p>
-                        EV Bus. Layanan bus perkotaan sebagai moda transportasi
-                        umum utama di kawasan IKN.
-                    </p>
+                <div class="intrakota-koridor-tags">
 
-                    <a href="../detail/bus-perkotaan.php" class="intrakota-detail-link">
-                        Lihat Detail
-                        <span>&rarr;</span>
-                    </a>
+                    <span>
+                        Transit Rel/Jalan Arteri
+                    </span>
 
-                </div>
+                    <span>
+                        Moda Rel
+                    </span>
 
-            </div>
+                    <span>
+                        Moda Jalan
+                    </span>
 
-
-            <!-- =========================
-                 MOBILITAS AKTIF
-            ========================== -->
-            <div class="intrakota-moda-card">
-
-                <div class="intrakota-moda-image">
-                    <img
-                        src="../assets/images/intrakota/mobilitas_aktif.jpeg"
-                        alt="Mobilitas Aktif"
-                    >
-                </div>
-
-                <div class="intrakota-moda-content">
-
-                    <div class="intrakota-moda-icon">
-                        <i class="fas fa-person-walking"></i>
-                    </div>
-
-                    <h3>
-                        Mobilitas Aktif
-                    </h3>
-
-                    <p>
-                        Berjalan kaki dan bersepeda sebagai bagian utama
-                        perjalanan.
-                    </p>
-
-                    <a href="../detail/mobilitas-aktif.php" class="intrakota-detail-link">
-                        Lihat Detail
-                        <span>&rarr;</span>
-                    </a>
+                    <span>
+                        Moda Udara
+                    </span>
 
                 </div>
 
             </div>
 
 
-            <!-- =========================
-                 MIKROMOBILITAS
-            ========================== -->
-            <div class="intrakota-moda-card">
+            <!-- PRIMER -->
+            <div class="intrakota-koridor-card">
 
-                <div class="intrakota-moda-image">
-                    <img
-                        src="../assets/images/intrakota/mikromobilitas_moda.jpeg"
-                        alt="Mikromobilitas"
-                    >
+                <div class="intrakota-koridor-icon">
+                    <i class="fas fa-share-alt"></i>
                 </div>
 
-                <div class="intrakota-moda-content">
+                <h3>
+                    Primer
+                </h3>
 
-                    <div class="intrakota-moda-icon">
-                        <i class="fas fa-bicycle"></i>
-                    </div>
+                <h4>
+                    ANTAR-WP
+                </h4>
 
-                    <h3>
-                        Mikromobilitas
-                    </h3>
+                <p>
+                    Melayani pergerakan utama antar Wilayah Perencanaan (WP)
+                    di kawasan IKN.
+                </p>
 
-                    <p>
-                        Pilihan mobilitas jarak dekat seperti sepeda, skuter
-                        listrik, dan layanan berbagi sepeda atau skuter.
-                    </p>
+                <div class="intrakota-koridor-tags">
 
-                    <a href="../detail/mikromobilitas.php" class="intrakota-detail-link">
-                        Lihat Detail
-                        <span>&rarr;</span>
-                    </a>
+                    <span>
+                        Transit Rel/Jalan Arteri
+                    </span>
+
+                    <span>
+                        Moda Rel
+                    </span>
+
+                    <span>
+                        Moda Jalan
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEKUNDER -->
+            <div class="intrakota-koridor-card">
+
+                <div class="intrakota-koridor-icon">
+                    <i class="fas fa-map-signs"></i>
+                </div>
+
+                <h3>
+                    Sekunder
+                </h3>
+
+                <h4>
+                    ANTAR SUB-WP
+                </h4>
+
+                <p>
+                    Melayani pergerakan antar Sub-WP dalam Wilayah Perencanaan
+                    dan akses menuju pusat kegiatan lokal.
+                </p>
+
+                <div class="intrakota-koridor-tags">
+
+                    <span>
+                        Transit Perkotaan
+                    </span>
+
+                    <span>
+                        Jalan Kaki &amp; Sepeda
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- TERSIER -->
+            <div class="intrakota-koridor-card">
+
+                <div class="intrakota-koridor-icon">
+                    <i class="fas fa-person-walking"></i>
+                </div>
+
+                <h3>
+                    Tersier
+                </h3>
+
+                <h4>
+                    INTERNAL SUB-WP IKN /<br>
+                    FIRST &amp; LAST MILE
+                </h4>
+
+                <p>
+                    Melayani pergerakan internal sub-WP dan mendukung
+                    konektivitas first &amp; last mile.
+                </p>
+
+                <div class="intrakota-koridor-tags">
+
+                    <span>
+                        Jalan Kaki
+                    </span>
+
+                    <span>
+                        Sepeda
+                    </span>
+
+                    <span>
+                        NMT
+                    </span>
 
                 </div>
 
@@ -1072,12 +1127,36 @@ ob_start();
 
     <div class="intrakota-logistik-container">
 
-        <!-- FOTO UTAMA -->
-        <div class="intrakota-logistik-photo">
+        <!-- FOTO UTAMA (SLIDESHOW 5 FOTO) -->
+        <div class="intrakota-logistik-photo" id="logistikSlideshow">
 
+            <!-- Ganti nama file logistik-1.jpg s/d logistik-5.jpg dengan
+                 foto milikmu sendiri, taruh di assets/images/intrakota/.
+                 Boleh tambah/kurangi <img> ini sesuai jumlah foto. -->
             <img
-                src="../assets/images/intrakota/logistik.jpg"
+                src="../assets/images/intrakota/gowes-ikn.jpg"
                 alt="Logistik Perkotaan di IKN"
+                class="intrakota-logistik-slide active"
+            >
+            <img
+                src="../assets/images/intrakota/ekios.jpeg"
+                alt="Logistik Perkotaan di IKN"
+                class="intrakota-logistik-slide"
+            >
+            <img
+                src="../assets/images/intrakota/logistik-3.jpg"
+                alt="Logistik Perkotaan di IKN"
+                class="intrakota-logistik-slide"
+            >
+            <img
+                src="../assets/images/intrakota/logistik-4.jpg"
+                alt="Logistik Perkotaan di IKN"
+                class="intrakota-logistik-slide"
+            >
+            <img
+                src="../assets/images/intrakota/logistik-5.jpg"
+                alt="Logistik Perkotaan di IKN"
+                class="intrakota-logistik-slide"
             >
 
             <div class="intrakota-logistik-photo-overlay"></div>
@@ -1187,15 +1266,12 @@ ob_start();
             </p>
 
             <p>
-                Berbagai layanan logistik dan mobilitas hadir di IKN untuk
-                mendukung kebutuhan pengiriman, distribusi, dan mobilitas
-                masyarakat. Beberapa layanan yang tersedia antara lain
-                <strong>Grab</strong> untuk layanan transportasi dan pengantaran,
-                <strong>Gojek</strong> untuk mobilitas dan pengiriman,
-                <strong>Blogmove</strong> untuk pengiriman barang dalam kota,
-                <strong>J&amp;T Cargo</strong>, <strong>J&amp;T Express</strong>,
-                untuk layanan kurir dan logistik, serta berbagai layanan
-                lainnya yang terus berkembang.
+                Berbagai layanan logistik dan mobilitas hadir di IKN untuk mendukung kebutuhan 
+                pengiriman, distribusi, dan mobilitas masyarakat. Beberapa layanan yang tersedia 
+                antara lain <strong>Blogmove</strong> untuk layanan pengiriman barang dalam kota, 
+                <strong>Grab</strong> untuk layanan transportasi dan pengantaran, <strong>J&T</strong> 
+                untuk layanan kurir dan logistik, <strong>Pos Indonesia</strong> untuk layanan pengiriman
+                dan logistik, serta <strong>SPX</strong> untuk layanan pengiriman dan distribusi barang.
             </p>
 
         </div>
@@ -1203,197 +1279,6 @@ ob_start();
     </div>
 
 </section>
-<!-- =========================================================
-     SISTEM KORIDOR PERKOTAAN IKN
-========================================================= -->
-<section class="intrakota-koridor">
-
-    <div class="intrakota-koridor-container">
-
-        <!-- JUDUL -->
-        <div class="intrakota-koridor-heading">
-
-            <h2>
-                Sistem Koridor Perkotaan IKN
-            </h2>
-
-            <p>
-                Jaringan pergerakan yang mengatur mobilitas orang dan distribusi
-                barang berdasarkan hierarki koridor, mulai dari skala regional
-                hingga pergerakan internal kawasan.
-            </p>
-
-        </div>
-
-
-        <!-- KARTU KORIDOR -->
-        <div class="intrakota-koridor-grid">
-
-
-            <!-- REGIONAL -->
-            <div class="intrakota-koridor-card">
-
-                <div class="intrakota-koridor-icon">
-                    <i class="fas fa-globe-asia"></i>
-                </div>
-
-                <h3>
-                    Regional
-                </h3>
-
-                <h4>
-                    IKN ↔ GATEWAY, KPIKN &amp;<br>
-                    DAERAH MITRA
-                </h4>
-
-                <p>
-                    Menghubungkan kawasan IKN dengan Gateway, KPIKN, dan Daerah
-                    Mitra untuk mendukung pergerakan regional.
-                </p>
-
-                <div class="intrakota-koridor-tags">
-
-                    <span>
-                        Transit Rel/Jalan Arteri
-                    </span>
-
-                    <span>
-                        Moda Rel
-                    </span>
-
-                    <span>
-                        Moda Jalan
-                    </span>
-
-                    <span>
-                        Moda Udara
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <!-- PRIMER -->
-            <div class="intrakota-koridor-card">
-
-                <div class="intrakota-koridor-icon">
-                    <i class="fas fa-share-alt"></i>
-                </div>
-
-                <h3>
-                    Primer
-                </h3>
-
-                <h4>
-                    ANTAR-WP
-                </h4>
-
-                <p>
-                    Melayani pergerakan utama antar Wilayah Perencanaan (WP)
-                    di kawasan IKN.
-                </p>
-
-                <div class="intrakota-koridor-tags">
-
-                    <span>
-                        Transit Rel/Jalan Arteri
-                    </span>
-
-                    <span>
-                        Moda Rel
-                    </span>
-
-                    <span>
-                        Moda Jalan
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <!-- SEKUNDER -->
-            <div class="intrakota-koridor-card">
-
-                <div class="intrakota-koridor-icon">
-                    <i class="fas fa-map-signs"></i>
-                </div>
-
-                <h3>
-                    Sekunder
-                </h3>
-
-                <h4>
-                    ANTAR SUB-WP
-                </h4>
-
-                <p>
-                    Melayani pergerakan antar Sub-WP dalam Wilayah Perencanaan
-                    dan akses menuju pusat kegiatan lokal.
-                </p>
-
-                <div class="intrakota-koridor-tags">
-
-                    <span>
-                        Transit Perkotaan
-                    </span>
-
-                    <span>
-                        Jalan Kaki &amp; Sepeda
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <!-- TERSIER -->
-            <div class="intrakota-koridor-card">
-
-                <div class="intrakota-koridor-icon">
-                    <i class="fas fa-person-walking"></i>
-                </div>
-
-                <h3>
-                    Tersier
-                </h3>
-
-                <h4>
-                    INTERNAL SUB-WP IKN /<br>
-                    FIRST &amp; LAST MILE
-                </h4>
-
-                <p>
-                    Melayani pergerakan internal sub-WP dan mendukung
-                    konektivitas first &amp; last mile.
-                </p>
-
-                <div class="intrakota-koridor-tags">
-
-                    <span>
-                        Jalan Kaki
-                    </span>
-
-                    <span>
-                        Sepeda
-                    </span>
-
-                    <span>
-                        NMT
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
 <!-- =========================================================
      PERGERAKAN BARANG
 ========================================================= -->
@@ -1883,6 +1768,27 @@ window.addEventListener('resize', () => {
         halteWrapper.style.maxHeight = halteWrapper.scrollHeight + 'px';
     }
 });
+
+/* =========================================================
+   SLIDESHOW FOTO LOGISTIK PERKOTAAN
+   Foto berganti otomatis (fade) setiap 4 detik. Tinggal ganti
+   file logistik-1.jpg s/d logistik-5.jpg di HTML dengan foto
+   milikmu sendiri — jumlah foto boleh ditambah/dikurangi,
+   script ini otomatis menyesuaikan.
+========================================================= */
+(function () {
+    const slides = document.querySelectorAll('#logistikSlideshow .intrakota-logistik-slide');
+    if (!slides.length) return;
+
+    let current = 0;
+    const intervalMs = 4000; // ganti tiap 4 detik, ubah sesuai kebutuhan
+
+    setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+    }, intervalMs);
+})();
 </script>
 
 <?php
