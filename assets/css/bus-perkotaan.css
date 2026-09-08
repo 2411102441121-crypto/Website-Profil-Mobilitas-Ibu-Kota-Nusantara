@@ -1,0 +1,141 @@
+.bus-page {
+    background: #fff; color: #222; padding: 0px 14px; max-width: 1400px;
+    margin: auto; box-sizing: border-box;
+}
+
+.bus-header { margin-bottom: 20px; padding-top: 20px; }
+.bus-label { display: inline-block; font-size: 12px; font-weight: 700; color: #2f7138; letter-spacing: 1.5px; margin-bottom: 5px; }
+.bus-header h1 { margin: 0; font-family: "Sutasoma Display", sans-serif; font-size: 38px; line-height: 1.1; font-weight: 700; color: #111; }
+.bus-header p { max-width: 900px; margin: 8px 0 0; font-size: 14px; line-height: 1.6; color: #666; }
+
+/* FOTO BUS */
+.bus-map-section { width: 100%; }
+.bus-map-card { background: #fff; border: 1px solid #e7e7e7; border-radius: 5px; overflow: hidden; }
+.bus-map {
+    display: block; width: 100%; height: auto;
+    margin: 0 auto; object-fit: contain;
+}
+.map-caption { display: flex; flex-direction: column; padding: 10px 14px; background: #fafafa; border-top: 1px solid #eee; }
+.map-caption strong { font-size: 12px; color: #333; }
+.map-caption span { margin-top: 2px; font-size: 10px; color: #777; }
+
+/* JADWAL */
+.bus-schedule { margin-top: 22px; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 13px; }
+.section-heading > div:first-child span { font-size: 11px; color: #888; letter-spacing: 1px; font-weight: 700; }
+.section-heading h2 { margin: 2px 0 0; font-family: "Sutasoma Display", sans-serif; font-size: 23px; font-weight: 700; color: #111; }
+
+/* TAB */
+.schedule-filter { display: flex; background: #f5f5f2; padding: 3px; border-radius: 4px; }
+.schedule-filter button { border: none; background: transparent; padding: 8px 18px; border-radius: 4px; font-family: inherit; font-size: 11px; color: #777; cursor: pointer; transition: all .25s ease; }
+.schedule-filter button:hover { color: #333; }
+.schedule-filter button.active { background: #fff; color: #333; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+
+/* PANEL */
+.schedule-content { width: 100%; overflow: hidden; }
+.schedule-panel { display: none; width: 100%; }
+.schedule-panel.active { display: block; animation: scheduleSlide .35s ease; }
+@keyframes scheduleSlide { from { opacity: 0; transform: translateX(35px); } to { opacity: 1; transform: translateX(0); } }
+
+/* GRID & CARD JADWAL */
+.schedule-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
+.schedule-card { position: relative; min-height: 83px; display: flex; gap: 10px; padding: 12px; background: #fff; border: 1px solid #e5e5e5; border-radius: 4px; overflow: hidden; box-sizing: border-box; }
+.schedule-card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; }
+
+.schedule-card.purple::before { background: #7623b6; }
+.schedule-card.blue::before { background: #1976d2; }
+.schedule-card.green::before { background: #20c77a; }
+.schedule-card.yellow::before { background: #f3bd00; }
+.schedule-card.red::before { background: #f34d42; }
+.schedule-card.brown::before { background: #795548; }
+
+/* ROUTE */
+.route-number { flex: 0 0 auto; width: 27px; height: 27px; display: flex; align-items: center; justify-content: center; border-radius: 4px; color: #fff; font-size: 10px; font-weight: 700; }
+.purple .route-number { background: #7623b6; }
+.blue .route-number { background: #1976d2; }
+.green .route-number { background: #20c77a; }
+.yellow .route-number { background: #f3bd00; }
+.red .route-number { background: #f34d42; }
+.brown .route-number { background: #795548; }
+
+.route-info { flex: 1; min-width: 0; }
+.route-info h3 { margin: 2px 0 12px; font-size: 13px; font-weight: 700; color: #333; }
+.schedule-row { display: flex; justify-content: space-between; gap: 10px; font-size: 9px; color: #666; }
+.schedule-row strong { color: #333; white-space: nowrap; }
+
+/* SERVICES */
+.bus-services { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 30px; margin-top: 15px; padding: 20px 15px; border: 1px solid #e5e5e5; border-radius: 5px; background: #fff; }
+.service-column h3 { display: flex; align-items: center; gap: 7px; margin: 0 0 13px; font-size: 10px; font-weight: 700; letter-spacing: 1px; color: #777; }
+.service-line { width: 3px; height: 14px; background: #d1a83a; border-radius: 2px; }
+.service-item { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 10px; }
+.service-item p { margin: 2px 0 0; font-size: 9px; line-height: 1.45; color: #444; }
+.service-badge { flex: 0 0 auto; width: 17px; height: 17px; display: flex; align-items: center; justify-content: center; border-radius: 3px; color: #fff; font-size: 7px; font-weight: 700; }
+
+.purple-bg { background: #7623b6; }
+.blue-bg { background: #1976d2; }
+.yellow-bg { background: #eab800; }
+.brown-bg { background: #795548; }
+.red-bg { background: #f34d42; }
+.green-bg { background: #20b974; }
+.orange-bg { background: #f0a000; }
+.lime-bg { background: #d5e500; color: #333; }
+
+/* NOTICE */
+.bus-notice { display: flex; align-items: center; gap: 9px; margin-top: 15px; padding: 11px 14px; border-radius: 3px; background: #e5f2ed; border: 1px solid #d4e8df; }
+.notice-icon { color: #56866f; font-size: 13px; }
+.bus-notice p { margin: 0; font-size: 10px; color: #557064; }
+.bus-notice strong { color: #456457; }
+
+/* TARIF */
+.bus-route-detail { display: grid; grid-template-columns: 330px 1fr; gap: 28px; margin-top: 30px; align-items: start; }
+.tariff-card { background: #e7f3ef; border-radius: 7px; padding: 28px; min-height: 300px; display: flex; flex-direction: column; box-sizing: border-box; }
+.tariff-card h2 { margin: 0 0 22px; font-family: "Sutasoma Display", sans-serif; font-size: 27px; line-height: 1.2; color: #111; }
+.tariff-price { font-family: "Sutasoma Display", sans-serif; font-size: 31px; font-weight: 700; line-height: 1; color: #111; margin-bottom: 28px; }
+.tariff-price span { font-family: inherit; font-size: 12px; font-weight: 400; color: #333; }
+.tariff-card p { margin: 0; font-size: 13px; line-height: 1.75; color: #333; }
+.tariff-card p strong { color: #347342; }
+
+.tariff-button { display: flex; align-items: center; justify-content: center; gap: 9px; margin-top: auto; padding: 12px 14px; background: #20572b; color: #fff; text-decoration: none; border-radius: 4px; font-size: 12px; font-weight: 600; transition: all .25s ease; }
+.tariff-button:hover { background: #17441f; transform: translateY(-1px); }
+.tariff-button i { font-size: 14px; }
+
+/* DETAIL RUTE */
+.route-detail-content { min-width: 0; }
+.route-detail-content > h2 { margin: 0 0 25px; font-family: "Sutasoma Display", sans-serif; font-size: 30px; line-height: 1.2; color: #111; }
+.route-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+.route-card { background: #fff; border: 1px solid #e4e4e4; border-radius: 7px; padding: 17px; min-height: 175px; box-sizing: border-box; }
+.route-card-title { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.route-card-title h3 { margin: 0; font-size: 14px; font-weight: 700; color: #222; line-height: 1.3; }
+.route-icon { width: 28px; height: 28px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center; border-radius: 4px; background: #e6f1e9; color: #286336; font-size: 13px; }
+.route-card > p { margin: 0 0 12px; font-size: 11px; line-height: 1.55; color: #666; }
+.route-card ul { margin: 0; padding-left: 16px; color: #555; }
+.route-card li { padding-left: 2px; margin-bottom: 7px; font-size: 11px; line-height: 1.35; }
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .schedule-grid { grid-template-columns: repeat(2,1fr); }
+    .bus-services { grid-template-columns: 1fr; gap: 20px; }
+    .bus-route-detail { grid-template-columns: 1fr; gap: 20px; }
+    .tariff-card { min-height: auto; }
+    .tariff-button { margin-top: 25px; }
+    .bus-map { height: 450px; }
+}
+
+@media (max-width: 650px) {
+    .bus-page { padding: 50px 10px; }
+    .bus-header { padding-top: 10px; }
+    .bus-header h1 { font-size: 30px; }
+    .bus-header p { font-size: 12px; }
+    .section-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
+    .schedule-filter { width: 100%; }
+    .schedule-filter button { flex: 1; }
+    .schedule-grid { grid-template-columns: 1fr; }
+    .bus-map { height: 300px; }
+    .bus-services { padding: 15px; }
+    .tariff-card { padding: 22px; }
+    .tariff-card h2 { font-size: 24px; }
+    .tariff-price { font-size: 28px; }
+    .route-detail-content > h2 { font-size: 25px; margin-bottom: 18px; }
+    .route-grid { grid-template-columns: 1fr; }
+    .facility-card { grid-column: auto; }
+}
