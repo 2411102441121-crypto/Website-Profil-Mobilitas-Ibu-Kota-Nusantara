@@ -4,6 +4,16 @@ $base_url = '/ikn-mobility/admin/';
 $current_uri = $_SERVER['REQUEST_URI'];
 ?>
 <style>
+    /* 1. Otomatis dorong elemen <main> atau .main-content di SEMUA halaman */
+    main, 
+    .main-content, 
+    .main-content-layout {
+        margin-left: 260px !important;
+        width: calc(100% - 260px) !important;
+        min-height: 100vh !important;
+        box-sizing: border-box !important;
+    }
+
     /* Reset khusus area sidebar agar tidak terpengaruh CSS Halaman/Framework */
     .ikn-sidebar-wrapper,
     .ikn-sidebar-wrapper * {
@@ -14,21 +24,21 @@ $current_uri = $_SERVER['REQUEST_URI'];
     }
 
     .ikn-sidebar-wrapper {
-        position: fixed !important; /* Mengunci posisi sidebar di layar */
+        position: fixed !important;
         top: 0 !important;
         left: 0 !important;
         bottom: 0 !important;
         width: 260px !important;
         min-width: 260px !important;
         max-width: 260px !important;
-        height: 100vh !important; /* Memenuhi tinggi layar */
+        height: 100vh !important;
         background-color: #1b4327 !important;
         color: #ffffff !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
-        z-index: 9999 !important; /* Memastikan di atas elemen lain */
-        overflow-y: auto !important; /* Mencegah terpotong jika layar pendek */
+        z-index: 9999 !important;
+        overflow-y: auto !important;
         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05) !important;
     }
     
@@ -60,7 +70,6 @@ $current_uri = $_SERVER['REQUEST_URI'];
     .ikn-sidebar-link {
         display: flex !important;
         align-items: center !important;
-        gap: 12px !important;
         height: 44px !important;
         padding: 0 16px !important;
         color: #d1d5db !important;
@@ -97,16 +106,6 @@ $current_uri = $_SERVER['REQUEST_URI'];
         border-radius: 0 4px 4px 0 !important;
     }
 
-    .ikn-sidebar-icon {
-        width: 20px !important;
-        height: 20px !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        font-size: 16px !important;
-        flex-shrink: 0 !important;
-    }
-
     .ikn-sidebar-footer {
         padding: 16px 12px 24px 12px !important;
         border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -124,42 +123,36 @@ $current_uri = $_SERVER['REQUEST_URI'];
             <li>
                 <a href="<?= $base_url ?>dashboard.php" 
                    class="ikn-sidebar-link <?= (strpos($current_uri, 'dashboard.php') !== false) ? 'active' : '' ?>">
-                    <i class="fa-solid fa-border-all ikn-sidebar-icon"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li>
                 <a href="<?= $base_url ?>beranda/index.php" 
                    class="ikn-sidebar-link <?= (strpos($current_uri, '/beranda/') !== false) ? 'active' : '' ?>">
-                    <i class="fa-solid fa-location-dot ikn-sidebar-icon"></i>
                     <span>Beranda</span>
                 </a>
             </li>
             <li>
                 <a href="<?= $base_url ?>antarkota/index.php" 
                    class="ikn-sidebar-link <?= (strpos($current_uri, '/antarkota/') !== false) ? 'active' : '' ?>">
-                    <i class="fa-solid fa-bus ikn-sidebar-icon"></i>
                     <span>Layanan Antarkota</span>
                 </a>
             </li>
             <li>
                 <a href="<?= $base_url ?>intrakota/index.php" 
                    class="ikn-sidebar-link <?= (strpos($current_uri, '/intrakota/') !== false) ? 'active' : '' ?>">
-                    <i class="fa-solid fa-car-side ikn-sidebar-icon"></i>
                     <span>Layanan Intrakota</span>
                 </a>
             </li>
             <li>
                 <a href="<?= $base_url ?>aktivitas/index.php" 
                    class="ikn-sidebar-link <?= (strpos($current_uri, '/aktivitas/') !== false) ? 'active' : '' ?>">
-                    <i class="fa-solid fa-clock-rotate-left ikn-sidebar-icon"></i>
                     <span>Aktivitas</span>
                 </a>
             </li>
             <li>
                 <a href="<?= $base_url ?>tentang/index.php" 
                    class="ikn-sidebar-link <?= (strpos($current_uri, '/tentang/') !== false) ? 'active' : '' ?>">
-                    <i class="fa-regular fa-circle-question ikn-sidebar-icon"></i>
                     <span>Tentang</span>
                 </a>
             </li>
@@ -168,7 +161,6 @@ $current_uri = $_SERVER['REQUEST_URI'];
 
     <div class="ikn-sidebar-footer">
         <a href="<?= $base_url ?>logout.php" class="ikn-sidebar-link">
-            <i class="fa-solid fa-right-from-bracket ikn-sidebar-icon"></i>
             <span>Logout</span>
         </a>
     </div>
