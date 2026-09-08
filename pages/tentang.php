@@ -252,11 +252,13 @@ ob_start();
 
                     </div>
                 </div>
-               <div class="contact-map">
-    <a href="https://petanusantara.id/peta-ikn" target="_blank">
-        <img src="../assets/images/tentang/peta.jpeg" alt="Peta IKN">
-    </a>
-</div>
+              <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4030.8108304603975!2d116.6995946591199!3d-0.9618942204804518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df6cf003be52405%3A0xbdebbf9fb3225fd6!2sIKN%20Nusantara%20Indonesia!5e1!3m2!1sen!2sus!4v1788765611728!5m2!1sen!2sus"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+                </div>
     </div>
 
 <?php
