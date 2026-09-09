@@ -26,19 +26,42 @@ ob_start();
 
 <!-- CUSTOM CSS HALAMAN ANTARKOTA -->
 <style>
-    /* 1. Hilangkan margin/padding pembungkus utama bawaan Bootstrap / Base */
-    body, html {
-        margin: 0 !important;
-        padding: 0 !important;
-        background-color: #f8f9fa !important;
-    }
 
-    /* Jika di base.php ada pembungkus seperti <main>, .content, atau .container-fluid */
-    main, .main-content, .content, #content {
-        padding-top: 0 !important;
-        margin-top: 0 !important;
-        background-color: #f8f9fa !important;
-    }
+/* 1. Kunci lebar scrollbar browser agar stabil */
+html {
+    scrollbar-gutter: stable !important;
+}
+
+/* 2. Mencegah seluruh halaman meluap ke samping */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #f8f9fa !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/* 3. Mencegah pendorong bawaan Bootstrap saat modal terbuka tanpa merusak layout navbar */
+body.modal-open {
+    padding-right: 0px !important;
+    margin-right: 0px !important;
+}
+
+/* 4. Kembalikan kontrol padding navbar ke bawaan (HAPUS override padding-right: 0px) */
+/* .fixed-top, .sticky-top, header, nav, .navbar TIDAK lagi di-force padding-right: 0px */
+
+/* 5. Menetralkan margin negatif bawaan .row Bootstrap */
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* 6. Pembungkus konten utama */
+main, .main-content, .content, #content {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    background-color: #f8f9fa !important;
+}
 
 
     /* HERO BANNER HIJAU TUA */
@@ -47,8 +70,8 @@ ob_start();
         color: #ffffff;
         
         /* UBAH PADDING ATAS & BAWAH JADI SAMA AGAR KONTEN TURUN KE TENGAH PRESISI */
-        padding-top: 196px; 
-        padding-bottom: 196px;
+        padding-top: 180px; 
+        padding-bottom: 180px;
         margin-top: 0;
         width: 100%;
         display: flex;
@@ -57,7 +80,7 @@ ob_start();
 
     .hero-antarkota h1 {
         font-family: 'Sutasoma Display', serif, sans-serif !important;
-        font-size: 56px; /* Ukuran font diperbesar */
+        font-size: 55px; /* Ukuran font diperbesar */
         font-weight: 700;
         line-height: 1.15;
         margin-bottom: 24px;
@@ -65,7 +88,8 @@ ob_start();
 
     .hero-antarkota p {
         font-family: 'Sutasoma Text', sans-serif;
-        font-weight: 300;
+        font-size: 16px;
+        font-weight: 400;
         line-height: 1.7;
         opacity: 0.92;
         margin-bottom: 35px;
@@ -558,7 +582,7 @@ ob_start();
     .card-moda-green p {
         font-family: 'Sutasoma Text', sans-serif !important;
         font-size: 14px; /* <--- UBAH UKURAN (GEDE/KECIL) DESKRIPSI DI SINI */
-        font-weight: 200;
+        font-weight: 300;
         line-height: 1.5;
         opacity: 0.92;
         margin-bottom: 16px;
@@ -662,7 +686,7 @@ ob_start();
                 <div class="stat-card-white">
                    <img src="<?= $base_url; ?>assets/images/antarkota/ikon_bangunan.png" alt="Wilayah" class="stat-icon-img">
                     <h3 class="fw-bold">3</h3>
-                    <small class="d-block">Wilayah Penghubung</small>
+                    <small class="d-block">Kawasan Kabupaten/Kota Terhubung</small>
                 </div>
             </div>
 
@@ -678,7 +702,7 @@ ob_start();
 
         <div class="text-center mb-5">
            <h2 class="fw-bold mb-3" style="font-size: 32px;">Rute Perjalanan</h2>
-            <p class="mx-auto mb-4" style="max-width: 800px; color: #808080; font-size: 16px;">Cara Menuju Nusantara</div>
+            <p class="mx-auto mb-4" style="max-width: 800px; color: #666666; font-size: 16px;">Cara Menuju Nusantara</div>
 
         <div class="row g-4">
             <!-- JALUR UDARA -->
@@ -793,7 +817,7 @@ ob_start();
     <div class="container py-1">
         <div class="text-center mb-5">
             <h2 class="fw-bold mb-3" style="font-size: 32px;">Infrastruktur Konektivitas</h2>
-            <p class="mx-auto mb-4" style="max-width: 800px; color: #808080; font-size: 16px;">Jaringan Utama</p>
+            <p class="mx-auto mb-4" style="max-width: 800px; color: #666666; font-size: 16px;">Jaringan Utama</p>
         </div>
         
         <div class="row g-4">
@@ -803,7 +827,7 @@ ob_start();
                     <img src="<?= $base_url; ?>assets/images/antarkota/tol_balsam.jpeg" alt="Tol Balsam" onerror="this.src='https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=800&q=80';">
                     <div class="p-content">
                         <h4>Jalan Tol Balikpapan – Samarinda (Tol Balsam)</h4>
-                        <p>Jalan Tol Balikpapan–Samarinda (Tol Balsam) adalah tol pertama di Kalimantan sepanjang 99,02 km yang memangkas waktu tempuh antar-kota menjadi 1,5 jam. Tol ini berfungsi sebagai tulang punggung logistik utama yang menghubungkan Bandara Sepinggan Balikpapan, Pelabuhan Semayang, dan Kota Samarinda langsung menuju kawasan inti Ibu Kota Nusantara (IKN).</p>
+                        <p>Jalan Tol Balikpapan–Samarinda (Tol Balsam) adalah tol pertama di Kalimantan sepanjang 99,02 km yang memangkas waktu tempuh antar-kota menjadi 1,5 jam. Tol ini berfungsi sebagai tulang punggung logistik utama yang menghubungkan Pelabuhan Semayang/Kariangau, Bandara Sepinggan Balikpapan, dan Kota Samarinda langsung menuju Kawasan Inti Ibu Kota Nusantara (IKN).</p>
                     </div>
                 </div>
             </div>
@@ -813,7 +837,7 @@ ob_start();
                 <div class="card-infra-custom">
                     <img src="<?= $base_url; ?>assets/images/antarkota/pulau_balang.jpeg" alt="Pulau Balang" onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80';">
                     <div class="p-content">
-                        <h4>Jalan Tol Balikpapan – Pulau Balang – IKN</h4>
+                        <h4>Jalan Tol Balikpapan - IKN (via Pulau Balang)</h4>
                         <p>Jalan Tol Akses IKN (Seksi Balikpapan–Pulau Balang–IKN) merupakan megaproyek infrastruktur bebas hambatan sepanjang lebih dari 52 km yang dirancang untuk memangkas waktu tempuh dari Balikpapan menuju Kawasan Inti Pusat Pemerintahan (KIPP) IKN dari 2 jam menjadi 30–45 menit saja. Rute ini terhubung dari Km 8 Tol Balsam, melintasi Jembatan Pulau Balang, hingga langsung menembus ring luar IKN. Saat ini, statusnya masih beroperasi secara fungsional terbatas pada momen-momen tertentu (seperti libur nasional/mudik) sembari mengejar target penyelesaian konstruksi penuh.</p>
                     </div>
                 </div>
@@ -825,7 +849,7 @@ ob_start();
                     <img src="<?= $base_url; ?>assets/images/antarkota/samboja-ikn.jpeg" alt="Bandara VVIP IKN" onerror="this.src='https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80';">
                     <div class="p-content">
                         <h4>Jalan Nasional Samboja – IKN</h4>
-                        <p>Jalan Nasional Samboja–IKN merupakan jalur arteri non-tol sepanjang sekitar 100 km yang menghubungkan Km 38 Tol Balikpapan–Samarinda, kawasan Samboja Barat, hingga masuk ke ring luar Ibu Kota Nusantara (IKN). Berperan sebagai jalur logistik utama nondigital dan akses alternatif, jalan nasional ini sangat krusial bagi mobilitas kendaraan berat pembawa material konstruksi dari pelabuhan sekitarnya menuju kawasan inti pemerintahan. Jalur ini terus diperkuat dengan infrastruktur penahan longsor permanen seperti struktur pile slab (jalan layang di atas tanah labil) demi menjamin kelancaran arus transportasi publik non-tol.</p>
+                        <p>Jalan Nasional Samboja–IKN merupakan jalur arteri non-tol sepanjang sekitar 52 km yang menghubungkan Km 38 Tol Balikpapan–Samarinda, kawasan Samboja Barat, hingga masuk ke ring luar Ibu Kota Nusantara (IKN). Berperan sebagai jalur logistik utama dan akses alternatif, jalan nasional ini sangat krusial bagi mobilitas kendaraan berat pembawa material konstruksi dari pelabuhan sekitarnya menuju kawasan inti pemerintahan. Jalur ini terus diperkuat dengan infrastruktur penahan longsor permanen seperti struktur pile slab (jalan layang di atas tanah labil) demi menjamin kelancaran arus transportasi publik non-tol.</p>
                     </div>
                 </div>
             </div>
@@ -836,7 +860,7 @@ ob_start();
                     <img src="<?= $base_url; ?>assets/images/antarkota/bpp-smd.jpeg" alt="Pulau Balang" onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80';">
                     <div class="p-content">
                         <h4>Jalan Trans Kalimantan (Balikpapan – Samarinda)</h4>
-                        <p>Jalan Trans Kalimantan (Poros Balikpapan–Samarinda) merupakan jalur arteri nasional non-tol utama sepanjang sekitar 115 km yang menghubungkan Kota Balikpapan (via Jl. Soekarno-Hatta) dan Kota Samarinda. Jalur legendaris ini melintasi kawasan Bukit Soeharto dan terhubung langsung dengan Jalan Nasional Samboja–IKN (Km 38) sebagai gerbang masuk alternatif non-tol menuju kawasan Ibu Kota Nusantara (IKN). Berperan vital sebagai jalur logistik konvensional gratis, rute ini menyediakan akses intermoda tanpa batas bagi kendaraan umum, roda dua, hingga angkutan barang berat nonstop 24 jam.</p>
+                        <p>Jalan Trans Kalimantan (Poros Balikpapan–Samarinda) merupakan jalur arteri nasional non-tol utama sepanjang sekitar 115 km yang menghubungkan Kota Balikpapan (via Jl. Soekarno-Hatta) dan Kota Samarinda. Jalur ini melintasi kawasan Bukit Soeharto dan terhubung langsung dengan Jalan Nasional Samboja–IKN (Km 38) sebagai gerbang masuk alternatif non-tol menuju kawasan Ibu Kota Nusantara (IKN). Berperan vital sebagai jalur logistik, rute ini menyediakan akses intermoda tanpa batas bagi kendaraan umum, roda dua, hingga angkutan barang berat nonstop 24 jam.</p>
                     </div>
                 </div>
             </div>
@@ -871,7 +895,7 @@ ob_start();
     <div class="container pt-3 pb-0">
         <div class="text-center mb-5">
             <h2 class="fw-bold mb-3" style="font-size: 32px;">Layanan Terpadu</h2>
-            <p class="mx-auto mb-4" style="max-width: 800px; color: #808080; font-size: 16px;">Moda Transportasi Antarkota</p>
+            <p class="mx-auto mb-4" style="max-width: 800px; color: #666666; font-size: 16px;">Moda Transportasi Antarkota</p>
         </div>
 
         <div class="mb-5">
@@ -902,7 +926,7 @@ ob_start();
                         <div class="card-moda-green">
                             <div>
                                 <img src="<?= $base_url; ?>assets/images/antarkota/VVIP_IKN.jpeg" alt="Bandara VVIP" onerror="this.src='https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80';">
-                                <h5>Bandara VVIP IKN</h5>
+                                <h5>Bandar Udara Internasional Nusantara</h5>
                                 <p>Akses penerbangan VVIP menuju kawasan Ibu Kota Nusantara.</p>
                             </div>
                             <a href="<?= $base_url; ?>detail/antarkota-bandara.php?id=bandara-vvip" class="btn-card-detail">Lihat Detail</a>
@@ -912,7 +936,7 @@ ob_start();
                         <div class="card-moda-green">
                             <div>
                                 <img src="<?= $base_url; ?>assets/images/antarkota/sams_sepinggan.jpeg" alt="Sinar Jaya" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80';">
-                                <h5>Bandara SAMS Sepinggan</h5>
+                                <h5>Bandar Udara Internasional Sultan Aji Muhammad Sulaiman Sepinggan</h5>
                                 <p>Simpul transportasi udara utama menuju IKN melalui konektivitas darat.</p>
                             </div>
                             <a href="<?= $base_url; ?>detail/antarkota-bandara.php?id=sams-sepinggan" class="btn-card-detail">Lihat Detail</a>
@@ -922,7 +946,7 @@ ob_start();
                         <div class="card-moda-green">
                             <div>
                                 <img src="<?= $base_url; ?>assets/images/antarkota/apt_pranoto.jpeg" alt="Sinar Jaya" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80';">
-                                <h5>Bandara APT Pranoto</h5>
+                                <h5>Bandar Udara Internasional Aji Pangeran Tumenggung Pranoto</h5>
                                 <p>Salah satu simpul akses udara dari Samarinda menuju IKN.</p>
                             </div>
                             <a href="<?= $base_url; ?>detail/antarkota-bandara.php?id=apt-pranoto" class="btn-card-detail">Lihat Detail</a>
@@ -1007,7 +1031,8 @@ ob_start();
                             <h5>KA Perkotaan K-IKN</h5>
                             <p>Rencana jaringan kereta api perkotaan untuk mendukung pergerakan masyarakat di kawasan Ibu Kota Nusantara.</p>
                         </div>
-                        <a href="https://id.scribd.com/document/896635712/231122-Fgd-Sid-Ka-Perkotaan-Ikn" class="btn-card-detail">Lihat Rencana</a>
+                        <!-- Diarahkan ke file PDF di folder assets/pdf/ -->
+                        <a href="#" class="btn-card-detail" data-bs-toggle="modal" data-bs-target="#pdfModalKaPerkotaan">Lihat Rencana</a>
                     </div>
                 </div>
 
@@ -1033,27 +1058,27 @@ ob_start();
             </h5>
 
             <div class="row g-4">
-                <!-- Card 1: Pelabuhan Kariangau -->
+                <!-- Card 1: Pelabuhan Semayang -->
                 <div class="col-lg-4 col-md-6">
                     <div class="card-moda-green">
                         <div>
-                            <img src="<?= $base_url; ?>assets/images/antarkota/kariangau.jpeg" alt="Pelabuhan Kariangau" onerror="this.src='https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80';">
-                            <h5>Pelabuhan Kariangau</h5>
-                            <p>Pelabuhan penyeberangan yang menghubungkan Balikpapan dan Penajam melalui layanan feri.</p>
-                        </div>
-                        <a href="<?= $base_url; ?>detail/antarkota-perairan.php?id=pelabuhan-kariangau" class="btn-card-detail">Lihat Detail</a>
-                    </div>
-                </div>
-
-                <!-- Card 2: Pelabuhan Semayang -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card-moda-green">
-                        <div>
-                            <img src="<?= $base_url; ?>assets/images/antarkota/semayang.jpeg" alt="Pelabuhan Semayang" onerror="this.src='https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80';">
-                            <h5>Pelabuhan Semayang</h5>
+                            <img src="<?= $base_url; ?>assets/images/antarkota/pelabuhan_semayang2.webp" alt="Pelabuhan Semayang" onerror="this.src='https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80';">
+                            <h5>Pelabuhan Semayang Balikpapan</h5>
                             <p>Pelabuhan utama Balikpapan untuk angkutan penumpang dan konektivitas menuju IKN.</p>
                         </div>
                         <a href="<?= $base_url; ?>detail/antarkota-perairan.php?id=pelabuhan-semayang" class="btn-card-detail">Lihat Detail</a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Pelabuhan Kariangau -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-moda-green">
+                        <div>
+                            <img src="<?= $base_url; ?>assets/images/antarkota/pelabuhan_kariangau.webp" alt="Pelabuhan Kariangau" onerror="this.src='https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80';">
+                            <h5> Pelabuhan Penyeberangan Kariangau</h5>
+                            <p>Pelabuhan penyeberangan yang menghubungkan Balikpapan dan Penajam melalui layanan feri.</p>
+                        </div>
+                        <a href="<?= $base_url; ?>detail/antarkota-perairan.php?id=pelabuhan-kariangau" class="btn-card-detail">Lihat Detail</a>
                     </div>
                 </div>
 
@@ -1061,8 +1086,8 @@ ob_start();
                 <div class="col-lg-4 col-md-6">
                     <div class="card-moda-green">
                         <div>
-                            <img src="<?= $base_url; ?>assets/images/antarkota/penajam.jpeg" alt="Pelabuhan Penajam" onerror="this.src='https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80';">
-                            <h5>Pelabuhan Penajam</h5>
+                            <img src="<?= $base_url; ?>assets/images/antarkota/pelabuhan_penajam.webp" alt="Pelabuhan Penajam" onerror="this.src='https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80';">
+                            <h5> Pelabuhan Penyeberangan Penajam</h5>
                             <p>Simpul penyeberangan dan akses darat dari Penajam menuju kawasan IKN.</p>
                         </div>
                         <a href="<?= $base_url; ?>detail/antarkota-perairan.php?id=pelabuhan-penajam" class="btn-card-detail">Lihat Detail</a>
@@ -1121,7 +1146,7 @@ ob_start();
             <div class="container py-2">
                 <div class="text-center mb-4">
                     <h2 class="fw-bold mb-3" style="font-size: 32px;">Visualisasi Konektivitas</h2>
-                    <p class="mx-auto mb-4" style="max-width: 800px; color: #808080; font-size: 16px;">Peta Konektivitas Regional</p>
+                    <p class="mx-auto mb-4" style="max-width: 800px; color: #666666; font-size: 16px;">Peta Konektivitas Regional</p>
                 </div>
                 <div class="bg-light p-4 rounded-4 text-center border shadow-sm">
                     <img src="<?= $base_url; ?>assets/images/antarkota/peta_antarkota.jpg" alt="Peta Konektivitas" class="img-fluid rounded-3 mb-3" style="max-height: 600px;" onerror="this.src='https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=80';">
@@ -1129,6 +1154,25 @@ ob_start();
                 </div>
             </div>
         </section>
+
+        <!-- MODAL POP-UP PDF RENCANA KA PERKOTAAN K-IKN -->
+        <div class="modal fade" id="pdfModalKaPerkotaan" tabindex="-1" aria-labelledby="pdfModalKaPerkotaanLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered" style="max-width: 90vw;">
+                <div class="modal-content" style="border-radius: 16px; overflow: hidden; height: 90vh;">
+                    <!-- Header Modal -->
+                    <div class="modal-header" style="background-color: #204420; color: #ffffff; border-bottom: none;">
+                        <h5 class="modal-title fw-bold" id="pdfModalKaPerkotaanLabel" style="font-family: 'Sutasoma Display', serif; font-size: 1.1rem;">
+                            <i class="fas fa-file-pdf me-2"></i> Dokumen Rencana KA Perkotaan K-IKN
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!-- Body Modal dengan PDF Viewer -->
+                    <div class="modal-body p-0" style="height: calc(100% - 56px);">
+                        <iframe src="<?= $base_url; ?>assets/pdf/231122-Fgd-Sid-Ka-Perkotaan-Ikn.pdf" width="100%" height="100%" style="border: none;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <?php
         $content = ob_get_clean();

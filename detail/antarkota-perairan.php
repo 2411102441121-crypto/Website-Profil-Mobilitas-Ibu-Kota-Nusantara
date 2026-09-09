@@ -27,10 +27,10 @@ $perairan_data = [
         'integrasi' => 'Jalur Utama Logistik & Feri',
         // Rantai Konektivitas
         'rantai' => [
-            ['title' => 'Pelabuhan Kariangau', 'sub' => 'Titik Muat & Dermaga Ro-Ro', 'img' => 'assets/images/antarkota/ikon_jangkar.png'],
+            ['title' => 'Pelabuhan Kariangau', 'sub' => 'Titik Muat & Dermaga Ro-Ro', 'img' => 'assets/images/antarkota/ikon_jangkar2.png', 'dark' => true],
             ['title' => 'Kapal Feri Ro-Ro', 'sub' => 'Penyeberangan Selat ASDP', 'icon' => 'fas fa-ship'],
-            ['title' => 'Pelabuhan Penajam', 'sub' => 'Pendaratan Penajam Paser Utara', 'img' => 'assets/images/antarkota/ikon_jangkar.png'],
-            ['title' => 'Jl. Penajam - Sepaku', 'sub' => 'Koridor Logistik IKN', 'icon' => 'fas fa-road'],
+            ['title' => 'Pelabuhan Penajam', 'sub' => 'Koridor Transportasi Manusia', 'img' => 'assets/images/antarkota/ikon_jangkar.png'],
+            ['title' => 'Jl. Penajam - Sepaku', 'sub' => 'Koridor Logistik dan Jalan Nasional', 'icon' => 'fas fa-road'],
             ['title' => 'KIPP IKN Nusantara', 'sub' => 'Kawasan Inti Pusat Pemerintahan', 'img' => 'assets/images/antarkota/ikon_bangunan2.png', 'accent' => true]
         ],
         // Layanan Transportasi Lanjutan
@@ -95,22 +95,22 @@ $perairan_data = [
         
         // Rantai Konektivitas IKN
         'rantai' => [
-            ['title' => 'Pelabuhan Semayang', 'sub' => 'Titik Kedatangan', 'icon' => 'fas fa-ship'],
+            ['title' => 'Pelabuhan Semayang', 'sub' => 'Titik Kedatangan', 'icon' => 'fas fa-ship', 'dark' => true],
             ['title' => 'Bus AKAP / Travel', 'sub' => 'DAMRI / PO Sinar Jaya / Travel Lintas Kota', 'img' => 'assets/images/antarkota/ikon_bus.png'],
             ['title' => 'Tol Balikpapan - IKN', 'sub' => 'Koridor Cepat', 'icon' => 'fas fa-road'],
-            ['title' => 'Park and Ride', 'sub' => 'Simpul Transit', 'img' => 'assets/images/antarkota/ikon_pnr2.png'],
+            ['title' => 'Rest Area', 'sub' => 'Simpul Transit', 'img' => 'assets/images/antarkota/ikon_pnr2.png'],
             ['title' => 'Bus Perkotaan KIPP', 'sub' => 'Mobilitas Internal', 'img' => 'assets/images/antarkota/ikon_bus2.png', 'accent' => true]
         ],
         
         // Layanan Transportasi Lanjutan
         'layanan' => [
             [
-                'badge' => 'Bus DAMRI',
+                'badge' => 'Balikpapan City Trans (Bacitra)',
                 'badge_color' => '#DDF1ED',
                 'text_color' => '#000000',
-                'img' => 'assets/images/antarkota/bus_damri.jpg',
-                'title' => 'Bus DAMRI',
-                'desc' => 'Layanan bus yang menghubungkan Pelabuhan Semayang dengan berbagai titik tujuan melalui jaringan transportasi darat.',
+                'img' => 'assets/images/antarkota/bus_bacitra.jpeg',
+                'title' => 'Balikpapan City Trans (Bacitra)',
+                'desc' => 'Layanan bus yang menghubungkan Pelabuhan Semayang dengan koridor bus perkotaaan di Balikpapan yang terintekgrasi antarmoda dengan bus antarkota IKN.',
                 'rute' => 'Jadwal: Reguler'
             ],
             [
@@ -168,22 +168,22 @@ $perairan_data = [
         'rantai' => [
             ['title' => 'Pelabuhan Kariangau / Kp. Baru', 'sub' => 'Titik Keberangkatan', 'img' => 'assets/images/antarkota/ikon_jangkar.png'],
             ['title' => 'Kapal Feri / Speedboat / Klotok', 'sub' => 'Penyeberangan Lintas Teluk', 'icon' => 'fas fa-ship'],
-            ['title' => 'Pelabuhan Penajam', 'sub' => 'Titik Kedatangan PPU', 'img' => 'assets/images/antarkota/ikon_jangkar.png'],
-            ['title' => 'Jl. Penajam - Sepaku', 'sub' => 'Koridor Logistik IKN', 'icon' => 'fas fa-road'],
+            ['title' => 'Pelabuhan Penajam', 'sub' => 'Koridor Transportasi Manusia', 'img' => 'assets/images/antarkota/ikon_jangkar2.png', 'dark' => true],
+            ['title' => 'Jl. Penajam - Sepaku', 'sub' => 'Koridor Logistik dan Jalan Nasional', 'icon' => 'fas fa-road'],
             ['title' => 'KIPP IKN', 'sub' => 'Kawasan Inti Pusat Pemerintahan', 'img' => 'assets/images/antarkota/ikon_bangunan2.png', 'accent' => true]
         ],
         
         // Layanan Transportasi Lanjutan
         'layanan' => [
-            [
-                'badge' => 'Bus Feeder & Shuttle IKN',
-                'badge_color' => '#DDF1ED',
-                'text_color' => '#000000',
-                'img' => 'assets/images/antarkota/pelabuhan_penajam4.jpg',
-                'title' => 'Bus Feeder / Shuttle IKN',
-                'desc' => 'Bus antarkota/shuttle yang menjemput penumpang dari area pelabuhan menuju Sepaku / KIPP IKN dengan jadwal reguler dan terintegrasi.',
-                'rute' => 'Layanan: Feeder Pelabuhan - Sepaku / KIPP'
-            ],
+            // [
+            //     'badge' => 'Bus Feeder & Shuttle IKN',
+            //     'badge_color' => '#DDF1ED',
+            //     'text_color' => '#000000',
+            //     'img' => 'assets/images/antarkota/pelabuhan_penajam4.jpg',
+            //     'title' => 'Bus Feeder / Shuttle IKN',
+            //     'desc' => 'Bus antarkota/shuttle yang menjemput penumpang dari area pelabuhan menuju Sepaku / KIPP IKN dengan jadwal reguler dan terintegrasi.',
+            //     'rute' => 'Layanan: Feeder Pelabuhan - Sepaku / KIPP'
+            // ],
             [
                 'badge' => 'Travel Antarkota & Taksi Lokal',
                 'badge_color' => '#204420',
@@ -465,6 +465,16 @@ ob_start();
         height: 70%;
         object-fit: contain;
         display: block;
+    }
+
+    .chain-icon-circle.dark {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    /* Memaksa ikon FontAwesome di dalam lingkaran .dark menjadi putih */
+    .chain-icon-circle.dark i {
+        color: #ffffff !important;
     }
 
     .chain-icon-circle.accent {
@@ -750,7 +760,7 @@ ob_start();
             <?php foreach ($data['rantai'] as $index => $node): ?>
                 <!-- ITEM KARTU -->
                 <div class="chain-node-item">
-                    <div class="chain-icon-circle <?= isset($node['accent']) && $node['accent'] ? 'accent' : ''; ?>">
+                    <div class="chain-icon-circle <?= isset($node['accent']) && $node['accent'] ? 'accent' : (isset($node['dark']) && $node['dark'] ? 'dark' : ''); ?>">
                         <?php if (isset($node['img']) && !empty($node['img'])): ?>
                             <!-- GAMBAR UNTUK ITEM DILINGKARI MERAH -->
                             <img src="<?= $base_url . $node['img']; ?>" alt="<?= $node['title']; ?>" class="chain-icon-img" onerror="this.src='https://cdn-icons-png.flaticon.com/512/684/684908.png';">

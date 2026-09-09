@@ -8,6 +8,11 @@ if (!isset($conn) && isset($koneksi)) {
 $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
 $id = isset($_GET['id']) ? $_GET['id'] : 'sams-sepinggan';
 
+$tgl_hari_ini = date('d-m-Y'); // Menghasilkan format tanggal misal: 09-09-2026
+
+// Buat URL Traveloka dengan parameter asal, tujuan, dan tanggal dinamis
+$url_traveloka = "https://www.traveloka.com/id-id/bus-and-shuttle/search?from=Balikpapan.BPN&to=Penajam%20Paser%20Utara.PPU&date=" . $tgl_hari_ini;
+
 // 1. CEK KE DATABASE
 $data = null;
 if (isset($conn) && $conn) {
@@ -270,8 +275,8 @@ if ($data) {
             ];
 
             $spesifikasi = [];
-            $maskapai_domestik = ['Garuda Indonesia', 'Lion Air', 'Batik Air', 'Citilink', 'Super Air Jet', 'Pelita Air', 'Indonesia AirAsia', 'Wings Air', 'TransNusa'];
-            $maskapai_inter = ['AirAsia (Kuala Lumpur)', 'Scoot (Singapura)', 'Indonesia AirAsia'];
+            $maskapai_domestik = ['Garuda Indonesia', 'Lion Air', 'Batik Air', 'Citilink', 'Super Air Jet', 'Pelita Air', 'Indonesia AirAsia', 'Wings Air'];
+            $maskapai_inter = ['AirAsia (Kuala Lumpur)', 'Scoot (Singapura)', 'Royal Brunei Airlines (Brunei Darussalam)'];
             break;
     }
 }
@@ -859,7 +864,7 @@ ob_start();
                         Anda dapat menaiki bus Sinar Jaya dan bus Cititrans yang menuju ke ibu kota nusantara, atau pesan shuttle travel menuju destinasi anda di IKN di bawah ini.
                     </p>
                     
-                    <!-- TOMBOL HANYA TAMPIL UNTUK SAMS SEPINGGAN / LAINNYA -->
+                    <!-- TOMBOL HANYA TAMPIL UNTUK SAMS SEPINGGAN -->
                     <a href="https://www.traveloka.com/id-id/bus-and-shuttle" target="_blank" class="btn-ikn-green">
                         <img src="<?= $base_url; ?>assets/images/antarkota/ikon_kendaraan2.png" alt="Ikon Bus" class="btn-img-icon"> 
                         Pesan Shuttle ke IKN
