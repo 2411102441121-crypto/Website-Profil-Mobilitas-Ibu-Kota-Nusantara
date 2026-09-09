@@ -20,6 +20,14 @@ ob_start();
 
 <!-- Custom Style Tambahan -->
 <style>
+    
+    /* Utility font-size hasil konversi rem Bootstrap ke px */
+    .font-size-40px { font-size: 40px !important; }
+    .font-size-32px { font-size: 32px !important; }
+    .font-size-28px { font-size: 28px !important; }
+    .font-size-24px { font-size: 24px !important; }
+    .font-size-16px { font-size: 16px !important; }
+
     /* CSS Reset Mencegah Overflow Kanan secara Mutlak */
     body, html {
         width: 100% !important;
@@ -103,7 +111,7 @@ ob_start();
         font-family: 'Sutasoma Text', sans-serif !important;
         font-weight: 400 !important;
         color: #ffffff !important;   
-        font-size: 2.2rem;
+        font-size: 35px;
         margin-bottom: 8px;
     } 
 
@@ -111,7 +119,7 @@ ob_start();
         font-family: 'Sutasoma Text', sans-serif !important;
         font-weight: 500 !important;
         color: #d1dcd3 !important;   
-        font-size: 0.875rem;
+        font-size: 14px;
         line-height: 1.4;
     }
 
@@ -308,7 +316,7 @@ ob_start();
         border-radius: 20px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
         font-family: 'Sutasoma Text', sans-serif;
-        font-size: 0.825rem;
+        font-size: 13px;
         color: #4a4a4a;
         line-height: 1.5;
         transition: all 0.4s ease;
@@ -401,7 +409,7 @@ ob_start();
     .faq-accordion .accordion-button {
         font-family: 'Sutasoma Display', sans-serif !important;
         font-weight: 500;
-        font-size: 1.05rem;
+        font-size: 17px;
         padding: 20px 24px;
         background-color: #ffffff;
         color: #1a1a1a;
@@ -422,7 +430,7 @@ ob_start();
     /* Isi Jawaban FAQ */
     .faq-accordion .accordion-body {
         font-family: 'Sutasoma Text', sans-serif !important;
-        font-size: 0.95rem;
+        font-size: 15px;
         line-height: 1.6;
         color: #333333 !important;
         background-color: #f8f9fa;
@@ -445,7 +453,7 @@ ob_start();
     .explore-ikn-section h1 {
         font-family: 'Sutasoma Display', sans-serif;
         font-weight: 700;
-        font-size: 2.7rem !important;
+        font-size: 43px !important;
         color: #ffffff;
         line-height: 1.2;
     }
@@ -459,7 +467,7 @@ ob_start();
     }
 
     .card-iknow-single .deskripsi-iknow {
-        font-size: 0.95rem;
+        font-size: 15px;
         line-height: 1.6;
         color: #333333;
         margin-bottom: 24px;
@@ -539,7 +547,7 @@ ob_start();
     .btn-store-small-black i.store-icon {
         width: 23px !important;
         height: 23px !important;
-        font-size: 1.3rem !important;
+        font-size: 21px !important;
         object-fit: contain;
         flex-shrink: 0;
         transition: transform 0.25s ease;
@@ -552,7 +560,7 @@ ob_start();
 
     /* 3. UKURAN TEKS ATAS ("DAPATKAN DI") */
     .btn-store-small-black small { 
-        font-size: 0.70rem; 
+        font-size: 11px; 
         display: block; 
         line-height: 1; 
         text-transform: uppercase; 
@@ -570,7 +578,7 @@ ob_start();
 
     /* Deskripsi IKNOW di dalam Kartu */
     .card-mitra-darat-v1 .deskripsi-iknow {
-        font-size: 0.85rem;
+        font-size: 14px;
         line-height: 1.5;
         color: #4a4a4a;
         margin-bottom: 16px;
@@ -605,7 +613,7 @@ ob_start();
                 <h1 class="display-4 fw-bold mb-3" style="line-height: 1.2;">
                     Bergerak dengan Mudah,<br>Terhubung, dan Ramah<br>Lingkungan di Ibu Kota<br>Nusantara
                 </h1>
-                <p class="fs-6 mb-4 text-white-80" style="max-width: 750px; line-height: 1.6;">
+                <p class="font-size-16px mb-4 text-white-80" style="max-width: 750px; line-height: 1.6;">
                     Nusantara dirancang sebagai Kota 10 Menit yang berorientasi manusia dan berbasis transit dengan sistem transportasi andal, nyaman, dan ramah lingkungan. Pejalan kaki dan pesepeda menjadi prioritas aksesibilitas kawasan dan pusat aktivitas kota untuk mencapai kawasan hijau yang berkelanjutan.
                 </p>
                 
@@ -625,25 +633,25 @@ ob_start();
         <div class="row g-3">
             <div class="col-md-3 col-6">
                 <div class="stat-card-green">
-                    <h2 class="fw-bold mb-2 fs-1">80%</h2>
+                    <h2 class="fw-bold mb-2 font-size-40px">80%</h2>
                     <p class="small text-white-80 mb-0">Perjalanan dengan Transportasi Umum atau Mobilitas Aktif</p>
                 </div>
             </div>
             <div class="col-md-3 col-6">
                 <div class="stat-card-green">
-                    <h2 class="fw-bold mb-2 fs-1">10 Menit</h2>
+                    <h2 class="fw-bold mb-2 font-size-40px">10 Menit</h2>
                     <p class="small text-white-80 mb-0">Perjalanan ke fasilitas penting dan simpul transportasi umum</p>
                 </div>
             </div>
             <div class="col-md-3 col-6">
                 <div class="stat-card-green">
-                    <h2 class="fw-bold mb-2 fs-1">&lt;50 Menit</h2>
+                    <h2 class="fw-bold mb-2 font-size-40px">&lt;50 Menit</h2>
                     <p class="small text-white-80 mb-0">Koneksi transit ekspres dari KIPP ke bandara SAMS Sepinggan Balikpapan pada 2030</p>
                 </div>
             </div>
             <div class="col-md-3 col-6">
                 <div class="stat-card-green">
-                    <h2 class="fw-bold mb-2 fs-1">2045</h2>
+                    <h2 class="fw-bold mb-2 font-size-40px">2045</h2>
                     <p class="small text-white-80 mb-0">Untuk IKN (saat beroperasi) pada tahun 2045 di area seluas 256 ribu Ha</p>
                 </div>
             </div>
@@ -654,7 +662,7 @@ ob_start();
 <!-- SECTION 2: PRINSIP PEMBANGUNAN -->
 <section class="py-5 bg-light">
     <div class="container py-4">
-        <h2 class="text-center fw-bold mb-5 fs-3" style="letter-spacing: 2px;">Prinsip Pembangunan</h2>
+        <h2 class="text-center fw-bold mb-5 font-size-28px" style="letter-spacing: 2px;">Prinsip Pembangunan</h2>
         <div class="row g-4">
             <!-- Kota Hutan -->
             <div class="col-md-4">
@@ -719,7 +727,7 @@ ob_start();
 <!-- SECTION 3: TAHAP PEMBANGUNAN IKN -->
 <section class="py-5 bg-white">
     <div class="container-fluid px-lg-5 py-4">
-        <h2 class="text-center fw-bold mb-5 fs-2" style="font-family: 'Sutasoma Display', sans-serif;">
+        <h2 class="text-center fw-bold mb-5 font-size-32px" style="font-family: 'Sutasoma Display', sans-serif;">
             Tahap Pembangunan Ibu Kota Nusantara
         </h2>
         
@@ -812,17 +820,17 @@ ob_start();
 <!-- SECTION 4: DOKUMEN BANNER & FAQ -->
 <section class="green-section-banner">
     <div class="container text-center">
-        <h2 class="fw-bold mb-3 fs-2">Dokumen &amp; Sumber Daya</h2>
-        <p class="text-white-80 mx-auto mb-4" style="max-width: 800px; font-size: 1rem;">
+        <h2 class="fw-bold mb-3 font-size-32px">Dokumen &amp; Sumber Daya</h2>
+        <p class="text-white-80 mx-auto mb-4" style="max-width: 800px; font-size: 16px;">
             Akses dokumen resmi, dataset, serta referensi pengembangan Kota Cerdas dan Mobilitas Cerdas Nusantara untuk mendukung riset, pembelajaran, dan publikasi.
         </p>
         <div class="d-flex justify-content-center gap-4 flex-wrap">
             <a href="https://satudata.ikn.go.id/" target="_blank" class="btn-doc-card">
-                <i class="fas fa-file-pdf fs-4 text-dark"></i>
+                <i class="fas fa-file-pdf font-size-24px text-dark"></i>
                 <span>satu_data.ikn.go.id</span>
             </a>
             <a href="https://kms.kotacerdas.id" target="_blank" class="btn-doc-card">
-                <i class="fas fa-map-marked-alt fs-4 text-dark"></i>
+                <i class="fas fa-map-marked-alt font-size-24px text-dark"></i>
                 <span>kms.kotacerdas.id</span>
             </a>
         </div>
@@ -836,7 +844,7 @@ ob_start();
             
             <!-- KOLOM KIRI: Judul FAQ + Gambar Bus Melayang -->
             <div class="col-lg-4 text-center text-lg-start">
-                <h2 class="fw-bold fs-2 mb-3">Pertanyaan<br>Sering Diajukan</h2>
+                <h2 class="fw-bold font-size-32px mb-3">Pertanyaan<br>Sering Diajukan</h2>
                 <p class="text-muted mb-4">Temukan jawaban cepat untuk pertanyaan seputar sistem mobilitas di Nusantara.</p>
                 
                 <div class="faq-bus-container text-center mt-3">
@@ -887,7 +895,7 @@ ob_start();
                     <!-- Header Logo & Nama Aplikasi -->
                     <div class="mb-3 d-flex align-items-center gap-3">
                         <img src="assets/images/beranda/Icon IKN_Square.png" alt="IKNOW Logo" style="height: 48px; width: auto; object-fit: contain;">
-                        <h3 class="mb-0 text-dark" style="font-family: 'Sutasoma Display', serif; font-size: 1.8rem; font-weight: 700; letter-spacing: 0.5px;">IKNOW</h3>
+                        <h3 class="mb-0 text-dark" style="font-family: 'Sutasoma Display', serif; font-size: 29px; font-weight: 700; letter-spacing: 0.5px;">IKNOW</h3>
                     </div>
                     
                     <!-- Deskripsi IKNOW -->
