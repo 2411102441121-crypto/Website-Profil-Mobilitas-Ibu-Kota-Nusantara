@@ -2506,93 +2506,6 @@ body {
         gap: 8px;
     }
 }
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media (max-width: 850px) {
-
-    .mitra-darat-card {
-        width: calc(100% - 40px);
-
-        grid-template-columns: 1fr;
-
-        padding: 30px;
-
-        gap: 10px;
-    }
-
-    .mitra-darat-content {
-        text-align: left;
-    }
-
-    .mitra-darat-visual {
-        height: 340px;
-
-        margin-top: 15px;
-    }
-
-    .phone-left {
-        left: 25%;
-    }
-
-    .phone-right {
-        right: 25%;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .mitra-darat-section {
-        padding: 35px 0 50px;
-    }
-
-    .mitra-darat-card {
-        width: calc(100% - 30px);
-
-        padding: 25px 20px;
-
-        border-radius: 20px;
-    }
-
-    .mitra-logo-text {
-        font-size: 21px;
-    }
-
-    .mitra-logo-symbol {
-        transform: scale(.8);
-        transform-origin: left center;
-
-        margin-right: -10px;
-    }
-
-    .mitra-darat-content h2 {
-        font-size: 23px;
-    }
-
-    .mitra-darat-visual {
-        height: 300px;
-    }
-
-    .phone-left {
-        width: 105px;
-        height: 250px;
-
-        left: 20%;
-    }
-
-    .phone-right {
-        width: 125px;
-        height: 275px;
-
-        right: 13%;
-    }
-
-    .mitra-darat-download {
-        flex-wrap: wrap;
-    }
-}
 
 /* =========================================================
    LOGISTIK PERKOTAAN
@@ -2654,6 +2567,9 @@ body {
 
     object-fit: cover;
     object-position: center center;
+
+    /* Gelapkan foto supaya lebih kontras dan tidak terlalu terang */
+    filter: brightness(0.72) saturate(0.95);
 }
 
 /* =========================================================
@@ -2678,6 +2594,9 @@ body {
     object-fit: cover;
     object-position: center center;
 
+    /* Gelapkan foto supaya lebih kontras dan tidak terlalu terang */
+    filter: brightness(0.72) saturate(0.95);
+
     opacity: 0;
     z-index: 0;
 
@@ -2690,7 +2609,7 @@ body {
 }
 
 
-/* OVERLAY PUTIH DI BAGIAN KIRI */
+/* OVERLAY GELAP DI SELURUH FOTO (menggantikan overlay putih di kiri) */
 
 .intrakota-logistik-photo-overlay {
     position: absolute;
@@ -2701,11 +2620,12 @@ body {
     background:
         linear-gradient(
             90deg,
-            rgba(255,255,255,.98) 0%,
-            rgba(255,255,255,.94) 18%,
-            rgba(255,255,255,.72) 34%,
-            rgba(255,255,255,.30) 53%,
-            rgba(255,255,255,0) 75%
+            rgba(6, 15, 9, .82) 0%,
+            rgba(6, 15, 9, .74) 18%,
+            rgba(6, 15, 9, .55) 34%,
+            rgba(6, 15, 9, .35) 53%,
+            rgba(6, 15, 9, .18) 75%,
+            rgba(6, 15, 9, .18) 100%
         );
 }
 
@@ -2730,7 +2650,7 @@ body {
 
     margin-bottom: 22px;
 
-    color: #4d805b;
+    color: #8fd6a3;
 
     font-family: "Sutasoma Text", Arial, sans-serif;
     font-size: 12px;
@@ -2745,22 +2665,24 @@ body {
     width: 28px;
     height: 2px;
 
-    background: #4d805b;
+    background: #8fd6a3;
 }
 
 .intrakota-logistik-heading h2 {
     margin: 0;
 
-    color: #101c15;
+    color: #ffffff;
 
     font-family: "Sutasoma Display", Georgia, serif;
 
     font-size: 48px;
     line-height: 1.05;
+
+    text-shadow: 0 2px 10px rgba(0,0,0,.25);
 }
 
 .intrakota-logistik-heading h2 strong {
-    color: #176b3c;
+    color: #7fd99a;
 }
 
 .intrakota-logistik-line {
@@ -2771,7 +2693,7 @@ body {
 
     border-radius: 3px;
 
-    background: #4b8a60;
+    background: #7fd99a;
 }
 
 .intrakota-logistik-heading p {
@@ -2780,13 +2702,15 @@ body {
 
     margin: 0;
 
-    color: #3e4c42;
+    color: rgba(255,255,255,.9);
 
     font-family: "Sutasoma Text", Arial, sans-serif;
 
     font-size: 16px;
 
     line-height: 1.65;
+
+    text-shadow: 0 1px 6px rgba(0,0,0,.2);
 }
 
 
@@ -2976,22 +2900,32 @@ body {
    Foto + judul overlay dan card info (3 kolom di desktop)
    diubah jadi 1 kolom vertikal di layar kecil supaya tidak
    melebar ke kanan / terpotong.
+
+   CATATAN PERBAIKAN:
+   Tinggi foto di mobile sebelumnya dipaksa jauh lebih tinggi
+   (560px / 620px) daripada versi desktop (445px). Karena
+   lebar kotak foto otomatis menyempit mengikuti layar HP
+   sementara tingginya tetap dipaksa tinggi, object-fit: cover
+   jadi meng-crop & zoom foto sehingga bentuknya terlihat
+   "dipepetkan"/tidak proporsional dibanding versi desktop.
+   Nilai height di bawah ini diturunkan supaya rasio foto di
+   mobile mendekati rasio foto di desktop.
 ========================================================= */
 
 @media (max-width: 700px) {
 
     .intrakota-logistik-photo {
-        height: 560px;
+        height: 380px; /* sebelumnya 560px — diturunkan agar proporsi foto mendekati desktop */
     }
 
     .intrakota-logistik-photo-overlay {
         background:
             linear-gradient(
                 180deg,
-                rgba(255,255,255,.97) 0%,
-                rgba(255,255,255,.93) 42%,
-                rgba(255,255,255,.55) 68%,
-                rgba(255,255,255,0) 100%
+                rgba(6, 15, 9, .85) 0%,
+                rgba(6, 15, 9, .78) 42%,
+                rgba(6, 15, 9, .45) 68%,
+                rgba(6, 15, 9, .18) 100%
             );
     }
 
@@ -3046,7 +2980,7 @@ body {
 @media (max-width: 430px) {
 
     .intrakota-logistik-photo {
-        height: 620px;
+        height: 400px; /* sebelumnya 620px — diturunkan agar proporsi foto mendekati desktop */
     }
 
     .intrakota-logistik-heading h2 {
@@ -3889,39 +3823,6 @@ body {
 
 
 /* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .intrakota-teknologi-icon-status {
-        gap: 7px;
-
-        margin-bottom: 12px;
-    }
-
-    .intrakota-teknologi-icon-status
-    .intrakota-teknologi-icon {
-
-        width: 36px;
-        height: 36px;
-
-        font-size: 14px;
-    }
-
-    .intrakota-teknologi-status {
-
-        padding: 5px 9px;
-
-        font-size: 8px;
-
-        border-radius: 16px;
-    }
-
-}
-
-
-/* =========================================================
    CARD TITLE
 ========================================================= */
 
@@ -4182,6 +4083,7 @@ body {
     flex: 1;
 
     min-height: 180px;
+    max-height: 220px;
 
     overflow: hidden;
 
@@ -4337,82 +4239,15 @@ body {
         grid-column: span 2;
     }
 
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .intrakota-teknologi {
-        padding: 50px 0 60px;
-    }
-
-    .intrakota-teknologi-container {
-        width: calc(100% - 28px);
-    }
-
-    .intrakota-teknologi-heading {
-        margin-bottom: 25px;
-    }
-
-    .intrakota-teknologi-heading h2 {
-        font-size: 27px;
-    }
-
-    .intrakota-teknologi-heading p {
-        font-size: 11px;
-    }
-
-    .intrakota-teknologi-grid {
-        grid-template-columns: 1fr;
-
-        gap: 14px;
-    }
-
-    .intrakota-teknologi-card:nth-child(1),
-    .intrakota-teknologi-card:nth-child(3),
-    .intrakota-teknologi-card:nth-child(4),
-    .intrakota-teknologi-card:nth-child(5),
-    .intrakota-teknologi-card:nth-child(6),
-    .atcs-image,
-    .intrakota-teknologi-maas,
-    .intrakota-teknologi-command {
-        grid-column: span 1;
-    }
-
-    .intrakota-teknologi-card {
-        min-height: auto;
-
-        padding: 20px;
-    }
-
-    .intrakota-teknologi-image {
-        min-height: 230px;
-    }
-
-    .intrakota-teknologi-image img {
-        min-height: 230px;
-    }
-
-    .intrakota-teknologi-maas {
-        min-height: auto;
-    }
-
-    .intrakota-teknologi-maas-image {
-        min-height: 210px;
-    }
-
-    .intrakota-teknologi-command {
-        min-height: auto;
+    .intrakota-atcs {
+        grid-column: span 2;
     }
 
 }
 
+
 /* =========================================================
-   MOBILE
+   MOBILE - HALTE
 ========================================================= */
 
 @media (max-width: 600px) {
@@ -4448,7 +4283,7 @@ body {
 }
 
 /* =========================================================
-   TABLET
+   TABLET - TRANSFER
 ========================================================= */
 
 @media (max-width: 900px) {
@@ -4462,7 +4297,7 @@ body {
 
 
 /* =========================================================
-   MOBILE
+   MOBILE - TRANSFER
 ========================================================= */
 
 @media (max-width: 700px) {
@@ -4511,7 +4346,7 @@ body {
 }
 
 /* =========================
-   MOBILE
+   MOBILE - MODA
 ========================= */
 
 @media (max-width: 600px) {
@@ -4546,7 +4381,7 @@ body {
 }
 
 /* =========================
-   MOBILE
+   MOBILE - MOBILITY
 ========================= */
 
 @media (max-width: 600px) {
@@ -4602,7 +4437,7 @@ body {
 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE - HERO TABLET
 ========================= */
 @media (max-width: 991.98px) {
     .intrakota-hero {
@@ -5374,18 +5209,13 @@ body {
         font-size: 16px;
     }
 
-    /* TEKNOLOGI */
+    /* TEKNOLOGI - hanya ukuran umum kartu, grid diatur di blok terakhir */
     .intrakota-teknologi {
         padding: 50px 0 60px;
     }
 
     .intrakota-teknologi-container {
         width: calc(100% - 28px);
-    }
-
-    .intrakota-teknologi-grid {
-        grid-template-columns: 1fr;
-        gap: 14px;
     }
 
     .intrakota-teknologi-card {
@@ -5399,9 +5229,13 @@ body {
     }
 
     .intrakota-teknologi-maas,
-    .intrakota-teknologi-command,
-    .atcs-image {
-        grid-column: span 1;
+    .intrakota-teknologi-command {
+        min-height: auto;
+    }
+
+    .intrakota-teknologi-maas-image {
+        min-height: 180px;
+        max-height: 210px;
     }
 }
 
@@ -5496,17 +5330,16 @@ body {
     }
 }
 
-@media (max-width: 1000px) {
-    .intrakota-atcs {
-        grid-column: span 2;
-    }
-}
-
+/* =========================================================
+   TEKNOLOGI - GRID FINAL UNTUK MOBILE (satu-satunya sumber
+   kebenaran untuk breakpoint <= 600px, supaya tidak ada lagi
+   aturan grid-template-columns yang saling menimpa)
+========================================================= */
 @media (max-width: 600px) {
 
     /* GRID UTAMA: 2 kolom supaya kartu-kartu kecil tersusun 2x2 */
     .intrakota-teknologi-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 10px;
     }
 
@@ -5514,7 +5347,7 @@ body {
     .intrakota-atcs,
     .intrakota-teknologi-maas,
     .intrakota-teknologi-command {
-        grid-column: span 2;
+        grid-column: span 2 !important;
     }
 
     /* ATCS: teks tetap di atas, gambar di bawah (bukan kanan-kiri) */
@@ -5575,27 +5408,40 @@ body {
         font-size: 9px;
     }
 
-    /* EPS sekarang menjadi kartu ke-4 yang melengkapi grid 2x2,
-       jadi tidak perlu lagi dilebarkan penuh 1 baris. */
     .intrakota-teknologi-card:nth-child(5) .intrakota-teknologi-tags {
         flex-wrap: wrap;
     }
+
+    /* MaaS & Command Center selalu 1 kolom penuh di dalam kartunya sendiri */
+    .intrakota-teknologi-maas-content,
+    .intrakota-teknologi-command-top {
+        padding: 16px;
+    }
+
+    .intrakota-teknologi-command-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 16px;
+    }
 }
 
-/* LAYAR SANGAT SEMPIT: turunkan jadi 2 kolom supaya kartu kecil tidak terlalu sesak */
+/* LAYAR SANGAT SEMPIT: tetap 2 kolom supaya kartu kecil tidak terlalu sesak */
 @media (max-width: 400px) {
 
     .intrakota-teknologi-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 
     .intrakota-atcs,
     .intrakota-teknologi-maas,
     .intrakota-teknologi-command {
-        grid-column: span 2;
+        grid-column: span 2 !important;
     }
 }
 
+/* =========================================================
+   KORIDOR - GRID FINAL MOBILE
+========================================================= */
 @media (max-width: 600px) {
 
     .intrakota-koridor-grid {

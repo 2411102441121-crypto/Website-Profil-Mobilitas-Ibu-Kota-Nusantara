@@ -443,7 +443,7 @@
             <div class="gowes-image">
 
                 <img
-                    src="../assets/images/intrakota/gowes-ikn.jpg"
+                    src="../assets/images/intrakota/agenda.jpeg"
                     alt="Komunitas Gowes IKN"
                 >
 
@@ -872,26 +872,6 @@
                 nol emisi karbon serta budaya berjalan dan bersepeda
                 aktif warga KIPP.
             </p>
-
-            <div class="tariff-row">
-                <span>Menit ke-31 dan seterusnya:</span>
-                <strong>Rp 1.500 / 10 menit</strong>
-            </div>
-
-            <div class="tariff-row">
-                <span>Komuter Bulanan ASN & Warga:</span>
-                <strong>Gratis (Aktivasi NIK/ID)</strong>
-            </div>
-
-            <a href="#" class="download-app-btn">
-                <span>⇩</span>
-                Unduh Aplikasi Mitra Darat IKN
-            </a>
-
-            <div class="store-note">
-                Tersedia resmi di Google Play Store & Apple App Store
-            </div>
-
         </div>
 
 

@@ -1284,30 +1284,30 @@ ob_start();
         <div class="intrakota-logistik-photo" id="logistikSlideshow">
 
             <img
-                src="../assets/images/intrakota/gowes-ikn.jpg"
+                src="../assets/images/intrakota/blogmove.png"
                 alt="Logistik Perkotaan di IKN"
                 class="intrakota-logistik-slide active"
             >
             <img
-                src="../assets/images/intrakota/ekios.jpeg"
-                alt="Logistik Perkotaan di IKN"
-                class="intrakota-logistik-slide"
-            >
-            <!-- <img
-                src="../assets/images/intrakota/logistik-3.jpg"
+                src="../assets/images/intrakota/grab.webp"
                 alt="Logistik Perkotaan di IKN"
                 class="intrakota-logistik-slide"
             >
             <img
-                src="../assets/images/intrakota/logistik-4.jpg"
+                src="../assets/images/intrakota/jnt.jpg"
                 alt="Logistik Perkotaan di IKN"
                 class="intrakota-logistik-slide"
             >
             <img
-                src="../assets/images/intrakota/logistik-5.jpg"
+                src="../assets/images/intrakota/spx.jpg"
                 alt="Logistik Perkotaan di IKN"
                 class="intrakota-logistik-slide"
-            > -->
+            >
+            <img
+                src="../assets/images/intrakota/pos.webp"
+                alt="Logistik Perkotaan di IKN"
+                class="intrakota-logistik-slide"
+            >
 
             <div class="intrakota-logistik-photo-overlay"></div>
 
