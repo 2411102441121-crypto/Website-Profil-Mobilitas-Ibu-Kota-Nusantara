@@ -1,4 +1,8 @@
 <?php
+// Konfigurasi Base URL agar cocok untuk Localhost dan Ngrok
+$base_url = '/ikn-mobility/';
+
+// Konfigurasi Database
 $host = 'localhost';
 $db   = 'ikn_mobility';
 $user = 'root';
