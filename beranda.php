@@ -1,13 +1,15 @@
 <?php
 require_once 'config/database.php';
 
-// Fetch Data FAQ dari Database
+// Ambil FAQ yang dikelola dari Admin Beranda
 $faqs = [];
+
 try {
     if (isset($pdo)) {
         $pdo->setAttribute(PDO::ATTR_TIMEOUT, 2);
-        $stmt = $pdo->query("SELECT * FROM beranda_faq ORDER BY urutan ASC");
-        $faqs = $stmt->fetchAll();
+
+        $stmt = $pdo->query("SELECT * FROM faq ORDER BY id ASC");
+        $faqs = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 } catch (Exception $e) {
     $faqs = [];
@@ -17,7 +19,6 @@ $title = "Beranda - Profil Mobilitas IKN";
 
 ob_start();
 ?>
-
 <!-- Custom Style Tambahan -->
 <style>
     

@@ -19,6 +19,14 @@
 .map-caption strong { font-size: 16px; color: #333; }
 .map-caption span { margin-top: 2px; font-size: 12px; color: #777; }
 
+/* KODE LAYANAN */
+
+.map-code { margin-top: 15px; padding: 0 10px; }
+.map-code-title { display: block; margin-bottom: 10px; font-size: 12px; font-weight: 700; color: #888; letter-spacing: 1px; }
+.map-code-list { display: flex; flex-direction: column; gap: 9px; }
+.map-code-item { display: flex; align-items: center; }
+.map-code-badge { width: 70px; height: 66px; display: flex; align-items: center; justify-content: center; border-radius: 11px; color: #fff; font-size: 16px; font-weight: 700; }
+
 /* JADWAL */
 .bus-schedule { margin-top: 22px; }
 .section-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 13px; }
@@ -42,21 +50,11 @@
 .schedule-card { position: relative; min-height: 83px; display: flex; gap: 10px; padding: 12px; background: #fff; border: 1px solid #e5e5e5; border-radius: 4px; overflow: hidden; box-sizing: border-box; }
 .schedule-card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; }
 
-.schedule-card.purple::before { background: #7623b6; }
-.schedule-card.blue::before { background: #1976d2; }
-.schedule-card.green::before { background: #20c77a; }
-.schedule-card.yellow::before { background: #f3bd00; }
-.schedule-card.red::before { background: #f34d42; }
-.schedule-card.brown::before { background: #795548; }
+.schedule-card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--route-color, #64748B); }
 
 /* ROUTE */
 .route-number { flex: 0 0 auto; width: 27px; height: 27px; display: flex; align-items: center; justify-content: center; border-radius: 4px; color: #fff; font-size: 10px; font-weight: 700; }
-.purple .route-number { background: #7623b6; }
-.blue .route-number { background: #1976d2; }
-.green .route-number { background: #20c77a; }
-.yellow .route-number { background: #f3bd00; }
-.red .route-number { background: #f34d42; }
-.brown .route-number { background: #795548; }
+
 
 .route-info { flex: 1; min-width: 0; }
 .route-info h3 { margin: 2px 0 12px; font-size: 16px; font-weight: 700; color: #333; }
