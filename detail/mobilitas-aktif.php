@@ -87,46 +87,6 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
 
 
     <!-- =========================
-         PETA KORIDOR
-    ========================== -->
-    <section class="corridor-map">
-
-        <div class="section-top">
-
-            <div>
-                <h2>● Peta Koridor Pejalan Kaki &amp; Jaringan Aktif KIPP</h2>
-
-                <p>
-                    Peta rute kanopi pejalan kaki, elevated skywalk,
-                    serta jalur sepeda terproteksi.
-                </p>
-            </div>
-
-            <span class="map-badge">
-                Terintegrasi Moda Transit
-            </span>
-
-        </div>
-
-
-        <div class="map-image">
-
-            <img
-                src="../assets/images/mobilitas/peta-koridor-pejalan-kaki.jpg"
-                alt="Peta Koridor Pejalan Kaki dan Jaringan Aktif KIPP"
-            >
-
-        </div>
-
-        <div class="map-footer">
-            ● Terintegrasi langsung dengan 14 halte Bus IntraKota
-            &amp; stasiun Autonomous Rail Transit (ART).
-        </div>
-
-    </section>
-
-
-    <!-- =========================
          KORIDOR PRIORITAS
     ========================== -->
     <section class="priority-section">

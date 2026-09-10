@@ -3,6 +3,10 @@
 $title = "Layanan Intrakota - Profil Mobilitas IKN";
 $active_page = "intrakota";
 
+?>
+<link rel="stylesheet" href="/ikn-mobility/assets/css/intrakota.css?v=999">
+<?php
+
 ob_start();
 ?>
 
@@ -11,7 +15,6 @@ ob_start();
     <!-- HERO INTRAKOTA -->
     <section class="intrakota-hero" aria-label="Layanan Intrakota IKN">
         <div class="intrakota-hero-inner">
-            <span class="intrakota-kicker">INTRAKOTA IKN</span>
 
             <h1 class="intrakota-title">
                 Mobilitas Perkotaan<br>Ibu Kota Nusantara
@@ -28,8 +31,8 @@ ob_start();
             </p>
 
             <div class="intrakota-actions">
-                <a href="#moda-layanan" class="intrakota-btn intrakota-btn-primary">
-                    Jelajahi Moda &amp; Layanan
+                <a href="#Sistem-Mobilitas-Perkotaan" class="intrakota-btn intrakota-btn-primary">
+                    Sistem Mobilitas &amp; Perkotaan
                     <i class="fas fa-chevron-right" aria-hidden="true"></i>
                 </a>
 
@@ -40,10 +43,10 @@ ob_start();
         </div>
     </section>
 
-    <!-- ALUR PERJALANAN -->
+    <!-- Rantai PERJALANAN -->
     <section class="intrakota-flow" id="alur-perjalanan">
         <div class="intrakota-flow-inner">
-            <h2 class="intrakota-flow-title">Alur Perjalanan Pengguna</h2>
+            <h2 class="intrakota-flow-title">Rantai Perjalanan Pengguna</h2>
 
             <div class="intrakota-steps-wrap">
                 <div class="intrakota-steps">
@@ -65,23 +68,22 @@ ob_start();
                         </span>
                     </div>
 
-                    <!-- 2. MIKROMOBILITAS -->
+                    <!-- 2. MOBILITAS AKTIF (FIRST MILE) -->
                     <div class="intrakota-step">
                         <div class="intrakota-step-icon">
                             <img
-                                src="../assets/images/intrakota/icon-mikromobilitas.png"
-                                alt="Mikromobilitas"
+                                src="../assets/images/intrakota/icon-mobilitas.png"
+                                alt="Mobilitas Aktif (First Mile)"
                                 loading="lazy"
                             >
                         </div>
-                        <p class="intrakota-step-name">Mikromobilitas</p>
+                        <p class="intrakota-step-name">Mobilitas Aktif</p>
                         <p class="intrakota-step-sub">First Mile</p>
 
                         <span class="intrakota-step-arrow" aria-hidden="true">
                             <i class="fas fa-arrow-right"></i>
                         </span>
                     </div>
-
                     <!-- 3. TITIK TRANSFER -->
                     <div class="intrakota-step active">
                         <div class="intrakota-step-icon">
@@ -118,7 +120,23 @@ ob_start();
                         </span>
                     </div>
 
-                    <!-- 5. TUJUAN -->
+                    <!-- 5. MOBILITAS AKTIF (LAST MILE) -->
+                    <div class="intrakota-step">
+                        <div class="intrakota-step-icon">
+                            <img
+                                src="../assets/images/intrakota/icon-mobilitas.png"
+                                alt="Mobilitas Aktif (First Mile)"
+                                loading="lazy"
+                            >
+                        </div>
+                        <p class="intrakota-step-name">Mobilitas Aktif</p>
+                        <p class="intrakota-step-sub">Last Mile</p>
+
+                        <span class="intrakota-step-arrow" aria-hidden="true">
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </div>
+                    <!-- 6. TUJUAN -->
                     <div class="intrakota-step">
                         <div class="intrakota-step-icon">
                             <img
@@ -128,7 +146,7 @@ ob_start();
                             >
                         </div>
                         <p class="intrakota-step-name">Tujuan</p>
-                        <p class="intrakota-step-sub">Last Mile</p>
+                        <p class="intrakota-step-sub">Titik Akhir</p>
                     </div>
 
                 </div>
@@ -139,7 +157,7 @@ ob_start();
     <!-- =========================
      SISTEM MOBILITAS PERKOTAAN
     ========================== -->
-    <section class="intrakota-mobility">
+    <section class="intrakota-mobility" id="Sistem-Mobilitas-Perkotaan">
 
         <div class="intrakota-mobility-container">
 
@@ -153,91 +171,137 @@ ob_start();
                 yang mudah, terhubung, dan berkelanjutan.
             </p>
 
-            <div class="intrakota-mobility-cards">
+            <!-- WRAPPER FOTO + TOMBOL GESER -->
+            <div class="intrakota-mobility-cards-wrap">
 
-                <!-- TRANSPORTASI UMUM -->
-                <a href="#" class="intrakota-mobility-card">
+                <button
+                    type="button"
+                    class="intrakota-mobility-nav intrakota-mobility-nav-left"
+                    onclick="scrollMobilityCards(-1)"
+                    aria-label="Geser ke kiri"
+                >
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </button>
 
-                    <img
-                        src="../assets/images/intrakota/transportasi.jpeg"
-                        alt="Transportasi Umum"
-                    >
+                <div class="intrakota-mobility-cards" id="mobilityCards">
 
-                    <div class="intrakota-card-overlay"></div>
+                    <!-- TRANSPORTASI UMUM -->
+                    <div class="intrakota-mobility-card">
 
-                    <div class="intrakota-card-content">
+                        <img
+                            src="../assets/images/intrakota/transportasi.jpeg"
+                            alt="Transportasi Umum"
+                        >
 
-                        <div class="intrakota-card-icon">
-                            <i class="fas fa-bus"></i>
+                        <div class="intrakota-card-overlay"></div>
+
+                        <div class="intrakota-card-content">
+
+                            <div class="intrakota-card-icon">
+                                <img src="../assets/images/intrakota/icon-bus-perkotaan.png"
+                                    alt="Transportasi Umum">
+                            </div>
+
+                            <div class="intrakota-card-title">
+                                Transportasi Umum
+                            </div>
+
+                            <p class="intrakota-card-description">
+                               Layanan bus perkotaan dan paratransit yang 
+                               menghubungkan titik-titik penting di kawasan 
+                               IKN secara terjadwal.
+                            </p>
+                            
+                            <a href="peta.php" class="intrakota-card-detail-link">
+                                Lihat Detail
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+
                         </div>
-
-                        <div class="intrakota-card-title">
-                            Transportasi Umum
-                        </div>
-
-                        <div class="intrakota-card-subtitle">
-                            Bus Perkotaan &amp; Paratransit
-                        </div>
-
                     </div>
-                </a>
 
-                <!-- MOBILITAS AKTIF -->
-                <a href="#" class="intrakota-mobility-card">
+                    <!-- MOBILITAS AKTIF -->
+                    <div class="intrakota-mobility-card">
 
-                    <img
-                        src="../assets/images/intrakota/mobilitas.jpeg"
-                        alt="Mobilitas Aktif"
-                    >
+                        <img
+                            src="../assets/images/intrakota/mobilitas.jpeg"
+                            alt="Mobilitas Aktif"
+                        >
 
-                    <div class="intrakota-card-overlay"></div>
+                        <div class="intrakota-card-overlay"></div>
 
-                    <div class="intrakota-card-content">
+                        <div class="intrakota-card-content">
 
-                        <div class="intrakota-card-icon">
-                            <i class="fas fa-person-walking"></i>
+                            <div class="intrakota-card-icon">   
+                                <img src="../assets/images/intrakota/icon-mobilitas.png"
+                                    alt="Mobilitas Aktif">
+                            </div>
+
+                            <div class="intrakota-card-title">
+                                Mobilitas Aktif
+                            </div>
+
+                            <p class="intrakota-card-description">
+                                Jalur pejalan kaki dan sepeda yang nyaman, 
+                                mendukung perjalanan first & last mile di kawasan IKN.
+                            </p>
+
+                            <a href="../detail/mobilitas-aktif.php" class="intrakota-card-detail-link">
+                                Lihat Detail
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+
                         </div>
-
-                        <div class="intrakota-card-title">
-                            Mobilitas Aktif
-                        </div>
-
-                        <div class="intrakota-card-subtitle">
-                            Berjalan Kaki &amp; Bersepeda
-                        </div>
-
                     </div>
-                </a>
 
 
-                <!-- MIKROMOBILITAS -->
-                <a href="#" class="intrakota-mobility-card">
+                    <!-- MIKROMOBILITAS -->
+                    <div class="intrakota-mobility-card">
 
-                    <img
-                        src="../assets/images/intrakota/mikromobilitas.jpeg"
-                        alt="Mikromobilitas"
-                    >
+                        <img
+                            src="../assets/images/intrakota/mikromobilitas.jpeg"
+                            alt="Mikromobilitas"
+                        >
 
-                    <div class="intrakota-card-overlay"></div>
+                        <div class="intrakota-card-overlay"></div>
 
-                    <div class="intrakota-card-content">
+                        <div class="intrakota-card-content">
 
-                        <div class="intrakota-card-icon">
-                            <i class="fas fa-bicycle"></i>
+                                <div class="intrakota-card-icon">
+                                    <img src="../assets/images/intrakota/icon-mikromobilitas.png" alt="Mikromobilitas">
+                                </div>
+
+                            <div class="intrakota-card-title">
+                                Mikromobilitas
+                            </div>
+
+                            <p class="intrakota-card-description">
+                                Pilihan mobilitas jarak dekat yang praktis 
+                                untuk perjalanan singkat di dalam kawasan IKN.
+                            </p>
+
+                            <a href="../detail/mikromobilitas.php" class="intrakota-card-detail-link">
+                                Lihat Detail
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+
                         </div>
-
-                        <div class="intrakota-card-title">
-                            Mikromobilitas
-                        </div>
-
-                        <div class="intrakota-card-subtitle">
-                            Sepeda, Sepeda Listrik &amp; Skuter
-                        </div>
-
                     </div>
-                </a>
+
+                </div>
+                <!-- /.intrakota-mobility-cards -->
+
+                <button
+                    type="button"
+                    class="intrakota-mobility-nav intrakota-mobility-nav-right"
+                    onclick="scrollMobilityCards(1)"
+                    aria-label="Geser ke kanan"
+                >
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </button>
 
             </div>
+            <!-- /.intrakota-mobility-cards-wrap -->
 
         </div>
 
@@ -434,6 +498,106 @@ ob_start();
 
 </section>
 
+<!-- =========================================================
+     PERGERAKAN BARANG
+========================================================= -->
+<section class="intrakota-barang">
+
+    <div class="intrakota-barang-container">
+
+        <!-- GAMBAR KIRI -->
+        <div class="intrakota-barang-image">
+
+            <img
+                src="../assets/images/intrakota/pergerakan_barang.jpeg"
+                alt="Sistem Pergerakan Barang IKN"
+            >
+
+        </div>
+
+
+        <!-- KONTEN KANAN -->
+        <div class="intrakota-barang-content">
+
+            <div class="intrakota-barang-icon">
+                <i class="fas fa-truck"></i>
+            </div>
+
+            <h2>
+                Pergerakan Barang
+            </h2>
+
+            <p class="intrakota-barang-description">
+                Sistem distribusi barang di IKN dirancang berdasarkan hierarki
+                koridor untuk mendukung pergerakan logistik secara efisien hingga
+                mencapai tujuan akhir.
+            </p>
+
+
+            <div class="intrakota-barang-list">
+
+                <!-- REGIONAL -->
+                <div class="intrakota-barang-item">
+
+                    <span class="intrakota-barang-dot"></span>
+
+                    <p>
+                        <strong>REGIONAL:</strong>
+                        Gateway/KPIKN/Daerah Mitra → Logistik Center
+                    </p>
+
+                </div>
+
+
+                <!-- PRIMER -->
+                <div class="intrakota-barang-item">
+
+                    <span class="intrakota-barang-dot"></span>
+
+                    <p>
+                        <strong>PRIMER:</strong>
+                        Logistik Center → Terminal/Regional Hub
+                        (10-15 km)
+                    </p>
+
+                </div>
+
+
+                <!-- SEKUNDER -->
+                <div class="intrakota-barang-item">
+
+                    <span class="intrakota-barang-dot"></span>
+
+                    <p>
+                        <strong>SEKUNDER:</strong>
+                        Terminal Barang → Terminal Satelit
+                        (Jangkauan 5 km)
+                    </p>
+
+                </div>
+
+
+                <!-- TERSIER -->
+                <div class="intrakota-barang-item">
+
+                    <span class="intrakota-barang-dot"></span>
+
+                    <p>
+                        <strong>TERSIER:</strong>
+                        Terminal/Satelit → Last Mile → Pengiriman
+                        Komoditas Pokok: Terminal/Satelit → Pasar/Pusat Perdagangan
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 <!-- =========================
      FASILITAS & TITIK TRANSFER
 ========================== -->
@@ -462,10 +626,6 @@ ob_start();
 
             <!-- BAGIAN KIRI -->
             <div class="intrakota-transfer-info">
-
-                <div class="intrakota-transfer-icon">
-                    <i class="fas fa-share-nodes"></i>
-                </div>
 
                 <h3 class="intrakota-transfer-card-title">
                     Bus Interchange<br>
@@ -596,10 +756,6 @@ ob_start();
 
 <!-- =========================================================
      DETAIL HALTE BUS
-     Bagian hero "Halte Bus" bisa diklik untuk membuka
-     (accordion slide-down) konten "Halte sebagai Akses
-     Mobilitas" beserta "IKNOW Mobile & E-Kios Nusantara"
-     di bawahnya. Diletakkan di bawah section "MODA & LAYANAN".
 ========================================================= -->
 
 <section class="intrakota-halte">
@@ -626,10 +782,6 @@ ob_start();
             </div>
 
             <div class="intrakota-halte-heading">
-
-                <div class="intrakota-halte-icon">
-                    <i class="fas fa-person-walking"></i>
-                </div>
 
                 <h2>Halte Bus</h2>
 
@@ -1126,13 +1278,11 @@ ob_start();
 <section class="intrakota-logistik" id="logistik-perkotaan">
 
     <div class="intrakota-logistik-container">
+    <div class="intrakota-logistik-frame">
 
         <!-- FOTO UTAMA (SLIDESHOW 5 FOTO) -->
         <div class="intrakota-logistik-photo" id="logistikSlideshow">
 
-            <!-- Ganti nama file logistik-1.jpg s/d logistik-5.jpg dengan
-                 foto milikmu sendiri, taruh di assets/images/intrakota/.
-                 Boleh tambah/kurangi <img> ini sesuai jumlah foto. -->
             <img
                 src="../assets/images/intrakota/gowes-ikn.jpg"
                 alt="Logistik Perkotaan di IKN"
@@ -1143,7 +1293,7 @@ ob_start();
                 alt="Logistik Perkotaan di IKN"
                 class="intrakota-logistik-slide"
             >
-            <img
+            <!-- <img
                 src="../assets/images/intrakota/logistik-3.jpg"
                 alt="Logistik Perkotaan di IKN"
                 class="intrakota-logistik-slide"
@@ -1157,7 +1307,7 @@ ob_start();
                 src="../assets/images/intrakota/logistik-5.jpg"
                 alt="Logistik Perkotaan di IKN"
                 class="intrakota-logistik-slide"
-            >
+            > -->
 
             <div class="intrakota-logistik-photo-overlay"></div>
 
@@ -1277,105 +1427,10 @@ ob_start();
         </div>
 
     </div>
-
-</section>
-<!-- =========================================================
-     PERGERAKAN BARANG
-========================================================= -->
-<section class="intrakota-barang">
-
-    <div class="intrakota-barang-container">
-
-        <!-- GAMBAR KIRI -->
-        <div class="intrakota-barang-image">
-
-            <img
-                src="../assets/images/intrakota/pergerakan_barang.jpeg"
-                alt="Sistem Pergerakan Barang IKN"
-            >
-
-        </div>
-
-
-        <!-- KONTEN KANAN -->
-        <div class="intrakota-barang-content">
-
-            <div class="intrakota-barang-icon">
-                <i class="fas fa-truck"></i>
-            </div>
-
-            <h2>
-                Pergerakan Barang
-            </h2>
-
-            <p class="intrakota-barang-description">
-                Sistem distribusi barang di IKN dirancang berdasarkan hierarki
-                koridor untuk mendukung pergerakan logistik secara efisien hingga
-                mencapai tujuan akhir.
-            </p>
-
-
-            <div class="intrakota-barang-list">
-
-                <!-- REGIONAL -->
-                <div class="intrakota-barang-item">
-
-                    <span class="intrakota-barang-dot"></span>
-
-                    <p>
-                        <strong>REGIONAL:</strong>
-                        Gateway/KPIKN/Daerah Mitra → Logistik Center
-                    </p>
-
-                </div>
-
-
-                <!-- PRIMER -->
-                <div class="intrakota-barang-item">
-
-                    <span class="intrakota-barang-dot"></span>
-
-                    <p>
-                        <strong>PRIMER:</strong>
-                        Logistik Center → Terminal/Regional Hub
-                        (10–15 km)
-                    </p>
-
-                </div>
-
-
-                <!-- SEKUNDER -->
-                <div class="intrakota-barang-item">
-
-                    <span class="intrakota-barang-dot"></span>
-
-                    <p>
-                        <strong>SEKUNDER:</strong>
-                        Terminal Barang → Terminal Satelit
-                        (Jangkauan 5 km)
-                    </p>
-
-                </div>
-
-
-                <!-- TERSIER -->
-                <div class="intrakota-barang-item">
-
-                    <span class="intrakota-barang-dot"></span>
-
-                    <p>
-                        <strong>TERSIER:</strong>
-                        Terminal/Satelit → Last Mile → Pengiriman
-                        Komoditas Pokok: Terminal/Satelit → Pasar/Pusat Perdagangan
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
+    <!-- /.intrakota-logistik-frame -->
 
     </div>
+    <!-- /.intrakota-logistik-container -->
 
 </section>
 
@@ -1511,103 +1566,126 @@ ob_start();
             </div>
 
 
-            <!-- =================================================
-                 ETLE
-            ================================================== -->
-            <div class="intrakota-teknologi-card">
+<!-- =================================================
+     ETLE
+================================================== -->
+<div class="intrakota-teknologi-card">
+
+    <div class="intrakota-teknologi-icon-status">
+
+        <div class="intrakota-teknologi-icon">
+            <i class="fas fa-camera"></i>
+        </div>
+
+        <span class="intrakota-teknologi-status">
+            Tahap Pengembangan
+        </span>
+
+    </div>
+
+    <h3>
+        ETLE
+    </h3>
+
+    <p>
+        Electronic Traffic Law Enforcement adalah sistem
+        penegakan hukum lalu lintas berbasis elektronik
+        menggunakan kamera dan rekaman digital untuk
+        mendeteksi serta menindak pelanggaran secara otomatis.
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     ELECTRONIC PAYMENT SYSTEM
+================================================== -->
+<div class="intrakota-teknologi-card">
+
+    <div class="intrakota-teknologi-icon-status">
+
+        <div class="intrakota-teknologi-icon">
+            <i class="fas fa-money-bill-wave"></i>
+        </div>
+
+        <span class="intrakota-teknologi-status">
+            Tahap Pengembangan
+        </span>
+
+    </div>
+
+    <h3>
+        Electronic Payment System (EPS)
+    </h3>
+
+    <p>
+        Sistem pembayaran elektronik yang mendukung transaksi
+        perjalanan secara terintegrasi, aman, dan nyaman melalui
+        berbagai metode pembayaran serta teknologi digital
+        (Account-Based Ticketing, Mobile Ticketing, NFC, dan QRIS).
+    </p>
+
+    <div class="intrakota-teknologi-tags">
+
+        <span>Multi Operator</span>
+        <span>Multi Modal</span>
+        <span>Interoperabilitas</span>
+
+    </div>
+
+</div>
+
+
+<!-- =================================================
+     MAAS & SMART PARKING
+================================================== -->
+    <div class="intrakota-teknologi-maas">
+
+        <div class="intrakota-teknologi-maas-content">
+
+            <div class="intrakota-teknologi-icon-status">
 
                 <div class="intrakota-teknologi-icon">
-                    <i class="fas fa-camera"></i>
+                    <i class="fas fa-car"></i>
                 </div>
 
-                <h3>
-                    ETLE
-                </h3>
-
-                <p>
-                    Electronic Traffic Law Enforcement adalah sistem
-                    penegakan hukum lalu lintas berbasis elektronik
-                    menggunakan kamera dan rekaman digital untuk
-                    mendeteksi serta menindak pelanggaran secara otomatis.
-                </p>
+                <span class="intrakota-teknologi-status">
+                    Tahap Pengembangan
+                </span>
 
             </div>
 
+            <h3>
+                MaaS &amp; Smart Parking
+            </h3>
 
-            <!-- =================================================
-                 ELECTRONIC PAYMENT SYSTEM
-            ================================================== -->
-            <div class="intrakota-teknologi-card">
+            <p>
+                Layanan mobilitas terintegrasi untuk merencanakan
+                perjalanan dan mengakses berbagai moda, didukung
+                sistem parkir cerdas dengan informasi ketersediaan
+                parkir secara real-time.
+            </p>
 
-                <div class="intrakota-teknologi-icon">
-                    <i class="fas fa-money-bill-wave"></i>
-                </div>
+            <div class="intrakota-teknologi-tags">
 
-                <h3>
-                    Electronic Payment System (EPS)
-                </h3>
-
-                <p>
-                    Sistem pembayaran elektronik yang mendukung transaksi
-                    perjalanan secara terintegrasi, aman, dan nyaman melalui
-                    berbagai metode pembayaran serta teknologi digital
-                    (Account-Based Ticketing, Mobile Ticketing, NFC, dan QRIS).
-                </p>
-
-                <div class="intrakota-teknologi-tags">
-
-                    <span>Multi Operator</span>
-                    <span>Multi Modal</span>
-                    <span>Interoperabilitas</span>
-
-                </div>
+                <span>Multi-Moda</span>
+                <span>Perjalanan Terintegrasi</span>
+                <span>Parkir Real-Time</span>
 
             </div>
 
+        </div>
 
-            <!-- =================================================
-                 MAAS & SMART PARKING
-            ================================================== -->
-            <div class="intrakota-teknologi-maas">
+        <div class="intrakota-teknologi-maas-image">
 
-                <div class="intrakota-teknologi-maas-content">
+            <img
+                src="../assets/images/intrakota/smartparking.jpg"
+                alt="MaaS dan Smart Parking"
+            >
 
-                    <div class="intrakota-teknologi-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
+        </div>
 
-                    <h3>
-                        MaaS &amp; Smart Parking
-                    </h3>
-
-                    <p>
-                        Layanan mobilitas terintegrasi untuk merencanakan
-                        perjalanan dan mengakses berbagai moda, didukung
-                        sistem parkir cerdas dengan informasi ketersediaan
-                        parkir secara real-time.
-                    </p>
-
-                    <div class="intrakota-teknologi-tags">
-
-                        <span>Multi-Moda</span>
-                        <span>Perjalanan Terintegrasi</span>
-                        <span>Parkir Real-Time</span>
-
-                    </div>
-
-                </div>
-
-                <div class="intrakota-teknologi-maas-image">
-
-                    <img
-                        src="../assets/images/intrakota/smartparking.jpg"
-                        alt="MaaS dan Smart Parking"
-                    >
-
-                </div>
-
-            </div>
-
+    </div>
 
             <!-- =================================================
                  NUSANTARA COMMAND CENTER
@@ -1788,6 +1866,119 @@ window.addEventListener('resize', () => {
         current = (current + 1) % slides.length;
         slides[current].classList.add('active');
     }, intervalMs);
+})();
+
+(function () {
+    const steps = document.querySelectorAll('.intrakota-steps .intrakota-step');
+    const wrap = document.querySelector('.intrakota-steps-wrap');
+    if (!steps.length || !wrap) return;
+
+    const MOBILE_BREAKPOINT = 850; // ambang batas dianggap "mobile"
+    const POP_DURATION = 2000;     // 2 detik per kotak
+
+    let currentIndex = 0;
+    let popTimer = null;
+
+    function clearAllPop() {
+        steps.forEach(step => step.classList.remove('intrakota-step-pop'));
+    }
+
+    function scrollToStep(step) {
+        // Hitung posisi kotak relatif terhadap wrapper, lalu
+        // geser wrapper supaya kotak tersebut berada di tengah
+        // area yang terlihat (viewport horizontal).
+        const targetLeft =
+            step.offsetLeft - (wrap.clientWidth / 2) + (step.offsetWidth / 2);
+
+        wrap.scrollTo({
+            left: Math.max(0, targetLeft),
+            behavior: 'smooth'
+        });
+    }
+
+    function popNext() {
+        clearAllPop();
+        const step = steps[currentIndex];
+        step.classList.add('intrakota-step-pop');
+        scrollToStep(step);
+        currentIndex = (currentIndex + 1) % steps.length;
+    }
+
+    function startPopAnimation() {
+        if (popTimer) return; // sudah berjalan, jangan dobel
+        currentIndex = 0;
+        popNext();
+        popTimer = setInterval(popNext, POP_DURATION);
+    }
+
+    function stopPopAnimation() {
+        if (popTimer) {
+            clearInterval(popTimer);
+            popTimer = null;
+        }
+        clearAllPop();
+        wrap.scrollTo({ left: 0, behavior: 'auto' });
+    }
+
+    function checkViewportAndToggle() {
+        if (window.innerWidth <= MOBILE_BREAKPOINT) {
+            startPopAnimation();
+        } else {
+            stopPopAnimation();
+        }
+    }
+
+    // Jalankan sekali saat halaman dimuat
+    checkViewportAndToggle();
+
+    // Cek ulang setiap kali ukuran layar berubah (misalnya rotasi HP)
+    let resizeDebounce;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeDebounce);
+        resizeDebounce = setTimeout(checkViewportAndToggle, 200);
+    });
+})();
+
+/* =========================================================
+   GESER FOTO "SISTEM MOBILITAS PERKOTAAN" DENGAN TOMBOL
+   PANAH TRANSPARAN DI KIRI & KANAN
+========================================================= */
+function scrollMobilityCards(direction) {
+    const container = document.getElementById('mobilityCards');
+    if (!container) return;
+
+    const card = container.querySelector('.intrakota-mobility-card');
+    const styles = window.getComputedStyle(container);
+    const gap = parseFloat(styles.columnGap || styles.gap || '15') || 15;
+
+    const scrollAmount = card
+        ? card.getBoundingClientRect().width + gap
+        : container.clientWidth * 0.8;
+
+    container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+}
+
+/* Sembunyikan tombol panah otomatis saat sudah mentok kiri/kanan */
+(function () {
+    const container = document.getElementById('mobilityCards');
+    const wrap = document.querySelector('.intrakota-mobility-cards-wrap');
+    if (!container || !wrap) return;
+
+    const btnLeft = wrap.querySelector('.intrakota-mobility-nav-left');
+    const btnRight = wrap.querySelector('.intrakota-mobility-nav-right');
+    if (!btnLeft || !btnRight) return;
+
+    function updateNavState() {
+        const maxScroll = container.scrollWidth - container.clientWidth - 1;
+
+        btnLeft.classList.toggle('is-disabled', container.scrollLeft <= 0);
+        btnRight.classList.toggle('is-disabled', container.scrollLeft >= maxScroll);
+    }
+
+    container.addEventListener('scroll', updateNavState, { passive: true });
+    window.addEventListener('resize', updateNavState);
+
+    updateNavState();
 })();
 </script>
 

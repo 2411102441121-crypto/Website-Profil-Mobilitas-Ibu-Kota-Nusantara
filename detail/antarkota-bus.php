@@ -185,10 +185,9 @@ ob_start();
     /* KONEKTIVITAS STEP CARDS */
     .step-card-box {
         background: #e8f0eb;
-        border-radius: 16px;
-        padding: 30px 20px;
+        border-radius: 14px;
+        padding: 16px 12px;
         text-align: center;
-        height: 100%;
         border: 1px solid #e8eee9;
         transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
         cursor: pointer;
@@ -196,18 +195,18 @@ ob_start();
 
     /* WADAH GAMBAR IKON */
     .step-icon-wrapper {
-        width: 64px;
-        height: 64px;
+        width: 48px;
+        height: 48px;
         background: #eef4f0;
-        border-radius: 16px;
+        border-radius: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 auto 20px auto;
-        font-size: 1.6rem;
+        margin: 0 auto 12px auto;
+        font-size: 1.2rem;
         color: #204420;
         overflow: hidden; /* Agar gambar tidak keluar dari sudut rounded */
-        padding: 10px;    /* Memberi jarak/padding gambar dari kotak background */
+        padding: 8px;    /* Memberi jarak/padding gambar dari kotak background */
     }
 
     /* PENGATURAN FOTO/GAMBAR IKON */
@@ -221,16 +220,16 @@ ob_start();
     /* PENGATURAN HURUF JUDUL (Samarinda - Balikpapan - Penajam) */
     .step-title {
         font-family: 'Sutasoma Text', sans-serif;
-        font-size: 0.95rem;
+        font-size: 0.89rem;
         font-weight: 600;
         color: #204420;
-        margin-bottom: 6px;
-        line-height: 1.4;
+        margin-bottom: 4px;
+        line-height: 1.3;
     }
 
     /* PENGATURAN HURUF SUBJUDUL (Titik Awal Keberangkatan) */
     .step-desc {
-        font-size: 0.82rem;
+        font-size: 0.75rem;
         font-weight: 400;     /* Ketebalan huruf deskripsi */
         color: #6c757d;
         margin-bottom: 0;
@@ -546,8 +545,8 @@ ob_start();
                     </div>
                 </div>
                 <div class="col">
-                    <div class="thumb-gallery-box" onclick="changeHeroImage(this, '<?= $base_url; ?>assets/images/antarkota/bus_cititrans.jpeg', 1)">
-                        <img src="<?= $base_url; ?>assets/images/antarkota/bus_cititrans.jpeg" alt="Thumb 2">
+                    <div class="thumb-gallery-box" onclick="changeHeroImage(this, '<?= $base_url; ?>assets/images/antarkota/bus_antarkota.jpeg', 1)">
+                        <img src="<?= $base_url; ?>assets/images/antarkota/bus_antarkota.jpeg" alt="Thumb 2">
                     </div>
                 </div>
                 <div class="col">
@@ -585,7 +584,7 @@ ob_start();
 
     <!-- ================= GAMBAR 2: KONEKTIVITAS & DETAIL RUTE ================= -->
     <div class="mb-5 text-center">
-        <h2 class="fw-bold text-dark fs-2 mb-1" style="font-family: 'Sutasoma Display', serif;">Konektivitas Bus Antarkota</h2>
+        <h2 class="fw-bold text-dark font-size-28px mb-1" style="font-family: 'Sutasoma Display', serif;">Konektivitas Bus Antarkota</h2>
         <p class="text-muted small mb-4">Kota/Simpul Transportasi &rarr; IKN</p>
 
         <div class="row g-4">
@@ -629,7 +628,7 @@ ob_start();
     <!-- DETAIL RUTE PERJALANAN -->
     <div id="rute-perjalanan" class="mb-5 pt-4">
         <div class="text-center mb-4">
-            <h2 class="fw-bold text-dark fs-2 mb-1" style="font-family: 'Sutasoma Display', serif;">Detail Rute Perjalanan</h2>
+            <h2 class="fw-bold text-dark font-size-28px mb-1" style="font-family: 'Sutasoma Display', serif;">Detail Rute Perjalanan</h2>
             <p class="text-muted small">Panduan rute perjalanan dari berbagai kota dan wilayah sekitar menuju kawasan Ibu Kota Nusantara.</p>
         </div>
 
@@ -918,7 +917,7 @@ ob_start();
     // Array 5 foto untuk slideshow otomatis
     const heroImages = [
         "<?= $base_url; ?>assets/images/antarkota/bus_sinarjaya.jpeg",
-        "<?= $base_url; ?>assets/images/antarkota/bus_cititrans.jpeg",
+        "<?= $base_url; ?>assets/images/antarkota/bus_antarkota.jpeg",
         "<?= $base_url; ?>assets/images/antarkota/bus_damri.jpg",
         "<?= $base_url; ?>assets/images/antarkota/bus_transkaltim.jpeg",
         "<?= $base_url; ?>assets/images/antarkota/bus.jpg"

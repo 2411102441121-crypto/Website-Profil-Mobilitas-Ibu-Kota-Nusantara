@@ -23,7 +23,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- CSS UTAMA WEBSITE -->
-    <link rel="stylesheet" href="<?= $base_url; ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?= $base_url; ?>assets/css/style.css?v=1">
 
     <!-- CSS KHUSUS HALAMAN AKTIVITAS -->
     <?php
@@ -74,7 +74,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
         LAYANAN INTRAKOTA
         ========================= */
         case 'intrakota.php':
-            echo '<link rel="stylesheet" href="' . $base_url . 'assets/css/intrakota.css">';
+            echo '<link rel="stylesheet" href="' . $base_url . 'assets/css/intrakota.css?v=2">';
             break;
     }
     ?>
@@ -422,10 +422,10 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
                     <a class="nav-link <?= ($current_page == 'intrakota.php') ? 'active' : ''; ?>" href="<?= $base_url; ?>pages/intrakota.php">Layanan Intrakota</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= (strpos($current_page, 'aktivitas') !== false) ? 'active' : ''; ?>" href="<?= $base_url; ?>pages/aktivitas.php">Aktivitas</a>
-               
-                <li class="nav-item">
                     <a class="nav-link <?= ($current_page == 'peta.php') ? 'active' : ''; ?>" href="<?= $base_url; ?>pages/peta.php"> Peta</a>
+
+                <li class="nav-item">
+                    <a class="nav-link <?= (strpos($current_page, 'aktivitas') !== false) ? 'active' : ''; ?>" href="<?= $base_url; ?>pages/aktivitas.php">Aktivitas</a>
 
                 </li>
                 <li class="nav-item">
@@ -489,13 +489,12 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
                             <li><a href="<?= $base_url; ?>pages/intrakota.php" class="text-white-50 text-decoration-none">Layanan Intrakota</a></li>
                         <?php endif; ?>
 
-                        <?php if ($current_page != 'aktivitas.php'): ?>
-                            <li><a href="<?= $base_url; ?>pages/aktivitas.php" class="text-white-50 text-decoration-none">Aktivitas</a></li>
-                        <?php endif; ?>
-
-
                         <?php if ($current_page != 'peta.php'): ?>
                             <li><a href="<?= $base_url; ?>pages/peta.php" class="text-white-50 text-decoration-none">Peta</a></li>
+                        <?php endif; ?>
+
+                        <?php if ($current_page != 'aktivitas.php'): ?>
+                            <li><a href="<?= $base_url; ?>pages/aktivitas.php" class="text-white-50 text-decoration-none">Aktivitas</a></li>
                         <?php endif; ?>
 
                         <?php if ($current_page != 'tentang.php'): ?>
