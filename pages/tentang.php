@@ -232,16 +232,21 @@ ob_start();
     </div>
 
 <?php
-$terms = [
-    ['Mobilitas Cerdas', 'Mobilitas cerdas merupakan sistem transportasi yang memanfaatkan teknologi untuk meningkatkan efisiensi, keamanan, dan kenyamanan perjalanan.'],
-    ['Park & Ride', 'Fasilitas yang memungkinkan pengguna memarkir kendaraan pribadi kemudian melanjutkan perjalanan menggunakan transportasi umum.'],
-    ['First Mile - Last Mile', 'Konsep perjalanan dari titik awal menuju transportasi utama dan dari titik pemberhentian menuju tujuan akhir.'],
-    ['Micromobility', 'Transportasi menggunakan kendaraan ringan bertenaga listrik untuk perjalanan jarak pendek seperti skuter listrik, sepeda listrik, atau hoverboard.'],
-    ['Lingkara', 'Lingkara merupakan layanan transportasi yang mendukung mobilitas masyarakat di kawasan IKN.'],
-    ['Mitra Darat', 'Platform yang mendukung pengelolaan dan informasi layanan transportasi darat.']
-];
-?>
+$terms = [];
 
+$query_glosarium = mysqli_query($koneksi, "
+    SELECT istilah, definisi
+    FROM glosarium
+    WHERE status = 'aktif'
+    ORDER BY id DESC
+");
+
+if ($query_glosarium) {
+    while ($row = mysqli_fetch_assoc($query_glosarium)) {
+        $terms[] = [$row['istilah'], $row['definisi']];
+    }
+}
+?>
 <div class="glossary" style="
     width:400px !important; 
     height:296px !important; 

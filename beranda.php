@@ -21,17 +21,6 @@ ob_start();
 ?>
 <!-- Custom Style Tambahan -->
 <style>
-<<<<<<< HEAD
-=======
-
-    /* Jika di base.php ada pembungkus seperti <main>, .content, atau .container-fluid */
-    main, .main-content, .content, #content {
-        padding-top: 0 !important;
-        margin-top: 0 !important;
-        background-color: #f8f9fa !important;
-    }
->>>>>>> efd083c163a2cb32214647039fe7f1195a61abe5
-    
     /* Utility font-size hasil konversi rem Bootstrap ke px */
     .font-size-40px { font-size: 40px !important; }
     .font-size-32px { font-size: 32px !important; }
@@ -625,11 +614,6 @@ ob_start();
                 <h1 class="display-4 fw-bold mb-3" style="line-height: 1.2;">
                     Bergerak dengan Mudah,<br>Terhubung, dan Ramah<br>Lingkungan di Ibu Kota<br>Nusantara
                 </h1>
-<<<<<<< HEAD
-                <p class="font-size-16px mb-4 text-white-80" style="max-width: 750px; line-height: 1.6;">
-=======
-                <p class="font-size-16px mb-4 text-white-80" style="max-width: 750px; font-weight: 400; line-height: 1.6;">
->>>>>>> efd083c163a2cb32214647039fe7f1195a61abe5
                     Nusantara dirancang sebagai Kota 10 Menit yang berorientasi manusia dan berbasis transit dengan sistem transportasi andal, nyaman, dan ramah lingkungan. Pejalan kaki dan pesepeda menjadi prioritas aksesibilitas kawasan dan pusat aktivitas kota untuk mencapai kawasan hijau yang berkelanjutan.
                 </p>
                 
