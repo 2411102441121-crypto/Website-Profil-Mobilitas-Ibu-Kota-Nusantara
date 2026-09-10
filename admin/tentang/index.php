@@ -1,5 +1,5 @@
 <?php
-require_once '../koneksi.php';
+require_once __DIR__ . '/../koneksi.php';
 
 // Ambil semua data glosarium
 $query = "SELECT * FROM glosarium ORDER BY id DESC";
@@ -22,7 +22,6 @@ $result = mysqli_query($koneksi, $query);
         .card-custom { background-color: #ffffff; border-radius: 12px; border: 1px solid #edf2f7; overflow: hidden; }
         .table-glosarium th { background-color: #ffffff; color: #6b7280; font-size: 11px; font-weight: 700; text-transform: uppercase; padding: 16px 24px; border-bottom: 1px solid #f3f4f6; }
         .table-glosarium td { padding: 20px 24px; vertical-align: middle; border-bottom: 1px solid #f3f4f6; font-size: 14px; }
-        .icon-avatar { width: 40px; height: 40px; border-radius: 50%; background-color: #f3f7f4; color: #1b4327; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
         .badge-status { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; display: inline-block; }
         .badge-aktif { background-color: #d1fae5; color: #065f46; }
         .badge-nonaktif { background-color: #fee2e2; color: #991b1b; }
@@ -68,12 +67,7 @@ $result = mysqli_query($koneksi, $query);
                                 <?php while ($row = mysqli_fetch_assoc($result)): ?>
                                 <tr>
                                     <td>
-                                        <div class="d-flex align-items-center gap-3">
-                                            <div class="icon-avatar">
-                                                <i class="fa-solid <?= htmlspecialchars($row['icon']) ?>"></i>
-                                            </div>
-                                            <span class="fw-bold text-dark"><?= htmlspecialchars($row['istilah']) ?></span>
-                                        </div>
+                                        <span class="fw-bold text-dark"><?= htmlspecialchars($row['istilah']) ?></span>
                                     </td>
                                     <td><span class="text-secondary"><?= htmlspecialchars($row['definisi']) ?></span></td>
                                     <td>

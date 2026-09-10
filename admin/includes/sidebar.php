@@ -145,12 +145,18 @@ $current_uri = $_SERVER['REQUEST_URI'];
                 </a>
             </li>
             <li>
-                <a href="<?= $base_url ?>aktivitas/index.php" 
-                   class="ikn-sidebar-link <?= (strpos($current_uri, '/aktivitas/') !== false) ? 'active' : '' ?>">
+                <a href="<?= $base_url ?>peta/index.php"
+                class="ikn-sidebar-link <?= (strpos($current_uri, '/peta/') !== false) ? 'active' : '' ?>">
+                    <span>Peta & Rute</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="<?= $base_url ?>aktivitas/index.php"
+                class="ikn-sidebar-link <?= (strpos($current_uri, '/aktivitas/') !== false) ? 'active' : '' ?>">
                     <span>Aktivitas</span>
                 </a>
             </li>
-            <li>
                 <a href="<?= $base_url ?>tentang/index.php" 
                    class="ikn-sidebar-link <?= (strpos($current_uri, '/tentang/') !== false) ? 'active' : '' ?>">
                     <span>Tentang</span>

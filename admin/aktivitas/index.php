@@ -55,10 +55,9 @@ if ($cat_filter !== 'All') {
             </a>
         </div>
 
-        <!-- Filter Kategori -->
+        <!-- Filter Kategori (Opsi Olahraga Sudah Dihapus) -->
         <div class="d-flex gap-2 mb-4 overflow-x-auto pb-1">
             <a href="index.php?cat=All" class="btn btn-sm rounded-pill <?= $cat_filter==='All'?'btn-dark':'btn-outline-secondary bg-white' ?>">All Categories</a>
-            <a href="index.php?cat=Olahraga" class="btn btn-sm rounded-pill <?= $cat_filter==='Olahraga'?'btn-dark':'btn-outline-secondary bg-white' ?>">Olahraga</a>
             <a href="index.php?cat=Transportasi" class="btn btn-sm rounded-pill <?= $cat_filter==='Transportasi'?'btn-dark':'btn-outline-secondary bg-white' ?>">Transportasi</a>
             <a href="index.php?cat=Pembangunan" class="btn btn-sm rounded-pill <?= $cat_filter==='Pembangunan'?'btn-dark':'btn-outline-secondary bg-white' ?>">Pembangunan</a>
             <a href="index.php?cat=Kegiatan %26 Masyarakat" class="btn btn-sm rounded-pill <?= $cat_filter==='Kegiatan & Masyarakat'?'btn-dark':'btn-outline-secondary bg-white' ?>">Kegiatan & Masyarakat</a>

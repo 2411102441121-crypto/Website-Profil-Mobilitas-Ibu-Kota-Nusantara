@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/../admin/koneksi.php';
+
 $title = "Tentang | Profil Mobilitas IKN";
 ob_start();
 ?>
