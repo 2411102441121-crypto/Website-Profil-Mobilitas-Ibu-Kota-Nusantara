@@ -24,44 +24,40 @@ if (isset($conn) && $conn) {
 ob_start();
 ?>
 
-<!-- CUSTOM CSS HALAMAN ANTARKOTA -->
 <style>
 
-/* 1. Kunci lebar scrollbar browser agar stabil */
-html {
-    scrollbar-gutter: stable !important;
-}
+    /* 1. Kunci lebar scrollbar browser agar stabil */
+    html {
+        scrollbar-gutter: stable !important;
+    }
 
-/* 2. Mencegah seluruh halaman meluap ke samping */
-html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-    background-color: #f8f9fa !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-}
+    /* 2. Mencegah seluruh halaman meluap ke samping */
+    html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #f8f9fa !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
 
-/* 3. Mencegah pendorong bawaan Bootstrap saat modal terbuka tanpa merusak layout navbar */
-body.modal-open {
-    padding-right: 0px !important;
-    margin-right: 0px !important;
-}
+    /* 3. Mencegah pendorong bawaan Bootstrap saat modal terbuka tanpa merusak layout navbar */
+    body.modal-open {
+        padding-right: 0px !important;
+        margin-right: 0px !important;
+    }
 
-/* 4. Kembalikan kontrol padding navbar ke bawaan (HAPUS override padding-right: 0px) */
-/* .fixed-top, .sticky-top, header, nav, .navbar TIDAK lagi di-force padding-right: 0px */
+    /* 4. Menetralkan margin negatif bawaan .row Bootstrap */
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
 
-/* 5. Menetralkan margin negatif bawaan .row Bootstrap */
-.row {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-
-/* 6. Pembungkus konten utama */
-main, .main-content, .content, #content {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-    background-color: #f8f9fa !important;
-}
+    /* 6. Pembungkus konten utama */
+    main, .main-content, .content, #content {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+        background-color: #f8f9fa !important;
+    }
 
 
     /* HERO BANNER HIJAU TUA */

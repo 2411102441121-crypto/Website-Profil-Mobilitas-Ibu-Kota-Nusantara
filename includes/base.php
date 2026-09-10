@@ -23,7 +23,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- CSS UTAMA WEBSITE -->
-    <link rel="stylesheet" href="<?= $base_url; ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?= $base_url; ?>assets/css/style.css?v=1">
 
     <!-- CSS KHUSUS HALAMAN AKTIVITAS -->
     <?php
@@ -74,7 +74,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
         LAYANAN INTRAKOTA
         ========================= */
         case 'intrakota.php':
-            echo '<link rel="stylesheet" href="' . $base_url . 'assets/css/intrakota.css">';
+            echo '<link rel="stylesheet" href="' . $base_url . 'assets/css/intrakota.css?v=2">';
             break;
     }
     ?>

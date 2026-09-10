@@ -3,6 +3,10 @@
 $title = "Layanan Intrakota - Profil Mobilitas IKN";
 $active_page = "intrakota";
 
+?>
+<link rel="stylesheet" href="/ikn-mobility/assets/css/intrakota.css?v=999">
+<?php
+
 ob_start();
 ?>
 
@@ -1304,7 +1308,7 @@ ob_start();
                 alt="Logistik Perkotaan di IKN"
                 class="intrakota-logistik-slide"
             >
-            <img
+            <!-- <img
                 src="../assets/images/intrakota/logistik-3.jpg"
                 alt="Logistik Perkotaan di IKN"
                 class="intrakota-logistik-slide"
@@ -1318,7 +1322,7 @@ ob_start();
                 src="../assets/images/intrakota/logistik-5.jpg"
                 alt="Logistik Perkotaan di IKN"
                 class="intrakota-logistik-slide"
-            >
+            > -->
 
             <div class="intrakota-logistik-photo-overlay"></div>
 
