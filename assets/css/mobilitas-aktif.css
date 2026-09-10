@@ -1,726 +1,1505 @@
-/* =========================================
-   MOBILITAS AKTIF
-========================================= */
+/* ======================================================
+   MIKROMOBILITAS IKN
+   File: assets/css/mikromobilitas.css
+   (Ukuran font dibesarkan & disamakan dengan skala
+   tipografi antarkota.php)
+====================================================== */
 
-.active-page {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 45px 20px 80px;
-    color: #17231c;
-    background: #f7f9f7;
+
+/* ======================================================
+   RESET
+====================================================== */
+
+* {
     box-sizing: border-box;
 }
 
-.active-page * {
-    box-sizing: border-box;
+html {
+    scroll-behavior: smooth;
 }
 
-
-/* =========================================
-   HEADER
-========================================= */
-
-.active-header {
-    margin-bottom: 20px;
-}
-
-.breadcrumb {
-    display: inline-block;
-    padding: 7px 12px;
-    border-radius: 20px;
-    background: #e5f3eb;
-    color: #28683d;
-    font-size: 11px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.active-header h1 {
-    margin: 0 0 8px;
-    font-family: "Sutasoma Display", Georgia, serif;
-    font-size: 40px;
-    line-height: 1.15;
-    color: #172a1d;
-}
-
-.active-header p {
-    max-width: 850px;
+body {
     margin: 0;
-    font-size: 13px;
-    line-height: 1.55;
-    color: #68736d;
+    padding: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f7faf8;
+    color: #17233a;
 }
 
 
-/* =========================================
-   HERO
-========================================= */
+/* ======================================================
+   HALAMAN
+====================================================== */
 
-.active-hero {
-    position: relative;
-    height: 370px;
+.micro-page {
+    width: min(1180px, calc(100% - 40px));
+
+    margin: 0 auto;
+
+    padding-top: 28px;
+    padding-bottom: 70px;
+}
+
+
+/* ======================================================
+   HEADING
+====================================================== */
+
+.micro-heading {
+    margin-bottom: 28px;
+}
+
+.micro-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 12px;
+
+    font-size: 14px;
+    color: #718094;
+}
+
+.micro-breadcrumb span:first-child {
+    padding: 6px 11px;
+
+    border-radius: 5px;
+
+    background: #e8f3eb;
+
+    color: #356b46;
+
+    font-weight: 700;
+}
+
+.micro-breadcrumb i {
+    font-style: normal;
+    color: #b1bbb7;
+}
+
+.heading-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 30px;
+}
+
+.heading-row > div:first-child {
+    max-width: 780px;
+}
+
+/* Judul utama halaman - dibesarkan melebihi hero antarkota (55px) */
+.micro-heading h1 {
+    margin: 0 0 12px;
+
+    font-size: 60px;
+    line-height: 1.15;
+
+    color: #14233a;
+
+    letter-spacing: -1px;
+}
+
+.micro-heading p {
+    margin: 0;
+
+    max-width: 780px;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    color: #667489;
+}
+
+.emission-badge {
+    flex-shrink: 0;
+
+    padding: 12px 18px;
+
+    border: 1px solid #bdd2c3;
+
+    border-radius: 25px;
+
+    background: #eff8f1;
+
+    color: #176237;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.emission-badge span {
+    color: #176237;
+}
+
+
+/* ======================================================
+   CARD UMUM
+====================================================== */
+
+.micro-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #dce5e1;
+
+    border-radius: 14px;
+
     overflow: hidden;
-    border-radius: 10px;
-    margin-top: 20px;
-    background: #ddd;
+
+    margin-bottom: 28px;
 }
 
-.active-hero img {
+
+/* ======================================================
+   BAGIAN FOTO
+====================================================== */
+
+.bike-main-image,
+.docking-image,
+.scooter-image,
+.gowes-image {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+.bike-main-image img,
+.docking-image img,
+.scooter-image img,
+.gowes-image img {
+    display: block;
+
     width: 100%;
     height: 100%;
-    display: block;
+
     object-fit: cover;
 }
 
-.hero-overlay {
+
+/* ======================================================
+   BADGE FOTO
+====================================================== */
+
+.image-badge {
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 80px 28px 25px;
-    color: white;
-    background: linear-gradient(
-        transparent,
-        rgba(0, 0, 0, .78)
-    );
-}
 
-.hero-overlay span {
-    display: inline-block;
-    margin-bottom: 7px;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: .5px;
-    color: #d4f4df;
-}
+    top: 15px;
+    left: 15px;
 
-.hero-overlay h2 {
-    margin: 0 0 5px;
-    font-size: 23px;
-}
+    z-index: 5;
 
-.hero-overlay p {
-    max-width: 750px;
-    margin: 0;
-    font-size: 11px;
-    line-height: 1.5;
-}
+    padding: 8px 13px;
 
-
-/* =========================================
-   STATS
-========================================= */
-
-.active-stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    background: white;
-    border: 1px solid #e3e8e4;
-    border-top: none;
-    border-radius: 0 0 8px 8px;
-    margin-top: -1px;
-    padding: 14px 10px;
-}
-
-.stat-item {
-    text-align: center;
-    border-right: 1px solid #e8ece9;
-}
-
-.stat-item:last-child {
-    border-right: none;
-}
-
-.stat-item strong {
-    display: block;
-    font-size: 12px;
-    color: #315f3e;
-}
-
-.stat-item span {
-    display: block;
-    margin-top: 3px;
-    font-size: 9px;
-    color: #87918b;
-}
-
-
-/* =========================================
-   MAP
-========================================= */
-
-.corridor-map {
-    margin-top: 20px;
-    background: white;
-    border: 1px solid #e2e8e4;
-    border-radius: 10px;
-    padding: 15px;
-}
-
-.section-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.section-top h2 {
-    margin: 0;
-    font-size: 14px;
-}
-
-.section-top p {
-    margin: 4px 0 0;
-    font-size: 9px;
-    color: #8a938d;
-}
-
-.map-badge {
-    white-space: nowrap;
-    padding: 6px 10px;
     border-radius: 20px;
-    background: #eaf8f0;
-    color: #319263;
-    font-size: 8px;
-}
 
-.map-image {
-    margin-top: 10px;
-    border-radius: 7px;
-    overflow: hidden;
-}
+    background: #075c31;
 
-.map-image img {
-    width: 100%;
-    height: 390px;
-    object-fit: cover;
-    display: block;
-}
+    color: #ffffff;
 
-.map-footer {
-    margin-top: 8px;
-    font-size: 9px;
-    color: #83908a;
-}
-
-
-/* =========================================
-   PRIORITY
-========================================= */
-
-.priority-section {
-    margin-top: 25px;
-}
-
-.section-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 12px;
-}
-
-.section-title h2 {
-    margin: 0;
-    font-size: 17px;
-}
-
-.section-title p {
-    margin: 3px 0 0;
-    font-size: 9px;
-    color: #89928d;
-}
-
-.corridor-filter {
-    display: flex;
-    gap: 4px;
-    padding: 3px;
-    border: 1px solid #e1e7e3;
-    background: #f1f5f2;
-    border-radius: 6px;
-}
-
-.corridor-filter button {
-    border: none;
-    background: transparent;
-    padding: 7px 10px;
-    border-radius: 4px;
-    font-size: 8px;
-    color: #69746d;
-    cursor: pointer;
-}
-
-.corridor-filter button.active {
-    background: white;
-    color: #205d37;
-    box-shadow: 0 1px 3px rgba(0,0,0,.08);
-}
-
-.corridor-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-}
-
-.corridor-card {
-    display: flex;
-    gap: 9px;
-    min-height: 115px;
-    padding: 12px;
-    background: white;
-    border: 1px solid #dfe7e1;
-    border-radius: 7px;
-}
-
-.corridor-code {
-    width: 23px;
-    height: 23px;
-    flex: 0 0 23px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #205a32;
-    border-radius: 4px;
-    color: white;
-    font-size: 8px;
-    font-weight: 700;
-}
-
-.corridor-card h3 {
-    margin: 0 0 8px;
-    font-size: 11px;
-    line-height: 1.3;
-}
-
-.corridor-card p {
-    margin: 3px 0;
-    font-size: 8px;
-    line-height: 1.4;
-    color: #69736c;
-}
-
-.corridor-card strong {
-    color: #37433c;
-}
-
-
-/* =========================================
-   BIKE BANNER
-========================================= */
-
-.bike-banner {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 25px;
-    padding: 16px;
-    background: linear-gradient(
-        100deg,
-        #086447,
-        #154e25
-    );
-    border-radius: 10px;
-    color: white;
-}
-
-.bike-icon {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255,255,255,.1);
-    border-radius: 7px;
-    flex: 0 0 auto;
-}
-
-.bike-content {
-    flex: 1;
-}
-
-.bike-content > span {
-    font-size: 8px;
-    color: #7de0b4;
-    font-weight: 700;
-}
-
-.bike-content h2 {
-    margin: 4px 0;
     font-size: 13px;
-}
-
-.bike-content p {
-    margin: 0;
-    max-width: 700px;
-    font-size: 8px;
-    line-height: 1.45;
-    color: #c8ded3;
-}
-
-.bike-button {
-    flex: 0 0 auto;
-    padding: 10px 14px;
-    border-radius: 7px;
-    background: white;
-    color: #245f35;
-    text-decoration: none;
-    font-size: 9px;
     font-weight: 700;
 }
 
+.solar-badge {
+    position: absolute;
 
-/* =========================================
-   FEATURE LAYOUT
-========================================= */
+    top: 15px;
+    right: 15px;
 
-.feature-layout {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 18px;
-    margin-top: 25px;
-}
+    z-index: 5;
 
+    padding: 8px 13px;
 
-/* =========================================
-   PRINCIPLE
-========================================= */
-
-.principle-card {
-    padding: 18px;
-    border-radius: 10px;
-    background: #194f27;
-    color: white;
-}
-
-.green-label {
-    display: inline-block;
-    padding: 5px 9px;
-    background: rgba(81,199,133,.2);
     border-radius: 20px;
-    color: #8de0ac;
-    font-size: 8px;
-}
 
-.principle-card h2 {
-    margin: 13px 0 8px;
-    font-size: 16px;
-}
+    background: #0d542f;
 
-.principle-number {
-    font-size: 28px;
-    font-weight: 700;
-}
+    color: #ffffff;
 
-.principle-number small {
-    font-size: 8px;
-    font-weight: 400;
-}
-
-.principle-card > p {
-    margin: 10px 0;
-    font-size: 9px;
-    line-height: 1.6;
-    color: #d0dfd3;
-}
-
-.principle-route {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    padding: 10px 0;
-    margin-top: 8px;
-    border-top: 1px solid rgba(255,255,255,.1);
-}
-
-.principle-route strong,
-.principle-route small {
-    display: block;
-}
-
-.principle-route strong {
-    font-size: 9px;
-}
-
-.principle-route small {
-    margin-top: 2px;
-    color: #a9c5af;
-    font-size: 7px;
-}
-
-.route-button {
-    display: block;
-    text-align: center;
-    margin-top: 8px;
-    padding: 9px;
-    border-radius: 6px;
-    background: #2bd29b;
-    color: #073b20;
-    text-decoration: none;
-    font-size: 9px;
+    font-size: 13px;
     font-weight: 700;
 }
 
 
-/* =========================================
-   FEATURES
-========================================= */
+/* ======================================================
+   CAPTION
+====================================================== */
 
-.features-card {
-    padding: 16px;
-    background: white;
-    border: 1px solid #e0e7e2;
-    border-radius: 10px;
+.image-caption {
+    position: absolute;
+
+    right: 12px;
+    bottom: 10px;
+
+    z-index: 5;
+
+    padding: 5px 9px;
+
+    border-radius: 4px;
+
+    background: rgba(0, 0, 0, 0.62);
+
+    color: #ffffff;
+
+    font-size: 12px;
 }
 
-.features-card > h2 {
-    margin: 0 0 13px;
+
+/* ======================================================
+   LABEL
+====================================================== */
+
+.small-label {
+    display: inline-block;
+
+    width: fit-content;
+
+    margin-bottom: 13px;
+
+    padding: 8px 11px;
+
+    border-radius: 4px;
+
+    background: #e9f3eb;
+
+    color: #2f6c43;
+
     font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 0.2px;
 }
 
-.features-grid {
+
+/* ======================================================
+   DESKRIPSI
+====================================================== */
+
+.description {
+    margin: 0;
+
+    color: #657286;
+
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+
+/* ======================================================
+   BAGIAN 1
+====================================================== */
+
+.bike-main-card {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 9px;
+
+    grid-template-columns: 58% 42%;
+
+    min-height: 440px;
+}
+
+.bike-main-image {
+    min-height: 440px;
+}
+
+.bike-main-content {
+    padding: 40px 34px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bike-main-content h2 {
+    margin: 0 0 15px;
+
+    color: #17243a;
+
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.feature-list {
+    margin-top: 20px;
 }
 
 .feature-item {
     display: flex;
-    gap: 9px;
-    padding: 11px;
-    background: #f7f9fa;
-    border-radius: 7px;
-    border: 1px solid #edf0ef;
-}
 
-.feature-item.full {
-    grid-column: span 2;
+    gap: 11px;
+
+    margin-bottom: 14px;
 }
 
 .feature-icon {
-    width: 25px;
-    height: 25px;
-    flex: 0 0 25px;
+    flex: 0 0 22px;
+
+    width: 22px;
+    height: 22px;
+
     display: flex;
-    justify-content: center;
     align-items: center;
-    background: #eaf8f1;
-    border-radius: 6px;
-    font-size: 11px;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e7f2e8;
+
+    color: #3a7a4a;
+
+    font-size: 12px;
+    font-weight: 800;
 }
 
-.feature-item h3 {
-    margin: 0 0 4px;
-    font-size: 9px;
-    color: #314138;
+.feature-item strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #2b394e;
+
+    font-size: 17px;
 }
 
 .feature-item p {
     margin: 0;
-    font-size: 7.5px;
-    line-height: 1.4;
-    color: #88928d;
+
+    color: #718093;
+
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-.eco-note {
-    margin-top: 9px;
-    padding: 8px 10px;
-    border: 1px solid #cdeedf;
-    border-radius: 6px;
-    color: #547466;
-    background: #f0fbf5;
-    font-size: 8px;
-}
-
-.eco-note strong {
-    float: right;
-    color: #34744d;
-}
-
-
-/* =========================================
-   CONNECTIVITY
-========================================= */
-
-.connectivity-card {
+.bike-info {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 12px;
-    margin-top: 15px;
-    padding: 14px;
-    background: white;
-    border: 1px solid #dfe6e1;
-    border-radius: 9px;
+
+    gap: 10px;
+
+    margin-top: 13px;
+    padding-top: 15px;
+
+    border-top: 1px solid #e2e9e4;
+
+    font-size: 14px;
 }
 
-.connectivity-icon {
-    width: 28px;
-    height: 28px;
+.bike-info strong {
+    color: #3c7650;
+}
+
+.bike-info span {
+    padding: 7px 9px;
+
+    background: #f3f6f6;
+
+    border-radius: 4px;
+
+    color: #697789;
+}
+
+
+/* ======================================================
+   BAGIAN DOCKING
+====================================================== */
+
+.docking-card {
+    display: grid;
+    grid-template-columns: 42% 58%;
+    width: 100%;
+    min-height: 440px;
+}
+
+.docking-content {
+    padding: 38px 30px;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #edf9f2;
-    border-radius: 50%;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    min-width: 0;
 }
 
-.connectivity-card h2 {
+.docking-content h2 {
+    margin: 0 0 15px;
+
+    color: #17243a;
+
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.docking-image {
+    position: relative;
+
+    width: 100%;
+    min-height: 380px;
+    align-self: stretch;
+
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.docking-image img {
+    display: block;
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.dock-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.dock-feature {
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.dock-feature strong {
+    display: block;
+    font-size: 17px;
+    color: #2b394e;
+    margin-bottom: 3px;
+}
+
+.dock-feature p {
     margin: 0;
+    font-size: 16px;
+    color: #718093;
+    line-height: 1.5;
+}
+
+.dock-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 16px;
+    padding-top: 15px;
+
+    border-top: 1px solid #e2e9e4;
+
+    font-size: 14px;
+    color: #697789;
+}
+
+
+/* ======================================================
+   SCOOTER
+====================================================== */
+
+.scooter-card {
+    display: grid;
+
+    grid-template-columns: 58% 42%;
+
+    min-height: 440px;
+}
+
+.scooter-image {
+    min-height: 440px;
+}
+
+.scooter-content {
+    padding: 35px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.scooter-content h2 {
+    margin: 0 0 14px;
+
+    color: #17243a;
+
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.info-box {
+    margin-top: 13px;
+
+    padding: 15px;
+
+    border: 1px solid #dce6df;
+
+    border-radius: 8px;
+
+    background: #f8faf9;
+}
+
+.info-box h3 {
+    margin: 0 0 8px;
+
+    color: #345d40;
+
+    font-size: 16px;
+}
+
+.info-box p {
+    margin: 0 0 6px;
+
+    color: #687688;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.info-box p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ======================================================
+   GOWES
+====================================================== */
+
+.gowes-card {
+    padding: 25px;
+}
+
+.gowes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #e4eae6;
+}
+
+.gowes-header h2 {
+    margin: 0 0 8px;
+
+    color: #19263b;
+
+    font-size: 36px;
+}
+
+.gowes-header p {
+    margin: 0;
+
+    color: #758294;
+
+    font-size: 18px;
+}
+
+.community-button {
+    border: 1px solid #d1dfd5;
+
+    border-radius: 6px;
+
+    background: #edf6ef;
+
+    color: #397149;
+
+    padding: 11px 16px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.gowes-body {
+    display: grid;
+
+    grid-template-columns: 58% 42%;
+
+    min-height: 380px;
+}
+
+.gowes-image {
+    min-height: 380px;
+
+    margin-top: 20px;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.gowes-schedule {
+    padding: 25px 0 20px 24px;
+}
+
+.gowes-schedule h3 {
+    margin: 0 0 14px;
+
+    color: #25334a;
+
+    font-size: 22px;
+}
+
+.event-item {
+    padding: 14px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #dfe7e2;
+
+    border-radius: 7px;
+
+    background: #fafcfb;
+}
+
+.event-title {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 6px;
+}
+
+.event-title span {
+    padding: 5px 8px;
+
+    border-radius: 4px;
+
+    background: #eaf3eb;
+
+    color: #386945;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.event-title small {
+    color: #8490a0;
+
+    font-size: 13px;
+}
+
+.event-item h4 {
+    margin: 0 0 5px;
+
+    color: #304057;
+
+    font-size: 17px;
+}
+
+.event-item p {
+    margin: 0;
+
+    color: #7a8795;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.register-row {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 13px;
+
+    color: #8993a0;
+
+    font-size: 13px;
+}
+
+.register-row strong {
+    color: #347047;
+
+    white-space: nowrap;
+}
+
+
+/* ======================================================
+   ARMADA
+====================================================== */
+
+.fleet-section {
+    margin-top: 32px;
+}
+
+.fleet-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 20px;
+
+    margin-bottom: 18px;
+}
+
+.fleet-heading h2 {
+    margin: 0 0 8px;
+
+    color: #17243a;
+
+    font-size: 36px;
+}
+
+.fleet-heading p {
+    margin: 0;
+
+    color: #718093;
+
+    font-size: 18px;
+}
+
+.fleet-emission {
+    padding: 10px 15px;
+
+    border: 1px solid #c9dacd;
+
+    border-radius: 20px;
+
+    background: #eef7f0;
+
+    color: #317045;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.fleet-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.fleet-card {
+    overflow: hidden;
+
+    border: 1px solid #dce5e1;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+}
+
+.fleet-top {
+    min-height: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 14px;
+
+    background: #123f21;
+}
+
+.fleet-label {
+    display: inline-block;
+
+    padding: 5px 8px;
+
+    border-radius: 3px;
+
+    background: #346340;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.fleet-icon {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #376b48;
+
+    color: #ffffff;
+
     font-size: 11px;
 }
 
-.connectivity-card p {
-    margin: 3px 0 0;
-    font-size: 8px;
-    color: #8a938d;
+.fleet-title {
+    padding: 18px 15px 14px;
+
+    background: #123f21;
+
+    color: #ffffff;
 }
 
-.connectivity-card a {
-    margin-left: auto;
-    color: #315e3b;
-    text-decoration: none;
-    font-size: 8px;
-    font-weight: 700;
+.fleet-title small {
+    font-size: 13px;
+
+    opacity: 0.85;
 }
 
+.fleet-title h3 {
+    margin: 4px 0 0;
 
-/* =========================================
-   ETHICS
-========================================= */
-
-.ethics-section {
-    margin-top: 25px;
-    padding: 18px;
-    background: white;
-    border: 1px solid #dfe6e1;
-    border-radius: 10px;
+    font-size: 23px;
 }
 
-.ethics-section > h2 {
-    margin: 0;
+.spec-list {
+    padding: 10px 14px;
+}
+
+.spec-list > div {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid #edf0ee;
+
     font-size: 15px;
 }
 
-.ethics-intro {
-    margin: 4px 0 15px;
-    color: #89928d;
-    font-size: 8px;
+.spec-list > div:last-child {
+    border-bottom: 0;
 }
 
-.ethics-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.spec-list span {
+    color: #8995a5;
 }
 
-.ethics-item {
-    display: flex;
-    gap: 9px;
+.spec-list strong {
+    color: #344157;
+
+    text-align: right;
 }
 
-.ethics-item > span {
-    width: 20px;
-    height: 20px;
-    flex: 0 0 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #255b32;
-    border-radius: 50%;
-    color: white;
-    font-size: 8px;
-    font-weight: 700;
-}
-
-.ethics-item h3 {
-    margin: 1px 0 5px;
-    font-size: 9px;
-}
-
-.ethics-item p {
+.fleet-note {
     margin: 0;
-    color: #737d77;
-    font-size: 7.5px;
+
+    padding: 0 14px 15px;
+
+    color: #7d8998;
+
+    font-size: 16px;
     line-height: 1.5;
 }
 
 
-/* =========================================
+/* ======================================================
+   FOOTER FIX
+====================================================== */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+body > main {
+    flex: 0 0 auto;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* =========================================================
+   MIKROMOBILITAS - DETAIL
+========================================================= */
+
+.micro-detail-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 42px 20px 70px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+    border-bottom: 1px solid #e8edf0;
+    padding: 0 0 18px;
+    margin-bottom: 20px;
+}
+
+.section-label {
+    display: inline-block;
+    background: #e6f0e6;
+    color: #315b38;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .4px;
+    padding: 7px 12px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    color: #172238;
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.section-heading p {
+    margin: 6px 0 0;
+    color: #748095;
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   STEPS CARD
+========================================================= */
+
+.steps-card {
+    background: #ffffff;
+    border: 1px solid #dfe6eb;
+    border-radius: 16px;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .03);
+    margin-bottom: 42px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step-item {
+    background: #f7f9fb;
+    border: 1px solid #edf1f4;
+    border-radius: 12px;
+    padding: 18px 16px 20px;
+    min-height: 195px;
+    box-sizing: border-box;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #20552b;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    margin-bottom: 15px;
+}
+
+.step-item h3 {
+    color: #273247;
+    font-size: 21px;
+    line-height: 1.35;
+    margin: 0 0 11px;
+    font-weight: 800;
+}
+
+.step-item p {
+    color: #748095;
+    font-size: 16px;
+    line-height: 1.55;
+    margin: 0;
+}
+
+
+/* =========================================================
+   TARIF + FACILITIES
+========================================================= */
+
+.micro-info-layout {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    gap: 22px;
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   TARIFF CARD
+========================================================= */
+
+.tariff-card {
+    background: #e7f0e6;
+    border: 1px solid #b9ccb9;
+    border-radius: 16px;
+    padding: 26px 23px;
+    box-sizing: border-box;
+}
+
+.tariff-label {
+    display: inline-block;
+    background: #ffffff;
+    border: 1px solid #cbd8cd;
+    color: #4e6954;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin-bottom: 17px;
+}
+
+.tariff-card h2 {
+    color: #26334a;
+    font-size: 24px;
+    line-height: 1.25;
+    margin: 0 0 12px;
+}
+
+.price {
+    color: #20552b;
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.price span {
+    color: #61706a;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.tariff-description {
+    color: #5e6d67;
+    font-size: 18px;
+    line-height: 1.65;
+    margin: 0 0 15px;
+}
+
+.tariff-row {
+    border-top: 1px solid #c8d7ca;
+    padding: 11px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+
+    color: #50615a;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.tariff-row strong {
+    color: #3c5043;
+    text-align: right;
+}
+
+.download-app-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    width: 100%;
+    min-height: 44px;
+
+    background: #20552b;
+    color: #ffffff;
+    text-decoration: none;
+
+    border-radius: 10px;
+    margin-top: 17px;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    transition: .2s ease;
+}
+
+.download-app-btn:hover {
+    background: #163f20;
+    transform: translateY(-1px);
+}
+
+.download-app-btn span {
+    font-size: 18px;
+}
+
+.store-note {
+    text-align: center;
+    color: #718078;
+    font-size: 13px;
+    margin-top: 9px;
+}
+
+
+/* =========================================================
+   FACILITIES AREA
+========================================================= */
+
+.facilities-area {
+    min-width: 0;
+}
+
+.facilities-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 16px;
+}
+
+.facilities-heading h2 {
+    color: #263247;
+    font-size: 36px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.standard-badge {
+    flex-shrink: 0;
+
+    background: #e5eee5;
+    color: #4d6752;
+
+    padding: 8px 12px;
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   FACILITY GRID
+========================================================= */
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.facility-card {
+    background: #ffffff;
+    border: 1px solid #dfe6eb;
+    border-radius: 13px;
+    padding: 20px 18px;
+    box-sizing: border-box;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .025);
+}
+
+.facility-title {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #4b586b;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.3;
+
+    margin-bottom: 8px;
+}
+
+.facility-icon {
+    width: 20px;
+    height: 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #376244;
+    font-size: 16px;
+}
+
+.facility-card h3 {
+    color: #263247;
+    font-size: 23px;
+    margin: 0 0 8px;
+}
+
+.facility-card p {
+    color: #748095;
+    font-size: 16px;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.facility-note {
+    color: #637084;
+    font-size: 13px;
+    line-height: 1.5;
+
+    margin-top: 9px;
+}
+
+.facility-note span {
+    display: block;
+    margin-top: 2px;
+    color: #8390a0;
+}
+
+
+/* =========================================================
    RESPONSIVE
-========================================= */
+========================================================= */
 
 @media (max-width: 1000px) {
 
-    .corridor-grid {
+    .micro-info-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .tariff-card {
+        width: 100%;
+    }
+
+    .steps-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .feature-layout {
+}
+
+
+@media (max-width: 650px) {
+
+    .micro-detail-section {
+        padding: 25px 12px 50px;
+    }
+
+    .steps-card {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .step-item {
+        min-height: auto;
+        padding: 14px 12px 16px;
+    }
+
+    .facility-grid {
         grid-template-columns: 1fr;
     }
 
-    .ethics-grid {
+    .facilities-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .price {
+        font-size: 34px;
+    }
+
+    .step-number {
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .step-item h3 {
+        font-size: 16px;
+        margin: 0 0 8px;
+    }
+
+    .step-item p {
+        font-size: 13px;
+    }
+
+}
+
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 1000px) {
+
+    .bike-main-card,
+    .scooter-card {
         grid-template-columns: 1fr;
     }
 
+    /* ---- DOCKING CARD: foto tampil DI ATAS teks ---- */
+    .docking-card {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 0;
+        overflow: visible;
+    }
+
+    .docking-image {
+        order: 1;
+        width: 100%;
+    }
+
+    .docking-content {
+        order: 2;
+    }
+
+    .bike-main-image,
+    .docking-image,
+    .scooter-image {
+        height: 400px;
+        min-height: 400px;
+    }
+
+    .bike-main-content,
+    .docking-content,
+    .scooter-content {
+        padding: 30px;
+    }
+
+    .gowes-body {
+        grid-template-columns: 1fr;
+    }
+
+    .gowes-image {
+        min-height: 400px;
+    }
+
+    .gowes-schedule {
+        padding-left: 0;
+    }
+
+    .fleet-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
 @media (max-width: 700px) {
 
-    .active-page {
-        padding: 25px 12px 50px;
+    .micro-page {
+        width: min(100% - 24px, 600px);
+
+        padding-top: 18px;
     }
 
-    .active-header h1 {
-        font-size: 32px;
+    .heading-row {
+        display: block;
     }
 
-    .active-hero {
+    .emission-badge {
+        display: inline-block;
+
+        margin-top: 15px;
+    }
+
+    .micro-heading h1 {
+        font-size: 38px;
+    }
+
+    .micro-heading p {
+        font-size: 16px;
+    }
+
+    .bike-main-content h2,
+    .docking-content h2,
+    .scooter-content h2,
+    .gowes-header h2,
+    .fleet-heading h2,
+    .section-heading h2,
+    .facilities-heading h2 {
+        font-size: 26px;
+    }
+
+    .bike-main-image,
+    .docking-image,
+    .scooter-image,
+    .gowes-image {
         height: 300px;
+        min-height: 300px;
     }
 
-    .active-stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+    .bike-main-content,
+    .docking-content,
+    .scooter-content {
+        padding: 24px 20px;
     }
 
-    .stat-item {
-        border-right: none;
-    }
-
-    .section-title,
-    .section-top {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .corridor-grid {
+    .dock-features {
         grid-template-columns: 1fr;
     }
 
-    .bike-banner {
-        align-items: flex-start;
+    .gowes-card {
+        padding: 15px;
+    }
+
+    .gowes-header {
+        display: block;
+    }
+
+    .community-button {
+        margin-top: 15px;
+    }
+
+    .gowes-image {
+        margin-top: 15px;
+    }
+
+    .bike-info,
+    .dock-bottom {
         flex-direction: column;
+        align-items: flex-start;
     }
 
-    .bike-button {
-        width: 100%;
-        text-align: center;
+    .fleet-heading {
+        display: block;
     }
 
-    .features-grid {
+    .fleet-emission {
+        display: inline-block;
+
+        margin-top: 12px;
+    }
+
+    .fleet-grid {
         grid-template-columns: 1fr;
     }
-
-    .feature-item.full {
-        grid-column: span 1;
-    }
-
-    .connectivity-card {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .connectivity-card a {
-        margin-left: 0;
-    }
-
 }

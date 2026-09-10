@@ -13,8 +13,8 @@
 
     <title>Mikromobilitas - Profil Mobilitas IKN</title>
 
-    <!-- CSS HALAMAN INI -->
-    <link rel="stylesheet" href="../assets/css/mikromobilitas.css">
+    <!-- CSS HALAMAN INI (cache-busting otomatis) -->
+    <link rel="stylesheet" href="../assets/css/mikromobilitas.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/mikromobilitas.css'); ?>">
 </head>
 
 <body>
@@ -443,7 +443,7 @@
             <div class="gowes-image">
 
                 <img
-                    src="../assets/images/intrakota/.jpg"
+                    src="../assets/images/intrakota/gowes-ikn.jpg"
                     alt="Komunitas Gowes IKN"
                 >
 

@@ -27,8 +27,8 @@ ob_start();
             </p>
 
             <div class="intrakota-actions">
-                <a href="#moda-layanan" class="intrakota-btn intrakota-btn-primary">
-                    Jelajahi Moda &amp; Layanan
+                <a href="#Sistem-Mobilitas-Perkotaan" class="intrakota-btn intrakota-btn-primary">
+                    Sistem Mobilitas &amp; Perkotaan
                     <i class="fas fa-chevron-right" aria-hidden="true"></i>
                 </a>
 
@@ -153,7 +153,7 @@ ob_start();
     <!-- =========================
      SISTEM MOBILITAS PERKOTAAN
     ========================== -->
-    <section class="intrakota-mobility">
+    <section class="intrakota-mobility" id="Sistem-Mobilitas-Perkotaan">
 
         <div class="intrakota-mobility-container">
 
@@ -202,15 +202,10 @@ ob_start();
                                 Transportasi Umum
                             </div>
 
-                            <div class="intrakota-card-subtitle">
-                                Bus Perkotaan &amp; Paratransit
-                            </div>
-
                             <p class="intrakota-card-description">
-                                Layanan bus perkotaan dan paratransit yang
-                                menghubungkan berbagai titik penting di
-                                kawasan IKN secara terjadwal dan terintegrasi
-                                antarmoda.
+                               Layanan bus perkotaan dan paratransit yang 
+                               menghubungkan titik-titik penting di kawasan 
+                               IKN secara terjadwal.
                             </p>
                             
                             <a href="peta.php" class="intrakota-card-detail-link">
@@ -242,14 +237,9 @@ ob_start();
                                 Mobilitas Aktif
                             </div>
 
-                            <div class="intrakota-card-subtitle">
-                                Berjalan Kaki &amp; Bersepeda
-                            </div>
-
                             <p class="intrakota-card-description">
-                                Jalur pejalan kaki dan sepeda yang nyaman
-                                dan aman, mendukung pergerakan first &amp;
-                                last mile di kawasan perkotaan IKN.
+                                Jalur pejalan kaki dan sepeda yang nyaman, 
+                                mendukung perjalanan first & last mile di kawasan IKN.
                             </p>
 
                             <a href="../detail/mobilitas-aktif.php" class="intrakota-card-detail-link">
@@ -281,14 +271,9 @@ ob_start();
                                 Mikromobilitas
                             </div>
 
-                            <div class="intrakota-card-subtitle">
-                                Sepeda, Sepeda Listrik &amp; Skuter
-                            </div>
-
                             <p class="intrakota-card-description">
-                                Alternatif mobilitas jarak dekat yang ramah
-                                lingkungan, memudahkan perjalanan singkat
-                                di dalam kawasan IKN.
+                                Pilihan mobilitas jarak dekat yang praktis 
+                                untuk perjalanan singkat di dalam kawasan IKN.
                             </p>
 
                             <a href="../detail/mikromobilitas.php" class="intrakota-card-detail-link">
