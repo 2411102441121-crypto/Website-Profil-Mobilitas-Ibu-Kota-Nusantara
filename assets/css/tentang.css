@@ -12,8 +12,8 @@
 
 .tentang-hero { background: #204420; color: #fff; min-height: 138px; margin: 0; display: flex; align-items: center; justify-content: center; box-sizing: border-box; }
 .hero-inner { width: 100%; max-width: 1100px; margin: 0 auto; padding: 10px 20px 14px; box-sizing: border-box; text-align: center; }
-.hero-inner h1 { margin:0 0 12px; color:#fff; font-family:'Sutasoma Display',sans-serif !important; font-size:56px; line-height:1.05; font-weight:700; white-space:nowrap; }
-.hero-inner p { width:100%; max-width:850px; margin:0 auto; color:#fff; font-family:'Sutasoma Text',sans-serif !important; font-size:18px; line-height:1.5; }
+.hero-inner h1 { margin:0 0 12px; color:#fff; font-family:'Sutasoma Display',sans-serif !important; font-size:55px; line-height:1.05; font-weight:700; white-space:nowrap; }
+.hero-inner p { width:100%; max-width:850px; margin:0 auto; color:#fff; font-family:'Sutasoma Text',sans-serif !important; font-size:16px; line-height:1.5; }
 
 /* ======================================== PROFIL KEDEPUTIAN ======================================== */
 
@@ -134,81 +134,112 @@
 
 
 /* ======================================== HP ======================================== */
+@media screen and (max-width: 680px) {
 
-@media (max-width: 680px) {
+    /* 1. Mencegah Seluruh Pembungkus Meluap Ke Samping */
+    html, body {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
 
-    html, body { width: 100% !important; max-width: 100% !important; min-width: 0 !important; margin: 0 !important; padding: 0 !important; overflow-x: hidden !important; }
+    .tentang-page {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 16px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
 
-    *, *::before, *::after { box-sizing: border-box; max-width: 100%; }
+    /* 2. Menetralkan Posisi Kontak & Peta */
+    .contact-section {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 20px 0 0 0 !important;
+        padding: 0 !important;
+        position: static !important;
+        left: 0 !important;
+        transform: none !important;
+    }
 
+    .contact-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 16px !important;
+    }
 
-    /* HALAMAN */
+    /* 3. Menghilangkan Lebar Kaku pada Kotak Hijau Kontak */
+    .contact-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 18px 14px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        box-sizing: border-box !important;
+    }
 
-    .tentang-page { width: 100% !important; max-width: 100% !important; min-width: 0 !important; margin: 0 !important; padding: 25px 18px 50px !important; overflow: hidden !important; }
+    .contact-info {
+        width: 100% !important;
+    }
 
+    .contact-item {
+        gap: 10px !important;
+        margin-bottom: 12px !important;
+    }
 
-    /* HERO */
+    /* PERBAIKAN UKURAN FONT KONTAK */
+    .contact-item strong {
+        font-size: 14px !important;
+    }
 
-    .tentang-hero { width: 100%; min-height: 150px; }
-    .hero-inner { width: 100%; padding: 20px 15px; }
-    .hero-inner h1 { font-size: 30px; line-height: 1.1; white-space: normal; }
-    .hero-inner p { width: 100%; font-size: 12px; line-height: 1.5; }
+    .contact-item p {
+        font-size: 13px !important; /* Font diperbesar agar tidak kekecilan */
+        line-height: 1.4 !important;
+    }
 
+    .contact-map {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 180px !important;
+        margin: 10px 0 0 0 !important;
+    }
 
-    /* JUDUL */
+    /* 4. Menghilangkan Lebar Kaku pada Glosarium */
+    .glossary {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
 
-    .section-heading { width: 100%; margin-left: 0; margin-right: 0; gap: 10px; margin-bottom: 20px; }
-    .section-icon { width: 38px; height: 38px; min-width: 38px; }
-    .section-heading h2 { font-size: 23px; }
+    .glossary-header {
+        width: 100% !important;
+        height: auto !important;
+        padding: 14px 16px !important;
+    }
 
+    .glossary-header h2 {
+        font-size: 22px !important;
+    }
 
-    /* PROFIL */
+    .glossary-header p {
+        font-size: 13px !important; /* Font diperbesar */
+    }
 
-    .profil-image, .profil-copy { width: 100%; }
-    .profil-image { height: 250px; }
+    .glossary-scroll {
+        width: 100% !important;
+        height: 200px !important;
+    }
 
-
-    /* ======================================== PEMANGKU KEPENTINGAN - HP ======================================== */
-
-    .stakeholder-grid { width: 100%; grid-template-columns: 1fr !important; gap: 16px; margin-bottom: 16px; }
-    .stakeholder-card { width: 100%; min-height: 0; height: auto; padding: 20px 18px; border-radius: 11px; }
-    .stakeholder-card h3 { margin: 0 0 10px; font-size: 20px; line-height: 1.3; }
-    .stakeholder-card p { margin: 0; font-size: 14px; line-height: 1.5; }
-
-
-    /* ======================================== STRUKTUR KARTU - HP ======================================== */
-
-    .struktur-list { width: 100%; max-width: 100%; padding: 0; margin: 0 auto 30px; gap: 16px; }
-    .struktur-card { width: 100%; min-height: 0; height: auto; padding: 18px 16px; }
-    .struktur-card h3 { margin: 0 0 10px; font-size: 18px; line-height: 1.3; }
-    .struktur-card p { margin: 0; font-size: 13px; line-height: 1.5; }
-
-
-    /* ======================================== STRUKTUR ORGANISASI ======================================== */
-
-    .organization-chart { width: 100%; max-width: 100%; min-width: 0; margin: 0; overflow-x: auto; }
-
-
-    /* ======================================== HUBUNGI KAMI - HP ======================================== */
-
-    .contact-section { width: 100% !important; max-width: 100% !important; min-width: 0 !important; margin: 30px 0 0 !important; padding: 0 !important; position: relative !important; left: 0 !important; right: auto !important; transform: none !important; }
-    .contact-grid { width: 100% !important; max-width: 100% !important; display: grid !important; grid-template-columns: 1fr !important; gap: 15px !important; margin: 0 !important; padding: 0 !important; }
-    .contact-card { width: 100% !important; max-width: 100% !important; min-width: 0 !important; height: auto !important; min-height: 0 !important; margin: 0 !important; padding: 20px !important; display: flex !important; flex-direction: column !important; gap: 18px !important; }
-    .contact-info { width: 100% !important; max-width: 100% !important; min-width: 0 !important; padding-top: 0; }
-    .contact-item { gap: 8px; margin-bottom: 12px; }
-    .contact-item > span { width: 18px; min-width: 18px; font-size: 15px; }
-    .contact-item strong { font-size: 12px; }
-    .contact-item p { font-size: 9px; }
-    .contact-map { width: 100% !important; max-width: 100% !important; height: 190px !important; margin: 0 !important; }
-    .contact-map img { width: 100% !important; height: 100% !important; object-fit: cover !important; }
-
-
-    /* ======================================== GLOSARIUM - HP ======================================== */
-
-    .glossary { width: 100% !important; max-width: 100% !important; min-width: 0 !important; height: 300px !important; margin: 0 !important; }
-    .glossary-header { width: 100% !important; height: 90px !important; padding: 14px 16px; }
-    .glossary-header h2 { font-size: 25px; }
-    .glossary-header p { font-size: 9px; }
-    .glossary-scroll { width: 100% !important; height: 210px !important; }
-    .glossary-button { height: 45px; font-size: 10px; }
+    .glossary-button {
+        font-size: 13px !important;
+        height: 42px !important;
+    }
 }

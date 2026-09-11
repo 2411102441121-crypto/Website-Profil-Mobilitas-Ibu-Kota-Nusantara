@@ -45,12 +45,13 @@ ob_start();
         position: relative;
         background-color: #1b3821;
         color: white;
-        min-height: auto;
+        /* Ubah ke 100vh agar memenuhi persis 1 layar penuh laptop */
+        min-height: 100vh; 
         width: 100%;
         display: flex;
         align-items: center;
-        padding-top: 180px; 
-        padding-bottom: 180px;
+        padding-top: 120px; 
+        padding-bottom: 120px; /* Tambah padding bawah agar ruang hero lebih tinggi */
         box-sizing: border-box;
         overflow: hidden;
     }
@@ -317,7 +318,7 @@ ob_start();
         border-radius: 20px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
         font-family: 'Sutasoma Text', sans-serif;
-        font-size: 13px;
+        font-size: 14px;
         color: #4a4a4a;
         line-height: 1.5;
         transition: all 0.4s ease;
@@ -598,6 +599,111 @@ ob_start();
         width: auto;
         object-fit: contain;
     }
+
+    /* PENGATURAN RESPONSIF UNTUK BERANDA (HP & TABLET) */
+
+    /* 1. LAYAR TABLET (Maksimal Lebar 991px) */
+    @media (max-width: 991px) {
+        /* Hero Banner */
+        .hero-container-wrapper {
+            padding-top: 120px !important;
+            padding-bottom: 80px !important;
+            text-align: center;
+        }
+        .hero-container-wrapper h1 {
+            font-size: 36px !important;
+        }
+        .hero-container-wrapper p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-container-wrapper .d-flex {
+            justify-content: center;
+        }
+
+        /* Section Siap Menjelajahi (IKNOW) */
+        .explore-ikn-section h1 {
+            font-size: 32px !important;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .hp-double-preview-container {
+            justify-content: center !important; /* Buat gambar HP ke tengah di tablet & mobile */
+            margin-top: 24px;
+        }
+        .hp-double-preview-container img {
+            height: 300px !important;
+        }
+    }
+
+    /* 2. LAYAR HP / MOBILE (Maksimal Lebar 768px) */
+    @media (max-width: 768px) {
+        /* Hero Banner */
+        .hero-container-wrapper {
+            padding-top: 100px !important;
+            padding-bottom: 60px !important;
+        }
+        .hero-container-wrapper h1 {
+            font-size: 28px !important;
+        }
+        .btn-green-ikn {
+            width: 100%; /* Tombol memanjang penuh di HP agar mudah diklik */
+            text-align: center;
+        }
+
+        /* Cards Prinsip Pembangunan */
+        .prinsip-card-custom .card-img-wrapper {
+            height: 180px; /* Kurangi tinggi gambar banner di HP */
+        }
+
+        /* Timeline Tahap Pembangunan (KOLOM 1 - 5) */
+        .strategic-photo-wrap {
+            height: 260px !important; /* Sesuaikan tinggi foto di HP */
+        }
+        .strategic-text.top, 
+        .strategic-text.bottom {
+            height: auto !important;
+            min-height: auto !important;
+            padding: 16px;
+        }
+
+        /* Dokumen Banner & FAQ */
+        .green-section-banner h2,
+        .faq-accordion .accordion-button {
+            font-size: 16px !important;
+        }
+        .btn-doc-card {
+            width: 100%;
+            justify-content: center;
+        }
+        
+        /* Card IKNOW & Tombol Store */
+        .card-iknow-single {
+            padding: 20px 16px;
+        }
+        .store-buttons-horizontal {
+            flex-direction: column; /* Tombol PlayStore & AppStore bertumpuk di HP */
+            width: 100%;
+        }
+        .btn-store-small-black {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    /* 3. LAYAR HP KECIL (Maksimal Lebar 480px) */
+    @media (max-width: 480px) {
+        .stat-card-green h2 {
+            font-size: 24px !important; /* Ukuran angka statistik mengecil di HP */
+        }
+        .stat-card-green p {
+            font-size: 11px !important;
+        }
+        .stat-card-green {
+            padding: 14px 10px;
+        }
+    }
+
 </style>
 
 <!-- SECTION 1: HERO WITH AUTO SLIDESHOW BACKGROUND -->
@@ -633,25 +739,25 @@ ob_start();
         <div class="row g-3">
             <div class="col-md-3 col-6">
                 <div class="stat-card-green">
-                    <h2 class="fw-bold mb-2 font-size-40px">80%</h2>
+                    <h2 class="fw-bold mb-2 font-size-30px">80%</h2>
                     <p class="small text-white-80 mb-0">Perjalanan dengan Transportasi Umum atau Mobilitas Aktif</p>
                 </div>
             </div>
             <div class="col-md-3 col-6">
                 <div class="stat-card-green">
-                    <h2 class="fw-bold mb-2 font-size-40px">10 Menit</h2>
+                    <h2 class="fw-bold mb-2 font-size-30px">10 Menit</h2>
                     <p class="small text-white-80 mb-0">Perjalanan ke fasilitas penting dan simpul transportasi umum</p>
                 </div>
             </div>
             <div class="col-md-3 col-6">
                 <div class="stat-card-green">
-                    <h2 class="fw-bold mb-2 font-size-40px">&lt;50 Menit</h2>
+                    <h2 class="fw-bold mb-2 font-size-30px">&lt;50 Menit</h2>
                     <p class="small text-white-80 mb-0">Koneksi transit ekspres dari KIPP ke bandara SAMS Sepinggan Balikpapan pada 2030</p>
                 </div>
             </div>
             <div class="col-md-3 col-6">
                 <div class="stat-card-green">
-                    <h2 class="fw-bold mb-2 font-size-40px">2045</h2>
+                    <h2 class="fw-bold mb-2 font-size-30px">2045</h2>
                     <p class="small text-white-80 mb-0">Untuk IKN (saat beroperasi) pada tahun 2045 di area seluas 256 ribu Ha</p>
                 </div>
             </div>

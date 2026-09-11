@@ -150,6 +150,12 @@ ob_start();
         transform: translateY(-2px);
     }
 
+    /* Memberi ruang bernapas untuk Navbar yang melayang */
+    #infrastruktur, 
+    #layanan-terpadu {
+        scroll-margin-top: 90px; /* Adjust angka ini sesuai tinggi Navbar kamu (misal 80px - 100px) */
+    }
+
     /* .btn-hero-trans {
         background-color: #8AAF6A;
         color: #000000;
@@ -625,6 +631,19 @@ ob_start();
         letter-spacing: 0.5px;
         margin-bottom: 16px;
     }
+
+    
+
+    /* Responsif Khusus Layar HP (Maksimal Lebar 768px) */
+    @media (max-width: 768px) {
+        .hero-antarkota h1 {
+            font-size: 32px !important; /* Memperkecil ukuran judul di HP */
+        }
+        .hero-antarkota {
+            padding-top: 100px; /* Mengurangi padding di HP */
+            padding-bottom: 40px;
+        }
+    }
 </style>
 
 <!-- HERO SECTION (FULL WIDTH BANNER) -->
@@ -823,7 +842,7 @@ ob_start();
                     <img src="<?= $base_url; ?>assets/images/antarkota/tol_balsam.jpeg" alt="Tol Balsam" onerror="this.src='https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=800&q=80';">
                     <div class="p-content">
                         <h4>Jalan Tol Balikpapan – Samarinda (Tol Balsam)</h4>
-                        <p>Jalan Tol Balikpapan–Samarinda (Tol Balsam) adalah tol pertama di Kalimantan sepanjang 99,02 km yang memangkas waktu tempuh antar-kota menjadi 1,5 jam. Tol ini berfungsi sebagai tulang punggung logistik utama yang menghubungkan Pelabuhan Semayang/Kariangau, Bandara Sepinggan Balikpapan, dan Kota Samarinda langsung menuju Kawasan Inti Ibu Kota Nusantara (IKN).</p>
+                        <p>Jalan Tol Balikpapan–Samarinda atau Tol Balsam merupakan koridor bebas hambatan utama sepanjang 99,02 km yang menghubungkan Balikpapan dan Samarinda sebagai dua kota mitra utama IKN. Koridor ini berperan penting dalam mendukung konektivitas regional, pergerakan logistik, akses menuju Bandara Sepinggan, serta distribusi perjalanan dari dan menuju kawasan IKN. Dalam kerangka mobilitas Nusantara, Tol Balsam menjadi bagian dari jaringan regional yang perlu diintegrasikan dengan simpul transportasi, park and ride, dan layanan angkutan umum lanjutan menuju KIPP dan WP IKN.</p>
                     </div>
                 </div>
             </div>
@@ -834,7 +853,7 @@ ob_start();
                     <img src="<?= $base_url; ?>assets/images/antarkota/pulau_balang.jpeg" alt="Pulau Balang" onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80';">
                     <div class="p-content">
                         <h4>Jalan Tol Balikpapan - IKN (via Pulau Balang)</h4>
-                        <p>Jalan Tol Akses IKN (Seksi Balikpapan–Pulau Balang–IKN) merupakan megaproyek infrastruktur bebas hambatan sepanjang lebih dari 52 km yang dirancang untuk memangkas waktu tempuh dari Balikpapan menuju Kawasan Inti Pusat Pemerintahan (KIPP) IKN dari 2 jam menjadi 30–45 menit saja. Rute ini terhubung dari Km 8 Tol Balsam, melintasi Jembatan Pulau Balang, hingga langsung menembus ring luar IKN. Saat ini, statusnya masih beroperasi secara fungsional terbatas pada momen-momen tertentu (seperti libur nasional/mudik) sembari mengejar target penyelesaian konstruksi penuh.</p>
+                        <p>Jalan Tol Balikpapan–Pulau Balang–IKN merupakan koridor akses strategis sepanjang 52 km yang dirancang untuk mempercepat konektivitas dari Balikpapan menuju kawasan inti IKN melalui Jembatan Pulau Balang. Koridor ini menjadi salah satu pintu masuk utama dari sisi selatan IKN, terutama untuk pergerakan ASN, pekerja, pengunjung, investor, serta layanan logistik. Jalan tol ini masih berfungsi secara fungsional terbatas.</p>
                     </div>
                 </div>
             </div>
@@ -845,7 +864,7 @@ ob_start();
                     <img src="<?= $base_url; ?>assets/images/antarkota/samboja-ikn.jpeg" alt="Bandara VVIP IKN" onerror="this.src='https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80';">
                     <div class="p-content">
                         <h4>Jalan Nasional Samboja – IKN</h4>
-                        <p>Jalan Nasional Samboja–IKN merupakan jalur arteri non-tol sepanjang sekitar 52 km yang menghubungkan Km 38 Tol Balikpapan–Samarinda, kawasan Samboja Barat, hingga masuk ke ring luar Ibu Kota Nusantara (IKN). Berperan sebagai jalur logistik utama dan akses alternatif, jalan nasional ini sangat krusial bagi mobilitas kendaraan berat pembawa material konstruksi dari pelabuhan sekitarnya menuju kawasan inti pemerintahan. Jalur ini terus diperkuat dengan infrastruktur penahan longsor permanen seperti struktur pile slab (jalan layang di atas tanah labil) demi menjamin kelancaran arus transportasi publik non-tol.</p>
+                        <p>Jalan Nasional Samboja–IKN merupakan koridor arteri non-tol sepanjang 100km yang menghubungkan kawasan Samboja dan jaringan Balikpapan–Samarinda menuju IKN. Jalan ini juga terhubung dengan tol Balsam pada kilometer ke-38. Koridor ini berperan sebagai akses alternatif sekaligus jalur pendukung mobilitas barang, pekerja konstruksi, dan pergerakan masyarakat dari kawasan sekitar menuju KIPP.</p>
                     </div>
                 </div>
             </div>
@@ -878,7 +897,7 @@ ob_start();
                     <img src="<?= $base_url; ?>assets/images/antarkota/muarajawa.jpeg" alt="Bandara VVIP IKN" onerror="this.src='https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80';">
                     <div class="p-content">
                         <h4>Jalan Nasional Samboja – Muara Jawa</h4>
-                        <p>Jalan Nasional Samboja–Muara Jawa merupakan rute arteri non-tol pesisir sepanjang sekitar 30 km yang menghubungkan pesisir selatan Kutai Kartanegara langsung ke zona delineasi timur IKN. Berfungsi strategis sebagai koridor pendukung wilayah perencanaan (WP) Muara Jawa dan Kuala Samboja, jalur lintas pesisir ini mengintegrasikan mobilitas sektor perikanan, pertanian, dan distribusi komoditas lokal menuju pusat pemerintahan baru. Rute ini beroperasi penuh 24 jam untuk umum bebas biaya, sekaligus berfungsi sebagai jalur logistik sekunder penunjang ketahanan pangan domestik Nusantara.</p>
+                        <p>Jalan Nasional Samboja–Muara Jawa merupakan koridor non-tol berkisar panjang 30 km yang menghubungkan kawasan pesisir timur Kalimantan Timur dengan wilayah perencanaan IKN bagian timur. Ruas ini berperan sebagai jalur pendukung bagi konektivitas kawasan Samboja, Muara Jawa, dan Kuala Samboja, termasuk pergerakan logistik, komoditas lokal, serta akses masyarakat ke pusat kegiatan baru. Dalam jangka menengah, koridor ini penting untuk memperkuat pemerataan akses menuju wilayah pengembangan IKN di luar KIPP, sekaligus mendukung konektivitas ekonomi pesisir dan kawasan penyangga.</p>
                     </div>
                 </div>
             </div>
@@ -923,7 +942,7 @@ ob_start();
                             <div>
                                 <img src="<?= $base_url; ?>assets/images/antarkota/VVIP_IKN.jpeg" alt="Bandara VVIP" onerror="this.src='https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80';">
                                 <h5>Bandar Udara Internasional Nusantara</h5>
-                                <p>Akses penerbangan VVIP menuju kawasan Ibu Kota Nusantara.</p>
+                                <p>Akses penerbangan internasional dan kenegaraaan untuk Nusantara di masa depan.</p>
                             </div>
                             <a href="<?= $base_url; ?>detail/antarkota-bandara.php?id=bandara-vvip" class="btn-card-detail">Lihat Detail</a>
                         </div>
@@ -933,7 +952,7 @@ ob_start();
                             <div>
                                 <img src="<?= $base_url; ?>assets/images/antarkota/sams_sepinggan.jpeg" alt="Sinar Jaya" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80';">
                                 <h5>Bandar Udara Internasional Sultan Aji Muhammad Sulaiman Sepinggan</h5>
-                                <p>Simpul transportasi udara utama menuju IKN melalui konektivitas darat.</p>
+                                <p>Pintu masuk utama dari beragam kota-kota di Indonesia dan Internasional menuju Kalimantan Timur.</p>
                             </div>
                             <a href="<?= $base_url; ?>detail/antarkota-bandara.php?id=sams-sepinggan" class="btn-card-detail">Lihat Detail</a>
                         </div>
@@ -943,7 +962,7 @@ ob_start();
                             <div>
                                 <img src="<?= $base_url; ?>assets/images/antarkota/apt_pranoto.jpeg" alt="Sinar Jaya" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80';">
                                 <h5>Bandar Udara Internasional Aji Pangeran Tumenggung Pranoto</h5>
-                                <p>Salah satu simpul akses udara dari Samarinda menuju IKN.</p>
+                                <p>Pintu masuk sekunder menuju Ibu Kota Nusantara melalui Ibu Kota Provinsi Kalimantan Timur.</p>
                             </div>
                             <a href="<?= $base_url; ?>detail/antarkota-bandara.php?id=apt-pranoto" class="btn-card-detail">Lihat Detail</a>
                         </div>
@@ -1013,7 +1032,7 @@ ob_start();
                         <div>
                             <img src="<?= $base_url; ?>assets/images/antarkota/ka_samssepinggan.jpeg" alt="KA Bandara" onerror="this.src='https://images.unsplash.com/photo-1515165562839-978bbcf1b26d?auto=format&fit=crop&w=800&q=80';">
                             <h5>KA Bandara SAMS Sepinggan – KIPP IKN</h5>
-                            <p>Rencana layanan kereta api yang menghubungkan Bandara SAMS Sepinggan Balikpapan dengan Kawasan Inti Pusat Pemerintahan (KIPP) IKN.</p>
+                            <p>Koridor kereta api bandara yang direncanakan untuk menghubungkan Bandara Sultan Aji Muhammad Sulaiman Sepinggan Balikpapan dengan Kawasan Inti Pusat Pemerintahan (KIPP) IKN sebagai akses cepat dari gerbang udara utama menuju pusat pemerintahan Nusantara.</p>
                         </div>
                         <a href="https://ibukotakini.com/read/kereta-api-bandara-sepinggan-kipp-ikn-masuk-pembahasan-ditargetkan-selesai-2030" class="btn-card-detail">Lihat Rencana</a>
                     </div>
@@ -1025,7 +1044,7 @@ ob_start();
                         <div>
                             <img src="<?= $base_url; ?>assets/images/antarkota/ka_ikn.jpeg" alt="KA Perkotaan" onerror="this.src='https://images.unsplash.com/photo-1515165562839-978bbcf1b26d?auto=format&fit=crop&w=800&q=80';">
                             <h5>KA Perkotaan K-IKN</h5>
-                            <p>Rencana jaringan kereta api perkotaan untuk mendukung pergerakan masyarakat di kawasan Ibu Kota Nusantara.</p>
+                            <p>Jaringan kereta api perkotaan yang direncanakan untuk mendukung pergerakan antarkawasan di IKN, memperkuat konektivitas harian, integrasi simpul transportasi, serta mengurangi ketergantungan pada kendaraan pribadi.</p>
                         </div>
                         <!-- Diarahkan ke file PDF di folder assets/pdf/ -->
                         <a href="#" class="btn-card-detail" data-bs-toggle="modal" data-bs-target="#pdfModalKaPerkotaan">Lihat Rencana</a>
@@ -1038,7 +1057,7 @@ ob_start();
                         <div>
                             <img src="<?= $base_url; ?>assets/images/antarkota/ka_transkalimantan.webp" alt="KA Trans Kalimantan" onerror="this.src='https://images.unsplash.com/photo-1515165562839-978bbcf1b26d?auto=format&fit=crop&w=800&q=80';">
                             <h5>KA Trans Kalimantan</h5>
-                            <p>Rencana pengembangan jaringan kereta api yang menghubungkan berbagai wilayah di Pulau Kalimantan dan diarahkan untuk memperkuat konektivitas antarkawasan.</p>
+                            <p>Koridor kereta api lintas Kalimantan yang direncanakan untuk memperkuat konektivitas antarkota, distribusi logistik, dan integrasi ekonomi regional, termasuk keterhubungan Nusantara dengan pusat-pusat pertumbuhan di Kalimantan.</p>
                         </div>
                         <a href="https://mti.or.id/en/masyarakat-transportasi-indonesia-dorong-percepatan-kereta-api-kalimantan/" class="btn-card-detail">Lihat Rencana</a>
                     </div>
@@ -1060,7 +1079,7 @@ ob_start();
                         <div>
                             <img src="<?= $base_url; ?>assets/images/antarkota/pelabuhan_semayang2.webp" alt="Pelabuhan Semayang" onerror="this.src='https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80';">
                             <h5>Pelabuhan Semayang Balikpapan</h5>
-                            <p>Pelabuhan utama Balikpapan untuk angkutan penumpang dan konektivitas menuju IKN.</p>
+                            <p>Pelabuhan penumpang utama di Balikpapan yang mendukung konektivitas antarkota dan antarpulau, serta berperan sebagai salah satu gerbang mobilitas laut menuju ekosistem IKN.</p>
                         </div>
                         <a href="<?= $base_url; ?>detail/antarkota-perairan.php?id=pelabuhan-semayang" class="btn-card-detail">Lihat Detail</a>
                     </div>
@@ -1072,7 +1091,7 @@ ob_start();
                         <div>
                             <img src="<?= $base_url; ?>assets/images/antarkota/pelabuhan_kariangau.webp" alt="Pelabuhan Kariangau" onerror="this.src='https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80';">
                             <h5> Pelabuhan Penyeberangan Kariangau</h5>
-                            <p>Pelabuhan penyeberangan yang menghubungkan Balikpapan dan Penajam melalui layanan feri.</p>
+                            <p>Simpul penyeberangan utama di Balikpapan yang melayani koneksi feri menuju Penajam dan mendukung akses dari sisi selatan menuju kawasan IKN.</p>
                         </div>
                         <a href="<?= $base_url; ?>detail/antarkota-perairan.php?id=pelabuhan-kariangau" class="btn-card-detail">Lihat Detail</a>
                     </div>
@@ -1084,7 +1103,7 @@ ob_start();
                         <div>
                             <img src="<?= $base_url; ?>assets/images/antarkota/pelabuhan_penajam.webp" alt="Pelabuhan Penajam" onerror="this.src='https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80';">
                             <h5> Pelabuhan Penyeberangan Penajam</h5>
-                            <p>Simpul penyeberangan dan akses darat dari Penajam menuju kawasan IKN.</p>
+                            <p>Simpul penyeberangan di Penajam yang menghubungkan arus pergerakan dari Balikpapan dengan akses darat menuju Sepaku dan kawasan IKN.</p>
                         </div>
                         <a href="<?= $base_url; ?>detail/antarkota-perairan.php?id=pelabuhan-penajam" class="btn-card-detail">Lihat Detail</a>
                     </div>
@@ -1102,10 +1121,10 @@ ob_start();
             <div class="row g-4 align-items-center">
                 <div class="col-lg-7">
                     <p class="mb-3" style="font-family: 'Sutasoma Text', sans-serif !important; font-size: 14px; font-weight: 400; line-height: 1.7; color: #030405;">
-                        Lokasi Park n Ride direncanakan di daerah perimeter dan jalan akses ke kawasan perkotaan IKN. Saat ini, ada 2 fasilitas Park n Ride yang direncanakan yaitu di KIPP 1A and KIPP 1B.
+                        Lokasi Park and Ride direncanakan berada di kawasan perimeter dan koridor akses menuju kawasan perkotaan IKN. Saat ini, terdapat dua fasilitas Park and Ride yang direncanakan, yaitu di KIPP 1A dan KIPP 1B.
                     </p>
                     <p class="mb-4" style="font-family: 'Sutasoma Text', sans-serif !important; font-size: 14px; font-weight: 400; line-height: 1.7; color: #030405;">
-                        Park n Ride 1A melayani perpindahan transportasi dari Sepaku, Samboja, Tenggarong, Samarinda, dan daerah mitra lainnya di utara IKN. Sedangkan Park n Ride 1B melayani perpindahan transportasi dari Balikpapan, Penajam, Samarinda (via tol Pulau Balang), and daerah mitra lainnya di selatan IKN.
+                        Park and Ride 1A melayani perpindahan moda dari arah Sepaku, Samboja, Tenggarong, Samarinda, dan daerah mitra lainnya di sisi utara IKN. Sementara itu, Park and Ride 1B melayani perpindahan moda dari arah Balikpapan, Penajam, Samarinda melalui Tol Pulau Balang, serta daerah mitra lainnya di sisi selatan IKN.
                     </p>
 
                     <!-- Gambar Dokumentasi Park n Ride -->

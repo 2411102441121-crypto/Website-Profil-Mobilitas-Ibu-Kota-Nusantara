@@ -24,7 +24,7 @@ ob_start();
         ========================== -->
         <div class="text-center mb-5 max-w-75 mx-auto">
             <h1 class="fw-bold display-5 mb-3">Aktivitas &amp; Perkembangan Mobilitas IKN</h1>
-            <p class="text-secondary fs-5 lead">
+            <p class="fw-medium text-secondary fs-6 fs-5 lead">
                 Ikuti informasi terbaru mengenai pengembangan transportasi,
                 inovasi mobilitas cerdas, serta berbagai kegiatan yang mendukung
                 sistem transportasi di Ibu Kota Nusantara.

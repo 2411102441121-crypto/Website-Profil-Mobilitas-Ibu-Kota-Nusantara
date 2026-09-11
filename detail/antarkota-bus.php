@@ -266,6 +266,20 @@ ob_start();
         gap: 10px;
     }
 
+    /* BADGE COMING SOON */
+    .badge-coming-soon {
+        background-color: #878d88;
+        color: #ffffff;
+        font-family: 'Sutasoma Display', serif, sans-serif !important;
+        font-size: 0.68rem;
+        font-weight: 600;
+        padding: 4px 11px;
+        border-radius: 12px;
+        letter-spacing: 0.5px;
+        text-transform: capitalize;
+        margin-left: auto; /* Otomatis terdorong ke paling kanan kartu */
+    }
+
     .route-label {
         font-family: 'Sutasoma Text', sans-serif;
         font-size: 0.82rem;
@@ -652,7 +666,10 @@ ob_start();
             <!-- Samarinda -> IKN -->
             <div class="col-lg-4 col-md-6">
                 <div class="route-card-teal shadow-sm">
-                    <h5 class="route-card-title"><i class="fas fa-route"></i> Samarinda &rarr; IKN</h5>
+                    <h5 class="route-card-title">
+                        <span><i class="fas fa-route"></i> Samarinda &rarr; IKN</span>
+                        <span class="badge-coming-soon">Coming Soon</span>
+                    </h5>
                     
                     <span class="route-label">TITIK KEBERANGKATAN</span>
                     <p class="route-val">Terminal/halte layanan bus Samarinda</p>
@@ -668,7 +685,10 @@ ob_start();
             <!-- Penajam -> IKN -->
             <div class="col-lg-4 col-md-6">
                 <div class="route-card-teal shadow-sm">
-                    <h5 class="route-card-title"><i class="fas fa-route"></i> Penajam &rarr; IKN</h5>
+                    <h5 class="route-card-title">
+                        <span><i class="fas fa-route"></i> Penajam &rarr; IKN</span>
+                        <span class="badge-coming-soon">Coming Soon</span>
+                    </h5>
                     
                     <span class="route-label">TITIK KEBERANGKATAN</span>
                     <p class="route-val">Penajam Paser Utara</p>
@@ -726,7 +746,7 @@ ob_start();
                 <div class="operator-icon-box" style="width:38px; height:38px; font-size:1rem;"><i class="fas fa-plus"></i></div>
                 <div>
                     <h6 class="fw-semibold text-dark mb-0" style="font-size:0.95rem;">Operator Lainnya</h6>
-                    <p class="text-muted mb-0" style="font-size: 0.78rem;">Operator bus lainnya dapat ditambahkan sesuai rute dan layanan yang tersedia.</p>
+                    <p class="text-muted mb-0" style="font-size: 0.78rem;">Operator bus lainnya dapat ditambahkan pada pengembangan selanjutnya menyesuaikan dengan demand yang ada.</p>
                 </div>
             </div>
         </div>
@@ -739,7 +759,7 @@ ob_start();
                 </h5>
 
                 <small class="d-block" style="font-family: 'Sutasoma Text', serif; font-size:0.8rem; color: #C5EDBE; font-weight: 400; letter-spacing:1px;">WILAYAH LAYANAN</small>
-                <p class="fw-normal text-white mb-0 fs-6">Kota dan simpul transportasi di sekitar IKN</p>
+                <p class="fw-normal text-white mb-0 fs-6">Kawasan perkotaan IKN, Balikpapan, dan Samarinda</p>
                 <div class="divider"></div>
 
                 <small class="d-block" style="font-family: 'Sutasoma Text', serif; font-size:0.8rem; color: #C5EDBE; font-weight: 400; letter-spacing:1px;">MODA</small>
@@ -765,7 +785,7 @@ ob_start();
 
         <div class="row g-3">
             <!-- 1. Bandara SAMS Sepinggan -->
-            <div class="col-lg col-md-4 col-sm-6">
+            <div class="col-lg col-md-3 col-sm-6">
                 <div class="pickup-card">
                     <div class="pickup-img-box">
                         <img src="<?= $base_url; ?>assets/images/antarkota/sams_sepinggan.jpeg" alt="Bandara SAMS Sepinggan" onerror="this.src='https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=600&q=80';">
@@ -781,7 +801,7 @@ ob_start();
             </div>
 
             <!-- 2. Pelabuhan Semayang -->
-            <div class="col-lg col-md-4 col-sm-6">
+            <div class="col-lg col-md-3 col-sm-6">
                 <div class="pickup-card">
                     <div class="pickup-img-box">
                         <img src="<?= $base_url; ?>assets/images/antarkota/semayang.jpeg" alt="Pelabuhan Semayang" onerror="this.src='https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=600&q=80';">

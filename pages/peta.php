@@ -108,7 +108,7 @@ ob_start();
 
         <?php else: ?>
 
-            <img src="../assets/images/peta/peta bus.jpeg"
+            <img src="../assets/images/peta/peta_bus.jpeg"
                  alt="Peta Jaringan Bus Perkotaan IKN"
                  class="bus-map">
 

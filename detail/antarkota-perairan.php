@@ -273,14 +273,14 @@ ob_start();
 
     .hero-port-title {
         font-family: 'Sutasoma Display', serif, sans-serif !important;
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: 700;
         margin-bottom: 6px;
         color: #ffffff;
     }
 
     .hero-port-location {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
         color: #e2e8f0;
         display: flex;
         align-items: center;

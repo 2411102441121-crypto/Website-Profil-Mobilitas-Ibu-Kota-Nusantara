@@ -294,9 +294,9 @@ body {
 
     gap: 8px;
 
-    min-height: 38px;
+    min-height: 45px;
 
-    padding: 9px 16px;
+    padding: 10px 20px;
 
     border-radius: 8px;
 
@@ -304,9 +304,9 @@ body {
 
     text-decoration: none;
 
-    font-family: 'Sutasoma Text', Arial, sans-serif;
+    font-family: 'Sutasoma Display', Arial, sans-serif;
 
-    font-size: 11px;
+    font-size: 13px;
     line-height: 1;
 
     font-weight: 600;
