@@ -1142,24 +1142,6 @@ onclick="return confirm('Hapus jadwal kondisional ini?')">
 
 </div>
 
-<div class="form-group" style="margin-top:18px">
-
-<label class="label">Status</label>
-
-<select class="select" name="status">
-
-<option value="aktif" <?=($info['status']??'aktif')==='aktif'?'selected':''?>>
-    Aktif
-</option>
-
-<option value="nonaktif" <?=($info['status']??'')==='nonaktif'?'selected':''?>>
-    Nonaktif
-</option>
-
-</select>
-
-</div>
-
 <div style="display:flex;justify-content:flex-end;margin-top:20px">
 
 <button class="btn" name="simpan_informasi">
