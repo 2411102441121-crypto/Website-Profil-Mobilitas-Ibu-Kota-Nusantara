@@ -293,9 +293,9 @@ ob_start();
         line-height: 1.5;
     }
 
-    /* SIDEBAR SEBELUM BERANGKAT (GREEN DARK) */
+    /* SIDEBAR SEBELUM BERANGKAT (PUTIH) */
     .before-travel-sidebar {
-        background-color: #204420;
+        background-color: #ffffff;
         color: #ffffff;
         border-radius: 20px;
         padding: 32px 28px;
@@ -314,7 +314,7 @@ ob_start();
     }
 
     .before-travel-item i {
-        color: #82A77C;
+        color: #204420;
         font-size: 1.15rem;
         margin-top: 2px;
         flex-shrink: 0;
@@ -322,7 +322,7 @@ ob_start();
 
     .before-travel-item p {
         font-size: 0.88rem;
-        color: #82A77C;
+        color: #204420;
         line-height: 1.6;
         margin-bottom: 0;
     }
@@ -597,7 +597,7 @@ ob_start();
                     <h5 class="access-card-title">Balikpapan &rarr; IKN</h5>
                     <span class="access-badge">Akses Regional</span>
                     <p class="access-card-desc">
-                        Perjalanan dari Balikpapan menuju IKN melalui jaringan jalan regional menuju kawasan Sepaku.
+                        Perjalanan dari Balikpapan menuju IKN melalui jaringan jalan regional menuju kawasan Sepaku/KIPP IKN.
                     </p>
                 </div>
             </div>
@@ -609,7 +609,7 @@ ob_start();
                     <h5 class="access-card-title">Penajam &rarr; IKN</h5>
                     <span class="access-badge">Akses Lokal</span>
                     <p class="access-card-desc">
-                        Perjalanan dari Penajam menuju IKN melalui jaringan jalan darat menuju Sepaku dan kawasan IKN.
+                        Perjalanan dari Penajam menuju IKN melalui jaringan jalan darat menuju Sepaku/KIPP IKN.
                     </p>
                 </div>
             </div>
@@ -633,7 +633,7 @@ ob_start();
                         <p class="operator-card-desc">Shuttle eksekutif menggunakan armada van modern dengan pilihan waktu keberangkatan terjadwal dan berkala.</p>
                     </div>
                     <div class="operator-time-info">
-                        <i class="far fa-clock text-muted"></i> Tersedia Setiap Hari
+                        <i class="far fa-clock text-muted"></i> Tersedia Setiap Hari*
                     </div>
                 </div>
             </div>
@@ -649,7 +649,7 @@ ob_start();
                         <p class="operator-card-desc">Layanan travel reguler dengan sistem jemput antar pintu (door-to-door) untuk rute antarkota di Kalimantan Timur.</p>
                     </div>
                     <div class="operator-time-info">
-                        <i class="far fa-clock text-muted"></i> Jadwal Berkala
+                        <i class="far fa-clock text-muted"></i> Jadwal Berkala*
                     </div>
                 </div>
             </div>
@@ -665,7 +665,7 @@ ob_start();
                         <p class="operator-card-desc">Pilihan travel lokal konvensional dengan cakupan titik penjemputan dan area layanan yang lebih luas.</p>
                     </div>
                     <div class="operator-time-info">
-                        <i class="far fa-clock text-muted"></i> Bervariasi
+                        <i class="far fa-clock text-muted"></i> Bervariasi*
                     </div>
                 </div>
             </div>
@@ -689,19 +689,19 @@ ob_start();
 
             <div class="pickup-area-card shadow-sm">
                 <h6 class="pickup-area-title"><i class="fas fa-city"></i> Area Balikpapan</h6>
-                <p class="pickup-area-desc">Keberangkatan dapat diakses dari Bandara SAMS Sepinggan, Terminal Batu Ampar, atau lokasi pool operator tersebar di Balikpapan.</p>
+                <p class="pickup-area-desc">Keberangkatan dapat diakses dari Bandara SAMS Sepinggan, Terminal Batu Ampar, atau lokasi pool operator yang tersebar di Balikpapan.</p>
             </div>
 
             <div class="pickup-area-card shadow-sm">
                 <h6 class="pickup-area-title"><i class="fas fa-building"></i> Area Penajam</h6>
-                <p class="pickup-area-desc">Tersedia titik-titik penjemputan di area Penajam Paser Utara untuk akses yang lebih dekat menuju Sepaku.</p>
+                <p class="pickup-area-desc">Tersedia titik-titik penjemputan di area Penajam Paser Utara untuk akses yang lebih dekat menuju Sepaku/KIPP IKN.</p>
             </div>
         </div>
 
-        <!-- Kolom Kanan: Sebelum Berangkat (Hijau Tua) -->
+        <!-- Kolom Kanan: Sebelum Berangkat (Putih) -->
         <div class="col-lg-5">
             <div class="before-travel-sidebar shadow">
-                <h5 class="fw-semibold mb-4" style="color: #82A77C; font-size: 1.2rem;">Sebelum Berangkat</h5>
+                <h5 class="fw-semibold mb-4" style="color: #204420; font-size: 1.2rem;">Sebelum Berangkat</h5>
                 <div class="before-travel-item">
                     <i class="far fa-check-circle"></i>
                     <p>Khusus travel door-to-door, konfirmasi titik jemput 24 jam sebelum keberangkatan. Untuk airport shuttle, pastikan e-tiket sudah dipesan sebelum jadwal armada jalan.</p>
