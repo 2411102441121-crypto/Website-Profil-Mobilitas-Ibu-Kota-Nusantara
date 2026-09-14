@@ -1,6 +1,8 @@
 <?php
 $title = "Mobilitas Aktif - Profil Mobilitas IKN";
 
+$parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Intrakota
+
 ?>
 
 <link rel="stylesheet" href="../assets/css/mobilitas-aktif.css">
