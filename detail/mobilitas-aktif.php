@@ -13,16 +13,18 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
     <section class="active-header">
 
         <div class="breadcrumb">
-            ← Kawasan Inti Pusat Pemerintahan (KIPP) Nusantara
+            ← Penerapan Teknologi untuk Mobilitas Cerdas di IKN
         </div>
 
-        <h1>Jalur Pejalan Kaki &amp; Mobilitas Aktif Terpadu</h1>
+        <h1>Green Transportation: Memprioritaskan Mobilitas Aktif</h1>
 
         <p>
-            Mewujudkan visi Kota 10 Menit berbasis prinsip pedestrian-first.
-            Setiap koridor jalan di KIPP IKN dirancang terpadu berdampingan
-            trotoar pedestrian yang ekstra lebar dan rindang terhubung langsung
-            di sisi jalur sepeda terproteksi, bebas konflik kendaraan bermotor.
+            Mobilitas aktif di IKN menempatkan berjalan kaki dan bersepeda
+            sebagai cara utama untuk perjalanan jarak dekat dan akses ke
+            halte bus serta stasiun. Nusantara dirancang sebagai Kota 10
+            Menit, dengan jaringan jalur pejalan kaki, jalur sepeda, dan
+            jalur tepi air yang nyaman, lengkap dengan peneduh, pencahayaan,
+            dan area parkir sepeda di titik-titik penting.
         </p>
 
     </section>
@@ -40,17 +42,18 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
 
         <div class="hero-overlay">
 
-            <span>INFRASTRUKTUR BERDAMPINGAN (SIDE-BY-SIDE)</span>
+            <span>GREEN TRANSPORTATION</span>
 
             <h2>
-                Integrasi Jalur Pedestrian Lebar &amp;
-                Jalur Sepeda Khusus
+                Pejalan Kaki &amp; Pesepeda Adalah
+                Prioritas Utama
             </h2>
 
             <p>
-                Trotoar berpaving permeabel anti-licin dengan pohon peneduh
-                tropis dilengkapi blok taktil berdampingan dengan jalur sepeda
-                terproteksi bebas konflik kendaraan bermotor.
+                Prioritas utama di setiap bagian jalan perkotaan IKN — dari
+                Arteri Kolektor Sekunder (ROW 54) hingga Shared Street /
+                Woonerf (ROW 16) — termasuk jalur pintas pejalan kaki dan
+                pesepeda di atas embung dan ruang terbuka hijau.
             </p>
 
         </div>
@@ -65,22 +68,22 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
 
         <div class="stat-item">
             <strong>10 Menit</strong>
-            <span>Radius Capaian Fasilitas Utama</span>
+            <span>Visi Kota 10 Menit ke Fasilitas &amp; Simpul Transportasi</span>
         </div>
 
         <div class="stat-item">
-            <strong>4.5 - 6 Meter</strong>
-            <span>Lebar Rata-rata Trotoar</span>
+            <strong>80%</strong>
+            <span>Target Pergerakan dengan Angkutan Umum &amp; Mobilitas Aktif</span>
         </div>
 
         <div class="stat-item">
-            <strong>250 Meter</strong>
-            <span>Interval Water Station</span>
+            <strong>ROW 16</strong>
+            <span>Woonerf / Shared Street Prioritas Jalan Kaki &amp; Sepeda</span>
         </div>
 
         <div class="stat-item">
-            <strong>100% Terlindung</strong>
-            <span>Kanopi Alami &amp; Skywalk</span>
+            <strong>Prinsip Ke-3</strong>
+            <span>Terhubung, Aktif, dan Mudah Diakses</span>
         </div>
 
     </section>
@@ -96,19 +99,20 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
 
         <div class="bike-content">
 
-            <span>JALUR SEPEDA BERDAMPINGAN</span>
+            <span>FIRST MILE - LAST MILE</span>
 
             <h2>
-                Ingin menggunakan sepeda sewa &amp;
-                skuter listrik bersama?
+                Ingin tahu tentang sepeda, skuter listrik,
+                dan mikromobilitas berbagi?
             </h2>
 
             <p>
-                Jalur sepeda terproteksi di KIPP IKN siap digunakan
-                untuk sepeda pribadi maupun moda sewa.
-                Untuk melihat titik stasiun docking, tarif,
-                serta panduan bike-sharing dan e-scooter,
-                kunjungi halaman Mikromobilitas.
+                Untuk perjalanan first mile-last mile, IKN mengembangkan
+                mikromobilitas seperti sepeda, skuter listrik, dan shared
+                bike/scooter yang menghubungkan kawasan hunian dan
+                perkantoran ke simpul transportasi massal. Untuk penjelasan
+                lengkap dan tahapan pengembangannya, kunjungi halaman
+                Mikromobilitas.
             </p>
 
         </div>
@@ -130,23 +134,24 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
         <div class="principle-card">
 
             <span class="green-label">
-                Komitmen Kota Sehat &amp; Ramah
+                Prinsip Pengembangan Nusantara
             </span>
 
             <h2>
-                Prinsip Pedestrian-First
+                Terhubung, Aktif &amp; Mudah Diakses
             </h2>
 
             <div class="principle-number">
-                100%
-                <small>/ Hak Prioritas Pejalan Kaki</small>
+                80%
+                <small>/ Target Pergerakan dengan Angkutan Umum atau Mobilitas Aktif</small>
             </div>
 
             <p>
-                Setiap jengkal trotoar, skywalk, jembatan penyeberangan
-                bertapak kanopi, serta minimum siap di KIPP dapat diakses
-                gratis oleh masyarakat umum untuk mendorong budaya mobilitas
-                aktif non emisi.
+                Pejalan kaki dan pesepeda adalah prioritas utama di setiap
+                bagian jalan di daerah perkotaan IKN: Arteri, Kolektor,
+                Sekunder, hingga Shared Street. Hal ini sejalan dengan
+                prinsip pengembangan ke-3 Nusantara — Terhubung, Aktif, dan
+                Mudah Diakses — serta prinsip ke-4, Emisi Karbon Rendah.
             </p>
 
             <div class="principle-route">
@@ -154,16 +159,16 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
                 <span>🗺️</span>
 
                 <div>
-                    <strong>Navigasi Jalur Pejalan Kaki</strong>
+                    <strong>Informasi &amp; Rute Perjalanan</strong>
                     <small>
-                        Terintegrasi di SuperApps Nusantara
+                        Terintegrasi di Aplikasi IKNOW
                     </small>
                 </div>
 
             </div>
 
             <a href="#" class="route-button">
-                Buka Rute Pejalan Kaki →
+                Pelajari Konektivitas Antarmoda →
             </a>
 
         </div>
@@ -172,22 +177,22 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
         <!-- FEATURES -->
         <div class="features-card">
 
-            <h2>Fitur Unggulan Pejalan Kaki KIPP IKN</h2>
+            <h2>Elemen Jaringan Mobilitas Aktif KIPP IKN</h2>
 
 
             <div class="features-grid">
 
                 <div class="feature-item">
 
-                    <div class="feature-icon">💧</div>
+                    <div class="feature-icon">🚶</div>
 
                     <div>
-                        <h3>Water Refill Station Setiap 250m</h3>
+                        <h3>Jaringan Jalur Pejalan Kaki &amp; Sepeda</h3>
 
                         <p>
-                            Air siap minum higienis bebas isi ulang
-                            dengan penyaringan ultrabersih berstandar
-                            internasional WHO.
+                            Jaringan jalur pejalan kaki, jalur sepeda, dan
+                            jalur tepi air yang menerus dan nyaman di
+                            seluruh kawasan perkotaan KIPP.
                         </p>
                     </div>
 
@@ -199,12 +204,12 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
                     <div class="feature-icon">🌳</div>
 
                     <div>
-                        <h3>Trotoar Kanopi Peneduh Alami</h3>
+                        <h3>Peneduh &amp; Pencahayaan di Titik Penting</h3>
 
                         <p>
-                            Dinaungi pepohonan endemik Kalimantan
-                            dan struktur peneduh bertenaga surya
-                            untuk suhu nyaman sepanjang hari.
+                            Dilengkapi peneduh dan pencahayaan di
+                            titik-titik penting sepanjang jalur pejalan
+                            kaki dan jalur sepeda.
                         </p>
                     </div>
 
@@ -213,15 +218,15 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
 
                 <div class="feature-item">
 
-                    <div class="feature-icon">🏢</div>
+                    <div class="feature-icon">💧</div>
 
                     <div>
-                        <h3>Elevated Skywalk Terkoneksi</h3>
+                        <h3>Jalur Pintas di Atas Embung</h3>
 
                         <p>
-                            Jalur layang melintasi ruang terbuka hijau
-                            yang menghubungkan gedung kementerian
-                            langsung ke Plaza Seremoni.
+                            Jalur pejalan kaki &amp; pesepeda (shortcut)
+                            di atas embung dan taman menjadikan Nusantara
+                            kota 10 menit dengan akses yang lebih dekat.
                         </p>
                     </div>
 
@@ -230,14 +235,15 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
 
                 <div class="feature-item">
 
-                    <div class="feature-icon">↗</div>
+                    <div class="feature-icon">🚲</div>
 
                     <div>
-                        <h3>Tactile Paving Ramah Disabilitas</h3>
+                        <h3>Area Parkir Sepeda di Titik Penting</h3>
 
                         <p>
-                            Guiding block kontinu standar kemandirian
-                            untuk pengguna kursi roda tanpa undakan tinggi.
+                            Area parkir sepeda disediakan di titik-titik
+                            penting untuk mendukung perjalanan jarak dekat
+                            dan akses ke halte bus serta stasiun.
                         </p>
                     </div>
 
@@ -246,15 +252,16 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
 
                 <div class="feature-item full">
 
-                    <div class="feature-icon">🌬️</div>
+                    <div class="feature-icon">🛣️</div>
 
                     <div>
-                        <h3>Misting Fan &amp; Rest Shelter Sejuk</h3>
+                        <h3>Shared Street / Woonerf (ROW 16)</h3>
 
                         <p>
-                            Pavilion istirahat teduh dilengkapi semprotan
-                            kabut sejuk otomatis bertekanan tinggi saat
-                            terik siang.
+                            Ruang jalan berbagi (shared street) di mana
+                            pejalan kaki dan pesepeda menjadi prioritas
+                            utama berdampingan dengan lalu lintas kecepatan
+                            rendah.
                         </p>
                     </div>
 
@@ -264,9 +271,8 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
 
 
             <div class="eco-note">
-                ♧ Penerangan jalur ditenagai 100% sel surya
-                fotovoltaik cerdas dengan sensor gerak adaptif.
-                <strong>Eco-Living IKN</strong>
+                ♧ Sejalan dengan Prinsip Pengembangan Ke-4 Nusantara:
+                <strong>Emisi Karbon Rendah</strong>
             </div>
 
         </div>
@@ -285,17 +291,20 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
 
         <div>
 
-            <h2>Konektivitas Antarmoda Tanpa Hambatan</h2>
+            <h2>Integrasi Seamless dengan Angkutan Umum</h2>
 
             <p>
-                Semua titik trotoar terhubung kurang dari 3 menit
-                berjalan kaki ke Halte Bus Listrik IntraKota &amp; ART.
+                Layanan bus direncanakan mencakup 80% wilayah perkotaan
+                dalam jangkauan 10 menit jalan kaki (440 m), dengan bus
+                tiba setiap 5 menit pada jam sibuk. Integrasi mobilitas
+                aktif dengan angkutan umum turut didukung fitur ramp pada
+                bis bila diperlukan.
             </p>
 
         </div>
 
         <a href="bus-perkotaan.php">
-            Cek Jadwal Bus Terdekat →
+            Cek Layanan Bus Perkotaan →
         </a>
 
     </section>
@@ -306,11 +315,12 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
     ========================== -->
     <section class="ethics-section">
 
-        <h2>Etika &amp; Panduan Jalur Berdampingan</h2>
+        <h2>Prinsip Ruang Berbagi Pejalan Kaki &amp; Sepeda</h2>
 
         <p class="ethics-intro">
-            Mewujudkan ruang bersama yang tertib, harmonis,
-            dan aman bagi pejalan kaki serta pesepeda.
+            Mewujudkan ruang bersama yang tertib dan aman bagi pejalan
+            kaki serta pesepeda, sejalan dengan konsep Green Transportation
+            IKN.
         </p>
 
 
@@ -321,12 +331,12 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
                 <span>1</span>
 
                 <div>
-                    <h3>Hierarki Pedestrian-First</h3>
+                    <h3>Pejalan Kaki &amp; Pesepeda adalah Prioritas Utama</h3>
 
                     <p>
-                        Pejalan kaki memiliki prioritas utama di zebra cross
-                        dan elevated walkway. Pesepeda wajib melambat
-                        dan mendahulukan pejalan kaki.
+                        Di setiap bagian jalan perkotaan — dari Arteri
+                        Kolektor Sekunder hingga Shared Street — pejalan
+                        kaki dan pesepeda memperoleh prioritas utama.
                     </p>
                 </div>
 
@@ -338,12 +348,13 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
                 <span>2</span>
 
                 <div>
-                    <h3>Pemisahan Jalur Tegas</h3>
+                    <h3>Jalur Terproteksi &amp; Kecepatan Terbatas</h3>
 
                     <p>
-                        Gunakan sisi trotoar untuk berjalan kaki dan jalur
-                        aspal terproteksi untuk sepeda. Dilarang mengendarai
-                        sepeda motor di kedua jalur ini.
+                        Jalan kaki dan sepeda menggunakan jalur terproteksi
+                        untuk first/last mile. Kendaraan pribadi dibatasi
+                        ruang dan kecepatannya (maksimal 20-30 km/jam)
+                        di koridor sekunder dan tersier.
                     </p>
                 </div>
 
@@ -355,12 +366,12 @@ $title = "Mobilitas Aktif - Profil Mobilitas IKN";
                 <span>3</span>
 
                 <div>
-                    <h3>Zero Waste &amp; Jaga Higienitas</h3>
+                    <h3>Keamanan Mobilitas Aktif</h3>
 
                     <p>
-                        KIPP IKN menerapkan aturan zero waste.
-                        Dilarang merokok, membuang sampah sembarangan,
-                        dan wajib menjaga kebersihan water refill station.
+                        Keamanan dalam berjalan kaki dan bermobilitas
+                        aktif menjadi salah satu fokus pengembangan sistem
+                        mobilitas cerdas Nusantara.
                     </p>
                 </div>
 

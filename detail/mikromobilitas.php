@@ -31,28 +31,32 @@
     <section class="micro-heading">
 
         <div class="micro-breadcrumb">
-            <span>Kawasan KIPP Nusantara</span>
+            <span>Penerapan Teknologi untuk Mobilitas Cerdas di IKN</span>
             <i>•</i>
-            <span>Pusat Layanan Sepeda, Jalur Hijau & Mikromobilitas Cerdas</span>
+            <span>Mobilitas Aktif dan Mikromobilitas | First Mile - Last Mile</span>
         </div>
 
         <div class="heading-row">
 
             <div>
                 <h1>
-                    Ekosistem Sepeda & Mikromobilitas Ramah Lingkungan
+                    Mikromobilitas: Sepeda, Skuter Listrik &amp; Mobilitas Berbagi
                 </h1>
 
                 <p>
-                    Solusi mobilitas aktif dan first-mile last-mile non-emisi di Ibu Kota Nusantara.
-                    Terintegrasi penuh dengan jalur terproteksi di sampingnya, stasiun docking
-                    bertenaga surya, sensor cerdas IoT geofencing, dan komunitas gowes Nusantara.
+                    Untuk perjalanan first mile-last mile, IKN mengembangkan
+                    mikromobilitas seperti sepeda, skuter listrik, dan shared
+                    bike/scooter. Moda ini menghubungkan kawasan hunian dan
+                    perkantoran ke simpul transportasi massal, beroperasi di
+                    koridor kecepatan rendah demi keselamatan, dan dapat
+                    dikelola melalui skema berbagi armada yang terintegrasi
+                    dengan aplikasi di kawasan TOD dan area ramai pejalan kaki.
                 </p>
             </div>
 
             <div class="emission-badge">
                 <span>●</span>
-                100% Nol Emisi Langsung
+                Menuju Zero Emission 2045
             </div>
 
         </div>
@@ -62,7 +66,7 @@
 
     <!-- ==================================================
          BAGIAN 1
-         JALUR SEPEDA
+         APA ITU MIKROMOBILITAS
     =================================================== -->
 
     <section class="micro-card bike-main-card">
@@ -72,15 +76,15 @@
 
             <img
                 src="../assets/images/intrakota/jalur-sepeda.jpg"
-                alt="Jalur Sepeda IKN"
+                alt="Mikromobilitas IKN"
             >
 
             <div class="image-badge">
-                ♧ Terpisah dari Kendaraan Bermotor
+                ♧ First Mile - Last Mile
             </div>
 
             <div class="image-caption">
-                Koridor Poros Sumbu Kebangsaan KIPP
+                Skuter, Sepeda, dan Moda Mikromobilitas Lain di KIPP
             </div>
 
         </div>
@@ -90,17 +94,18 @@
         <div class="bike-main-content">
 
             <span class="small-label">
-                INFRASTRUKTUR JALUR HIJAU UTAMA
+                DEFINISI &amp; CAKUPAN
             </span>
 
             <h2>
-                Jalur Sepeda Mandiri Berdampingan Trotoar KIPP
+                Apa yang Termasuk Mikromobilitas?
             </h2>
 
             <p class="description">
-                Dirancang dengan pemisahan fisik penuh
-                (grade-separated) dari jalur lalu lintas kendaraan
-                bermotor untuk menjamin keselamatan maksimal.
+                Micromobility dapat berupa kendaraan bertenaga manusia atau
+                listrik, milik pribadi atau digunakan bersama-sama, secara
+                umum berkecepatan rendah (maksimal 25 km/jam), dan beberapa
+                berkecepatan sedang (maksimal hingga 45 km/jam).
             </p>
 
 
@@ -111,44 +116,45 @@
 
                     <div>
                         <strong>
-                            Permukaan Aspal Berpori (Permeable)
+                            Termasuk Mikromobilitas
                         </strong>
 
                         <p>
-                            Mengurangi risiko slip saat basah dan
-                            mendukung sirkulasi udara tanah perkotaan.
+                            Skuter, sepeda, skateboard, dan sepeda kargo —
+                            baik unit pribadi maupun unit berbagi.
                         </p>
                     </div>
                 </div>
 
 
                 <div class="feature-item">
-                    <div class="feature-icon">✓</div>
+                    <div class="feature-icon">✗</div>
 
                     <div>
                         <strong>
-                            Penerangan Smart Solar LED
+                            Tidak Termasuk Mikromobilitas
                         </strong>
 
                         <p>
-                            Lampu jalan otomatis bertenaga surya
-                            dengan sensor gerak ramah fauna nokturnal.
+                            Kendaraan bermotor konvensional seperti mobil
+                            dan moped, serta kendaraan berkecepatan tinggi
+                            (melebihi 45 km/jam).
                         </p>
                     </div>
                 </div>
 
 
                 <div class="feature-item">
-                    <div class="feature-icon">✓</div>
+                    <div class="feature-icon">⚡</div>
 
                     <div>
                         <strong>
-                            Konektivitas Berdampingan
+                            Kendaraan Penggerak Motor Listrik
                         </strong>
 
                         <p>
-                            Terhubung langsung dengan trotoar pejalan
-                            kaki beraspal tanpa konflik jalur.
+                            Skuter listrik, sepeda listrik, hoverboard,
+                            sepeda roda satu (unicycle), dan otopet.
                         </p>
                     </div>
                 </div>
@@ -159,11 +165,11 @@
             <div class="bike-info">
 
                 <strong>
-                    ♧ Total 42,6 km Terhubung di KIPP
+                    ♧ Beroperasi di Koridor Kecepatan Rendah
                 </strong>
 
                 <span>
-                    Batas Laju 20 km/jam
+                    Demi Keselamatan Pengguna Jalan
                 </span>
 
             </div>
@@ -176,7 +182,7 @@
 
     <!-- ==================================================
          BAGIAN 2
-         SMART DOCKING
+         PRINSIP PENGEMBANGAN DESAIN INFRASTRUKTUR SEPEDA
     =================================================== -->
 
     <section class="micro-card docking-card">
@@ -185,33 +191,47 @@
         <div class="docking-content">
 
             <span class="small-label">
-                HUB PENGISIAN DAYA & PENGEMBALIAN UNIT
+                RANCANGAN
             </span>
 
             <h2>
-                Fasilitas Parkir & Smart Docking
-                Station Cerdas
+                Prinsip Pengembangan Desain
+                Infrastruktur Sepeda
             </h2>
 
             <p class="description">
-                Setiap simpul mikromobilitas IKN dilengkapi shelter
-                arsitektural ramah lingkungan berbahan kayu laminasi
-                berkelanjutan dan kanopi panel surya berkapasitas
-                mandiri off-grid.
+                Peta rancangan lokasi infrastruktur bike hub disiapkan
+                sebagai tempat kumpulan fasilitas bike-sharing, mengikuti
+                empat prinsip pengembangan desain infrastruktur sepeda
+                berikut ini.
             </p>
 
 
             <div class="dock-features">
 
                 <div class="dock-feature">
-                    <span>☀</span>
+                    <span>⚙</span>
 
                     <div>
-                        <strong>Shelter Bertenaga Surya</strong>
+                        <strong>Integrasi (Integration)</strong>
 
                         <p>
-                            Kanopi fotovoltaik 4,8 kWp untuk daya
-                            mandiri stasiun docking dan lampu malam.
+                            Terintegrasi dengan moda transportasi lain
+                            di kawasan TOD dan simpul transfer.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="dock-feature">
+                    <span>🛡</span>
+
+                    <div>
+                        <strong>Keamanan (Safety)</strong>
+
+                        <p>
+                            Jalur dan fasilitas dirancang untuk menjaga
+                            keselamatan pengguna sepeda dan mikromobilitas.
                         </p>
                     </div>
                 </div>
@@ -221,39 +241,25 @@
                     <span>▣</span>
 
                     <div>
-                        <strong>Smart Lock Racks</strong>
+                        <strong>Konektivitas (Connectivity)</strong>
 
                         <p>
-                            Sistem kunci magnetik terhubung RFID/QR
-                            mitra dan sensor keamanan optik 24 jam.
+                            Menghubungkan kawasan hunian dan perkantoran
+                            ke simpul transportasi massal.
                         </p>
                     </div>
                 </div>
 
 
                 <div class="dock-feature">
-                    <span>⚡</span>
+                    <span>🧭</span>
 
                     <div>
-                        <strong>Pompa & Toolkit Mandiri</strong>
+                        <strong>Penunjuk Arah (Wayfinding)</strong>
 
                         <p>
-                            Pompa angin elektrik otomatis dengan
-                            indikator PSI digital.
-                        </p>
-                    </div>
-                </div>
-
-
-                <div class="dock-feature">
-                    <span>⚙</span>
-
-                    <div>
-                        <strong>Fast Charging E-Bike</strong>
-
-                        <p>
-                            Pengisian induktif aman cuaca saat
-                            sepeda bertenaga pada slot docking.
+                            Sistem penunjuk arah yang jelas di sepanjang
+                            jaringan bike hub KIPP.
                         </p>
                     </div>
                 </div>
@@ -264,11 +270,11 @@
             <div class="dock-bottom">
 
                 <span>
-                    ♧ 48 Titik Docking Hub Aktif di KIPP
+                    ♧ Inisiatif Awal: Pilot Bike-Sharing untuk Pegawai OIKN
                 </span>
 
                 <span>
-                    Bebas Biaya Parkir Sepeda Pribadi
+                    Fitur Pemesanan &amp; Cek Ketersediaan Sepeda
                 </span>
 
             </div>
@@ -281,15 +287,15 @@
 
             <img
                 src="../assets/images/intrakota/gowes-ikn.jpg"
-                alt="Smart Docking Station IKN"
+                alt="Rancangan Bike Hub IKN"
             >
 
             <div class="solar-badge">
-                ☀ 100% Solar-Powered Hub
+                🗺️ Peta Rancangan Lokasi Bike Hub
             </div>
 
             <div class="image-caption">
-                Stasiun Hub Hunian ASN & Halte Poros Barat
+                Kumpulan Fasilitas Bike-Sharing di Kawasan KIPP
             </div>
 
         </div>
@@ -300,7 +306,7 @@
 
     <!-- ==================================================
          BAGIAN 3
-         SMART E-SCOOTER
+         TAHAPAN PENGEMBANGAN SISTEM SEPEDA (2025-2045)
     =================================================== -->
 
     <section class="micro-card scooter-card">
@@ -309,16 +315,16 @@
         <div class="scooter-image">
 
             <img
-                src="../assets/img/e-scooter.jpg"
-                alt="Smart E-Scooter IKN"
+                src="../assets/images/intrakota/agenda.jpeg"
+                alt="Tahapan Pengembangan Mikromobilitas IKN"
             >
 
             <div class="image-badge">
-                ⚡ Smart E-Scooter Share
+                📈 2025 - 2045
             </div>
 
             <div class="image-caption">
-                Docking Station & Kiosk Solar Hub - Koridor KIPP
+                Tahapan Utama Perluasan Sistem Sepeda KIPP
             </div>
 
         </div>
@@ -328,73 +334,89 @@
         <div class="scooter-content">
 
             <span class="small-label">
-                INOVASI MOBILITAS MIKRO CERDAS
+                RANCANGAN TAHAPAN PENGEMBANGAN
             </span>
 
             <h2>
-                Layanan Skuter Listrik Cerdas
-                Berbagi (Smart E-Scooter)
+                Dari Manual Bike System Menuju
+                Bike-Sharing Cerdas
             </h2>
 
             <p class="description">
-                Solusi mobilitas tangkas untuk perjalanan jarak
-                pendek antar-gedung pemerintahan dan titik transit
-                utama di Kawasan Inti Pusat Pemerintahan (KIPP).
-                Dilengkapi teknologi pembatas kecepatan otomatis
-                serta docking pengisian tenaga surya.
+                Diagram tahapan berikut menggambarkan tindakan yang
+                diperlukan serta peran kelembagaan yang akan memandu
+                perluasan sistem sepeda dari tahun 2025 hingga 2045
+                di kawasan KIPP.
             </p>
 
 
-            <!-- STATUS -->
+            <!-- TAHAP 1 -->
             <div class="info-box">
 
                 <h3>
-                    ✓ Status Akses & Penggunaan
+                    01. Manual Bike System Phase (2025-2028)
                 </h3>
 
                 <p>
-                    Tahap Pilot & Operasional Terbatas:
-                    diprioritaskan bagi mobilitas dinas harian ASN,
-                    pegawai OIKN, dan pekerja KIPP via akun SSO ASN / ID Nusantara.
+                    Biaya rendah, risiko rendah - implementasi,
+                    pembelajaran operasional, perubahan budaya dan
+                    perilaku, serta dasar infrastruktur. OIKN mulai
+                    mengembangkan sistem booking bagi pegawai OIKN.
                 </p>
 
                 <p>
-                    <strong>Pengunjung / Masyarakat Umum:</strong>
-                    Akses tersedia di zona rekreasi publik (Plaza).
-                </p>
-
-                <p>
-                    Seremoni & Sumbu Kebangsaan dapat digunakan
-                    melalui reservasi Nusantara SuperApp / Mitra Darat
-                    dengan verifikasi identitas.
+                    <strong>Kelembagaan:</strong>
+                    Policymaker, Operator, dan Monitoring dijalankan
+                    oleh OIKN. Milestone: Pilot Deployment, Monitoring
+                    &amp; Evaluation, Network Expansion.
                 </p>
 
             </div>
 
 
-            <!-- KEAMANAN -->
+            <!-- TAHAP 2 -->
             <div class="info-box">
 
                 <h3>
-                    ⚡ Sistem Sewa & Pengoperasian Aman
+                    02. Transition Phase (2028-2030)
                 </h3>
 
                 <p>
-                    Scan QR Code untuk membuka unit melalui aplikasi
-                    Mitra Darat atau Nusantara SuperApp.
+                    Evolusi sistem, aksesibilitas yang ditingkatkan,
+                    sinergi publik-swasta, serta bukti konsep untuk
+                    penskalaan.
                 </p>
 
                 <p>
-                    <strong>Geofence Speed Limit:</strong>
-                    Maks. 18 km/jam di jalur sepeda,
-                    deselerasi otomatis ke 10 km/jam di zona pedestrian
-                    bersama.
+                    <strong>Kelembagaan:</strong>
+                    Policymaker &amp; Monitoring oleh OIKN, Operator oleh
+                    Private Bike-Sharing. Milestone: Introduction of
+                    Bike Sharing.
+                </p>
+
+            </div>
+
+
+            <!-- TAHAP 3 -->
+            <div class="info-box">
+
+                <h3>
+                    03. Bike-Sharing Phase (2030-2045)
+                </h3>
+
+                <p>
+                    Cakupan dan fleksibilitas yang lebih luas, perjalanan
+                    multimoda yang lancar, integrasi mobilitas cerdas,
+                    berkelanjutan, dan tangguh.
                 </p>
 
                 <p>
-                    Wajib Parkir di Docking Hub.
-                    Parkir bebas tanpa pengembalian unit wajib
-                    dapat dikenakan denda sistem.
+                    <strong>Kelembagaan:</strong>
+                    Policymaker &amp; Monitoring oleh OIKN, Operator oleh
+                    Private Bike-Sharing. Milestone: System Update
+                    (Hybrid Model), Regional Expansion ke KIKN,
+                    Full Integration &amp; Scalability, serta Smart
+                    Mobility &amp; Innovation berbasis AI.
                 </p>
 
             </div>
@@ -407,7 +429,7 @@
 
     <!-- ==================================================
          BAGIAN 4
-         KOMUNITAS GOWES
+         HIERARKI MODE SHARE MOBILITAS AKTIF
     =================================================== -->
 
     <section class="micro-card gowes-card">
@@ -416,23 +438,21 @@
 
             <div>
                 <span class="small-label">
-                    GAYA HIDUP SEHAT & GUYUB
+                    KONSEP DAN HIERARKI MIKROMOBILITAS
                 </span>
 
                 <h2>
-                    Agenda & Event Gowes Bulanan Komunitas IKN
+                    Mobilitas Aktif &amp; Mikromobilitas dalam
+                    Hierarki Moda Transportasi IKN
                 </h2>
 
                 <p>
-                    Program bersepeda rutin untuk mempererat solidaritas
-                    ASN, pekerja konstruksi, masyarakat lokal, dan
-                    komunitas pesepeda nasional.
+                    Mikromobilitas melayani cakupan jarak lebih jauh dari
+                    berjalan kaki, menghubungkan kawasan sekitar Park
+                    n Ride dan Bus Interchange Station di dalam
+                    MicroMobility Distance Coverage Area.
                 </p>
             </div>
-
-            <button class="community-button">
-                ♧ Gabung Komunitas Gowes
-            </button>
 
         </div>
 
@@ -443,12 +463,13 @@
             <div class="gowes-image">
 
                 <img
-                    src="../assets/images/intrakota/agenda.jpeg"
-                    alt="Komunitas Gowes IKN"
+                    src="../assets/images/intrakota/spx.jpg"
+                    alt="Hierarki Mobilitas Aktif IKN"
                 >
 
                 <div class="image-caption">
-                    Nusantara Car Free Morning Ride - Koridor Utama Sumbu Barat
+                    Piramida Prioritas Moda: Berjalan Kaki, Bersepeda,
+                    Angkutan Umum, Logistik, hingga Kendaraan Pribadi
                 </div>
 
             </div>
@@ -458,25 +479,25 @@
             <div class="gowes-schedule">
 
                 <h3>
-                    Jadwal Rutin Agenda Gowes
+                    Urutan Prioritas Moda Mobilitas Aktif
                 </h3>
 
 
                 <div class="event-item">
 
                     <div class="event-title">
-                        <span>Minggu Pertama Tiap Bulan</span>
-                        <small>06.00 - 09.00 WITA</small>
+                        <span>Prioritas 1</span>
+                        <small>Walking</small>
                     </div>
 
                     <h4>
-                        Nusantara Car Free Morning Ride
+                        Berjalan Kaki
                     </h4>
 
                     <p>
-                        Gowes santai bersama keliling Plaza Serambi
-                        hingga Sumbu Kebangsaan. Rute 12 km tertutup
-                        total bagi mobil.
+                        Moda utama untuk perjalanan jarak dekat dan akses
+                        langsung ke halte bus serta stasiun di dalam
+                        Kota 10 Menit.
                     </p>
 
                 </div>
@@ -485,17 +506,18 @@
                 <div class="event-item">
 
                     <div class="event-title">
-                        <span>Pertengahan Bulan</span>
-                        <small>16.30 - 18.00 WITA</small>
+                        <span>Prioritas 2</span>
+                        <small>Cycling</small>
                     </div>
 
                     <h4>
-                        Sunset Ride Sumbu Kebangsaan
+                        Bersepeda &amp; Mikromobilitas
                     </h4>
 
                     <p>
-                        Menikmati senja hutan rimba kota dari atas
-                        jalur sepeda bersama rekan kerja dan keluarga.
+                        Sepeda, skuter listrik, dan moda mikromobilitas
+                        lain untuk perjalanan first mile-last mile menuju
+                        simpul transportasi massal.
                     </p>
 
                 </div>
@@ -504,18 +526,18 @@
                 <div class="event-item">
 
                     <div class="event-title">
-                        <span>Sabtu Akhir Pekan</span>
-                        <small>06.30 - 08.30 WITA</small>
+                        <span>Prioritas 3</span>
+                        <small>Public Transport &amp; Freight/Taxi</small>
                     </div>
 
                     <h4>
-                        Nusantara Cycling Clinic & Safety Riding
+                        Angkutan Umum, Logistik &amp; Taksi
                     </h4>
 
                     <p>
-                        Pelatihan etika bersepeda perkotaan,
-                        keselamatan helm pintar, dan teknik dasar
-                        perbaikan ban di shelter docking.
+                        Angkutan umum massal serta layanan logistik dan
+                        taksi melengkapi konektivitas antarmoda sebelum
+                        kendaraan pribadi.
                     </p>
 
                 </div>
@@ -524,12 +546,12 @@
                 <div class="register-row">
 
                     <span>
-                        Registrasi peserta & peminjaman unit gratis
-                        di aplikasi.
+                        Kendaraan pribadi berada di prioritas terakhir
+                        dalam hierarki mobilitas IKN.
                     </span>
 
                     <strong>
-                        Daftar Ride →
+                        Lihat Halaman Bus Perkotaan →
                     </strong>
 
                 </div>
@@ -539,236 +561,6 @@
         </div>
 
     </section>
-
-    <!-- =========================================
-         4 LANGKAH MUDAH
-    ========================================== -->
-    <div class="steps-card">
-
-        <div class="section-heading">
-            <span class="section-label">TATA CARA LAYANAN</span>
-
-            <h2>
-                4 Langkah Mudah Sewa & Gowes Sepeda di KIPP IKN
-            </h2>
-
-            <p>
-                Panduan praktis menggunakan layanan sepeda pintar untuk
-                perjalanan aman dan tertib.
-            </p>
-        </div>
-
-        <div class="steps-grid">
-
-            <!-- STEP 01 -->
-            <div class="step-item">
-                <div class="step-number">01</div>
-
-                <h3>Scan QR via Mitra Darat</h3>
-
-                <p>
-                    Buka aplikasi Mitra Darat IKN atau Nusantara SuperApp,
-                    pilih menu Mikromobilitas, lalu arahkan kamera ke kode
-                    QR di stang sepeda.
-                </p>
-            </div>
-
-            <!-- STEP 02 -->
-            <div class="step-item">
-                <div class="step-number">02</div>
-
-                <h3>Buka Kunci & Pakai Helm</h3>
-
-                <p>
-                    Kunci pintar otomatis terbuka dengan sinyal bunyi klik.
-                    Ambil helm pintar di docking shelter dan pasang dengan
-                    rapat sebelum mulai memacu pedal.
-                </p>
-            </div>
-
-            <!-- STEP 03 -->
-            <div class="step-item">
-                <div class="step-number">03</div>
-
-                <h3>Gowes di Jalur Sepeda</h3>
-
-                <p>
-                    Selalu gunakan lajur sepeda berdampingan khusus.
-                    Kecepatan maksimal dibatasi sistem pada 20 km/jam
-                    untuk menjaga keselamatan sesama pengguna jalan.
-                </p>
-            </div>
-
-            <!-- STEP 04 -->
-            <div class="step-item">
-                <div class="step-number">04</div>
-
-                <h3>Parkir Rapi di Docking Station</h3>
-
-                <p>
-                    Kembalikan ke salah satu dari 48 titik docking hub resmi,
-                    hubungkan kabel pengunci, lalu klik
-                    <em>"Selesai Perjalanan"</em> di aplikasi telepon Anda.
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-
-    <!-- =========================================
-         TARIF + DETAIL FASILITAS
-    ========================================== -->
-    <div class="micro-info-layout">
-
-        <!-- ==============================
-             TARIF
-        =============================== -->
-        <div class="tariff-card">
-
-            <span class="tariff-label">
-                SUBSIDI PENUH OIKN
-            </span>
-
-            <h2>
-                Tarif Layanan Mikromobilitas
-            </h2>
-
-            <div class="price">
-                Rp 0,-
-                <span>/ 30 Menit Pertama</span>
-            </div>
-
-            <p class="tariff-description">
-                Layanan mikromobilitas sepeda & skuter disubsidi penuh
-                oleh Otorita Ibu Kota Nusantara guna mendukung target
-                nol emisi karbon serta budaya berjalan dan bersepeda
-                aktif warga KIPP.
-            </p>
-        </div>
-
-
-        <!-- ==============================
-             DETAIL FASILITAS
-        =============================== -->
-        <div class="facilities-area">
-
-            <div class="facilities-heading">
-
-                <h2>
-                    Detail Ketentuan & Fasilitas Terintegrasi
-                </h2>
-
-                <span class="standard-badge">
-                    Standar Smart City KIPP
-                </span>
-
-            </div>
-
-
-            <div class="facility-grid">
-
-                <!-- JAM OPERASIONAL -->
-                <div class="facility-card">
-
-                    <div class="facility-title">
-                        <span class="facility-icon">◷</span>
-                        JAM OPERASIONAL HARIAN
-                    </div>
-
-                    <h3>
-                        05.30 - 22.00 WITA
-                    </h3>
-
-                    <p>
-                        Beroperasi setiap hari tanpa jeda. Pembersihan
-                        berkala, sanitasi helm, dan penukaran baterai
-                        unit berlangsung otonom malam hari.
-                    </p>
-
-                </div>
-
-
-                <!-- GEOFENCE -->
-                <div class="facility-card">
-
-                    <div class="facility-title">
-                        <span class="facility-icon">♧</span>
-                        PERLINDUNGAN BATAS GEOFENCE
-                    </div>
-
-                    <h3>
-                        Kawasan KIPP Terkunci
-                    </h3>
-
-                    <p>
-                        Unit otomatis membatasi laju dan membunyikan
-                        peringatan suara apabila pengendara mencoba
-                        keluar dari wilayah geofence KIPP.
-                    </p>
-
-                </div>
-
-
-                <!-- HUB HUNIAN -->
-                <div class="facility-card">
-
-                    <div class="facility-title">
-                        <span class="facility-icon">⌂</span>
-                        HUB HUNIAN ASN 1 - 4
-                    </div>
-
-                    <p>
-                        Titik kumpul armada sepeda di depan gerbang utama
-                        hunian vertikal terintegrasi halte bus feeder.
-                    </p>
-
-                    <div class="facility-note">
-                        Rusun ASN 1 & 2
-                        <span>(Tersedia 30 unit standby)</span>
-                    </div>
-
-                    <div class="facility-note">
-                        Rusun ASN 3, 4 & Kompleks Hankam
-                        <span>(Tersedia 26 unit)</span>
-                    </div>
-
-                </div>
-
-
-                <!-- HUB PLAZA -->
-                <div class="facility-card">
-
-                    <div class="facility-title">
-                        <span class="facility-icon">▥</span>
-                        HUB PLAZA SEREMONI & KEMENKO
-                    </div>
-
-                    <p>
-                        Menghubungkan Sumbu Kebangsaan Barat dan Timur,
-                        gedung kantor Kemenko 1 hingga 4, serta Galeri
-                        Nasional.
-                    </p>
-
-                    <div class="facility-note">
-                        Shelter Plaza Barat
-                        <span>(Koneksi Halte Bus Utama)</span>
-                    </div>
-
-                    <div class="facility-note">
-                        Shelter Bank Indonesia - Kemenko 2
-                        <span>(Stasiun Pengisian Cepat)</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
 
 </main>
 
