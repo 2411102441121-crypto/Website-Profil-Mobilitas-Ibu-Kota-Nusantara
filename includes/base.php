@@ -418,8 +418,8 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
                 <li class="nav-item">
                     <a class="nav-link <?= (strpos($current_page, 'antarkota') !== false) ? 'active' : ''; ?>" href="<?= $base_url; ?>pages/antarkota.php">Layanan Antarkota</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link <?= ($current_page == 'intrakota.php') ? 'active' : ''; ?>" href="<?= $base_url; ?>pages/intrakota.php">Layanan Intrakota</a>
+               <li class="nav-item">
+                    <a class="nav-link <?= (strpos($current_page, 'intrakota') !== false || (isset($parent_page) && $parent_page == 'intrakota')) ? 'active' : ''; ?>" href="<?= $base_url; ?>pages/intrakota.php">Layanan Intrakota</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?= ($current_page == 'peta.php') ? 'active' : ''; ?>" href="<?= $base_url; ?>pages/peta.php"> Peta</a>
@@ -485,7 +485,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
                             <li><a href="<?= $base_url; ?>pages/antarkota.php" class="text-white-50 text-decoration-none">Layanan Antarkota</a></li>
                         <?php endif; ?>
                         
-                        <?php if ($current_page != 'intrakota.php'): ?>
+                        <?php if (strpos($current_page, 'intrakota') === false && (!isset($parent_page) || $parent_page != 'intrakota')): ?>
                             <li><a href="<?= $base_url; ?>pages/intrakota.php" class="text-white-50 text-decoration-none">Layanan Intrakota</a></li>
                         <?php endif; ?>
 

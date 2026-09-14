@@ -3,6 +3,8 @@
 // HALAMAN MIKROMOBILITAS
 // File: detail/mikromobilitas.php
 // ======================================================
+
+$parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Intrakota
 ?>
 
 <!DOCTYPE html>

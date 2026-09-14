@@ -212,7 +212,7 @@ ob_start();
                                IKN secara terjadwal.
                             </p>
                             
-                            <a href="peta.php" class="intrakota-card-detail-link">
+                            <a href="../detail/bus-perkotaan.php" class="intrakota-card-detail-link">
                                 Lihat Detail
                                 <i class="fas fa-arrow-right" aria-hidden="true"></i>
                             </a>
