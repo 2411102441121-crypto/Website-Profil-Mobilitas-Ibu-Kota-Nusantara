@@ -40,35 +40,37 @@ $qKondisional = mysqli_query($koneksi, "
     FROM jam_kondisional j
     INNER JOIN layanan l ON l.id = j.layanan_id
     WHERE l.status = 'aktif'
-    ORDER BY l.urutan ASC,l.id ASC
+    ORDER BY l.urutan ASC, l.id ASC
 ");
 
 $kondisional = [];
-while($row = mysqli_fetch_assoc($qKondisional)){ $kondisional[] = $row; }
+while($row = mysqli_fetch_assoc($qKondisional)){ 
+    $kondisional[] = $row; 
+}
 
 // =====================================================
-// KELOMPOK LAYANAN
+// KELOMPOK LAYANAN (Disesuaikan dengan Peta IKN & Ramadan)
 // =====================================================
-$utama = ['1E','2','3','4'];
-$ekspres = ['2E','3E'];
-$komuter = ['1EM','2EM'];
+$utama   = ['1E', '2', '3', '4'];
+$ekspres = ['2E', '3E'];
+$komuter = ['1EM', '2EM', '2M']; // <-- Tambahkan '2M' di sini
 
-$grupUtama = [];
+$grupUtama   = [];
 $grupEkspres = [];
 $grupKomuter = [];
 
 foreach($layanan as $r){
     $kode = strtoupper(trim($r['kode']));
 
-    if(in_array($kode,$utama,true)){
+    if(in_array($kode, $utama, true)){
         $grupUtama[] = $r;
-    }elseif(in_array($kode,$ekspres,true)){
+    } elseif(in_array($kode, $ekspres, true)){
         $grupEkspres[] = $r;
-    }elseif(in_array($kode,$komuter,true)){
+    } elseif(in_array($kode, $komuter, true)){
         $grupKomuter[] = $r;
-    }else{
-        // Layanan baru otomatis masuk Layanan Utama
-        $grupUtama[] = $r;
+    } else {
+        // Jika ada layanan baru tambahan lainnya, masukkan ke grup komuter/kondisional
+        $grupKomuter[] = $r;
     }
 }
 
@@ -97,31 +99,48 @@ ob_start();
 <!-- =====================================================
      PETA
 ====================================================== -->
+<!-- =====================================================
+     PETA & SLIDER
+====================================================== -->
 <section class="bus-map-section">
     <div class="bus-map-card">
 
-        <?php if($peta && !empty($peta['gambar'])): ?>
+        <!-- CONTAINER PETA REGULER -->
+        <div id="map-reguler" class="map-container active">
+            <img src="../uploads/peta/<?=e($peta['gambar'] ?? 'peta_bus.jpeg')?>" 
+                 alt="Peta Jaringan Bus Perkotaan IKN" class="bus-map">
+            <div class="map-caption">
+                <strong>Peta Jaringan Bus Perkotaan IKN (Reguler)</strong>
+            </div>
+        </div>
 
-            <img src="../uploads/peta/<?=e($peta['gambar'])?>"
-                 alt="Peta Jaringan Bus Perkotaan IKN"
-                 class="bus-map">
+        <!-- CONTAINER PETA KONDISIONAL (RAMADAN) -->
+        <div id="map-kondisional" class="map-container" style="display: none;">
+            
+            <!-- Sub Switcher Gambar Peta Kondisional -->
+            <div class="cond-map-tabs" style="text-align: center; margin-bottom: 10px;">
+                <button type="button" class="btn-sub-map active" data-map="peta-ramadan">Peta Bus Ramadan</button>
+                <button type="button" class="btn-sub-map" data-map="peta-ekspres">Peta Bus Ekspres Ramadan</button>
+            </div>
 
-        <?php else: ?>
+            <!-- Gambar Peta Ramadan 1 -->
+            <div id="peta-ramadan" class="sub-map-item active">
+                <img src="../uploads/peta/<?=e($peta['gambar_ramadan'] ?? 'peta_ramadan.jpeg')?>" 
+                     alt="Peta Bus Perkotaan Ramadan" class="bus-map">
+                <div class="map-caption">
+                    <strong>Peta Bus Perkotaan Ramadan Nusantara</strong>
+                </div>
+            </div>
 
-            <img src="../assets/images/peta/peta_bus.jpeg"
-                 alt="Peta Jaringan Bus Perkotaan IKN"
-                 class="bus-map">
+            <!-- Gambar Peta Ramadan 2 -->
+            <div id="peta-ekspres" class="sub-map-item" style="display: none;">
+                <img src="../uploads/peta/<?=e($peta['gambar_ekspres_ramadan'] ?? 'peta_ekspres_ramadan.jpeg')?>" 
+                     alt="Peta Bus Ekspres Ramadan" class="bus-map">
+                <div class="map-caption">
+                    <strong>Peta Bus Ekspres Ramadan Nusantara</strong>
+                </div>
+            </div>
 
-        <?php endif; ?>
-
-        <div class="map-caption">
-            <strong>
-                <?=e($peta['judul'] ?? 'Peta Jaringan Bus Perkotaan IKN')?>
-            </strong>
-
-            <span>
-                <?=e($peta['deskripsi'] ?? 'Peta jaringan dan informasi rute bus perkotaan.')?>
-            </span>
         </div>
 
     </div>
@@ -163,9 +182,15 @@ ob_start();
 
                     <?php foreach($reguler as $r): ?>
 
-                        <div class="schedule-card" style="--route-color: <?=e($r['warna'] ?? '#64748B')?>;">
+                        <div class="schedule-card" style="--route-color: <?=e($r['warna'] ?? '#050608')?>;">
 
-                            <div class="route-number" style="background:<?=e($r['warna'] ?? '#64748B')?>;">
+                            <?php 
+                                // Daftar kode rute yang berlatar terang dan butuh teks hitam
+                                $kodeTerang = ['2E', '3', '1EM', '2EM']; 
+                                $warnaTeks = in_array(strtoupper(trim($r['kode'])), $kodeTerang) ? '#000000' : '#ffffff';
+                            ?>
+
+                            <div class="route-number" style="background:<?=e($r['warna'] ?? '#64748B')?>; color: <?= $warnaTeks ?>;">
                                 <?=e($r['kode'])?>
                             </div>
 
@@ -224,9 +249,15 @@ ob_start();
 
                     <?php foreach($kondisional as $r): ?>
 
+                        <?php 
+                            // Logika warna teks: Rute 2E, 3, 1EM, 2EM memakai teks hitam (#000000)
+                            $kodeTerang = ['2E', '3', '1EM', '2EM']; 
+                            $warnaTeks = in_array(strtoupper(trim($r['kode'])), $kodeTerang) ? '#000000' : '#ffffff';
+                        ?>
+
                         <div class="schedule-card" style="--route-color: <?=e($r['warna'] ?? '#64748B')?>;">
 
-                            <div class="route-number" style="background:<?=e($r['warna'] ?? '#64748B')?>;">
+                            <div class="route-number" style="background:<?=e($r['warna'] ?? '#64748B')?>; color: <?= $warnaTeks ?> !important;">
                                 <?=e($r['kode'])?>
                             </div>
 
@@ -257,7 +288,9 @@ ob_start();
 
                                     <div class="schedule-row">
                                         <span>Keterangan</span>
-                                        <strong><?=e($r['keterangan'])?></strong>
+                                        <strong style="white-space: normal; text-align: right; line-height: 1.3;">
+                                            <?=e($r['keterangan'])?>
+                                        </strong>
                                     </div>
 
                                 <?php endif; ?>
@@ -293,34 +326,39 @@ ob_start();
 ====================================================== -->
 <section class="bus-services">
 
-    <!-- LAYANAN UTAMA -->
-    <div class="service-column">
+   <!-- LAYANAN UTAMA -->
+<div class="service-column">
 
-        <h3>
-            <span class="service-line"></span>
-            LAYANAN UTAMA
-        </h3>
+    <h3>
+        <span class="service-line"></span>
+        KORIDOR REGULER
+    </h3>
 
-        <?php if(!empty($grupUtama)): ?>
+    <?php if(!empty($grupUtama)): ?>
 
-            <?php foreach($grupUtama as $r): ?>
+        <?php foreach($grupUtama as $r): ?>
+            <?php 
+                // Cek jika rute berlatar terang (3, 1EM, 2EM) pakai teks hitam (#000000), selebihnya putih (#ffffff)
+                $kodeTerang = ['2E', '3', '1EM', '2EM']; 
+                $warnaTeks = in_array(strtoupper(trim($r['kode'])), $kodeTerang) ? '#000000' : '#ffffff';
+            ?>
 
-                <div class="service-item">
+            <div class="service-item">
 
-                    <span class="service-badge" style="background:<?=e($r['warna'] ?? '#64748B')?>;">
-                        <?=e($r['kode'])?>
-                    </span>
+                <span class="service-badge" style="background:<?=e($r['warna'] ?? '#64748B')?>; color: <?= $warnaTeks ?> !important;">
+                    <?=e($r['kode'])?>
+                </span>
 
-                    <p>
-                        <strong><?=e($r['nama_layanan'])?></strong><br>
-                        <?=e($r['deskripsi'])?>
-                    </p>
+                <p>
+                    <strong><?=e($r['nama_layanan'])?></strong><br>
+                    <?=e($r['deskripsi'])?>
+                </p>
 
-                </div>
+            </div>
 
-            <?php endforeach; ?>
+        <?php endforeach; ?>
 
-        <?php else: ?>
+    <?php else: ?>
 
             <div class="service-item">
                 <p>Belum ada layanan utama.</p>
@@ -335,16 +373,20 @@ ob_start();
 
         <h3>
             <span class="service-line"></span>
-            LAYANAN EKSPRES
+            KORIDOR PENGHUBUNG
         </h3>
 
         <?php if(!empty($grupEkspres)): ?>
 
             <?php foreach($grupEkspres as $r): ?>
+                <?php 
+                    $kodeTerang = ['2E', '3', '1EM', '2EM']; 
+                    $warnaTeks = in_array(strtoupper(trim($r['kode'])), $kodeTerang) ? '#000000' : '#ffffff';
+                ?>
 
                 <div class="service-item">
 
-                    <span class="service-badge" style="background:<?=e($r['warna'] ?? '#64748B')?>;">
+                    <span class="service-badge" style="background:<?=e($r['warna'] ?? '#64748B')?>; color: <?= $warnaTeks ?> !important;">
                         <?=e($r['kode'])?>
                     </span>
 
@@ -372,16 +414,20 @@ ob_start();
 
         <h3>
             <span class="service-line"></span>
-            LAYANAN KOMUTER
+            KORIDOR PAGI
         </h3>
 
         <?php if(!empty($grupKomuter)): ?>
 
             <?php foreach($grupKomuter as $r): ?>
+                <?php 
+                    $kodeTerang = ['2E', '3', '1EM', '2EM']; 
+                    $warnaTeks = in_array(strtoupper(trim($r['kode'])), $kodeTerang) ? '#000000' : '#ffffff';
+                ?>
 
                 <div class="service-item">
 
-                    <span class="service-badge" style="background:<?=e($r['warna'] ?? '#64748B')?>;">
+                    <span class="service-badge" style="background:<?=e($r['warna'] ?? '#64748B')?>; color: <?= $warnaTeks ?> !important;">
                         <?=e($r['kode'])?>
                     </span>
 
@@ -439,19 +485,8 @@ ob_start();
 
         <p>
             Saat ini layanan Bus Perkotaan Nusantara beroperasi tanpa biaya
-            untuk seluruh warga dan pengunjung sebagai bagian dari inisiatif
-            <strong>Transformasi Hijau dan Digital</strong> Otorita IKN.
+            untuk seluruh warga dan pengunjung Otorita IKN.
         </p>
-
-        <a href="https://apps.apple.com/id/app/mitradarat/id6445860885?l=id"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="tariff-button">
-
-            <i class="fas fa-qrcode"></i>
-            Unduh Aplikasi Mitra Darat
-
-        </a>
 
     </div>
 
@@ -466,15 +501,15 @@ ob_start();
             $detailRute = [
                 [
                     'icon' => 'fa-briefcase',
-                    'judul' => 'Koridor 1: Pusat Pemerintahan',
+                    'judul' => 'Koridor 1E: Pusat Pemerintahan',
                     'deskripsi' => 'Menghubungkan area esensial di Kawasan Inti Pusat Pemerintahan (KIPP).',
-                    'point' => ['Istana Wapres','Kemenko 3','Plaza Barat']
+                    'point' => ['Rusun ASN 1', 'Kemenko 3', 'Plaza Barat', 'Hotel Nusantara', 'Balai Kota']
                 ],
                 [
                     'icon' => 'fa-building',
-                    'judul' => 'Koridor 2: Hunian & Residensial',
-                    'deskripsi' => 'Jalur penghubung utama untuk kawasan tempat tinggal ASN dan pekerja.',
-                    'point' => ['Rusun ASN 1 & 2','Rest Area IKN','Hotel Nusantara']
+                    'judul' => 'Koridor 2: Lingkar Dalam',
+                    'deskripsi' => 'Jalur lingkar utama penghubung kawasan rest area, perkantoran, dan fasilitas umum.',
+                    'point' => ['Rest Area IKN', 'Kemenko 3', 'Hotel Nusantara', 'Balai Kota']
                 ]
             ];
             ?>
@@ -519,29 +554,50 @@ ob_start();
      JAVASCRIPT TAB
 ====================================================== -->
 <script>
-document.addEventListener("DOMContentLoaded",function(){
-    const tabs=document.querySelectorAll(".schedule-tab");
-    const panels=document.querySelectorAll(".schedule-panel");
+document.addEventListener("DOMContentLoaded", function(){
+    const tabs = document.querySelectorAll(".schedule-tab");
+    const panels = document.querySelectorAll(".schedule-panel");
+    
+    // Element Peta
+    const mapReguler = document.getElementById("map-reguler");
+    const mapKondisional = document.getElementById("map-kondisional");
 
     tabs.forEach(function(tab){
-        tab.addEventListener("click",function(){
-            const target=this.getAttribute("data-target");
+        tab.addEventListener("click", function(){
+            const target = this.getAttribute("data-target");
 
-            tabs.forEach(function(item){
-                item.classList.remove("active");
-            });
-
+            // Switcher Tab Jadwal
+            tabs.forEach(item => item.classList.remove("active"));
             this.classList.add("active");
 
-            panels.forEach(function(panel){
-                panel.classList.remove("active");
-            });
+            panels.forEach(panel => panel.classList.remove("active"));
+            const targetPanel = document.getElementById(target);
+            if(targetPanel) targetPanel.classList.add("active");
 
-            const targetPanel=document.getElementById(target);
-
-            if(targetPanel){
-                targetPanel.classList.add("active");
+            // OTOMATIS SWAP GAMBAR PETA
+            if(target === 'kondisional') {
+                mapReguler.style.display = 'none';
+                mapKondisional.style.display = 'block';
+            } else {
+                mapReguler.style.display = 'block';
+                mapKondisional.style.display = 'none';
             }
+        });
+    });
+
+    // Sub-Tab Switcher untuk Peta Kondisional (Ramadan vs Ekspres Ramadan)
+    const subTabs = document.querySelectorAll(".btn-sub-map");
+    subTabs.forEach(function(btn){
+        btn.addEventListener("click", function(){
+            const targetMap = this.getAttribute("data-map");
+
+            subTabs.forEach(b => b.classList.remove("active"));
+            this.classList.add("active");
+
+            document.getElementById("peta-ramadan").style.display = 'none';
+            document.getElementById("peta-ekspres").style.display = 'none';
+
+            document.getElementById(targetMap).style.display = 'block';
         });
     });
 });

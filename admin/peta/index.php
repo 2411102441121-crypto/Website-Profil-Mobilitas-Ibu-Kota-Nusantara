@@ -17,6 +17,31 @@ function redirect_ok($msg, $jenis='reguler'){
     exit;
 }
 
+// Helper Function untuk Upload Gambar Peta
+function uploadGambarPeta($fileInputName, $oldFileName, $prefix, $folder, &$error) {
+    if (!isset($_FILES[$fileInputName]) || $_FILES[$fileInputName]['error'] === UPLOAD_ERR_NO_FILE) {
+        return $oldFileName;
+    }
+    if ($_FILES[$fileInputName]['error'] !== UPLOAD_ERR_OK) {
+        $error = "Gagal mengupload gambar ($fileInputName).";
+        return $oldFileName;
+    }
+    $ext = strtolower(pathinfo($_FILES[$fileInputName]['name'], PATHINFO_EXTENSION));
+    if (!in_array($ext, ['jpg','jpeg','png','webp'], true)) {
+        $error = 'Format gambar harus JPG, JPEG, PNG, atau WEBP.';
+        return $oldFileName;
+    }
+    $new = $prefix . '-' . date('YmdHis') . '-' . uniqid() . '.' . $ext;
+    if (move_uploaded_file($_FILES[$fileInputName]['tmp_name'], $folder . $new)) {
+        if ($oldFileName && file_exists($folder . $oldFileName)) {
+            @unlink($folder . $oldFileName);
+        }
+        return $new;
+    }
+    $error = 'Gambar gagal disimpan.';
+    return $oldFileName;
+}
+
 /* =========================================================
    TAMBAH JADWAL REGULER
 ========================================================= */
@@ -196,7 +221,7 @@ if (isset($_GET['hapus_kondisional'])) {
 }
 
 /* =========================================================
-   INFORMASI PETA
+   INFORMASI PETA (SIMPAN 3 GAMBAR)
 ========================================================= */
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['simpan_informasi'])) {
@@ -209,68 +234,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['simpan_informasi'])) 
         $old = mysqli_fetch_assoc($qold);
     }
 
-    $gambar = $old['gambar'] ?? '';
+    $folder = __DIR__ . '/../../uploads/peta/';
+    if (!is_dir($folder)) mkdir($folder, 0777, true);
 
-    if (isset($_FILES['gambar']) && $_FILES['gambar']['error'] !== UPLOAD_ERR_NO_FILE) {
-        if ($_FILES['gambar']['error'] !== UPLOAD_ERR_OK) {
-            $error = 'Gagal mengupload gambar.';
-        } else {
-            $ext = strtolower(pathinfo($_FILES['gambar']['name'], PATHINFO_EXTENSION));
-
-            if (!in_array($ext, ['jpg','jpeg','png','webp'], true)) {
-                $error = 'Format gambar harus JPG, JPEG, PNG, atau WEBP.';
-            } elseif ($_FILES['gambar']['size'] > 10 * 1024 * 1024) {
-                $error = 'Ukuran gambar maksimal 10 MB.';
-            } else {
-                $folder = __DIR__ . '/../../uploads/peta/';
-
-                if (!is_dir($folder)) {
-                    mkdir($folder, 0777, true);
-                }
-
-                $new = 'peta-' . date('YmdHis') . '-' . uniqid() . '.' . $ext;
-
-                if (move_uploaded_file($_FILES['gambar']['tmp_name'], $folder . $new)) {
-                    if ($old && !empty($old['gambar']) && file_exists($folder . $old['gambar'])) {
-                        @unlink($folder . $old['gambar']);
-                    }
-
-                    $gambar = $new;
-                } else {
-                    $error = 'Gambar gagal disimpan.';
-                }
-            }
-        }
-    }
+    $gambar = uploadGambarPeta('gambar', $old['gambar'] ?? '', 'peta-reguler', $folder, $error);
+    $gambar_ramadan = uploadGambarPeta('gambar_ramadan', $old['gambar_ramadan'] ?? '', 'peta-ramadan', $folder, $error);
+    $gambar_ekspres_ramadan = uploadGambarPeta('gambar_ekspres_ramadan', $old['gambar_ekspres_ramadan'] ?? '', 'peta-ekspres', $folder, $error);
 
     if ($error === '') {
-        $gambar_db = mysqli_real_escape_string($koneksi, $gambar);
+        $g1 = mysqli_real_escape_string($koneksi, $gambar);
+        $g2 = mysqli_real_escape_string($koneksi, $gambar_ramadan);
+        $g3 = mysqli_real_escape_string($koneksi, $gambar_ekspres_ramadan);
 
         if ($old) {
             $id = (int)$old['id'];
-
-            $ok = mysqli_query($koneksi,
-                "UPDATE informasi_peta
-                 SET gambar='$gambar_db', status='$status'
-                 WHERE id=$id"
-            );
+            $ok = mysqli_query($koneksi, "UPDATE informasi_peta SET gambar='$g1', gambar_ramadan='$g2', gambar_ekspres_ramadan='$g3', status='$status' WHERE id=$id");
         } else {
-            if ($gambar === '') {
-                $error = 'Silakan upload gambar peta terlebih dahulu.';
-            } else {
-                $judul = mysqli_real_escape_string($koneksi, 'Peta Jaringan Bus Perkotaan');
-                $deskripsi = mysqli_real_escape_string(
-                    $koneksi,
-                    'Sistem transportasi massal terintegrasi Nusantara dirancang untuk mobilitas yang cerdas, efisien, dan ramah lingkungan.'
-                );
-
-                $ok = mysqli_query($koneksi,
-                    "INSERT INTO informasi_peta
-                    (judul,deskripsi,gambar,status)
-                    VALUES
-                    ('$judul','$deskripsi','$gambar_db','$status')"
-                );
-            }
+            $judul = mysqli_real_escape_string($koneksi, 'Peta Jaringan Bus Perkotaan');
+            $deskripsi = mysqli_real_escape_string($koneksi, 'Sistem transportasi massal terintegrasi Nusantara.');
+            $ok = mysqli_query($koneksi, "INSERT INTO informasi_peta (judul, deskripsi, gambar, gambar_ramadan, gambar_ekspres_ramadan, status) VALUES ('$judul', '$deskripsi', '$g1', '$g2', '$g3', '$status')");
         }
 
         if ($error === '' && !empty($ok)) {
@@ -1111,46 +1093,57 @@ onclick="return confirm('Hapus jadwal kondisional ini?')">
 <section class="content-card">
 
 <div class="card-title" style="margin-bottom:20px">
-
-<h2>Informasi Umum</h2>
-
-<p>Kelola gambar peta layanan transportasi IKN.</p>
-
+    <h2>Informasi Umum</h2>
+    <p>Kelola gambar peta layanan transportasi IKN (Reguler & Ramadan).</p>
 </div>
 
-<div class="form-group">
-
-<label class="label">Gambar Peta</label>
-
-<div class="upload">
-
-<input type="file" name="gambar" accept=".jpg,.jpeg,.png,.webp">
-
-<small style="color:#98a2b3;display:block;margin-top:7px">
-    JPG, JPEG, PNG, WEBP maksimal 10 MB.
-</small>
-
-<?php if($info && $info['gambar']): ?>
-
-<div class="preview">
-<img src="../../uploads/peta/<?=e($info['gambar'])?>" alt="Peta">
+<!-- 1. PETA REGULER -->
+<div class="form-group" style="margin-bottom:20px;">
+    <label class="label">Gambar Peta Reguler</label>
+    <div class="upload">
+        <input type="file" name="gambar" accept=".jpg,.jpeg,.png,.webp">
+        <small style="color:#98a2b3;display:block;margin-top:7px">JPG, JPEG, PNG, WEBP maksimal 10 MB.</small>
+        <?php if($info && !empty($info['gambar'])): ?>
+            <div class="preview">
+                <img src="../../uploads/peta/<?=e($info['gambar'])?>" alt="Peta Reguler">
+            </div>
+        <?php endif; ?>
+    </div>
 </div>
 
-<?php endif; ?>
-
+<!-- 2. PETA BUS RAMADAN -->
+<div class="form-group" style="margin-bottom:20px;">
+    <label class="label">Gambar Peta Bus Ramadan (Kondisional 1)</label>
+    <div class="upload">
+        <input type="file" name="gambar_ramadan" accept=".jpg,.jpeg,.png,.webp">
+        <small style="color:#98a2b3;display:block;margin-top:7px">JPG, JPEG, PNG, WEBP maksimal 10 MB.</small>
+        <?php if($info && !empty($info['gambar_ramadan'])): ?>
+            <div class="preview">
+                <img src="../../uploads/peta/<?=e($info['gambar_ramadan'])?>" alt="Peta Bus Ramadan">
+            </div>
+        <?php endif; ?>
+    </div>
 </div>
 
+<!-- 3. PETA EKSPRES RAMADAN -->
+<div class="form-group" style="margin-bottom:20px;">
+    <label class="label">Gambar Peta Bus Ekspres Ramadan (Kondisional 2)</label>
+    <div class="upload">
+        <input type="file" name="gambar_ekspres_ramadan" accept=".jpg,.jpeg,.png,.webp">
+        <small style="color:#98a2b3;display:block;margin-top:7px">JPG, JPEG, PNG, WEBP maksimal 10 MB.</small>
+        <?php if($info && !empty($info['gambar_ekspres_ramadan'])): ?>
+            <div class="preview">
+                <img src="../../uploads/peta/<?=e($info['gambar_ekspres_ramadan'])?>" alt="Peta Bus Ekspres Ramadan">
+            </div>
+        <?php endif; ?>
+    </div>
 </div>
 
 <div style="display:flex;justify-content:flex-end;margin-top:20px">
-
-<button class="btn" name="simpan_informasi">
-
-<i class="fa-solid fa-floppy-disk"></i>
-Simpan Informasi
-
-</button>
-
+    <button class="btn" name="simpan_informasi">
+        <i class="fa-solid fa-floppy-disk"></i>
+        Simpan Informasi
+    </button>
 </div>
 
 </section>
