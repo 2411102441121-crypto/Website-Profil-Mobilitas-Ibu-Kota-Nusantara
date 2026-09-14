@@ -4,7 +4,7 @@ $title = "Layanan Intrakota - Profil Mobilitas IKN";
 $active_page = "intrakota";
 
 ?>
-<link rel="stylesheet" href="/ikn-mobility/assets/css/intrakota.css?v=1003">
+<link rel="stylesheet" href="/ikn-mobility/assets/css/intrakota.css?v=1004">
 <?php
 
 ob_start();
@@ -904,102 +904,108 @@ ob_start();
 
             <div class="iknow-ekios-container">
 
-                <div class="iknow-ekios-row">
+                <div class="iknow-ekios-card">
 
-                    <!-- FOTO HP IKNOW -->
-                    <div class="ik-phone-col">
-                        <div class="ik-phone-crop">
-                            <img
-                                src="../assets/images/intrakota/IKNOW.png"
-                                alt="IKNOW Mobile App"
-                                class="ik-phone-img"
-                            >
-                        </div>
-                    </div>
+                    <div class="iknow-ekios-row">
 
-                    <!-- INFO IKNOW MOBILE -->
-                    <div class="ik-info-col">
-
-                        <div class="ik-info-header">
-                            <div class="ik-info-icon-box">
+                        <!-- FOTO HP IKNOW -->
+                        <div class="ik-phone-col">
+                            <div class="ik-phone-crop">
                                 <img
-                                    src="../assets/images/beranda/Icon IKN_Square.png"
-                                    alt="IKNOW Mobile"
-                                    class="ik-info-icon-img"
+                                    src="../assets/images/intrakota/IKNOW.png"
+                                    alt="IKNOW Mobile App"
+                                    class="ik-phone-img"
                                 >
                             </div>
-                            <h3 class="ik-info-title">IKNOW<br>Mobile</h3>
                         </div>
 
-                        <p class="ik-info-desc">
-                            Menyediakan informasi ketersediaan &amp; rute transportasi
-                            umum, estimasi kedatangan bus, serta monitoring lalu
-                            lintas real-time di IKN.
-                        </p>
+                        <!-- INFO IKNOW MOBILE -->
+                        <div class="ik-info-col">
 
-                        <div class="ik-store-buttons">
-
-                            <a
-                                href="https://play.google.com/store/apps/details?id=com.ikn.smartcity&hl=id"
-                                target="_blank"
-                                class="ik-store-btn"
-                            >
-                                <img src="../assets/images/beranda/OIP.png" class="ik-store-icon" alt="Google Play">
-                                <div>
-                                    <span class="ik-store-small">Get it on</span>
-                                    <span class="ik-store-name">Google Play</span>
+                            <div class="ik-info-header">
+                                <div class="ik-info-icon-box">
+                                    <img
+                                        src="../assets/images/beranda/Icon IKN_Square.png"
+                                        alt="IKNOW Mobile"
+                                        class="ik-info-icon-img"
+                                    >
                                 </div>
-                            </a>
-
-                            <a
-                                href="https://apps.apple.com/id/app/iknow/id6477182949"
-                                target="_blank"
-                                class="ik-store-btn"
-                            >
-                                <i class="fab fa-apple"></i>
-                                <div>
-                                    <span class="ik-store-small">Download on the</span>
-                                    <span class="ik-store-name">App Store</span>
-                                </div>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <!-- INFO E-KIOS NUSANTARA -->
-                    <div class="ik-info-col">
-
-                        <div class="ik-info-header">
-                            <div class="ik-info-icon-box">
-                                <i class="fas fa-desktop"></i>
+                                <h3 class="ik-info-title">IKNOW<br>Mobile</h3>
                             </div>
-                            <h3 class="ik-info-title">E-Kios<br>Nusantara</h3>
+
+                            <p class="ik-info-desc">
+                                Menyediakan informasi ketersediaan &amp; rute transportasi
+                                umum, estimasi kedatangan bus, serta monitoring lalu
+                                lintas real-time di IKN.
+                            </p>
+
+                            <div class="ik-store-buttons">
+
+                                <a
+                                    href="https://play.google.com/store/apps/details?id=com.ikn.smartcity&hl=id"
+                                    target="_blank"
+                                    class="ik-store-btn"
+                                >
+                                    <img src="../assets/images/beranda/OIP.png" class="ik-store-icon" alt="Google Play">
+                                    <div>
+                                        <span class="ik-store-small">Get it on</span>
+                                        <span class="ik-store-name">Google Play</span>
+                                    </div>
+                                </a>
+
+                                <a
+                                    href="https://apps.apple.com/id/app/iknow/id6477182949"
+                                    target="_blank"
+                                    class="ik-store-btn"
+                                >
+                                    <i class="fab fa-apple"></i>
+                                    <div>
+                                        <span class="ik-store-small">Download on the</span>
+                                        <span class="ik-store-name">App Store</span>
+                                    </div>
+                                </a>
+
+                            </div>
+
                         </div>
 
-                        <p class="ik-info-desc">
-                            Layanan mandiri layar sentuh interaktif untuk warga dan
-                            pengunjung IKN — aktif 24 jam di titik strategis seperti
-                            Sumbu Kebangsaan Barat.
-                        </p>
+                        <!-- INFO E-KIOS NUSANTARA -->
+                        <div class="ik-info-col">
 
-                        <a href="#" class="ekios-btn ekios-btn-solid">
-                            <i class="fas fa-location-crosshairs"></i>
-                            Cari Halte Terdekat
-                        </a>
+                            <div class="ik-info-header">
+                                <div class="ik-info-icon-box">
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+                                <h3 class="ik-info-title">E-Kios<br>Nusantara</h3>
+                            </div>
+
+                            <p class="ik-info-desc">
+                                Layanan mandiri layar sentuh interaktif untuk warga dan
+                                pengunjung IKN — aktif 24 jam di titik strategis seperti
+                                Sumbu Kebangsaan Barat.
+                            </p>
+
+                            <a href="#" class="ekios-btn ekios-btn-solid">
+                                <i class="fas fa-location-crosshairs"></i>
+                                Cari Halte Terdekat
+                            </a>
+
+                        </div>
+
+                        <!-- FOTO E-KIOS -->
+                        <div class="ik-photo-col">
+                            <img
+                                src="../assets/images/intrakota/ekios.jpeg"
+                                alt="E-Kios Nusantara"
+                                class="ik-photo-img"
+                            >
+                        </div>
 
                     </div>
-
-                    <!-- FOTO E-KIOS -->
-                    <div class="ik-photo-col">
-                        <img
-                            src="../assets/images/intrakota/ekios.jpeg"
-                            alt="E-Kios Nusantara"
-                            class="ik-photo-img"
-                        >
-                    </div>
+                    <!-- /.iknow-ekios-row -->
 
                 </div>
+                <!-- /.iknow-ekios-card -->
 
             </div>
 

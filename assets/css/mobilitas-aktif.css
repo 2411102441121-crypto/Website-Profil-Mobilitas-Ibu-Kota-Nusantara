@@ -2,6 +2,11 @@
    MOBILITAS AKTIF
 ========================================= */
 
+:root {
+    --intra-green: #1f4d27;
+    --intra-green-light: #2e6e37;
+}
+
 .active-page {
     max-width: 1200px;
     margin: 0 auto;
@@ -37,7 +42,7 @@
     padding: 8px 14px;
     border-radius: 20px;
     background: #e5f3eb;
-    color: #28683d;
+    color: var(--intra-green);
     font-family: 'Sutasoma Text', Arial, sans-serif;
     font-size: 13px;
     font-weight: 600;
@@ -149,7 +154,7 @@
     display: block;
     font-family: 'Sutasoma Display', Georgia, serif;
     font-size: 20px;
-    color: #315f3e;
+    color: var(--intra-green);
 }
 
 .stat-item span {
@@ -199,7 +204,7 @@
     padding: 7px 13px;
     border-radius: 20px;
     background: #eaf8f0;
-    color: #319263;
+    color: var(--intra-green-light);
     font-family: 'Sutasoma Text', Arial, sans-serif;
     font-size: 11px;
     font-weight: 600;
@@ -276,7 +281,7 @@
 
 .corridor-filter button.active {
     background: white;
-    color: #205d37;
+    color: var(--intra-green);
     box-shadow: 0 1px 3px rgba(0,0,0,.08);
 }
 
@@ -303,7 +308,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #205a32;
+    background: var(--intra-green);
     border-radius: 5px;
     color: white;
     font-family: 'Sutasoma Text', Arial, sans-serif;
@@ -343,8 +348,8 @@
     padding: 22px;
     background: linear-gradient(
         100deg,
-        #086447,
-        #154e25
+        var(--intra-green),
+        var(--intra-green-light)
     );
     border-radius: 12px;
     color: white;
@@ -369,7 +374,7 @@
 .bike-content > span {
     font-family: 'Sutasoma Text', Arial, sans-serif;
     font-size: 11px;
-    color: #7de0b4;
+    color: #a8e0bb;
     font-weight: 700;
     letter-spacing: .3px;
 }
@@ -387,7 +392,7 @@
     font-family: 'Sutasoma Text', Arial, sans-serif;
     font-size: 14px;
     line-height: 1.6;
-    color: #c8ded3;
+    color: #d3e6da;
 }
 
 .bike-button {
@@ -395,7 +400,7 @@
     padding: 13px 20px;
     border-radius: 9px;
     background: white;
-    color: #245f35;
+    color: var(--intra-green-light);
     text-decoration: none;
     font-family: 'Sutasoma Text', Arial, sans-serif;
     font-size: 13px;
@@ -422,16 +427,16 @@
 .principle-card {
     padding: 24px;
     border-radius: 12px;
-    background: #194f27;
+    background: var(--intra-green);
     color: white;
 }
 
 .green-label {
     display: inline-block;
     padding: 6px 12px;
-    background: rgba(81,199,133,.2);
+    background: rgba(255,255,255,.15);
     border-radius: 20px;
-    color: #8de0ac;
+    color: #ffffff;
     font-family: 'Sutasoma Text', Arial, sans-serif;
     font-size: 11px;
     font-weight: 600;
@@ -494,8 +499,8 @@
     margin-top: 12px;
     padding: 13px;
     border-radius: 8px;
-    background: #2bd29b;
-    color: #073b20;
+    background: #ffffff;
+    color: var(--intra-green);
     text-decoration: none;
     font-family: 'Sutasoma Text', Arial, sans-serif;
     font-size: 14px;
@@ -580,7 +585,7 @@
 
 .eco-note strong {
     float: right;
-    color: #34744d;
+    color: var(--intra-green-light);
 }
 
 
@@ -626,7 +631,7 @@
 
 .connectivity-card a {
     margin-left: auto;
-    color: #315e3b;
+    color: var(--intra-green);
     text-decoration: none;
     font-family: 'Sutasoma Text', Arial, sans-serif;
     font-size: 14px;
@@ -679,7 +684,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #255b32;
+    background: var(--intra-green);
     border-radius: 50%;
     color: white;
     font-family: 'Sutasoma Text', Arial, sans-serif;

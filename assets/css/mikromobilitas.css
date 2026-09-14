@@ -10,6 +10,11 @@
    RESET
 ====================================================== */
 
+:root {
+    --intra-green: #1f4d27;
+    --intra-green-light: #2e6e37;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -72,7 +77,7 @@ body {
 
     background: #e8f3eb;
 
-    color: #356b46;
+    color: var(--intra-green);
 
     font-weight: 700;
 }
@@ -128,7 +133,7 @@ body {
 
     background: #eff8f1;
 
-    color: #176237;
+    color: var(--intra-green);
 
     font-size: 15px;
     font-weight: 700;
@@ -137,7 +142,7 @@ body {
 }
 
 .emission-badge span {
-    color: #176237;
+    color: var(--intra-green);
 }
 
 
@@ -204,7 +209,7 @@ body {
 
     border-radius: 20px;
 
-    background: #075c31;
+    background: var(--intra-green);
 
     color: #ffffff;
 
@@ -224,7 +229,7 @@ body {
 
     border-radius: 20px;
 
-    background: #0d542f;
+    background: var(--intra-green);
 
     color: #ffffff;
 
@@ -274,7 +279,7 @@ body {
 
     background: #e9f3eb;
 
-    color: #2f6c43;
+    color: var(--intra-green-light);
 
     font-size: 14px;
     font-weight: 800;
@@ -356,7 +361,7 @@ body {
 
     background: #e7f2e8;
 
-    color: #3a7a4a;
+    color: var(--intra-green-light);
 
     font-size: 12px;
     font-weight: 800;
@@ -397,7 +402,7 @@ body {
 }
 
 .bike-info strong {
-    color: #3c7650;
+    color: var(--intra-green-light);
 }
 
 .bike-info span {
@@ -555,7 +560,7 @@ body {
 .info-box h3 {
     margin: 0 0 8px;
 
-    color: #345d40;
+    color: var(--intra-green-light);
 
     font-size: 16px;
 }
@@ -617,7 +622,7 @@ body {
 
     background: #edf6ef;
 
-    color: #397149;
+    color: var(--intra-green-light);
 
     padding: 11px 16px;
 
@@ -685,7 +690,7 @@ body {
 
     background: #eaf3eb;
 
-    color: #386945;
+    color: var(--intra-green-light);
 
     font-size: 13px;
     font-weight: 700;
@@ -728,7 +733,7 @@ body {
 }
 
 .register-row strong {
-    color: #347047;
+    color: var(--intra-green-light);
 
     white-space: nowrap;
 }
@@ -777,7 +782,7 @@ body {
 
     background: #eef7f0;
 
-    color: #317045;
+    color: var(--intra-green-light);
 
     font-size: 14px;
     font-weight: 700;
@@ -812,7 +817,7 @@ body {
 
     padding: 14px;
 
-    background: #123f21;
+    background: var(--intra-green);
 }
 
 .fleet-label {
@@ -822,7 +827,7 @@ body {
 
     border-radius: 3px;
 
-    background: #346340;
+    background: var(--intra-green-light);
 
     color: #ffffff;
 
@@ -840,7 +845,7 @@ body {
 
     border-radius: 50%;
 
-    background: #376b48;
+    background: var(--intra-green-light);
 
     color: #ffffff;
 
@@ -850,7 +855,7 @@ body {
 .fleet-title {
     padding: 18px 15px 14px;
 
-    background: #123f21;
+    background: var(--intra-green);
 
     color: #ffffff;
 }
@@ -955,7 +960,7 @@ footer {
 .section-label {
     display: inline-block;
     background: #e6f0e6;
-    color: #315b38;
+    color: var(--intra-green-light);
     font-size: 14px;
     font-weight: 800;
     letter-spacing: .4px;
@@ -1013,7 +1018,7 @@ footer {
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    background: #20552b;
+    background: var(--intra-green);
     color: #ffffff;
 
     display: flex;
@@ -1086,7 +1091,7 @@ footer {
 }
 
 .price {
-    color: #20552b;
+    color: var(--intra-green);
     font-size: 40px;
     line-height: 1.1;
     font-weight: 900;
@@ -1134,7 +1139,7 @@ footer {
     width: 100%;
     min-height: 44px;
 
-    background: #20552b;
+    background: var(--intra-green);
     color: #ffffff;
     text-decoration: none;
 
@@ -1148,7 +1153,7 @@ footer {
 }
 
 .download-app-btn:hover {
-    background: #163f20;
+    background: var(--intra-green-light);
     transform: translateY(-1px);
 }
 
@@ -1243,7 +1248,7 @@ footer {
     align-items: center;
     justify-content: center;
 
-    color: #376244;
+    color: var(--intra-green-light);
     font-size: 16px;
 }
 
