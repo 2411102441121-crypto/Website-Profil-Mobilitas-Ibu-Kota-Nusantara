@@ -1128,12 +1128,12 @@ body {
 .intrakota-moda-content p {
     margin: 0 0 17px;
 
+    color: #5c635d;
+
     font-family: 'Sutasoma Text', Arial, sans-serif;
 
     font-size: 14px;
     line-height: 1.6;
-
-    color: #5c635d;
 }
 
 
@@ -1921,589 +1921,288 @@ body {
 
 /* =========================================================
    IKNOW MOBILE & E-KIOS NUSANTARA
-   ========================================================= */
+========================================================= */
 
 .iknow-ekios-section {
     width: 100%;
-    padding: 50px 0;
-    background: #fff;
+    padding: 40px 0;
+    background: #ffffff;
 }
 
 .iknow-ekios-container {
-    width: min(1320px, calc(100% - 48px));
+    width: min(1200px, calc(100% - 48px));
     margin: 0 auto;
 }
 
 .iknow-ekios-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: stretch;
-    gap: 28px;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 34px;
 }
 
-/* CARD */
-.ik-card {
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
+/* =========================
+   FOTO HP IKNOW (KIRI)
+========================= */
+
+.ik-phone-col {
+    flex: 0 0 auto;
+}
+
+.ik-phone-crop {
+    width: 270px;       /* dilebarkan agar kedua HP tampil penuh, tidak terpotong */
+    height: 280px;
     overflow: hidden;
-    border: 1px solid #eeeeee;
-    min-width: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-/* HEADER */
-.ik-card-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 26px 26px 16px;
-    gap: 14px;
-}
-
-.ik-card-brand {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    min-width: 0;
-}
-
-.iknow-logo-photo {
-    width: 54px;
-    height: 54px;
-    object-fit: contain;
-    flex-shrink: 0;
-    margin-top: 2px;
-}
-
-.ik-card-title-row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.ik-card-title {
-    margin: 0;
-    color: #172033;
-    font-family: 'Sutasoma Display', sans-serif;
-    font-size: 1.65rem;
-    font-weight: 700;
-    line-height: 1.15;
-}
-
-.ik-card-subtitle {
-    margin: 6px 0 0;
-    color: #626a64;
-    font-family: 'Sutasoma Text', sans-serif;
-    font-size: 0.92rem;
-    line-height: 1.35;
-}
-
-.ik-card-badges {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    flex-shrink: 0;
-}
-
-/* BADGE — default = light pill next to title */
-.ik-badge {
-    background: #e7ede9;
-    color: #204b25;
     border-radius: 20px;
-    padding: 6px 14px;
-    font-size: 0.8rem;
-    font-family: 'Sutasoma Text', sans-serif;
-    font-weight: 600;
-    white-space: nowrap;
-    display: inline-block;
 }
 
-.ik-badge-light {
-    background: #e7ede9;
-    color: #204b25;
-}
-
-/* BADGE — dark solid pill with dot, top-right */
-.ik-badge-dot {
-    background: #204b25;
-    color: #ffffff;
-    display: inline-flex;
-    align-items: center;
-}
-
-.ik-badge-dot::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    background: #ffffff;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 7px;
-    vertical-align: middle;
-}
-
-.ik-badge-inline {
-    margin-left: 2px;
-}
-
-/* GREEN CONTENT */
-.ik-card-green {
-    margin: 0 22px;
-    padding: 22px 24px;
-    background: #204b25;
-    border-radius: 14px;
-    color: #ffffff;
-    display: grid;
-    grid-template-columns: 44% 56%;
-    gap: 22px;
-    min-height: 300px;
-    box-sizing: border-box;
-}
-
-/* IMAGE AREA */
-.ik-card-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 0;
-    position: relative;
-}
-
-.ik-card-image img {
-    width: 100%;
-    height: 250px;
-    object-fit: contain;
-    border-radius: 10px;
-}
-
-/* IKNOW PHONE IMAGE */
-.iknow-phone-image {
-    object-fit: contain !important;
-}       
-
-/* E-KIOS IMAGE */
-.ik-card-image .iknow-phone-image {
-    height: 100%;
-}
-
-.iknow-phone-image {
-    object-fit: contain !important;
-}
-
-.ik-card-image .ekios-photo {
-    height: 100%;
-}
-
-.ekios-photo {
-    object-fit: cover !important;
-    background: #ddd;
-    min-height: 250px;
-}
-
-/* E-KIOS CAPTION OVERLAY */
-.ekios-caption {
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    background: #ffffff;
-    color: #1c231d;
-    border-radius: 8px;
-    padding: 10px 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-}
-
-.ekios-caption-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.ekios-caption-title {
-    font-family: 'Sutasoma Text', sans-serif;
-    font-weight: 700;
-    font-size: 0.82rem;
-}
-
-.ekios-caption-dot {
-    font-family: 'Sutasoma Text', sans-serif;
-    font-size: 0.78rem;
-    color: #4a534c;
-}
-
-.ekios-caption-sub {
-    margin-top: 3px;
-    font-family: 'Sutasoma Text', sans-serif;
-    font-size: 0.78rem;
-    color: #4a534c;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.ekios-caption-sub i {
-    font-size: 11px;
-    color: #204b25;
-}
-
-/* FEATURES */
-.ik-card-features {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 16px;
-}
-
-.ik-feature {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-family: 'Sutasoma Text', sans-serif;
-    font-size: 0.86rem;
-    line-height: 1.45;
-    color: #eef3ef;
-}
-
-.ik-feature strong {
-    color: #ffffff;
-    font-weight: 700;
+.ik-phone-crop .ik-phone-img {
+    width: 270px;       /* lebar asli gambar (berisi 2 HP) */
+    max-width: none;
+    height: 280px;
+    object-fit: cover;
+    object-position: center top;
     display: block;
-    margin-bottom: 2px;
-    font-size: 0.92rem;
 }
 
-.ik-feature-icon {
-    width: 26px;
-    min-width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    border: 1.5px solid rgba(255,255,255,0.55);
+/* =========================
+   KOLOM INFO (IKNOW & E-KIOS)
+========================= */
+
+.ik-info-col {
+    flex: 0 1 260px;
+    max-width: 260px;
+}
+
+.ik-info-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.ik-info-icon-box {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
-    margin-top: 1px;
+
+    background: var(--intra-green);
+    border-radius: 9px;
+
     color: #ffffff;
-    flex-shrink: 0;
+    font-size: 17px;
+
+    overflow: hidden;
 }
 
-/* FOOTER */
-.ik-card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 26px 26px;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-top: auto;
+.ik-info-icon-img {
+    width: 65%;
+    height: 65%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.ik-info-title {
+    margin: 0;
+    color: var(--intra-green);
+    font-family: 'Sutasoma Display', Georgia, serif;
+    font-size: 21px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.ik-info-desc {
+    margin: 0 0 14px;
+    color: #5c635d;
+    font-family: 'Sutasoma Text', Arial, sans-serif;
+    font-size: 12.5px;
+    line-height: 1.55;
 }
 
 .ik-store-buttons {
     display: flex;
-    gap: 12px;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
 .ik-store-btn {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    gap: 8px;
+
+    padding: 7px 11px;
+
+    border-radius: 8px;
+
     background: #000000;
-    color: #ffffff !important;
+    color: #ffffff;
+
     text-decoration: none;
-    border-radius: 10px;
-    padding: 9px 16px;
-    min-width: 150px;
-    box-sizing: border-box;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    transition: background .2s ease, transform .2s ease;
+
+    transition: background-color .2s ease, transform .2s ease;
 }
 
 .ik-store-btn:hover {
-    background: #262626;
-    transform: scale(1.03);
+    background: #1a1a1a;
+    transform: translateY(-1px);
 }
 
-.ik-store-btn i {
-    font-size: 26px;
+.ik-store-icon {
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+}
+
+.ik-store-btn i.fab.fa-apple {
+    font-size: 17px;
     color: #ffffff;
 }
 
-.ik-store-btn img.ik-store-icon {
-    width: 26px;
-    height: 26px;
-    object-fit: contain;
-    flex-shrink: 0;
+.ik-store-btn > div {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
 }
 
 .ik-store-small {
-    display: block;
-    text-align: center;
-    font-size: 0.62rem;
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
-    opacity: 0.9;
+    font-family: 'Sutasoma Text', Arial, sans-serif;
+    font-size: 7.5px;
+    color: rgba(255,255,255,.8);
 }
 
 .ik-store-name {
-    display: block;
-    text-align: center;
-    font-size: 1.05rem;
-    line-height: 1.2;
+    font-family: 'Sutasoma Text', Arial, sans-serif;
+    font-size: 11px;
     font-weight: 600;
-}
-
-.ik-footer-info {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #333;
-    font-family: 'Sutasoma Text', sans-serif;
-    font-size: 0.82rem;
-    line-height: 1.3;
-}
-
-.ik-footer-info i {
-    font-size: 20px;
-    color: #204b25;
-}
-
-/* E-KIOS FOOTER */
-.ekios-card-footer {
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px 16px;
-}
-
-.ekios-footer-buttons {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
+    color: #ffffff;
 }
 
 .ekios-btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    font-family: 'Sutasoma Text', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border-radius: 22px;
-    padding: 10px 18px;
-    white-space: nowrap;
-    transition: opacity .15s ease;
-}
+    gap: 7px;
 
-.ekios-btn:hover {
-    opacity: 0.85;
+    padding: 9px 16px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-family: 'Sutasoma Text', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: background-color .2s ease, transform .2s ease;
 }
 
 .ekios-btn-solid {
-    background: #204b25;
-    color: #ffffff !important;
+    background: var(--intra-green);
+    color: #ffffff;
 }
 
-.ekios-btn-outline {
-    background: #ffffff;
-    color: #204b25 !important;
-    border: 1.5px solid #d5ded7;
+.ekios-btn-solid:hover {
+    background: var(--intra-green-light);
+    transform: translateY(-1px);
 }
 
 .ekios-btn i {
-    font-size: 14px;
+    font-size: 11px;
 }
 
-.ekios-footer-note {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #333;
-    font-family: 'Sutasoma Text', sans-serif;
-    font-size: 0.82rem;
-    line-height: 1.3;
+/* =========================
+   FOTO E-KIOS (KANAN)
+========================= */
+
+.ik-photo-col {
+    flex: 0 0 auto;
+    width: 130px;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.ik-photo-img {
+    display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }
-
-.ekios-footer-note i {
-    font-size: 16px;
-    color: #1c231d;
-}
-
 
 /* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
 
     .iknow-ekios-row {
-        grid-template-columns: 1fr;
-        gap: 26px;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 28px;
     }
 
-    .ik-card-green {
-        min-height: 270px;
-        grid-template-columns: 42% 58%;
-    }
-
-    .ik-card-image img,
-    .ekios-photo {
-        height: 240px;
+    .ik-info-col {
+        flex: 0 1 220px;
     }
 }
 
-
 /* =========================================================
-   MOBILE
-   ========================================================= */
+   MOBILE - tumpuk vertikal
+========================================================= */
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
 
     .iknow-ekios-section {
-        padding: 28px 0;
+        padding: 30px 0;
     }
 
-    .iknow-ekios-container {
-        width: calc(100% - 28px);
-    }
-
-    /* SUSUN ATAS-BAWAH SEPERTI SEMULA, HANYA FONT/ELEMEN DIPERKECIL */
     .iknow-ekios-row {
-        grid-template-columns: 1fr;
-        gap: 16px;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
     }
 
-    .ik-card-header {
-        padding: 14px 14px 10px;
-        align-items: flex-start;
-        gap: 10px;
+    /* Tukar posisi: foto E-Kios ditampilkan sebelum teks E-Kios Nusantara */
+    .iknow-ekios-row > *:nth-child(3) {
+        order: 4; /* blok teks "E-Kios Nusantara" -> digeser ke bawah */
     }
 
-    .ik-card-brand {
-        gap: 8px;
+    .iknow-ekios-row > *:nth-child(4) {
+        order: 3; /* foto E-Kios -> digeser ke atas, sebelum teksnya */
     }
 
-    .iknow-logo-photo {
-        width: 34px;
-        height: 34px;
+    .ik-info-col {
+        max-width: 320px;
+        text-align: center;
     }
 
-    .ik-card-title {
-        font-size: 1rem;
-        line-height: 1.2;
-    }
-
-    .ik-card-subtitle {
-        font-size: 0.68rem;
-        margin-top: 4px;
-    }
-
-    .ik-card-badges {
-        gap: 6px;
-    }
-
-    .ik-badge {
-        padding: 4px 9px;
-        font-size: 0.6rem;
-    }
-
-    .ik-card-green {
-        margin: 0 12px;
-        padding: 12px;
-        grid-template-columns: 1fr;
-        gap: 12px;
-        min-height: unset;
-    }
-
-    .ik-card-image img,
-    .ekios-photo {
-        height: 160px;
-    }
-
-    .ekios-caption {
-        padding: 8px 10px;
-    }
-
-    .ekios-caption-title {
-        font-size: 0.7rem;
-    }
-
-    .ekios-caption-dot,
-    .ekios-caption-sub {
-        font-size: 0.64rem;
-    }
-
-    .ik-feature {
-        font-size: 0.68rem;
-        gap: 8px;
-    }
-
-    .ik-feature strong {
-        font-size: 0.72rem;
-    }
-
-    .ik-feature-icon {
-        width: 20px;
-        min-width: 20px;
-        height: 20px;
-        font-size: 9px;
-    }
-
-    .ik-card-footer {
-        padding: 12px 14px 16px;
-        align-items: flex-start;
+    .ik-info-header {
+        justify-content: center;
     }
 
     .ik-store-buttons {
-        gap: 8px;
+        justify-content: center;
     }
 
-    .ik-store-btn {
-        min-width: 0;
-        padding: 7px 10px;
-        gap: 6px;
+    .ik-photo-col {
+        width: 150px;
+        height: 300px;
     }
 
-    .ik-store-btn i {
-        font-size: 16px;
+    .ik-phone-crop {
+        width: 280px;       /* dilebarkan agar kedua HP tampil penuh, tidak terpotong */
+        height: 300px;
     }
 
-    .ik-store-btn img.ik-store-icon {
-        width: 16px;
-        height: 16px;
-    }
-
-    .ik-store-small {
-        font-size: 0.52rem;
-    }
-
-    .ik-store-name {
-        font-size: 0.64rem;
-    }
-
-    .ik-footer-info,
-    .ekios-footer-note {
-        font-size: 0.62rem;
-    }
-
-    .ekios-btn {
-        font-size: 0.66rem;
-        padding: 7px 12px;
-    }
-
-    .ekios-footer-buttons {
-        gap: 8px;
+    .ik-phone-crop .ik-phone-img {
+        width: 280px;
+        height: 300px;
+        object-position: center top;
     }
 }
 
