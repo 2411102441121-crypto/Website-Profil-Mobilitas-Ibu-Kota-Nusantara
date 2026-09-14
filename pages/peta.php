@@ -77,7 +77,7 @@ foreach($layanan as $r){
 ob_start();
 ?>
 
-<link rel="stylesheet" href="../assets/css/peta.css">
+<link rel="stylesheet" href="/ikn-mobility/assets/css/peta.css?v=2">
 
 <div class="bus-page">
 
@@ -118,9 +118,26 @@ ob_start();
         <div id="map-kondisional" class="map-container" style="display: none;">
             
             <!-- Sub Switcher Gambar Peta Kondisional -->
-            <div class="cond-map-tabs" style="text-align: center; margin-bottom: 10px;">
-                <button type="button" class="btn-sub-map active" data-map="peta-ramadan">Peta Bus Ramadan</button>
-                <button type="button" class="btn-sub-map" data-map="peta-ekspres">Peta Bus Ekspres Ramadan</button>
+            <div class="cond-map-tabs">
+                <button type="button" class="btn-sub-map active" data-map="peta-ramadan">
+                    <span class="sub-map-icon">
+                        <i class="fa-solid fa-mosque"></i>
+                    </span>
+                    <span class="sub-map-text">
+                        <strong>Peta Bus Ramadan</strong>
+                        <small>Rute khusus selama Ramadan</small>
+                    </span>
+                </button>
+
+                <button type="button" class="btn-sub-map" data-map="peta-ekspres">
+                    <span class="sub-map-icon">
+                        <i class="fa-solid fa-bus"></i>
+                    </span>
+                    <span class="sub-map-text">
+                        <strong>Peta Bus Ekspres Ramadan</strong>
+                        <small>Layanan ekspres selama Ramadan</small>
+                    </span>
+                </button>
             </div>
 
             <!-- Gambar Peta Ramadan 1 -->
