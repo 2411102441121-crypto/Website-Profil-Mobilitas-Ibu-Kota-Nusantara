@@ -1,11 +1,12 @@
 <?php
+
 $title = "Mobilitas Aktif - Profil Mobilitas IKN";
 
 $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Intrakota
 
 ?>
 
-<link rel="stylesheet" href="../assets/css/mobilitas-aktif.css">
+<link rel="stylesheet" href="../assets/css/mobilitas-aktif.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/mobilitas-aktif.css'); ?>">
 
 <main class="active-page">
 
@@ -90,14 +91,11 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
 
     </section>
 
+
     <!-- =========================
          BANNER SEPEDA
     ========================== -->
     <section class="bike-banner">
-
-        <div class="bike-icon">
-            🚲
-        </div>
 
         <div class="bike-content">
 
@@ -145,7 +143,9 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
 
             <div class="principle-number">
                 80%
-                <small>/ Target Pergerakan dengan Angkutan Umum atau Mobilitas Aktif</small>
+                <small>
+                    / Target Pergerakan dengan Angkutan Umum atau Mobilitas Aktif
+                </small>
             </div>
 
             <p>
@@ -156,23 +156,6 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
                 Mudah Diakses — serta prinsip ke-4, Emisi Karbon Rendah.
             </p>
 
-            <div class="principle-route">
-
-                <span>🗺️</span>
-
-                <div>
-                    <strong>Informasi &amp; Rute Perjalanan</strong>
-                    <small>
-                        Terintegrasi di Aplikasi IKNOW
-                    </small>
-                </div>
-
-            </div>
-
-            <a href="#" class="route-button">
-                Pelajari Konektivitas Antarmoda →
-            </a>
-
         </div>
 
 
@@ -181,12 +164,9 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
 
             <h2>Elemen Jaringan Mobilitas Aktif KIPP IKN</h2>
 
-
             <div class="features-grid">
 
                 <div class="feature-item">
-
-                    <div class="feature-icon">🚶</div>
 
                     <div>
                         <h3>Jaringan Jalur Pejalan Kaki &amp; Sepeda</h3>
@@ -203,8 +183,6 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
 
                 <div class="feature-item">
 
-                    <div class="feature-icon">🌳</div>
-
                     <div>
                         <h3>Peneduh &amp; Pencahayaan di Titik Penting</h3>
 
@@ -219,8 +197,6 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
 
 
                 <div class="feature-item">
-
-                    <div class="feature-icon">💧</div>
 
                     <div>
                         <h3>Jalur Pintas di Atas Embung</h3>
@@ -237,8 +213,6 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
 
                 <div class="feature-item">
 
-                    <div class="feature-icon">🚲</div>
-
                     <div>
                         <h3>Area Parkir Sepeda di Titik Penting</h3>
 
@@ -253,8 +227,6 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
 
 
                 <div class="feature-item full">
-
-                    <div class="feature-icon">🛣️</div>
 
                     <div>
                         <h3>Shared Street / Woonerf (ROW 16)</h3>
@@ -273,44 +245,13 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
 
 
             <div class="eco-note">
-                ♧ Sejalan dengan Prinsip Pengembangan Ke-4 Nusantara:
+                Sejalan dengan Prinsip Pengembangan Ke-4 Nusantara:
                 <strong>Emisi Karbon Rendah</strong>
             </div>
 
         </div>
 
     </section>
-
-
-    <!-- =========================
-         KONEKTIVITAS
-    ========================== -->
-    <section class="connectivity-card">
-
-        <div class="connectivity-icon">
-            🚌
-        </div>
-
-        <div>
-
-            <h2>Integrasi Seamless dengan Angkutan Umum</h2>
-
-            <p>
-                Layanan bus direncanakan mencakup 80% wilayah perkotaan
-                dalam jangkauan 10 menit jalan kaki (440 m), dengan bus
-                tiba setiap 5 menit pada jam sibuk. Integrasi mobilitas
-                aktif dengan angkutan umum turut didukung fitur ramp pada
-                bis bila diperlukan.
-            </p>
-
-        </div>
-
-        <a href="bus-perkotaan.php">
-            Cek Layanan Bus Perkotaan →
-        </a>
-
-    </section>
-
 
     <!-- =========================
          ETIKA

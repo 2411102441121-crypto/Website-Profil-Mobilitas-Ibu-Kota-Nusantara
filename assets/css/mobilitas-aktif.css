@@ -7,12 +7,16 @@
     --intra-green-light: #2e6e37;
 }
 
+html,
+body {
+    background: #f7f9f7 !important;
+}
+
 .active-page {
     max-width: 1200px;
     margin: 0 auto;
     padding: 45px 20px 80px;
     color: #17231c;
-    background: #f7f9f7;
     box-sizing: border-box;
     font-family: 'Sutasoma Text', Arial, sans-serif;
 }
@@ -89,14 +93,21 @@
 
 .hero-overlay {
     position: absolute;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     padding: 90px 32px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     color: white;
     background: linear-gradient(
-        transparent,
-        rgba(0, 0, 0, .78)
+        to top,
+        rgba(0, 0, 0, .82) 0%,
+        rgba(0, 0, 0, .55) 35%,
+        rgba(0, 0, 0, .15) 65%,
+        rgba(0, 0, 0, 0) 100%
     );
 }
 

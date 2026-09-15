@@ -56,11 +56,6 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
                 </p>
             </div>
 
-            <div class="emission-badge">
-                <span>●</span>
-                Menuju Zero Emission 2045
-            </div>
-
         </div>
 
     </section>
@@ -82,7 +77,7 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
             >
 
             <div class="image-badge">
-                ♧ First Mile - Last Mile
+                First Mile - Last Mile
             </div>
 
             <div class="image-caption">
@@ -114,9 +109,7 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
             <div class="feature-list">
 
                 <div class="feature-item">
-                    <div class="feature-icon">✓</div>
-
-                    <div>
+<div>
                         <strong>
                             Termasuk Mikromobilitas
                         </strong>
@@ -130,9 +123,7 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
 
 
                 <div class="feature-item">
-                    <div class="feature-icon">✗</div>
-
-                    <div>
+<div>
                         <strong>
                             Tidak Termasuk Mikromobilitas
                         </strong>
@@ -147,9 +138,7 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
 
 
                 <div class="feature-item">
-                    <div class="feature-icon">⚡</div>
-
-                    <div>
+<div>
                         <strong>
                             Kendaraan Penggerak Motor Listrik
                         </strong>
@@ -160,19 +149,6 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
                         </p>
                     </div>
                 </div>
-
-            </div>
-
-
-            <div class="bike-info">
-
-                <strong>
-                    ♧ Beroperasi di Koridor Kecepatan Rendah
-                </strong>
-
-                <span>
-                    Demi Keselamatan Pengguna Jalan
-                </span>
 
             </div>
 
@@ -212,9 +188,7 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
             <div class="dock-features">
 
                 <div class="dock-feature">
-                    <span>⚙</span>
-
-                    <div>
+<div>
                         <strong>Integrasi (Integration)</strong>
 
                         <p>
@@ -226,9 +200,7 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
 
 
                 <div class="dock-feature">
-                    <span>🛡</span>
-
-                    <div>
+<div>
                         <strong>Keamanan (Safety)</strong>
 
                         <p>
@@ -240,9 +212,7 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
 
 
                 <div class="dock-feature">
-                    <span>▣</span>
-
-                    <div>
+<div>
                         <strong>Konektivitas (Connectivity)</strong>
 
                         <p>
@@ -254,9 +224,7 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
 
 
                 <div class="dock-feature">
-                    <span>🧭</span>
-
-                    <div>
+<div>
                         <strong>Penunjuk Arah (Wayfinding)</strong>
 
                         <p>
@@ -265,19 +233,6 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
                         </p>
                     </div>
                 </div>
-
-            </div>
-
-
-            <div class="dock-bottom">
-
-                <span>
-                    ♧ Inisiatif Awal: Pilot Bike-Sharing untuk Pegawai OIKN
-                </span>
-
-                <span>
-                    Fitur Pemesanan &amp; Cek Ketersediaan Sepeda
-                </span>
 
             </div>
 
@@ -293,7 +248,7 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
             >
 
             <div class="solar-badge">
-                🗺️ Peta Rancangan Lokasi Bike Hub
+                Peta Rancangan Lokasi Bike Hub
             </div>
 
             <div class="image-caption">
@@ -322,7 +277,7 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
             >
 
             <div class="image-badge">
-                📈 2025 - 2045
+                2025 - 2045
             </div>
 
             <div class="image-caption">
@@ -541,20 +496,6 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
                         taksi melengkapi konektivitas antarmoda sebelum
                         kendaraan pribadi.
                     </p>
-
-                </div>
-
-
-                <div class="register-row">
-
-                    <span>
-                        Kendaraan pribadi berada di prioritas terakhir
-                        dalam hierarki mobilitas IKN.
-                    </span>
-
-                    <strong>
-                        Lihat Halaman Bus Perkotaan →
-                    </strong>
 
                 </div>
 
