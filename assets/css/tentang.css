@@ -183,7 +183,9 @@
 .glossary-item.active .glossary-content { display: block; padding: 0 7px 7px; background: #e7f1eb; border-radius: 0 0 9px 9px; }
 .glossary-item.active .glossary-button { background: #e7f1eb; border-radius: 9px 9px 0 0; }
 
-
+/* ========================================
+   TABLET / IPAD
+======================================== */
 
 @media screen and (min-width:681px) and (max-width:1024px) {
     html, body { width:100%; max-width:100%; overflow-x:hidden; margin:0; padding:0; }
@@ -213,6 +215,11 @@
     .hero-inner h1 { max-width:100%!important; font-size:58px!important; line-height:1.08!important; word-break:normal!important; overflow-wrap:break-word!important; }
     .hero-inner p { max-width:100%!important; font-size:17px!important; line-height:1.55!important; }
 }
+
+
+/* ========================================
+   HP
+======================================== */
 
 @media screen and (max-width:680px) {
     html, body { width:100%; max-width:100%; overflow-x:hidden; margin:0; padding:0; }
@@ -247,44 +254,77 @@
     .hero-inner p { width:100%!important; max-width:100%!important; margin:0 auto!important; padding:0 5px!important; font-size:15px!important; line-height:1.55!important; text-align:center!important; box-sizing:border-box!important; white-space:normal!important; }
 }
 
-@media screen and (max-width:400px) {
-    .tentang-hero { padding:24px 14px 26px!important; }
-    .hero-inner h1 { font-size:32px!important; line-height:1.1!important; margin-bottom:18px!important; }
-    .hero-inner p { font-size:14px!important; line-height:1.5!important; padding:0!important; }
-    .contact-item strong { font-size:13px!important; }
-    .contact-item p { font-size:11px!important; }
-    .contact-map { height:180px!important; }
-    .glossary-header h2 { font-size:20px!important; }
-    .glossary-header p { font-size:11px!important; }
-    .glossary-scroll { height:220px!important; }
+/* ========================================
+   STRUKTUR ORGANISASI RESPONSIVE OTOMATIS
+======================================== */
+
+@media screen and (max-width:1024px) {
+    .organization-chart { width:100%!important; max-width:100%!important; margin-left:0!important; margin-right:0!important; padding:12px!important; overflow:hidden!important; box-sizing:border-box!important; }
+    .org-canvas { width:100%!important; max-width:100%!important; min-width:0!important; height:auto!important; min-height:0!important; aspect-ratio:1000/760!important; box-sizing:border-box!important; }
+    .org-lines { width:100%!important; height:100%!important; max-width:100%!important; }
+    .org-box { box-sizing:border-box!important; }
 }
 
-/* ======================================== POPUP PROFIL PEJABAT ======================================== */
+@media screen and (max-width:850px) {
+    .organization-chart { padding:10px!important; }
+    .org-box { font-size:clamp(8px,1.8vw,14px)!important; line-height:1.2!important; padding:5px!important; border-width:1.5px!important; border-radius:8px!important; box-shadow:0 3px 7px rgba(0,0,0,.22)!important; }
+    .org-deputi { font-size:clamp(9px,2vw,14px)!important; }
+    .org-support { font-size:clamp(7px,1.6vw,12px)!important; }
+    .org-group { border-width:1.5px!important; }
+    .line-solid { stroke-width:1.5!important; }
+    .line-dotted { stroke-width:1.5!important; stroke-dasharray:2 3!important; }
+}
 
-.org-box { position:absolute; z-index:3; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; font-family:'Sutasoma Display',sans-serif !important; font-size:17px; line-height:1.35; padding:12px 15px; box-sizing:border-box; border-radius:12px; border:2px solid rgba(0,0,0,.28); box-shadow:0 4px 10px rgba(0,0,0,.25),0 1px 3px rgba(0,0,0,.18); transition:transform .2s ease,box-shadow .2s ease; cursor:pointer; }
+@media screen and (max-width:680px) {
+    .organization-chart { width:100%!important; max-width:100%!important; padding:6px!important; overflow:hidden!important; box-sizing:border-box!important; }
+    .org-canvas { width:100%!important; max-width:100%!important; min-width:0!important; height:auto!important; min-height:0!important; aspect-ratio:1000/760!important; }
+    .org-box { font-size:clamp(7px,2.2vw,11px)!important; line-height:1.15!important; padding:3px!important; border-width:1px!important; border-radius:7px!important; }
+    .org-deputi { font-size:clamp(8px,2.5vw,12px)!important; }
+    .org-support { font-size:clamp(6px,1.9vw,10px)!important; }
+    .org-group { border-width:1px!important; }
+    .line-solid { stroke-width:1.3!important; }
+    .line-dotted { stroke-width:1.3!important; stroke-dasharray:2 3!important; }
+}
+
+@media screen and (max-width:400px) {
+    .organization-chart { padding:4px!important; }
+    .org-box { font-size:clamp(6px,2.1vw,9px)!important; padding:2px!important; }
+    .org-deputi { font-size:clamp(7px,2.4vw,10px)!important; }
+    .org-support { font-size:clamp(5.5px,1.8vw,8px)!important; }
+}
+/* ========================================
+   POPUP PROFIL PEJABAT
+======================================== */
+
+.org-box { position:absolute; z-index:3; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; font-family:'Sutasoma Display',sans-serif!important; font-size:17px; line-height:1.35; padding:12px 15px; box-sizing:border-box; border-radius:12px; border:2px solid rgba(0,0,0,.28); box-shadow:0 4px 10px rgba(0,0,0,.25),0 1px 3px rgba(0,0,0,.18); transition:transform .2s ease,box-shadow .2s ease; cursor:pointer; pointer-events:auto!important; }
+
 .org-box:hover { transform:translateY(-3px); box-shadow:0 8px 18px rgba(0,0,0,.30),0 2px 5px rgba(0,0,0,.18); }
-.org-modal { position:fixed !important; inset:0 !important; display:none !important; align-items:center !important; justify-content:center !important; padding:20px !important; z-index:99999 !important; box-sizing:border-box !important; }
-.org-modal.active { display:flex !important; }
 
-.org-modal-overlay { position:absolute !important; inset:0 !important; background:rgba(0,0,0,.58) !important; backdrop-filter:blur(3px); }
+.org-lines { pointer-events:none!important; }
+
+.org-modal { position:fixed!important; inset:0!important; display:none!important; align-items:center!important; justify-content:center!important; padding:20px!important; z-index:999999!important; box-sizing:border-box!important; }
+
+.org-modal.active { display:flex!important; }
+
+.org-modal-overlay { position:absolute!important; inset:0!important; background:rgba(0,0,0,.58)!important; backdrop-filter:blur(3px); }
 
 .org-modal-box { width:620px; max-width:calc(100% - 40px); max-height:90vh; overflow:auto; position:relative; z-index:2; display:grid; grid-template-columns:180px minmax(0,1fr); gap:25px; padding:28px; background:#fff; border-radius:20px; box-shadow:0 18px 45px rgba(0,0,0,.3); box-sizing:border-box; animation:orgPopup .2s ease; }
 
 .org-modal-photo { width:180px; height:220px; display:flex; align-items:center; justify-content:center; background:#eef3ef; border-radius:14px; overflow:hidden; }
 
-.org-photo-placeholder { width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:#58705c; font-family:'Sutasoma Display',sans-serif !important; font-size:18px; background:#e8eee9; }
+.org-photo-placeholder { width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:#58705c; font-family:'Sutasoma Display',sans-serif!important; font-size:18px; background:#e8eee9; }
 
 .org-modal-info { min-width:0; padding-top:3px; }
 
-.org-modal-label { display:block; margin-bottom:8px; color:#4c8057; font-family:'Sutasoma Display',sans-serif !important; font-size:12px; letter-spacing:.8px; font-weight:700; }
+.org-modal-label { display:block; margin-bottom:8px; color:#4c8057; font-family:'Sutasoma Display',sans-serif!important; font-size:12px; letter-spacing:.8px; font-weight:700; }
 
-.org-modal-info h3 { margin:0 30px 6px 0; color:#204420; font-family:'Sutasoma Display',sans-serif !important; font-size:25px; line-height:1.25; }
+.org-modal-info h3 { margin:0 30px 6px 0; color:#204420; font-family:'Sutasoma Display',sans-serif!important; font-size:25px; line-height:1.25; }
 
-.org-modal-info h4 { margin:0; color:#555; font-family:'Sutasoma Text',sans-serif !important; font-size:16px; font-weight:600; line-height:1.45; }
+.org-modal-info h4 { margin:0; color:#555; font-family:'Sutasoma Text',sans-serif!important; font-size:16px; font-weight:600; line-height:1.45; }
 
 .org-modal-divider { width:100%; height:1px; margin:18px 0; background:#dce6de; }
 
-.org-modal-info p { margin:0; color:#333; font-family:'Sutasoma Text',sans-serif !important; font-size:14px; line-height:1.7; }
+.org-modal-info p { margin:0; color:#333; font-family:'Sutasoma Text',sans-serif!important; font-size:14px; line-height:1.7; }
 
 .org-modal-close { position:absolute; top:12px; right:14px; z-index:4; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border:0; background:#eef3ef; color:#444; border-radius:50%; font-size:25px; line-height:1; cursor:pointer; }
 
@@ -296,7 +336,7 @@
 }
 
 @media screen and (max-width:680px) {
-    .org-modal { padding:12px !important; }
+    .org-modal { padding:12px!important; }
     .org-modal-box { width:100%; max-width:100%; max-height:92vh; grid-template-columns:1fr; gap:18px; padding:22px; border-radius:18px; }
     .org-modal-photo { width:145px; height:175px; margin:0 auto; }
     .org-modal-info h3 { font-size:21px; }
