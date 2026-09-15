@@ -1,13 +1,13 @@
 /* ======================================================
-   MIKROMOBILITAS IKN
-   File: assets/css/mikromobilitas.css
-   (Ukuran font dibesarkan & disamakan dengan skala
-   tipografi antarkota.php)
+MIKROMOBILITAS IKN
+File: assets/css/mikromobilitas.css
+(Ukuran font dibesarkan & disamakan dengan skala
+tipografi antarkota.php)
 ====================================================== */
 
 
 /* ======================================================
-   RESET
+RESET
 ====================================================== */
 
 :root {
@@ -38,7 +38,7 @@ body {
 
 
 /* ======================================================
-   HALAMAN
+HALAMAN
 ====================================================== */
 
 .micro-page {
@@ -52,7 +52,7 @@ body {
 
 
 /* ======================================================
-   HEADING
+HEADING
 ====================================================== */
 
 .micro-heading {
@@ -80,11 +80,6 @@ body {
     color: var(--intra-green);
 
     font-weight: 700;
-}
-
-.micro-breadcrumb i {
-    font-style: normal;
-    color: #b1bbb7;
 }
 
 .heading-row {
@@ -141,13 +136,8 @@ body {
     white-space: nowrap;
 }
 
-.emission-badge span {
-    color: var(--intra-green);
-}
-
-
 /* ======================================================
-   CARD UMUM
+CARD UMUM
 ====================================================== */
 
 .micro-card {
@@ -166,7 +156,7 @@ body {
 
 
 /* ======================================================
-   BAGIAN FOTO
+BAGIAN FOTO
 ====================================================== */
 
 .bike-main-image,
@@ -194,7 +184,7 @@ body {
 
 
 /* ======================================================
-   BADGE FOTO
+BADGE FOTO
 ====================================================== */
 
 .image-badge {
@@ -239,7 +229,7 @@ body {
 
 
 /* ======================================================
-   CAPTION
+CAPTION
 ====================================================== */
 
 .image-caption {
@@ -263,7 +253,7 @@ body {
 
 
 /* ======================================================
-   LABEL
+LABEL
 ====================================================== */
 
 .small-label {
@@ -289,7 +279,7 @@ body {
 
 
 /* ======================================================
-   DESKRIPSI
+DESKRIPSI
 ====================================================== */
 
 .description {
@@ -303,7 +293,7 @@ body {
 
 
 /* ======================================================
-   BAGIAN 1
+BAGIAN 1
 ====================================================== */
 
 .bike-main-card {
@@ -345,26 +335,6 @@ body {
     gap: 11px;
 
     margin-bottom: 14px;
-}
-
-.feature-icon {
-    flex: 0 0 22px;
-
-    width: 22px;
-    height: 22px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #e7f2e8;
-
-    color: var(--intra-green-light);
-
-    font-size: 12px;
-    font-weight: 800;
 }
 
 .feature-item strong {
@@ -417,7 +387,7 @@ body {
 
 
 /* ======================================================
-   BAGIAN DOCKING
+BAGIAN DOCKING
 ====================================================== */
 
 .docking-card {
@@ -476,12 +446,6 @@ body {
     margin-top: 18px;
 }
 
-.dock-feature {
-    display: flex;
-    gap: 10px;
-    font-size: 16px;
-}
-
 .dock-feature strong {
     display: block;
     font-size: 17px;
@@ -513,7 +477,7 @@ body {
 
 
 /* ======================================================
-   SCOOTER
+SCOOTER
 ====================================================== */
 
 .scooter-card {
@@ -580,7 +544,7 @@ body {
 
 
 /* ======================================================
-   GOWES
+GOWES
 ====================================================== */
 
 .gowes-card {
@@ -740,7 +704,7 @@ body {
 
 
 /* ======================================================
-   ARMADA
+ARMADA
 ====================================================== */
 
 .fleet-section {
@@ -835,23 +799,6 @@ body {
     font-weight: 700;
 }
 
-.fleet-icon {
-    width: 25px;
-    height: 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: var(--intra-green-light);
-
-    color: #ffffff;
-
-    font-size: 11px;
-}
-
 .fleet-title {
     padding: 18px 15px 14px;
 
@@ -916,7 +863,7 @@ body {
 
 
 /* ======================================================
-   FOOTER FIX
+FOOTER FIX
 ====================================================== */
 
 body {
@@ -935,7 +882,7 @@ footer {
 }
 
 /* =========================================================
-   MIKROMOBILITAS - DETAIL
+MIKROMOBILITAS - DETAIL
 ========================================================= */
 
 .micro-detail-section {
@@ -948,7 +895,7 @@ footer {
 
 
 /* =========================================================
-   SECTION HEADING
+SECTION HEADING
 ========================================================= */
 
 .section-heading {
@@ -986,7 +933,7 @@ footer {
 
 
 /* =========================================================
-   STEPS CARD
+STEPS CARD
 ========================================================= */
 
 .steps-card {
@@ -1048,7 +995,7 @@ footer {
 
 
 /* =========================================================
-   TARIF + FACILITIES
+TARIF + FACILITIES
 ========================================================= */
 
 .micro-info-layout {
@@ -1060,7 +1007,7 @@ footer {
 
 
 /* =========================================================
-   TARIFF CARD
+TARIFF CARD
 ========================================================= */
 
 .tariff-card {
@@ -1157,10 +1104,6 @@ footer {
     transform: translateY(-1px);
 }
 
-.download-app-btn span {
-    font-size: 18px;
-}
-
 .store-note {
     text-align: center;
     color: #718078;
@@ -1170,7 +1113,7 @@ footer {
 
 
 /* =========================================================
-   FACILITIES AREA
+FACILITIES AREA
 ========================================================= */
 
 .facilities-area {
@@ -1208,7 +1151,7 @@ footer {
 
 
 /* =========================================================
-   FACILITY GRID
+FACILITY GRID
 ========================================================= */
 
 .facility-grid {
@@ -1240,18 +1183,6 @@ footer {
     margin-bottom: 8px;
 }
 
-.facility-icon {
-    width: 20px;
-    height: 20px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    color: var(--intra-green-light);
-    font-size: 16px;
-}
-
 .facility-card h3 {
     color: #263247;
     font-size: 23px;
@@ -1281,7 +1212,7 @@ footer {
 
 
 /* =========================================================
-   RESPONSIVE
+RESPONSIVE
 ========================================================= */
 
 @media (max-width: 1000px) {
@@ -1359,7 +1290,7 @@ footer {
 
 
 /* ======================================================
-   RESPONSIVE
+RESPONSIVE
 ====================================================== */
 
 @media (max-width: 1000px) {
@@ -1411,7 +1342,7 @@ footer {
     }
 
     /* "Lepas" kotak gowes-body agar isinya (foto & jadwal)
-       ikut jadi item flex langsung dari gowes-card */
+    ikut jadi item flex langsung dari gowes-card */
     .gowes-body {
         display: contents;
     }
@@ -1530,5 +1461,561 @@ footer {
 
     .fleet-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+POLISHED DESIGN - TANPA ICON
+========================================================= */
+
+:root {
+    --intra-green: #1f5b35;
+    --intra-green-light: #2f7a47;
+    --green-soft: #eef7f0;
+    --green-line: #d8e7dc;
+    --ink: #172438;
+    --muted: #667487;
+    --surface: #ffffff;
+    --page: #f4f8f5;
+}
+
+body {
+    background:
+        radial-gradient(circle at 10% 0%, rgba(47,122,71,.07), transparent 28%),
+        var(--page);
+    color: var(--ink);
+}
+
+.micro-page {
+    width: min(1240px, calc(100% - 48px));
+    padding-top: 34px;
+    padding-bottom: 80px;
+}
+
+.micro-heading {
+    margin-bottom: 34px;
+}
+
+.micro-breadcrumb {
+    gap: 9px;
+    margin-bottom: 16px;
+    font-size: 13px;
+}
+
+.micro-breadcrumb span {
+    line-height: 1.4;
+}
+
+.micro-breadcrumb span:first-child {
+    padding: 7px 12px;
+    border: 1px solid var(--green-line);
+    border-radius: 999px;
+    background: var(--green-soft);
+}
+
+.heading-row {
+    align-items: center;
+    gap: 36px;
+}
+
+.micro-heading h1 {
+    font-size: clamp(40px, 5vw, 62px);
+    line-height: 1.06;
+    letter-spacing: -1.8px;
+    max-width: 900px;
+}
+
+.micro-heading p {
+    max-width: 850px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.emission-badge {
+    padding: 11px 17px;
+    border: 1px solid #c8dccd;
+    border-radius: 999px;
+    background: #f0f8f2;
+    box-shadow: 0 8px 25px rgba(31,91,53,.06);
+}
+
+.micro-card {
+    border: 1px solid #dce7df;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(27,52,37,.06);
+    margin-bottom: 30px;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.micro-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 42px rgba(27,52,37,.09);
+}
+
+.image-badge,
+.solar-badge {
+    padding: 8px 13px;
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 999px;
+    background: rgba(20,58,32,.88);
+    backdrop-filter: blur(8px);
+    font-size: 12px;
+}
+
+.image-caption {
+    right: 16px;
+    bottom: 14px;
+    max-width: calc(100% - 32px);
+    padding: 7px 10px;
+    border-radius: 8px;
+    background: rgba(13,24,17,.72);
+    backdrop-filter: blur(6px);
+}
+
+.small-label,
+.section-label {
+    border: 1px solid var(--green-line);
+    border-radius: 999px;
+    background: var(--green-soft);
+    color: var(--intra-green-light);
+}
+
+.bike-main-content,
+.docking-content,
+.scooter-content {
+    padding: 44px 40px;
+}
+
+.bike-main-content h2,
+.docking-content h2,
+.scooter-content h2 {
+    font-size: 38px;
+    letter-spacing: -.8px;
+}
+
+.description,
+.feature-item p,
+.dock-feature p,
+.info-box p,
+.event-item p,
+.facility-card p {
+    line-height: 1.65;
+}
+
+.feature-list {
+    margin-top: 24px;
+}
+
+.feature-item {
+    display: block;
+    margin-bottom: 0;
+    padding: 16px 0;
+    border-top: 1px solid #e6eee8;
+}
+
+.feature-item:last-child {
+    border-bottom: 1px solid #e6eee8;
+}
+
+.feature-item strong {
+    font-size: 17px;
+    color: var(--intra-green);
+}
+
+.bike-info {
+    margin-top: 20px;
+    padding: 16px 0 0;
+}
+
+.dock-features {
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.dock-feature {
+    display: block;
+    padding: 17px;
+    border: 1px solid #e0e9e3;
+    border-radius: 14px;
+    background: #f8fbf9;
+}
+
+.dock-feature strong {
+    color: var(--intra-green);
+}
+
+.dock-bottom {
+    margin-top: 20px;
+    padding-top: 18px;
+}
+
+.info-box {
+    border: 1px solid #dce8df;
+    border-left: 4px solid var(--intra-green);
+    border-radius: 12px;
+    background: #f8fbf9;
+    padding: 18px;
+    box-shadow: none;
+}
+
+.info-box h3 {
+    font-size: 17px;
+    color: var(--intra-green);
+}
+
+.gowes-card {
+    padding: 30px;
+}
+
+.gowes-header {
+    padding-bottom: 24px;
+}
+
+.gowes-header h2,
+.fleet-heading h2,
+.facilities-heading h2 {
+    letter-spacing: -.6px;
+}
+
+.event-item {
+    padding: 18px;
+    border: 1px solid #dfe8e2;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 5px 16px rgba(25,50,35,.04);
+}
+
+.event-title span {
+    border-radius: 999px;
+    padding: 6px 10px;
+}
+
+.register-row {
+    padding-top: 10px;
+}
+
+.micro-detail-section {
+    padding-top: 46px;
+}
+
+.steps-card {
+    border: 1px solid #dce7df;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(27,52,37,.05);
+}
+
+.step-item {
+    border: 1px solid #e0e9e3;
+    border-radius: 14px;
+    background: #f9fcfa;
+    transition: transform .2s ease, border-color .2s ease;
+}
+
+.step-item:hover {
+    transform: translateY(-3px);
+    border-color: #bcd5c4;
+}
+
+.step-number {
+    border-radius: 10px;
+    background: var(--intra-green);
+}
+
+.tariff-card {
+    border: 1px solid #c8dacd;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(31,91,53,.06);
+}
+
+.facility-card {
+    border: 1px solid #dfe8e2;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(27,52,37,.04);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(27,52,37,.08);
+}
+
+.fleet-card {
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(27,52,37,.05);
+}
+
+.fleet-top,
+.fleet-title {
+    background: var(--intra-green);
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .micro-page {
+        width: min(100% - 24px, 620px);
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+
+    .micro-breadcrumb {
+        display: block;
+    }
+
+    .micro-breadcrumb span {
+        display: block;
+        margin-bottom: 7px;
+    }
+
+    .micro-heading h1 {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .micro-heading p {
+        font-size: 15px;
+    }
+
+    .emission-badge {
+        margin-top: 14px;
+    }
+
+    .bike-main-content,
+    .docking-content,
+    .scooter-content {
+        padding: 26px 20px;
+    }
+
+    .bike-main-content h2,
+    .docking-content h2,
+    .scooter-content h2,
+    .gowes-header h2,
+    .fleet-heading h2,
+    .section-heading h2,
+    .facilities-heading h2 {
+        font-size: 27px;
+    }
+
+    .dock-feature {
+        padding: 15px;
+    }
+
+    .gowes-card {
+        padding: 16px;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .step-item {
+        min-height: 170px;
+    }
+}
+
+@media (max-width: 480px) {
+    .steps-grid,
+    .facility-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .micro-heading h1 {
+        font-size: 31px;
+    }
+
+    .image-caption {
+        font-size: 11px;
+    }
+
+    .bike-main-image,
+    .docking-image,
+    .scooter-image,
+    .gowes-image {
+        height: 260px;
+        min-height: 260px;
+    }
+}
+
+
+/* =========================================================
+FOTO LEBIH PROPORSIONAL
+========================================================= */
+
+/* Desktop: foto jangan terlalu tinggi */
+.bike-main-card,
+.docking-card,
+.scooter-card {
+    min-height: 0;
+}
+
+.bike-main-image,
+.scooter-image {
+    height: 360px;
+    min-height: 360px;
+}
+
+.docking-image {
+    height: 360px;
+    min-height: 360px;
+}
+
+.gowes-body {
+    min-height: 0;
+}
+
+.gowes-image {
+    height: 320px;
+    min-height: 320px;
+}
+
+/* Hindari foto mengambil tinggi berlebihan pada card */
+.bike-main-image img,
+.docking-image img,
+.scooter-image img,
+.gowes-image img {
+    object-fit: cover;
+}
+
+/* Desktop sedikit lebih ramping */
+@media (min-width: 1001px) {
+    .bike-main-card {
+        grid-template-columns: 50% 50%;
+    }
+
+    .docking-card {
+        grid-template-columns: 50% 50%;
+    }
+
+    .scooter-card {
+        grid-template-columns: 50% 50%;
+    }
+
+    .gowes-body {
+        grid-template-columns: 50% 50%;
+    }
+
+    .bike-main-content,
+    .docking-content,
+    .scooter-content {
+        padding: 36px 34px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .bike-main-image,
+    .docking-image,
+    .scooter-image {
+        height: 320px;
+        min-height: 320px;
+    }
+
+    .gowes-image {
+        height: 300px;
+        min-height: 300px;
+    }
+}
+
+/* HP */
+@media (max-width: 700px) {
+    .bike-main-image,
+    .docking-image,
+    .scooter-image {
+        height: 250px;
+        min-height: 250px;
+    }
+
+    .gowes-image {
+        height: 240px;
+        min-height: 240px;
+    }
+}
+
+/* HP kecil */
+@media (max-width: 480px) {
+    .bike-main-image,
+    .docking-image,
+    .scooter-image,
+    .gowes-image {
+        height: 215px;
+        min-height: 215px;
+    }
+}
+
+/* ======================================================
+   FOTO DI ATAS, TEKS DI BAWAH (SEMUA UKURAN LAYAR)
+====================================================== */
+
+.bike-main-card,
+.docking-card,
+.scooter-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.bike-main-image,
+.docking-image,
+.scooter-image {
+    order: 1;
+    width: 100%;
+    height: 360px;
+    min-height: 360px;
+}
+
+.bike-main-content,
+.docking-content,
+.scooter-content {
+    order: 2;
+    padding: 36px 34px;
+}
+
+.gowes-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.gowes-header {
+    order: 2;
+}
+
+/* "Lepas" gowes-body agar isinya jadi item flex langsung dari gowes-card */
+.gowes-body {
+    display: contents;
+}
+
+.gowes-image {
+    order: 1;
+    width: 100%;
+    height: 320px;
+    min-height: 320px;
+}
+
+.gowes-schedule {
+    order: 3;
+    padding-left: 0;
+}
+
+/* Responsive: sesuaikan tinggi foto di layar lebih kecil */
+@media (max-width: 700px) {
+    .bike-main-image,
+    .docking-image,
+    .scooter-image {
+        height: 250px;
+        min-height: 250px;
+    }
+
+    .gowes-image {
+        height: 240px;
+        min-height: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bike-main-image,
+    .docking-image,
+    .scooter-image,
+    .gowes-image {
+        height: 215px;
+        min-height: 215px;
     }
 }
