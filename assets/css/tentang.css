@@ -167,21 +167,22 @@
 .contact-map { width:370px !important; height:330px !important; flex-shrink:0 !important; margin-left:auto !important; border-radius:8px !important; overflow:hidden !important; }
 .contact-map iframe { width:100% !important; height:100% !important; border:0 !important; display:block !important; }
 
-/* ======================================== GLOSARIUM ======================================== */
-
-.glossary { width: 390px; height: 382px; overflow: hidden; background: #f3f8f5; border-radius: 12px; box-sizing: border-box; }
-.glossary-header { width: 300%; height: 100px; padding: 12px 18px; box-sizing: border-box; background: #204420; color: #fff; }
-.glossary-header h2 { margin: 0 0 5px; color: #fff; font-family: 'Sutasoma Display', sans-serif !important; font-size: 28px; line-height: 1.1; }
-.glossary-header p { margin: 0; color: #fff; font-family: 'Sutasoma Text', sans-serif !important; font-size: 15px; line-height: 1.3; }
-.glossary-scroll { height: 290px; padding: 7px 4px 6px 0; overflow-y: auto; overflow-x: hidden; box-sizing: border-box; }
-.glossary-item { margin: 0 7px 6px; border-radius: 9px; overflow: hidden; }
-.glossary-button { width: 100%; height: 50px; padding: 0 10px; display: flex; align-items: center; justify-content: space-between; border: 0; outline: 0; background: #fff; color: #222; border-radius: 9px; cursor: pointer; font-family: 'Sutasoma Display', sans-serif !important; font-size: 16px; line-height: 1; text-align: left; box-sizing: border-box; }
-.glossary-button .arrow { width: 12px; height: 35px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #1b6530; font-family: Arial, sans-serif; font-size: 10px; line-height: 1; }
-.glossary-content { display: none; margin-top: 4px; padding: 0; background: #e7f1eb; border: 0; border-radius: 0; box-sizing: border-box; }
-.glossary-content p { position: relative; margin: 0; padding: 24px 25px 24px 55px; color: #222; font-family: 'Sutasoma Text', sans-serif !important; font-size: 14px; line-height: 1.5; background: #fff; border-radius: 25px; box-sizing: border-box; }
-.glossary-content p::before { content:""; position:absolute; left:27px; top:31px; width:8px; height:8px; background:#35965b; border-radius:50%; }
-.glossary-item.active .glossary-content { display: block; padding: 0 7px 7px; background: #e7f1eb; border-radius: 0 0 9px 9px; }
-.glossary-item.active .glossary-button { background: #e7f1eb; border-radius: 9px 9px 0 0; }
+.glossary { width:390px; height:382px; overflow:hidden; background:#f3f8f5; border-radius:12px; box-sizing:border-box; }
+.glossary-header { width:100%; height:100px; padding:12px 18px; box-sizing:border-box; background:#204420; color:#fff; }
+.glossary-header h2 { margin:0 0 5px; color:#fff; font-family:'Sutasoma Display',sans-serif!important; font-size:28px; line-height:1.1; }
+.glossary-header p { margin:0; color:#fff; font-family:'Sutasoma Text',sans-serif!important; font-size:15px; line-height:1.3; }
+.glossary-scroll { width:100%; height:282px; padding:8px 4px 8px 0; overflow-y:auto; overflow-x:hidden; box-sizing:border-box; }
+.glossary-item { width:auto; margin:0 7px 7px; border-radius:10px; overflow:hidden; }
+.glossary-button { width:100%; height:50px; min-height:50px; padding:0 13px; display:flex; align-items:center; justify-content:space-between; border:0; outline:0; background:#fff; color:#222; border-radius:10px; cursor:pointer; font-family:'Sutasoma Display',sans-serif!important; font-size:16px; line-height:1.2; text-align:left; box-sizing:border-box; }
+.glossary-button .arrow { width:8px; height:8px; border-right:2px solid #1b6530; border-bottom:2px solid #1b6530; transform:rotate(45deg); transition:transform .25s ease; margin-right:5px; flex-shrink:0; }
+.glossary-item.active .glossary-button .arrow { transform:rotate(225deg); }
+.glossary-content { display:none; margin-top:0; padding:7px; background:#e7f1eb; border:0; border-radius:0 0 10px 10px; box-sizing:border-box; }
+.glossary-content p { position:relative; width:100%; margin:0; padding:22px 22px 22px 55px; color:#222; font-family:'Sutasoma Text',sans-serif!important; font-size:14px; line-height:1.55; background:#fff; border:0; border-radius:25px; box-sizing:border-box; }
+.glossary-content p::before { content:""; position:absolute; left:25px; top:28px; width:8px; height:8px; background:#35965b; border-radius:50%; }
+.glossary-item.active { border:1px solid #2f6f3e; border-radius:16px; overflow:hidden; background:#edf6f0; box-sizing:border-box; }
+.glossary-item.active .glossary-button { background:#edf6f0; border-radius:14px 14px 0 0; }
+.glossary-item.active .glossary-content { display:block; padding:8px; background:#edf6f0; border-radius:0 0 14px 14px; }
+.glossary-item.active .glossary-content p { background:#fff; border-radius:22px; }
 
 /* ========================================
    TABLET / IPAD
@@ -291,6 +292,10 @@
     .org-box { font-size:clamp(6px,2.1vw,9px)!important; padding:2px!important; }
     .org-deputi { font-size:clamp(7px,2.4vw,10px)!important; }
     .org-support { font-size:clamp(5.5px,1.8vw,8px)!important; }
+}
+@media screen and (max-width:680px) {
+    .org-box { font-size:clamp(7px,2vw,10px)!important; line-height:1.15!important; padding:3px 5px!important; overflow:hidden!important; }
+    .org-deputi { font-size:clamp(8px,2.3vw,11px)!important; line-height:1.1!important; padding:4px 6px!important; }
 }
 /* ========================================
    POPUP PROFIL PEJABAT

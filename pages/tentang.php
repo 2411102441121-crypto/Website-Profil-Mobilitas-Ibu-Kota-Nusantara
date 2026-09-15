@@ -313,18 +313,14 @@ ob_start();
                  GLOSARIUM
             ======================================== -->
             <div class="glossary">
-
                 <div class="glossary-header">
                     <h2>GLOSARIUM</h2>
                     <p>Pahami istilah penting<br>dalam mobilitas cerdas</p>
                 </div>
 
                 <div class="glossary-scroll">
-
                     <?php foreach ($terms as $term): ?>
-
                         <div class="glossary-item">
-
                             <button type="button" class="glossary-button" aria-expanded="false">
                                 <span><?= htmlspecialchars($term[0]) ?></span>
                                 <span class="arrow"></span>
@@ -333,16 +329,10 @@ ob_start();
                             <div class="glossary-content">
                                 <p><?= htmlspecialchars($term[1]) ?></p>
                             </div>
-
                         </div>
-
                     <?php endforeach; ?>
-
                 </div>
-
             </div>
-
-        </div>
     </section>
 
 </main>
