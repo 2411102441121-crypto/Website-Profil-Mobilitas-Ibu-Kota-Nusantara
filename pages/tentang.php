@@ -163,12 +163,60 @@ ob_start();
             </div>
         </div>
 
-        <div class="organization-chart">
-    <img 
-        src="../assets/images/tentang/struktur-org.png"
-        alt="Struktur Organisasi Deputi Bidang Transformasi Hijau dan Digital"
-        class="struktur-image"
-    >
+<div class="organization-chart">
+    <div class="org-canvas">
+
+        <svg class="org-lines" viewBox="0 0 1000 760" preserveAspectRatio="none">
+            <!-- GARIS DEPUTI KE DIREKTUR -->
+            <path d="M500 110 V135" class="line-solid"/>
+            <path d="M175 135 H825" class="line-solid"/>
+            <path d="M175 135 V160 M500 135 V160 M825 135 V160" class="line-solid"/>
+            <!-- GARIS ANTAR DIREKTUR -->
+            <path d="M300 195 H390 M610 195 H700" class="line-dotted"/>
+
+            <!-- DIREKTUR KE KOORDINATOR -->
+            <path d="M175 235 V330 M500 235 V330 M825 235 V330" class="line-solid"/>
+
+            <!-- ANTAR KOORDINATOR -->
+            <path d="M300 370 H390 M610 370 H700" class="line-dotted"/>
+
+            <!-- KOORDINATOR KE ANGGOTA -->
+            <path d="M175 410 V470 M500 410 V470 M825 410 V470" class="line-solid"/>
+
+            <!-- ANTAR ANGGOTA -->
+            <path d="M300 510 H390 M610 510 H700" class="line-dotted"/>
+
+            <!-- GARIS TATA KELOLA -->
+            <path d="M650 65 H985 V665 H850" class="line-solid"/>
+        </svg>
+
+        <!-- DEPUTI -->
+        <div class="org-box org-deputi brown">Deputi bidang Transformasi<br>Hijau dan Digital</div>
+
+        <!-- GROUP DIREKTUR -->
+        <div class="org-group org-director-group"></div>
+
+        <div class="org-box org-director-1 blue">Direktur Pengembangan<br>Ekosistem Digital</div>
+        <div class="org-box org-director-2 dark-green">Direktur Transformasi Hijau</div>
+        <div class="org-box org-director-3 red-dark">Direktur Data dan<br>Kecerdasan buatan</div>
+
+        <!-- GROUP TIM -->
+        <div class="org-group org-team-group"></div>
+
+        <div class="org-box org-coord-1 cyan">Koordinator Tim</div>
+        <div class="org-box org-coord-2 green">Koordinator Tim</div>
+        <div class="org-box org-coord-3 red">Koordinator Tim</div>
+
+        <div class="org-box org-member-1 cyan">Anggota Tim</div>
+        <div class="org-box org-member-2 green">Anggota Tim</div>
+        <div class="org-box org-member-3 red-light">Anggota Tim</div>
+
+        <!-- TATA KELOLA -->
+        <div class="org-box org-support gold">Tata Kelola<br>Pendukung<br>(Umum) &amp; Kerja<br>Sama</div>
+
+    </div>
+</div>
+
 </div>
     </section>
 
@@ -182,9 +230,15 @@ ob_start();
         </div>
 
         <div class="contact-grid">
+
+            <!-- ========================================
+                 CONTACT CARD
+            ======================================== -->
             <div class="contact-card">
+
                 <div class="contact-info">
-                   <div class="contact-item">
+
+                    <div class="contact-item">
                         <span class="contact-icon">
                             <svg viewBox="0 0 24 24">
                                 <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/>
@@ -193,7 +247,16 @@ ob_start();
                         </span>
                         <div>
                             <strong>Kantor Otorita Ibu Kota Nusantara</strong>
-                            <p>Kawasan Inti Pusat Pemerintahan (KIPP), Nusantara, Kalimantan Timur</p>
+                            <p>Kawasan Inti Pusat Pemerintahan (KIPP),<br>Nusantara, Kalimantan Timur</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon">
+                        </span>
+                        <div>
+                            <strong>Kantor Otorita Ibu Kota Nusantara Jakarta</strong>
+                            <p>Menara Mandiri II Lantai 5,<br>Jl. Jenderal Sudirman Kav. 54–55,<br>Senayan, Jakarta Selatan</p>
                         </div>
                     </div>
 
@@ -204,7 +267,6 @@ ob_start();
                                 <path d="M3 6l9 7 9-7"/>
                             </svg>
                         </span>
-
                         <div>
                             <strong>Email</strong>
                             <p>investasi@ikn.go.id<br>sekretariat@ikn.go.id</p>
@@ -215,125 +277,76 @@ ob_start();
                         <span class="contact-icon">
                             <img src="../assets/images/tentang/wab.png" alt="Website">
                         </span>
-
                         <div>
                             <strong>Website Resmi</strong>
                             <p>ikn.go.id</p>
                         </div>
                     </div>
+
                 </div>
-              <div class="contact-map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4030.8108304603975!2d116.6995946591199!3d-0.9618942204804518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df6cf003be52405%3A0xbdebbf9fb3225fd6!2sIKN%20Nusantara%20Indonesia!5e1!3m2!1sen!2sus!4v1788765611728!5m2!1sen!2sus"
-                        loading="lazy"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-    </div>
 
-<?php
-$terms = [];
-
-$query_glosarium = mysqli_query($koneksi, "
-    SELECT istilah, definisi
-    FROM glosarium
-    WHERE status = 'aktif'
-    ORDER BY id DESC
-");
-
-if ($query_glosarium) {
-    while ($row = mysqli_fetch_assoc($query_glosarium)) {
-        $terms[] = [$row['istilah'], $row['definisi']];
-    }
-}
-?>
-<div class="glossary" style="
-    width:400px !important; 
-    height:296px !important; 
-    max-height:296px !important; 
-    overflow:hidden !important; 
-    background:#f3f8f5 !important; 
-    border-radius:12px !important; 
-    box-sizing:border-box !important; 
-">
-
-    <div class="glossary-header" style="
-        width:100% !important;
-        height:100px !important;
-        min-height:96px !important;
-        padding:17px !important;
-        background:#144A21 !important;
-        color:#fff !important;
-        box-sizing:border-box !important;
-    ">
-        <h2 style="
-            margin:0 0 5px !important;
-            color:#fff !important;
-            font-size:28px !important;
-            line-height:1.1 !important;
-
-        ">GLOSARIUM</h2>
-
-        <p style="
-            margin:0 !important;
-            color:#fff !important;
-            font-size:14px !important;
-            line-height:1.35 !important;
-        ">Pahami istilah penting<br>dalam mobilitas cerdas</p>
-    </div>
-
-
-    <div class="glossary-scroll" style="
-        width:100% !important;
-        height:200px !important;
-        max-height:200px !important;
-        padding:12px 5px 10px 0 !important;
-        overflow-y:scroll !important;
-        overflow-x:hidden !important;
-        box-sizing:border-box !important;
-    ">
-
-        <?php foreach ($terms as $term): ?>
-
-            <div class="glossary-item" style="
-                margin:0 9px 9px !important;
-                padding:0 !important;
-                overflow:hidden !important;
-                border-radius:11px !important;
-            ">
-
-                <button type="button" class="glossary-button" style="
-                    width:100% !important;
-                    height:42px !important;
-                    min-height:42px !important;
-                    padding:0 12px !important;
-                    display:flex !important;
-                    align-items:center !important;
-                    justify-content:space-between !important;
-                    border:0 !important;
-                    background:#fff !important;
-                    color:#222 !important;
-                    border-radius:11px !important;
-                    cursor:pointer !important;
-                    box-sizing:border-box !important;
-                ">
-
-                    <span><?= htmlspecialchars($term[0]) ?></span>
-                    <span class="arrow">⌃</span>
-
-                </button>
-
-                <div class="glossary-content">
-                    <p><?= htmlspecialchars($term[1]) ?></p>
+                <!-- GOOGLE MAPS -->
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps?q=Kawasan+Inti+Pusat+Pemerintahan+IKN&output=embed" loading="lazy" allowfullscreen></iframe>
                 </div>
 
             </div>
 
-        <?php endforeach; ?>
+            <?php
+            $terms = [];
 
-    </div>
+            $query_glosarium = mysqli_query($koneksi, "
+                SELECT istilah, definisi
+                FROM glosarium
+                WHERE status = 'aktif'
+                ORDER BY id DESC
+            ");
 
-</div>
+            if ($query_glosarium) {
+                while ($row = mysqli_fetch_assoc($query_glosarium)) {
+                    $terms[] = [$row['istilah'], $row['definisi']];
+                }
+            }
+            ?>
+
+            <!-- ========================================
+                 GLOSARIUM
+            ======================================== -->
+            <div class="glossary">
+
+                <div class="glossary-header">
+                    <h2>GLOSARIUM</h2>
+                    <p>Pahami istilah penting<br>dalam mobilitas cerdas</p>
+                </div>
+
+                <div class="glossary-scroll">
+
+                    <?php foreach ($terms as $term): ?>
+
+                        <div class="glossary-item">
+
+                            <button type="button" class="glossary-button" aria-expanded="false">
+                                <span><?= htmlspecialchars($term[0]) ?></span>
+                                <span class="arrow"></span>
+                            </button>
+
+                            <div class="glossary-content">
+                                <p><?= htmlspecialchars($term[1]) ?></p>
+                            </div>
+
+                        </div>
+
+                    <?php endforeach; ?>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
 <script src="../assets/js/tentang.js"></script>
 
 <?php

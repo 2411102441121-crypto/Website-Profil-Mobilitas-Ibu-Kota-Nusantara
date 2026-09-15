@@ -60,18 +60,85 @@
 .struktur-card h3 { margin: 0 0 7px; font-family: 'Sutasoma Display', sans-serif !important; font-size: 14px; line-height: 1.35; }
 .struktur-card p { margin: 0; font-family: 'Sutasoma Text', sans-serif !important; font-size: 11px; line-height: 1.5; }
 
+/* ========================================
+   STRUKTUR ORGANISASI
+======================================== */
 
-/* ======================================== STRUKTUR ORGANISASI ======================================== */
+.organization-chart { width:100%; max-width:1000px; margin:0 auto; padding:25px; background:#fff; border-radius:18px; box-shadow:0 4px 18px rgba(0,0,0,.08); box-sizing:border-box; overflow:hidden; }
+.org-canvas { width:100%; aspect-ratio:1000/760; min-height:650px; position:relative; }
+.org-lines { position:absolute; inset:0; width:100%; height:100%; z-index:1; pointer-events:none; overflow:visible; }
+.line-solid { fill:none; stroke:#777; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.line-dotted { fill:none; stroke:#777; stroke-width:2; stroke-dasharray:3 4; }
+.org-group { position:absolute; left:3%; width:94%; box-sizing:border-box; border:2px dotted #888; z-index:0; }
 
-.organization-chart { position: relative; width: 590px; max-width: 100%; margin: 0 auto; padding: 0; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.06); }
-.struktur-image { width: 100%; height: auto; display: block; }
+/* GROUP DIREKTUR */
+.org-director-group { top:19% !important; height:15% !important; }
 
+/* MATIKAN GARIS TAMBAHAN DARI CSS LAMA */
+.org-director-group::before,
+.org-director-group::after { content:none !important; display:none !important; }
+
+/* GROUP TIM */
+.org-team-group { top:37% !important; height:40% !important; }
+
+/* SEMUA KOTAK */
+.org-box { position:absolute; z-index:3; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; font-family:'Sutasoma Display',sans-serif !important; font-size:17px; line-height:1.35; padding:12px 15px; box-sizing:border-box; border-radius:12px; box-shadow:0 3px 8px rgba(0,0,0,.22); }
+
+/* DEPUTI */
+.org-deputi { left:35%; top:3%; width:30%; height:11%; }
+
+/* DIREKTUR */
+.org-director-1 { left:6%; top:21%; width:25%; height:11%; }
+.org-director-2 { left:37.5%; top:21%; width:25%; height:11%; }
+.org-director-3 { left:69%; top:21%; width:25%; height:11%; }
+
+/* KOORDINATOR */
+.org-coord-1 { left:6%; top:42%; width:25%; height:11%; }
+.org-coord-2 { left:37.5%; top:42%; width:25%; height:11%; }
+.org-coord-3 { left:69%; top:42%; width:25%; height:11%; }
+
+/* ANGGOTA */
+.org-member-1 { left:6%; top:61%; width:25%; height:11%; }
+.org-member-2 { left:37.5%; top:61%; width:25%; height:11%; }
+.org-member-3 { left:69%; top:61%; width:25%; height:11%; }
+
+/* TATA KELOLA */
+.org-support { left:75%; top:80%; width:18%; height:15%; }
+
+/* WARNA */
+.brown { background:#80551f; }
+.blue { background:#14558a; }
+.cyan { background:#2995a0; }
+.dark-green { background:#1d5527; }
+.green { background:#46963f; }
+.red-dark { background:#a3161b; }
+.red { background:#be171d; }
+.red-light { background:#f34b53; }
+.gold { background:#c39858; }
+
+/* ========================================
+   TABLET / IPAD
+======================================== */
+
+@media screen and (max-width:850px) {
+    .organization-chart { width:100%; max-width:100%; padding:18px; overflow-x:auto; }
+    .org-canvas { width:900px; min-width:900px; min-height:680px; }
+}
+
+/* ========================================
+   HP
+======================================== */
+
+@media screen and (max-width:680px) {
+    .organization-chart { width:100%; max-width:100%; padding:12px; overflow-x:auto; }
+    .org-canvas { width:850px; min-width:850px; min-height:650px; }
+}
 
 /* ======================================== HUBUNGI KAMI ======================================== */
 
-.contact-section { width: 1000px; max-width: 100%; margin: 35px auto 0; box-sizing: border-box; position: relative; left: -95px; }
+.contact-section { width: 1200px; max-width: 100%; margin: 35px auto 0; box-sizing: border-box; position: relative; left: -90Spx; }
 .contact-grid { width: 100%; display: grid; grid-template-columns: minmax(0,1fr) 300px; gap: 16px; align-items: start; }
-.contact-card { width: 100%; height: 295px; padding: 22px 20px; display: grid; grid-template-columns: minmax(0,1fr) 310px; gap: 18px; box-sizing: border-box; background: #204420; color: #fff; border-radius: 12px; box-shadow: 0 3px 7px rgba(0,0,0,.25); }
+.contact-card { width: 100%; height: 380px; padding: 22px 20px; display: grid; grid-template-columns: minmax(0,1fr) 310px; gap: 18px; box-sizing: border-box; background: #204420; color: #fff; border-radius: 12px; box-shadow: 0 3px 7px rgba(0,0,0,.25); }
 
 .contact-info { padding-top: 12px; }
 .contact-item { display: flex; gap: 10px; margin-bottom: 14px; }
@@ -97,19 +164,18 @@
 .contact-icon img { width:25px; height:25px; display:block; object-fit:contain; transform:translateY(-0px); }
 
 /* PETA NUSANTARA */
-.contact-map { width:370px !important; height:250px !important; flex-shrink:0 !important; margin-left:auto !important; border-radius:8px !important; overflow:hidden !important; }
-
+.contact-map { width:370px !important; height:330px !important; flex-shrink:0 !important; margin-left:auto !important; border-radius:8px !important; overflow:hidden !important; }
 .contact-map iframe { width:100% !important; height:100% !important; border:0 !important; display:block !important; }
 
 /* ======================================== GLOSARIUM ======================================== */
 
-.glossary { width: 245px; height: 163px; overflow: hidden; background: #f3f8f5; border-radius: 12px; box-sizing: border-box; }
-.glossary-header { width: 100%; height: 80px; padding: 12px 18px; box-sizing: border-box; background: #145321; color: #fff; }
+.glossary { width: 390px; height: 382px; overflow: hidden; background: #f3f8f5; border-radius: 12px; box-sizing: border-box; }
+.glossary-header { width: 300%; height: 100px; padding: 12px 18px; box-sizing: border-box; background: #204420; color: #fff; }
 .glossary-header h2 { margin: 0 0 5px; color: #fff; font-family: 'Sutasoma Display', sans-serif !important; font-size: 28px; line-height: 1.1; }
 .glossary-header p { margin: 0; color: #fff; font-family: 'Sutasoma Text', sans-serif !important; font-size: 15px; line-height: 1.3; }
-.glossary-scroll { height: 110px; padding: 7px 4px 6px 0; overflow-y: auto; overflow-x: hidden; box-sizing: border-box; }
+.glossary-scroll { height: 290px; padding: 7px 4px 6px 0; overflow-y: auto; overflow-x: hidden; box-sizing: border-box; }
 .glossary-item { margin: 0 7px 6px; border-radius: 9px; overflow: hidden; }
-.glossary-button { width: 100%; height: 35px; padding: 0 10px; display: flex; align-items: center; justify-content: space-between; border: 0; outline: 0; background: #fff; color: #222; border-radius: 9px; cursor: pointer; font-family: 'Sutasoma Display', sans-serif !important; font-size: 16px; line-height: 1; text-align: left; box-sizing: border-box; }
+.glossary-button { width: 100%; height: 50px; padding: 0 10px; display: flex; align-items: center; justify-content: space-between; border: 0; outline: 0; background: #fff; color: #222; border-radius: 9px; cursor: pointer; font-family: 'Sutasoma Display', sans-serif !important; font-size: 16px; line-height: 1; text-align: left; box-sizing: border-box; }
 .glossary-button .arrow { width: 12px; height: 35px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #1b6530; font-family: Arial, sans-serif; font-size: 10px; line-height: 1; }
 .glossary-content { display: none; margin-top: 4px; padding: 0; background: #e7f1eb; border: 0; border-radius: 0; box-sizing: border-box; }
 .glossary-content p { position: relative; margin: 0; padding: 24px 25px 24px 55px; color: #222; font-family: 'Sutasoma Text', sans-serif !important; font-size: 14px; line-height: 1.5; background: #fff; border-radius: 25px; box-sizing: border-box; }
@@ -117,129 +183,123 @@
 .glossary-item.active .glossary-content { display: block; padding: 0 7px 7px; background: #e7f1eb; border-radius: 0 0 9px 9px; }
 .glossary-item.active .glossary-button { background: #e7f1eb; border-radius: 9px 9px 0 0; }
 
-/* ======================================== IPAD ======================================== */
 
-@media (max-width: 850px) {
-    .tentang-page { width: calc(100% - 40px); }
-    .contact-section { width: 94%; left: 0; margin-left: auto; margin-right: auto; }
-    .contact-grid { grid-template-columns: 1fr; }
-    .glossary { width: 100%; }
-    .stakeholder-grid { gap: 16px; }
-    .top-three { grid-template-columns: repeat(2, 1fr); }
-    .middle-two, .bottom-two { grid-template-columns: repeat(2, 1fr); }
-    .stakeholder-card { padding: 20px 18px; }
-    .stakeholder-card h3 { font-size: 18px; }
-    .stakeholder-card p { font-size: 13px; }
+
+@media screen and (min-width:681px) and (max-width:1024px) {
+    html, body { width:100%; max-width:100%; overflow-x:hidden; margin:0; padding:0; }
+    .tentang-page { width:100%; max-width:100%; padding:20px; box-sizing:border-box; }
+    .contact-section { width:100%; max-width:100%; margin:30px 0 0; padding:0; position:static; left:0; }
+    .contact-grid { width:100%; display:grid; grid-template-columns:minmax(0,1fr) minmax(280px,35%); gap:16px; align-items:start; }
+    .contact-card { width:100%!important; height:auto!important; min-height:420px!important; padding:22px 18px!important; display:grid!important; grid-template-columns:minmax(0,1fr) minmax(250px,42%)!important; gap:16px!important; box-sizing:border-box!important; }
+    .contact-info { width:100%; min-width:0; }
+    .contact-item { gap:8px; margin-bottom:18px; }
+    .contact-item strong { font-size:15px!important; }
+    .contact-item p { font-size:13px!important; line-height:1.45!important; }
+    .contact-map { width:100%!important; height:300px!important; margin:0!important; }
+    .glossary { width:100%!important; height:420px!important; max-height:420px!important; }
+    .glossary-header { height:100px!important; padding:15px 16px!important; }
+    .glossary-header h2 { font-size:26px!important; }
+    .glossary-header p { font-size:13px!important; }
+    .glossary-scroll { height:320px!important; max-height:320px!important; }
+    .glossary-button { height:42px!important; font-size:14px!important; }
+    .stakeholder-grid { gap:16px; }
+    .top-three { grid-template-columns:repeat(2,1fr); }
+    .middle-two, .bottom-two { grid-template-columns:repeat(2,1fr); }
+    .stakeholder-card { padding:20px 18px; }
+    .stakeholder-card h3 { font-size:18px; }
+    .stakeholder-card p { font-size:13px; }
+    .tentang-hero { width:100%!important; overflow:hidden!important; }
+    .hero-inner { width:100%!important; max-width:100%!important; }
+    .hero-inner h1 { max-width:100%!important; font-size:58px!important; line-height:1.08!important; word-break:normal!important; overflow-wrap:break-word!important; }
+    .hero-inner p { max-width:100%!important; font-size:17px!important; line-height:1.55!important; }
 }
 
+@media screen and (max-width:680px) {
+    html, body { width:100%; max-width:100%; overflow-x:hidden; margin:0; padding:0; }
+    .tentang-page { width:100%!important; max-width:100%!important; padding:14px!important; margin:0!important; box-sizing:border-box!important; }
+    .contact-section { width:100%!important; max-width:100%!important; margin:20px 0 0!important; padding:0!important; position:static!important; left:0!important; transform:none!important; }
+    .contact-grid { width:100%!important; display:flex!important; flex-direction:column!important; gap:14px!important; }
+    .contact-card { width:100%!important; max-width:100%!important; height:auto!important; min-height:0!important; padding:18px 14px!important; display:flex!important; flex-direction:column!important; box-sizing:border-box!important; }
+    .contact-info { width:100%!important; }
+    .contact-item { width:100%; gap:8px!important; margin-bottom:14px!important; }
+    .contact-icon { width:32px!important; min-width:32px!important; height:32px!important; }
+    .contact-icon svg { width:26px!important; height:26px!important; }
+    .contact-icon img { width:24px!important; height:24px!important; }
+    .contact-item strong { font-size:14px!important; }
+    .contact-item p { font-size:12px!important; line-height:1.45!important; }
+    .contact-map { width:100%!important; max-width:100%!important; height:200px!important; margin:8px 0 0!important; }
+    .glossary { width:100%!important; max-width:100%!important; height:auto!important; max-height:none!important; margin:0!important; box-sizing:border-box!important; }
+    .glossary-header { width:100%!important; height:auto!important; min-height:90px!important; padding:14px 16px!important; }
+    .glossary-header h2 { font-size:22px!important; }
+    .glossary-header p { font-size:12px!important; line-height:1.35!important; }
+    .glossary-scroll { width:100%!important; height:240px!important; max-height:240px!important; }
+    .glossary-item { margin:0 7px 7px!important; }
+    .glossary-button { height:42px!important; min-height:42px!important; font-size:13px!important; padding:0 11px!important; }
+    .glossary-content p { font-size:12px!important; padding:17px 17px 17px 40px!important; }
+    .stakeholder-grid { gap:12px!important; }
+    .top-three, .middle-two, .bottom-two { grid-template-columns:1fr!important; }
+    .stakeholder-card { padding:18px 16px!important; }
+    .stakeholder-card h3 { font-size:16px!important; }
+    .stakeholder-card p { font-size:12px!important; }
+    .tentang-hero { width:100%!important; min-height:auto!important; padding:28px 16px 30px!important; box-sizing:border-box!important; overflow:hidden!important; }
+    .hero-inner { width:100%!important; max-width:100%!important; margin:0 auto!important; box-sizing:border-box!important; }
+    .hero-inner h1 { width:100%!important; max-width:100%!important; margin:0 0 20px!important; padding:0!important; font-size:38px!important; line-height:1.1!important; text-align:center!important; word-break:normal!important; overflow-wrap:break-word!important; white-space:normal!important; }
+    .hero-inner p { width:100%!important; max-width:100%!important; margin:0 auto!important; padding:0 5px!important; font-size:15px!important; line-height:1.55!important; text-align:center!important; box-sizing:border-box!important; white-space:normal!important; }
+}
 
-/* ======================================== HP ======================================== */
-@media screen and (max-width: 680px) {
+@media screen and (max-width:400px) {
+    .tentang-hero { padding:24px 14px 26px!important; }
+    .hero-inner h1 { font-size:32px!important; line-height:1.1!important; margin-bottom:18px!important; }
+    .hero-inner p { font-size:14px!important; line-height:1.5!important; padding:0!important; }
+    .contact-item strong { font-size:13px!important; }
+    .contact-item p { font-size:11px!important; }
+    .contact-map { height:180px!important; }
+    .glossary-header h2 { font-size:20px!important; }
+    .glossary-header p { font-size:11px!important; }
+    .glossary-scroll { height:220px!important; }
+}
 
-    /* 1. Mencegah Seluruh Pembungkus Meluap Ke Samping */
-    html, body {
-        width: 100vw !important;
-        max-width: 100vw !important;
-        overflow-x: hidden !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
+/* ======================================== POPUP PROFIL PEJABAT ======================================== */
 
-    .tentang-page {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 16px !important;
-        margin: 0 !important;
-        box-sizing: border-box !important;
-    }
+.org-box { position:absolute; z-index:3; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; font-family:'Sutasoma Display',sans-serif !important; font-size:17px; line-height:1.35; padding:12px 15px; box-sizing:border-box; border-radius:12px; border:2px solid rgba(0,0,0,.28); box-shadow:0 4px 10px rgba(0,0,0,.25),0 1px 3px rgba(0,0,0,.18); transition:transform .2s ease,box-shadow .2s ease; cursor:pointer; }
+.org-box:hover { transform:translateY(-3px); box-shadow:0 8px 18px rgba(0,0,0,.30),0 2px 5px rgba(0,0,0,.18); }
+.org-modal { position:fixed !important; inset:0 !important; display:none !important; align-items:center !important; justify-content:center !important; padding:20px !important; z-index:99999 !important; box-sizing:border-box !important; }
+.org-modal.active { display:flex !important; }
 
-    /* 2. Menetralkan Posisi Kontak & Peta */
-    .contact-section {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 20px 0 0 0 !important;
-        padding: 0 !important;
-        position: static !important;
-        left: 0 !important;
-        transform: none !important;
-    }
+.org-modal-overlay { position:absolute !important; inset:0 !important; background:rgba(0,0,0,.58) !important; backdrop-filter:blur(3px); }
 
-    .contact-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-        gap: 16px !important;
-    }
+.org-modal-box { width:620px; max-width:calc(100% - 40px); max-height:90vh; overflow:auto; position:relative; z-index:2; display:grid; grid-template-columns:180px minmax(0,1fr); gap:25px; padding:28px; background:#fff; border-radius:20px; box-shadow:0 18px 45px rgba(0,0,0,.3); box-sizing:border-box; animation:orgPopup .2s ease; }
 
-    /* 3. Menghilangkan Lebar Kaku pada Kotak Hijau Kontak */
-    .contact-card {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        min-height: 0 !important;
-        padding: 18px 14px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        box-sizing: border-box !important;
-    }
+.org-modal-photo { width:180px; height:220px; display:flex; align-items:center; justify-content:center; background:#eef3ef; border-radius:14px; overflow:hidden; }
 
-    .contact-info {
-        width: 100% !important;
-    }
+.org-photo-placeholder { width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:#58705c; font-family:'Sutasoma Display',sans-serif !important; font-size:18px; background:#e8eee9; }
 
-    .contact-item {
-        gap: 10px !important;
-        margin-bottom: 12px !important;
-    }
+.org-modal-info { min-width:0; padding-top:3px; }
 
-    /* PERBAIKAN UKURAN FONT KONTAK */
-    .contact-item strong {
-        font-size: 14px !important;
-    }
+.org-modal-label { display:block; margin-bottom:8px; color:#4c8057; font-family:'Sutasoma Display',sans-serif !important; font-size:12px; letter-spacing:.8px; font-weight:700; }
 
-    .contact-item p {
-        font-size: 13px !important; /* Font diperbesar agar tidak kekecilan */
-        line-height: 1.4 !important;
-    }
+.org-modal-info h3 { margin:0 30px 6px 0; color:#204420; font-family:'Sutasoma Display',sans-serif !important; font-size:25px; line-height:1.25; }
 
-    .contact-map {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: 180px !important;
-        margin: 10px 0 0 0 !important;
-    }
+.org-modal-info h4 { margin:0; color:#555; font-family:'Sutasoma Text',sans-serif !important; font-size:16px; font-weight:600; line-height:1.45; }
 
-    /* 4. Menghilangkan Lebar Kaku pada Glosarium */
-    .glossary {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        max-height: none !important;
-        margin: 0 !important;
-        box-sizing: border-box !important;
-    }
+.org-modal-divider { width:100%; height:1px; margin:18px 0; background:#dce6de; }
 
-    .glossary-header {
-        width: 100% !important;
-        height: auto !important;
-        padding: 14px 16px !important;
-    }
+.org-modal-info p { margin:0; color:#333; font-family:'Sutasoma Text',sans-serif !important; font-size:14px; line-height:1.7; }
 
-    .glossary-header h2 {
-        font-size: 22px !important;
-    }
+.org-modal-close { position:absolute; top:12px; right:14px; z-index:4; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border:0; background:#eef3ef; color:#444; border-radius:50%; font-size:25px; line-height:1; cursor:pointer; }
 
-    .glossary-header p {
-        font-size: 13px !important; /* Font diperbesar */
-    }
+.org-modal-close:hover { background:#dfe9e1; }
 
-    .glossary-scroll {
-        width: 100% !important;
-        height: 200px !important;
-    }
+@keyframes orgPopup {
+    from { opacity:0; transform:translateY(10px) scale(.97); }
+    to { opacity:1; transform:translateY(0) scale(1); }
+}
 
-    .glossary-button {
-        font-size: 13px !important;
-        height: 42px !important;
-    }
+@media screen and (max-width:680px) {
+    .org-modal { padding:12px !important; }
+    .org-modal-box { width:100%; max-width:100%; max-height:92vh; grid-template-columns:1fr; gap:18px; padding:22px; border-radius:18px; }
+    .org-modal-photo { width:145px; height:175px; margin:0 auto; }
+    .org-modal-info h3 { font-size:21px; }
+    .org-modal-info h4 { font-size:14px; }
+    .org-modal-info p { font-size:13px; }
 }
