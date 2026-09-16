@@ -163,25 +163,30 @@ ob_start();
             </div>
         </div>
 
+<!-- ========================================
+     STRUKTUR ORGANISASI
+======================================== -->
+
 <div class="organization-chart">
     <div class="org-canvas">
 
         <svg class="org-lines" viewBox="0 0 1000 760" preserveAspectRatio="none">
             <!-- GARIS DEPUTI KE DIREKTUR -->
-            <path d="M500 110 V135" class="line-solid"/>
-            <path d="M175 135 H825" class="line-solid"/>
-            <path d="M175 135 V160 M500 135 V160 M825 135 V160" class="line-solid"/>
+            <path d="M500 95 V145" class="line-solid"/>
+            <path d="M175 140 H825" class="line-solid"/>
+            <path d="M175 140 V165 M500 140 V165 M825 140 V165" class="line-solid"/>
+
             <!-- GARIS ANTAR DIREKTUR -->
             <path d="M300 195 H390 M610 195 H700" class="line-dotted"/>
 
             <!-- DIREKTUR KE KOORDINATOR -->
-            <path d="M175 235 V330 M500 235 V330 M825 235 V330" class="line-solid"/>
+            <path d="M175 225 V340 M500 225 V340 M825 225 V340" class="line-solid"/>
 
             <!-- ANTAR KOORDINATOR -->
             <path d="M300 370 H390 M610 370 H700" class="line-dotted"/>
 
             <!-- KOORDINATOR KE ANGGOTA -->
-            <path d="M175 410 V470 M500 410 V470 M825 410 V470" class="line-solid"/>
+            <path d="M175 400 V480 M500 400 V480 M825 400 V480" class="line-solid"/>
 
             <!-- ANTAR ANGGOTA -->
             <path d="M300 510 H390 M610 510 H700" class="line-dotted"/>
@@ -191,15 +196,82 @@ ob_start();
         </svg>
 
         <!-- DEPUTI -->
-        <div class="org-box org-deputi brown">Deputi bidang Transformasi<br>Hijau dan Digital</div>
+        <div class="org-box org-deputi brown director-popup-btn" data-director="deputi">
+            Deputi Bidang Transformasi<br>Hijau dan Digital
+        </div>
 
         <!-- GROUP DIREKTUR -->
         <div class="org-group org-director-group"></div>
 
-        <div class="org-box org-director-1 blue">Direktur Pengembangan<br>Ekosistem Digital</div>
-        <div class="org-box org-director-2 dark-green">Direktur Transformasi Hijau</div>
-        <div class="org-box org-director-3 red-dark">Direktur Data dan<br>Kecerdasan buatan</div>
+        <!-- DIREKTUR PENGEMBANGAN EKOSISTEM DIGITAL -->
+        <div class="org-box org-director-1 blue director-popup-btn" data-director="digital">
+            Direktur Pengembangan<br>Ekosistem Digital
+        </div>
 
+        <!-- DIREKTUR TRANSFORMASI HIJAU -->
+        <div class="org-box org-director-2 dark-green director-popup-btn" data-director="hijau">
+            Direktur Transformasi Hijau
+        </div>
+
+        <!-- DIREKTUR DATA DAN KECERDASAN BUATAN -->
+        <div class="org-box org-director-3 red-dark director-popup-btn" data-director="data">
+            Direktur Data dan<br>Kecerdasan Buatan
+        </div>
+
+        <!-- GROUP TIM -->
+        <div class="org-group org-team-group"></div>
+
+        <div class="org-box org-coord-1 cyan">Koordinator Tim</div>
+        <div class="org-box org-coord-2 green">Koordinator Tim</div>
+        <div class="org-box org-coord-3 red">Koordinator Tim</div>
+
+        <div class="org-box org-member-1 cyan">Anggota Tim</div>
+        <div class="org-box org-member-2 green">Anggota Tim</div>
+        <div class="org-box org-member-3 red-light">Anggota Tim</div>
+
+        <!-- TATA KELOLA -->
+        <div class="org-box org-support gold">
+            Tata Kelola<br>Pendukung<br>(Umum) &amp; Kerja<br>Sama
+        </div>
+
+    </div>
+</div>
+
+
+<!-- ========================================
+     POPUP DIREKTUR
+     LETAKNYA DI LUAR organization-chart
+======================================== -->
+
+        <div class="director-modal" id="directorModal">
+            <div class="director-modal-overlay" id="directorModalOverlay"></div>
+
+            <div class="director-modal-box">
+
+                <button type="button" class="director-modal-close" id="directorModalClose">×</button>
+
+                <div class="director-modal-header">
+                    <div class="director-heading">
+                        <span class="director-label">PROFIL DIREKTUR</span>
+                        <h3 id="directorName"></h3>
+                        <h4 id="directorPosition"></h4>
+                    </div>
+                </div>
+
+                <div class="director-divider"></div>
+
+                <div class="director-section">
+                    <span class="director-label">TENTANG</span>
+                    <p id="directorAbout"></p>
+                </div>
+
+                <div class="director-section">
+                    <span class="director-label">TUGAS &amp; FUNGSI</span>
+                    <ul id="directorTasks"></ul>
+                </div>
+
+            </div>
+        </div>
         <!-- GROUP TIM -->
         <div class="org-group org-team-group"></div>
 
