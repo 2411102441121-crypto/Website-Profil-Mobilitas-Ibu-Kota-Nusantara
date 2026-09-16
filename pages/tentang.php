@@ -272,20 +272,6 @@ ob_start();
 
             </div>
         </div>
-        <!-- GROUP TIM -->
-        <div class="org-group org-team-group"></div>
-
-        <div class="org-box org-coord-1 cyan">Koordinator Tim</div>
-        <div class="org-box org-coord-2 green">Koordinator Tim</div>
-        <div class="org-box org-coord-3 red">Koordinator Tim</div>
-
-        <div class="org-box org-member-1 cyan">Anggota Tim</div>
-        <div class="org-box org-member-2 green">Anggota Tim</div>
-        <div class="org-box org-member-3 red-light">Anggota Tim</div>
-
-        <!-- TATA KELOLA -->
-        <div class="org-box org-support gold">Tata Kelola<br>Pendukung<br>(Umum) &amp; Kerja<br>Sama</div>
-
     </div>
 </div>
 
