@@ -121,12 +121,6 @@ $current_uri = $_SERVER['REQUEST_URI'];
 
         <ul class="ikn-sidebar-menu">
             <li>
-                <a href="<?= $base_url ?>dashboard.php" 
-                   class="ikn-sidebar-link <?= (strpos($current_uri, 'dashboard.php') !== false) ? 'active' : '' ?>">
-                    <span>Dashboard</span>
-                </a>
-            </li>
-            <li>
                 <a href="<?= $base_url ?>beranda/index.php" 
                    class="ikn-sidebar-link <?= (strpos($current_uri, '/beranda/') !== false) ? 'active' : '' ?>">
                     <span>Beranda</span>

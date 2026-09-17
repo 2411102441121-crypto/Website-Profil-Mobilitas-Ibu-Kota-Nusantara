@@ -1,7 +1,7 @@
 <?php
 // pages/antarkota.php
 $title = "Layanan Antarkota - Profil Mobilitas IKN";
-
+require_once '../admin/koneksi.php';
 // 1. KONEKSI KE DATABASE (DENGAN PENANGANAN ERROR)
 require_once '../config/database.php';
 
