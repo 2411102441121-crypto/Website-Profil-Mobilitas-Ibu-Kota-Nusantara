@@ -308,7 +308,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
         }
 
         /* Tombol Admin */
-        .btn-admin {
+        /* .btn-admin {
             background-color: var(--ikn-green-dark);
             color: #fff !important;
             font-size: 0.85rem;
@@ -320,10 +320,169 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
             align-items: center;
             gap: 6px;
             transition: background-color 0.2s ease;
-        }
+        } */
         
-        .btn-admin:hover {
+        /* .btn-admin:hover {
             background-color: #317531;
+        } */
+
+        /* Styling Tombol Aksi Kanan Navbar (Pencarian & Bahasa) */
+        .navbar-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Tombol Ikon Pencarian */
+        .btn-search-trigger {
+            background: transparent;
+            border: none;
+            color: #204420;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 50%;
+            transition: background 0.2s, color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-search-trigger:hover {
+            background: #eaf3ed;
+            color: #10321a;
+        }
+
+        /* Mencegah halaman bergeser ke kiri saat Modal Pencarian terbuka */
+        body.modal-open {
+            overflow: auto !important;
+            padding-right: 0 !important;
+        }
+
+        .modal-backdrop {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Garis Pemisah Vertikal (|) */
+        .nav-divider {
+            width: 1px;
+            height: 18px;
+            background-color: #d0d7d1;
+            display: inline-block;
+        }
+
+        /* Pengalih Bahasa (ID / EN) */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #204420;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 4px 6px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .lang-switcher:hover {
+            background: #eaf3ed;
+            color: #204420;
+        }
+
+        .lang-switcher .lang-active {
+            color: #204420;
+        }
+
+        .lang-switcher .lang-inactive {
+            color: #88998c;
+        }
+
+        /* Custom Dropdown Switcher Bahasa */
+        .btn-lang-dropdown {
+            background: transparent;
+            border: none;
+            color: #204420;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .btn-lang-dropdown:hover, 
+        .btn-lang-dropdown:focus {
+            background: #eaf3ed;
+            color: #204420;
+        }
+
+        .btn-lang-dropdown::after {
+            margin-left: 4px;
+            font-size: 0.75rem;
+        }
+
+        /* Container Menu Dropdown */
+        .lang-dropdown .dropdown-menu {
+            background-color: #ffffff;
+            border: 1px solid #ebedf0 !important;
+            border-radius: 12px;
+            min-width: 180px;
+        }
+
+        /* Item Pilihan Bahasa */
+        .lang-dropdown .dropdown-item {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #333333;
+            padding: 8px 12px;
+            transition: all 0.2s ease;
+        }
+
+        .lang-dropdown .dropdown-item:hover {
+            background-color: #f4f7f5;
+            color: #204420;
+        }
+
+        /* State Aktif (Terpilih) */
+        .lang-dropdown .dropdown-item.active {
+            background-color: #E8F2EE !important; /* Warna hijau pastel IKN */
+            color: #204420 !important;
+            font-weight: 700;
+        }
+
+        .lang-dropdown .check-icon {
+            font-size: 0.8rem;
+            color: #204420;
+        }
+
+       /* Paksa Sembunyikan Semua Elemen Topbar Google Translate */
+        .goog-te-banner-frame, 
+        .goog-te-banner,
+        .goog-te-balloon-frame,
+        #goog-gt-tt,
+        .goog-te-spinner-pos {
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        /* Kunci Posisi HTML dan Body Agar Tidak Boleh Terdorong */
+        html {
+            margin-top: 0px !important;
+            padding-top: 0px !important;
+        }
+
+        body {
+            top: 0px !important;
+            position: static !important;
+            margin-top: 0px !important;
+        }
+
+        /* Sembunyikan Garis/Highlight Teks Bawaan Google */
+        .goog-text-highlight {
+            background-color: transparent !important;
+            box-shadow: none !important;
         }
 
         /* Hero Section */
@@ -435,17 +594,66 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
 
             <!-- 3. JUDUL & LOGIN -->
             <div class="d-flex align-items-center gap-3 ms-auto mt-2 mt-lg-0">
-                <span class="brand-title fs-4 fw-bold mb-0">Profil Mobilitas IKN</span>
-                <a href="<?= $base_url; ?>admin/login.php" class="btn-admin">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
-                        <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
-                    </svg> Login
-                </a>
+                <!-- Judul Brand -->
+                <span class="brand-title fs-5 fw-bold mb-0 me-2">Profil Mobilitas IKN</span>
+                
+                <!-- Tombol Pencarian & ID/EN -->
+                <div class="navbar-actions">
+                    <!-- Tombol Pencarian -->
+                    <button type="button" class="btn-search-trigger" data-bs-toggle="modal" data-bs-target="#searchModal" title="Cari">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <span class="nav-divider"></span>
+
+                    <!-- Tombol Switcher Bahasa Otomatis -->
+                    <div class="dropdown lang-dropdown">
+                        <button class="btn btn-lang-dropdown dropdown-toggle d-flex align-items-center gap-1" type="button" id="dropdownLang" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe me-1"></i>
+                            <span id="currentLangText">ID</span>
+                        </button>
+                        
+                        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 p-2" aria-labelledby="dropdownLang">
+                            <li>
+                                <button class="dropdown-item d-flex align-items-center gap-2 rounded active" id="btn-lang-id" onclick="selectLanguage('id', 'Bahasa Indonesia')">
+                                    <i class="fas fa-check check-icon"></i>
+                                    <span>Bahasa Indonesia</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item d-flex align-items-center gap-2 rounded" id="btn-lang-en" onclick="selectLanguage('en', 'English (English)')">
+                                    <i class="fas fa-check check-icon opacity-0"></i>
+                                    <span>English (English)</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Element Tersembunyi Mesin Google Translate -->
+                    <div id="google_translate_element" style="display:none;"></div>
+                </div>
             </div>
         </div>
     </div>
 </nav>
+
+<!-- Pop-Up Form Pencarian -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+            <div class="modal-body p-4">
+                <form action="<?= $base_url; ?>pages/search.php" method="GET">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text bg-white border-end-0 text-success" style="border-radius: 12px 0 0 12px;">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input type="text" name="q" class="form-control border-start-0 shadow-none" placeholder="Telusuri Profil Mobilitas Ibu Kota Nusantara" autofocus style="border-radius: 0 12px 12px 0; font-size: 1rem;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- KONTEN UTAMA DARI PANGGILAN OB_START -->
     <main style="padding-top: 70px;">
@@ -560,5 +768,109 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
             }
         });
     </script>
+
+    <!-- Container Tersembunyi Google Translate -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'id',
+            includedLanguages: 'en,id',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+
+    // 1. FUNGSI UNTUK MEMBACA COOKIE BROWSER
+    function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length === 2) return parts.pop().split(";").shift();
+        return "";
+    }
+
+    // 2. FUNGSI UTAMA PENGUBAH TAMPILAN UI DROPDOWN
+    function updateDropdownUI(langCode) {
+        // Change text ID / EN on Header Button
+        var langTextEl = document.getElementById('currentLangText');
+        if (langTextEl) {
+            langTextEl.innerText = langCode.toUpperCase();
+        }
+
+        // Reset state active pada dropdown
+        document.querySelectorAll('.lang-dropdown .dropdown-item').forEach(function(item) {
+            item.classList.remove('active');
+            var check = item.querySelector('.check-icon');
+            if (check) check.classList.add('opacity-0');
+        });
+
+        // Set state active untuk bahasa terpilih
+        var activeBtn = document.getElementById('btn-lang-' + langCode);
+        if (activeBtn) {
+            activeBtn.classList.add('active');
+            var activeCheck = activeBtn.querySelector('.check-icon');
+            if (activeCheck) activeCheck.classList.remove('opacity-0');
+        }
+    }
+
+    // 3. FUNGSI PENGUBAH BAHASA VIA DROPDOWN (PILIHAN USER)
+    function selectLanguage(langCode, labelText) {
+        // Set Cookie Google Translate
+        document.cookie = "googtrans=/id/" + langCode + "; path=/;";
+        document.cookie = "googtrans=/id/" + langCode + "; domain=" + window.location.hostname + "; path=/;";
+
+        // Trigger Google Translate
+        var selectEl = document.querySelector('.goog-te-combo');
+        if (selectEl) {
+            selectEl.value = langCode;
+            selectEl.dispatchEvent(new Event('change'));
+        } else {
+            window.location.reload();
+        }
+
+        updateDropdownUI(langCode);
+    }
+
+    // 4. OTOMATIS SINKRONKAN UI SAAT HALAMAN SELESAI DIMUAT
+    document.addEventListener("DOMContentLoaded", function() {
+        var cookieVal = getCookie("googtrans");
+        var activeLang = "id"; // Default bahasa awal
+
+        // Jika cookie mendeteksi mode bahasa inggris (/en)
+        if (cookieVal && cookieVal.indexOf("/en") !== -1) {
+            activeLang = "en";
+        }
+
+        updateDropdownUI(activeLang);
+    });
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+    /* Sembunyikan Frame Banner Topbar Bawaan Google Translate */
+    .goog-te-banner-frame,
+    .goog-te-banner,
+    .goog-te-balloon-frame,
+    #goog-gt-tt,
+    .goog-te-spinner-pos,
+    .skiptranslate {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+    /* Kembalikan Posisi Body ke Paling Atas Tanpa Banner */
+    body {
+        top: 0px !important;
+        position: static !important;
+    }
+
+    /* Hilangkan Highlight Garis/Warna Teks dari Google */
+    .goog-text-highlight {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+</style>
 </body>
 </html>

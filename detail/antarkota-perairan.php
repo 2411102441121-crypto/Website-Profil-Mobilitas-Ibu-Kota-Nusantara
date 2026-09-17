@@ -10,7 +10,7 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
 // 1. DATABASE KONTEN DINAMIS DUA BAHASA/PELABUHAN
 $perairan_data = [
     'pelabuhan-kariangau' => [
-        'nama' => 'Pelabuhan Kariangau',
+        'nama' => 'Pelabuhan Penyeberangan Kariangau',
         'lokasi_singkat' => 'Kec. Balikpapan Barat, Kota Balikpapan, Kalimantan Timur',
         'hero_banner' => 'assets/images/antarkota/pelabuhan_kariangau.webp',
         'main_img' => 'assets/images/antarkota/pelabuhan_kariangau2.jpeg',
@@ -77,7 +77,7 @@ $perairan_data = [
     ],
 
     'pelabuhan-semayang' => [
-        'nama' => 'Pelabuhan Semayang',
+        'nama' => 'Pelabuhan Semayang Balikpapan',
         'lokasi_singkat' => 'Balikpapan, Kalimantan Timur',
         'hero_banner' => 'assets/images/antarkota/pelabuhan_semayang2.webp',
         'main_img' => 'assets/images/antarkota/pelabuhan_semayang3.jpg',
@@ -148,7 +148,7 @@ $perairan_data = [
     ],
 
     'pelabuhan-penajam' => [
-        'nama' => 'Pelabuhan Penajam',
+        'nama' => 'Pelabuhan Penyeberangan Penajam',
         'lokasi_singkat' => 'Kab. Penajam Paser Utara, Kalimantan Timur',
         'hero_banner' => 'assets/images/antarkota/pelabuhan_penajam.webp',
         'main_img' => 'assets/images/antarkota/pelabuhan_penajam2.webp',

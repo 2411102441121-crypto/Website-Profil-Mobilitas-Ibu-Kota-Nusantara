@@ -1111,7 +1111,7 @@ html {
                 </div>
                 <div class="stat-number white-text">17</div>
                 <div class="stat-title white-text">Armada Eksisting</div>
-                <p class="stat-desc light-text">Terdiri dari 3 bus listrik (EV) + 14 bus diesel operasional.</p>
+                <p class="stat-desc light-text">Terdiri dari 3 bus listrik (EV) dan 14 bus diesel operasional.</p>
             </div>
         </div>
     </section>
@@ -1196,7 +1196,7 @@ html {
                     Rp0 <span>/penumpang</span>
                 </div>
                 <p>
-                    Layanan Bus Perkotaan Nusantara pada periode yang tercantum dalam data layanan tidak dikenakan tarif kepada penumpang. Layanan dapat digunakan oleh masyarakat dan ASN sesuai ketentuan operasional yang berlaku.
+                    Layanan Bus Perkotaan Nusantara pada periode yang tercantum dalam data layanan tidak dikenakan tarif kepada penumpang. Layanan dapat digunakan oleh masyarakat pemukim dan pengunjung sesuai ketentuan operasional yang berlaku.
                 </p>
                 <div class="tariff-footer-note">
                     <i class="fas fa-info-circle"></i> Tarif dapat berubah mengikuti kebijakan operasional yang berlaku.
@@ -1210,7 +1210,7 @@ html {
                     52.044 <span>Penumpang</span>
                 </div>
                 <p>
-                    Data menunjukkan jumlah pengguna layanan Bus Perkotaan berdasarkan periode pencatatan Juli 2026, mencerminkan kepercayaan tinggi para pekerja, ASN, dan masyarakat lokal terhadap keandalan sistem transit IKN.
+                    Data menunjukkan jumlah pengguna layanan Bus Perkotaan berdasarkan periode pencatatan Juli 2026, mencerminkan kepercayaan tinggi para pekerja, ASN, masyarakat lokal, dan pengunjung terhadap keandalan sistem transportasi IKN.
                 </p>
                 <div class="period-box">
                     <span>Periode Pencatatan</span>
@@ -1241,7 +1241,7 @@ html {
                 <span class="notes-tag">KETETAPAN OPERASIONAL</span>
                 <h3>Catatan Layanan</h3>
                 <p>
-                    Jadwal, rute, dan operasional Bus Perkotaan dapat menyesuaikan kondisi dan kebutuhan layanan di lapangan serta perkembangan infrastruktur kawasan KIPP. Informasi layanan khusus Ramadan berlaku pada periode Ramadan sesuai ketentuan operasional yang ditetapkan oleh Otorita Ibu Kota Nusantara dan Kedeputian Sarana &amp; Prasarana.
+                    Jadwal, rute, dan operasional Bus Perkotaan dapat menyesuaikan kondisi dan kebutuhan layanan di lapangan serta perkembangan infrastruktur kawasan KIPP. Informasi layanan khusus Hari Besar, Periode Ramadhan, Hari Besar Keagamaan, dan Hari Libur Nasional ditetapkan oleh Kedeputian Bidang Sarana &amp; Prasarana.
                 </p>
                 <div class="notes-meta">
                     <span>Sumber Data: Kedeputian Bidang Sarana &amp; Prasarana OIKN</span>

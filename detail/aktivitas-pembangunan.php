@@ -3,7 +3,7 @@
 require_once __DIR__ . '/../admin/koneksi.php';
 
 // Tangkap parameter 'cat' dari URL (Default: Olahraga jika tidak ada parameter)
-$cat = isset($_GET['cat']) ? $_GET['cat'] : 'Olahraga';
+$cat = isset($_GET['cat']) ? $_GET['cat'] : 'Pembangunan';
 $cat_clean = mysqli_real_escape_string($koneksi, $cat);
 
 $title = "Aktivitas " . htmlspecialchars($cat) . " - Profil Mobilitas IKN";

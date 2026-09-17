@@ -2,6 +2,13 @@
    MOBILITAS AKTIF
 ========================================= */
 
+body, 
+main, 
+.main-content, 
+.content-wrapper {
+    background-color: #f8faf9 !important; /* Sesuaikan warna abu-abu lembut pilihanmu */
+}
+
 :root {
     --intra-green: #1f4d27;
     --intra-green-light: #2e6e37;

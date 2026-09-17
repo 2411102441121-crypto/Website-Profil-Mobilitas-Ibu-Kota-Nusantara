@@ -942,7 +942,7 @@ ob_start();
                             <div>
                                 <img src="<?= $base_url; ?>assets/images/antarkota/VVIP_IKN.jpeg" alt="Bandara VVIP" onerror="this.src='https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80';">
                                 <h5>Bandar Udara Internasional Nusantara</h5>
-                                <p>Akses penerbangan internasional dan kenegaraaan untuk Nusantara di masa depan.</p>
+                                <p>Akses penerbangan internasional dan kenegaraan untuk Nusantara di masa depan.</p>
                             </div>
                             <a href="<?= $base_url; ?>detail/antarkota-bandara.php?id=bandara-vvip" class="btn-card-detail">Lihat Detail</a>
                         </div>
@@ -952,7 +952,7 @@ ob_start();
                             <div>
                                 <img src="<?= $base_url; ?>assets/images/antarkota/sams_sepinggan.jpeg" alt="Sinar Jaya" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80';">
                                 <h5>Bandar Udara Internasional Sultan Aji Muhammad Sulaiman Sepinggan</h5>
-                                <p>Pintu masuk utama dari beragam kota-kota di Indonesia dan Internasional menuju Kalimantan Timur.</p>
+                                <p>Pintu masuk utama dari beragam kota-kota di Indonesia dan Internasional menuju Kalimantan Timur melalui kota Balikpapan.</p>
                             </div>
                             <a href="<?= $base_url; ?>detail/antarkota-bandara.php?id=sams-sepinggan" class="btn-card-detail">Lihat Detail</a>
                         </div>
@@ -962,7 +962,7 @@ ob_start();
                             <div>
                                 <img src="<?= $base_url; ?>assets/images/antarkota/apt_pranoto.jpeg" alt="Sinar Jaya" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80';">
                                 <h5>Bandar Udara Internasional Aji Pangeran Tumenggung Pranoto</h5>
-                                <p>Pintu masuk sekunder menuju Ibu Kota Nusantara melalui Ibu Kota Provinsi Kalimantan Timur.</p>
+                                <p>Pintu masuk sekunder menuju Ibu Kota Nusantara melalui kota Samarinda.</p>
                             </div>
                             <a href="<?= $base_url; ?>detail/antarkota-bandara.php?id=apt-pranoto" class="btn-card-detail">Lihat Detail</a>
                         </div>
