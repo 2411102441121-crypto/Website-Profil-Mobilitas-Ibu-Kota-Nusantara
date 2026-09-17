@@ -32,7 +32,7 @@ ob_start();
 
             <div class="intrakota-actions">
                 <a href="#Sistem-Mobilitas-Perkotaan" class="intrakota-btn intrakota-btn-primary">
-                    Sistem Mobilitas &amp; Perkotaan
+                    Sistem Mobilitas Perkotaan
                     <i class="fas fa-chevron-right" aria-hidden="true"></i>
                 </a>
 

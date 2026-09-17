@@ -243,12 +243,6 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
 
             </div>
 
-
-            <div class="eco-note">
-                Sejalan dengan Prinsip Pengembangan Ke-4 Nusantara:
-                <strong>Emisi Karbon Rendah</strong>
-            </div>
-
         </div>
 
     </section>

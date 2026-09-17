@@ -1,8 +1,7 @@
 /* ======================================================
 MIKROMOBILITAS IKN
 File: assets/css/mikromobilitas.css
-(Ukuran font dibesarkan & disamakan dengan skala
-tipografi antarkota.php)
+Layout: SEMUA CARD FOTO & TEKS BERDAMPINGAN (KANAN-KIRI)
 ====================================================== */
 
 
@@ -94,7 +93,6 @@ HEADING
     max-width: 780px;
 }
 
-/* Judul utama halaman - dibesarkan melebihi hero antarkota (55px) */
 .micro-heading h1 {
     margin: 0 0 12px;
 
@@ -135,6 +133,7 @@ HEADING
 
     white-space: nowrap;
 }
+
 
 /* ======================================================
 CARD UMUM
@@ -287,7 +286,7 @@ DESKRIPSI
 
     color: #657286;
 
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.65;
 }
 
@@ -352,7 +351,7 @@ BAGIAN 1
 
     color: #718093;
 
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.5;
 }
 
@@ -455,7 +454,7 @@ BAGIAN DOCKING
 
 .dock-feature p {
     margin: 0;
-    font-size: 16px;
+    font-size: 12px;
     color: #718093;
     line-height: 1.5;
 }
@@ -534,7 +533,7 @@ SCOOTER
 
     color: #687688;
 
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.5;
 }
 
@@ -679,7 +678,7 @@ GOWES
 
     color: #7a8795;
 
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.5;
 }
 
@@ -857,7 +856,7 @@ ARMADA
 
     color: #7d8998;
 
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.5;
 }
 
@@ -880,6 +879,7 @@ body > main {
 footer {
     margin-top: auto;
 }
+
 
 /* =========================================================
 MIKROMOBILITAS - DETAIL
@@ -988,7 +988,7 @@ STEPS CARD
 
 .step-item p {
     color: #748095;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.55;
     margin: 0;
 }
@@ -1053,7 +1053,7 @@ TARIFF CARD
 
 .tariff-description {
     color: #5e6d67;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.65;
     margin: 0 0 15px;
 }
@@ -1191,7 +1191,7 @@ FACILITY GRID
 
 .facility-card p {
     color: #748095;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.55;
     margin: 0;
 }
@@ -1212,7 +1212,7 @@ FACILITY GRID
 
 
 /* =========================================================
-RESPONSIVE
+RESPONSIVE (DETAIL)
 ========================================================= */
 
 @media (max-width: 1000px) {
@@ -1283,86 +1283,15 @@ RESPONSIVE
     }
 
     .step-item p {
-        font-size: 13px;
+        font-size: 12px;
     }
 
 }
 
 
 /* ======================================================
-RESPONSIVE
+RESPONSIVE UMUM
 ====================================================== */
-
-@media (max-width: 1000px) {
-
-    .bike-main-card,
-    .scooter-card {
-        grid-template-columns: 1fr;
-    }
-
-    /* ---- DOCKING CARD: foto tampil DI ATAS teks ---- */
-    .docking-card {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        min-height: 0;
-        overflow: visible;
-    }
-
-    .docking-image {
-        order: 1;
-        width: 100%;
-    }
-
-    .docking-content {
-        order: 2;
-    }
-
-    .bike-main-image,
-    .docking-image,
-    .scooter-image {
-        height: 400px;
-        min-height: 400px;
-    }
-
-    .bike-main-content,
-    .docking-content,
-    .scooter-content {
-        padding: 30px;
-    }
-
-    /* ---- GOWES CARD: foto tampil PALING ATAS, di atas header ---- */
-    .gowes-card {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .gowes-header {
-        order: 2;
-    }
-
-    /* "Lepas" kotak gowes-body agar isinya (foto & jadwal)
-    ikut jadi item flex langsung dari gowes-card */
-    .gowes-body {
-        display: contents;
-    }
-
-    .gowes-image {
-        order: 1;
-        width: 100%;
-        min-height: 400px;
-    }
-
-    .gowes-schedule {
-        order: 3;
-        padding-left: 0;
-    }
-
-    .fleet-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 
 @media (max-width: 700px) {
 
@@ -1390,57 +1319,8 @@ RESPONSIVE
         font-size: 16px;
     }
 
-    .bike-main-content h2,
-    .docking-content h2,
-    .scooter-content h2,
-    .gowes-header h2,
-    .fleet-heading h2,
-    .section-heading h2,
-    .facilities-heading h2 {
-        font-size: 26px;
-    }
-
-    .bike-main-image,
-    .docking-image,
-    .scooter-image,
-    .gowes-image {
-        height: 300px;
-        min-height: 300px;
-    }
-
-    .bike-main-content,
-    .docking-content,
-    .scooter-content {
-        padding: 24px 20px;
-    }
-
     .dock-features {
         grid-template-columns: 1fr;
-    }
-
-    .gowes-card {
-        padding: 15px;
-    }
-
-    .gowes-header {
-        display: block;
-        margin-top: 15px;
-        padding-bottom: 0;
-        border-bottom: none;
-    }
-
-    .community-button {
-        margin-top: 15px;
-    }
-
-    .gowes-image {
-        margin-top: 0;
-    }
-
-    .gowes-schedule {
-        margin-top: 15px;
-        padding-top: 15px;
-        border-top: 1px solid #e4eae6;
     }
 
     .bike-info,
@@ -1463,6 +1343,14 @@ RESPONSIVE
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 1000px) {
+
+    .fleet-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 
 /* =========================================================
 POLISHED DESIGN - TANPA ICON
@@ -1580,12 +1468,6 @@ body {
     color: var(--intra-green-light);
 }
 
-.bike-main-content,
-.docking-content,
-.scooter-content {
-    padding: 44px 40px;
-}
-
 .bike-main-content h2,
 .docking-content h2,
 .scooter-content h2 {
@@ -1661,14 +1543,6 @@ body {
 .info-box h3 {
     font-size: 17px;
     color: var(--intra-green);
-}
-
-.gowes-card {
-    padding: 30px;
-}
-
-.gowes-header {
-    padding-bottom: 24px;
 }
 
 .gowes-header h2,
@@ -1749,7 +1623,6 @@ body {
     background: var(--intra-green);
 }
 
-/* Mobile */
 @media (max-width: 700px) {
     .micro-page {
         width: min(100% - 24px, 620px);
@@ -1779,28 +1652,8 @@ body {
         margin-top: 14px;
     }
 
-    .bike-main-content,
-    .docking-content,
-    .scooter-content {
-        padding: 26px 20px;
-    }
-
-    .bike-main-content h2,
-    .docking-content h2,
-    .scooter-content h2,
-    .gowes-header h2,
-    .fleet-heading h2,
-    .section-heading h2,
-    .facilities-heading h2 {
-        font-size: 27px;
-    }
-
     .dock-feature {
         padding: 15px;
-    }
-
-    .gowes-card {
-        padding: 16px;
     }
 
     .steps-grid {
@@ -1825,197 +1678,501 @@ body {
     .image-caption {
         font-size: 11px;
     }
-
-    .bike-main-image,
-    .docking-image,
-    .scooter-image,
-    .gowes-image {
-        height: 260px;
-        min-height: 260px;
-    }
 }
 
 
 /* =========================================================
-FOTO LEBIH PROPORSIONAL
+   LAYOUT KARTU
+   ---------------------------------------------------------
+   Card 1 + Card 2 : BERSAMPINGAN (2 kolom dalam satu baris)
+                     -> di dalamnya foto di atas, teks di bawah
+   Card 3 (scooter): full width, FOTO kiri - TEKS kanan
+   Card 4 (gowes)  : full width, FOTO kiri - TEKS kanan
 ========================================================= */
 
-/* Desktop: foto jangan terlalu tinggi */
+
+/* ---------------------------------------------------------
+   BARIS KARTU 1 & 2
+--------------------------------------------------------- */
+
+.micro-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+
+    margin-bottom: 30px;
+}
+
+.micro-duo > .micro-card {
+    margin-bottom: 0;
+    height: 100%;
+}
+
+/* Isi kartu 1 & 2 menumpuk: foto di atas, teks di bawah */
 .bike-main-card,
-.docking-card,
-.scooter-card {
+.docking-card {
+    display: flex;
+    flex-direction: column;
+
     min-height: 0;
 }
 
 .bike-main-image,
-.scooter-image {
-    height: 360px;
-    min-height: 360px;
+.docking-image {
+    order: 1;
+
+    position: relative;
+    width: 100%;
+    height: 300px;
+    min-height: 300px;
+
+    overflow: hidden;
 }
 
-.docking-image {
-    height: 360px;
-    min-height: 360px;
+.bike-main-content,
+.docking-content {
+    order: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    min-width: 0;
+    padding: 30px 28px 34px;
+}
+
+.bike-main-image img,
+.docking-image img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Judul disesuaikan karena kartu hanya selebar setengah halaman */
+.bike-main-content h2,
+.docking-content h2 {
+    font-size: 30px;
+    letter-spacing: -.5px;
+}
+
+.bike-main-content .description,
+.docking-content .description {
+    font-size: 14px;
+}
+
+/* Dua kolom fitur terlalu sempit di kartu setengah lebar */
+.dock-features {
+    grid-template-columns: 1fr;
+}
+
+
+/* ---------------------------------------------------------
+   CARD 3 (SCOOTER): FOTO KIRI - TEKS KANAN
+--------------------------------------------------------- */
+
+.scooter-card {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: stretch;
+
+    min-height: 0;
+}
+
+.scooter-image {
+    order: 1;
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 460px;
+
+    align-self: stretch;
+    overflow: hidden;
+}
+
+.scooter-image img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.scooter-content {
+    order: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+    padding: 40px 38px;
+}
+
+
+/* ---------------------------------------------------------
+   CARD 4 (GOWES): FOTO KIRI - TEKS KANAN
+--------------------------------------------------------- */
+
+.gowes-card {
+    display: block;
+    padding: 30px;
+}
+
+.gowes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+
+    border-bottom: 1px solid #e4eae6;
 }
 
 .gowes-body {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 26px;
+    align-items: stretch;
+
     min-height: 0;
 }
 
 .gowes-image {
-    height: 320px;
-    min-height: 320px;
+    order: 1;
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+
+    margin-top: 0;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    /* latar netral untuk area kosong saat gambar ditampilkan utuh */
+    background: #f4f8f5;
 }
 
-/* Hindari foto mengambil tinggi berlebihan pada card */
-.bike-main-image img,
-.docking-image img,
-.scooter-image img,
+/* Infografis piramida harus tampil UTUH, jangan dipotong */
 .gowes-image img {
-    object-fit: cover;
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    padding: 10px;
 }
 
-/* Desktop sedikit lebih ramping */
-@media (min-width: 1001px) {
-    .bike-main-card {
-        grid-template-columns: 50% 50%;
+/* Caption gowes dipindah ke kiri-bawah agar tidak menutupi isi piramida */
+.gowes-image .image-caption {
+    left: 12px;
+    right: 12px;
+    bottom: 10px;
+
+    max-width: none;
+    text-align: center;
+}
+
+.gowes-schedule {
+    order: 2;
+    padding: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE LAYOUT KARTU
+========================================================= */
+
+/* Kartu 1 & 2 turun jadi satu kolom */
+@media (max-width: 950px) {
+
+    .micro-duo {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    .docking-card {
-        grid-template-columns: 50% 50%;
+    .bike-main-image,
+    .docking-image {
+        height: 280px;
+        min-height: 280px;
     }
+}
+
+
+/* Kartu 3 & 4 ikut menumpuk, foto tetap di atas */
+@media (max-width: 850px) {
 
     .scooter-card {
-        grid-template-columns: 50% 50%;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .scooter-image {
+        order: 1;
+        height: 320px;
+        min-height: 320px;
+    }
+
+    /* Fokus foto digeser ke bawah agar orang-orangnya ikut terlihat */
+    .scooter-image img {
+        object-position: center bottom;
+    }
+
+    .scooter-content {
+        order: 2;
+        padding: 28px 22px;
     }
 
     .gowes-body {
-        grid-template-columns: 50% 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    /* Di layar kecil gambar mengikuti tinggi aslinya supaya tetap utuh */
+    .gowes-image {
+        order: 1;
+        position: static;
+        height: auto;
+        min-height: 0;
+
+        display: block;
+        text-align: center;
+
+        padding: 12px;
+    }
+
+    .gowes-image img {
+        position: static;
+
+        display: block;
+        margin: 0 auto;
+
+        width: auto;
+        max-width: 100%;
+        height: auto;
+
+        padding: 0;
+    }
+
+    .gowes-image .image-caption {
+        position: static;
+        display: block;
+
+        left: auto;
+        right: auto;
+        bottom: auto;
+
+        margin: 10px auto 0;
+        padding: 0;
+
+        background: transparent;
+        backdrop-filter: none;
+
+        color: #7d8998;
+        text-align: center;
+    }
+
+    .gowes-schedule {
+        order: 2;
+        margin-top: 20px;
+    }
+
+    .gowes-card {
+        padding: 18px;
+    }
+
+    .gowes-header {
+        display: block;
+        padding-bottom: 18px;
+        margin-bottom: 18px;
+    }
+
+    .bike-main-content,
+    .docking-content {
+        padding: 26px 22px 30px;
+    }
+
+    .bike-main-content h2,
+    .docking-content h2,
+    .scooter-content h2,
+    .gowes-header h2,
+    .fleet-heading h2,
+    .section-heading h2,
+    .facilities-heading h2 {
+        font-size: 28px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .bike-main-image,
+    .docking-image {
+        height: 215px;
+        min-height: 215px;
+    }
+
+    .scooter-image {
+        height: 260px;
+        min-height: 260px;
     }
 
     .bike-main-content,
     .docking-content,
     .scooter-content {
-        padding: 36px 34px;
+        padding: 22px 18px 26px;
+    }
+
+    .bike-main-content h2,
+    .docking-content h2,
+    .scooter-content h2,
+    .gowes-header h2 {
+        font-size: 25px;
     }
 }
 
-/* Tablet */
-@media (max-width: 1000px) {
-    .bike-main-image,
-    .docking-image,
-    .scooter-image {
-        height: 320px;
-        min-height: 320px;
-    }
 
-    .gowes-image {
-        height: 300px;
-        min-height: 300px;
-    }
+/* =========================================================
+   TIPOGRAFI SUTASOMA
+========================================================= */
+
+body {
+    font-family: 'Sutasoma Text', Arial, Helvetica, sans-serif;
 }
 
-/* HP */
-@media (max-width: 700px) {
-    .bike-main-image,
-    .docking-image,
-    .scooter-image {
-        height: 250px;
-        min-height: 250px;
-    }
-
-    .gowes-image {
-        height: 240px;
-        min-height: 240px;
-    }
+h1, h2, h3, h4,
+.small-label,
+.section-label,
+.image-badge,
+.solar-badge,
+.emission-badge,
+.fleet-emission,
+.community-button,
+.event-title span,
+.step-number,
+.price,
+.tariff-label,
+.standard-badge,
+.facility-title {
+    font-family: 'Sutasoma Display', 'Sutasoma Text', Arial, Helvetica, sans-serif;
 }
 
-/* HP kecil */
-@media (max-width: 480px) {
-    .bike-main-image,
-    .docking-image,
-    .scooter-image,
-    .gowes-image {
-        height: 215px;
-        min-height: 215px;
-    }
+p, li, span, small, strong, a,
+.description,
+.micro-breadcrumb,
+.spec-list,
+.bike-info,
+.dock-bottom,
+.register-row,
+.tariff-row,
+.store-note,
+.image-caption,
+.facility-note {
+    font-family: 'Sutasoma Text', Arial, Helvetica, sans-serif;
 }
 
-/* ======================================================
-   FOTO DI ATAS, TEKS DI BAWAH (SEMUA UKURAN LAYAR)
-====================================================== */
 
-.bike-main-card,
-.docking-card,
-.scooter-card {
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
+/* ---------------------------------------------------------
+   HERO ATAS
+--------------------------------------------------------- */
+
+.micro-heading h1 {
+    font-family: 'Sutasoma Display', Arial, Helvetica, sans-serif;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -1.2px;
 }
 
-.bike-main-image,
-.docking-image,
-.scooter-image {
-    order: 1;
-    width: 100%;
-    height: 360px;
-    min-height: 360px;
+.micro-heading p {
+    font-family: 'Sutasoma Text', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
 }
 
-.bike-main-content,
-.docking-content,
-.scooter-content {
-    order: 2;
-    padding: 36px 34px;
-}
-
-.gowes-card {
-    display: flex;
-    flex-direction: column;
-}
-
-.gowes-header {
-    order: 2;
-}
-
-/* "Lepas" gowes-body agar isinya jadi item flex langsung dari gowes-card */
-.gowes-body {
-    display: contents;
-}
-
-.gowes-image {
-    order: 1;
-    width: 100%;
-    height: 320px;
-    min-height: 320px;
-}
-
-.gowes-schedule {
-    order: 3;
-    padding-left: 0;
-}
-
-/* Responsive: sesuaikan tinggi foto di layar lebih kecil */
-@media (max-width: 700px) {
-    .bike-main-image,
-    .docking-image,
-    .scooter-image {
-        height: 250px;
-        min-height: 250px;
-    }
-
-    .gowes-image {
-        height: 240px;
-        min-height: 240px;
+@media (max-width: 850px) {
+    .micro-heading h1 {
+        font-size: 38px;
+        letter-spacing: -.8px;
     }
 }
 
 @media (max-width: 480px) {
-    .bike-main-image,
-    .docking-image,
-    .scooter-image,
-    .gowes-image {
-        height: 215px;
-        min-height: 215px;
+    .micro-heading h1 {
+        font-size: 31px;
+    }
+}
+
+
+/* =========================================================
+   FEATURE ITEM CARD 1 DISAMAKAN DENGAN DOCK FEATURE CARD 2
+========================================================= */
+
+.feature-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+
+    margin-top: 22px;
+}
+
+.feature-item {
+    display: block;
+
+    margin: 0;
+    padding: 17px;
+
+    border: 1px solid #e0e9e3;
+    border-radius: 14px;
+
+    background: #f8fbf9;
+}
+
+.feature-item:last-child {
+    border-bottom: 1px solid #e0e9e3;
+}
+
+.feature-item strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--intra-green);
+
+    font-size: 17px;
+}
+
+.feature-item p {
+    margin: 0;
+
+    color: #718093;
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+@media (max-width: 700px) {
+    .feature-item {
+        padding: 15px;
     }
 }

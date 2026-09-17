@@ -62,208 +62,217 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
 
 
     <!-- ==================================================
-         BAGIAN 1
-         APA ITU MIKROMOBILITAS
+         BARIS KARTU 1 & 2 (BERSAMPINGAN)
     =================================================== -->
 
-    <section class="micro-card bike-main-card">
+    <div class="micro-duo">
 
-        <!-- FOTO KIRI -->
-        <div class="bike-main-image">
+        <!-- ==============================================
+             BAGIAN 1
+             APA ITU MIKROMOBILITAS
+        =============================================== -->
 
-            <img
-                src="../assets/images/intrakota/jalur-sepeda.jpg"
-                alt="Mikromobilitas IKN"
-            >
+        <section class="micro-card bike-main-card">
 
-            <div class="image-badge">
-                First Mile - Last Mile
-            </div>
+            <!-- FOTO -->
+            <div class="bike-main-image">
 
-            <div class="image-caption">
-                Skuter, Sepeda, dan Moda Mikromobilitas Lain di KIPP
-            </div>
+                <img
+                    src="../assets/images/intrakota/konten.jpg"
+                    alt="Mikromobilitas IKN"
+                >
 
-        </div>
-
-
-        <!-- INFORMASI KANAN -->
-        <div class="bike-main-content">
-
-            <span class="small-label">
-                DEFINISI &amp; CAKUPAN
-            </span>
-
-            <h2>
-                Apa yang Termasuk Mikromobilitas?
-            </h2>
-
-            <p class="description">
-                Micromobility dapat berupa kendaraan bertenaga manusia atau
-                listrik, milik pribadi atau digunakan bersama-sama, secara
-                umum berkecepatan rendah (maksimal 25 km/jam), dan beberapa
-                berkecepatan sedang (maksimal hingga 45 km/jam).
-            </p>
-
-
-            <div class="feature-list">
-
-                <div class="feature-item">
-<div>
-                        <strong>
-                            Termasuk Mikromobilitas
-                        </strong>
-
-                        <p>
-                            Skuter, sepeda, skateboard, dan sepeda kargo —
-                            baik unit pribadi maupun unit berbagi.
-                        </p>
-                    </div>
+                <div class="image-badge">
+                    First Mile - Last Mile
                 </div>
 
-
-                <div class="feature-item">
-<div>
-                        <strong>
-                            Tidak Termasuk Mikromobilitas
-                        </strong>
-
-                        <p>
-                            Kendaraan bermotor konvensional seperti mobil
-                            dan moped, serta kendaraan berkecepatan tinggi
-                            (melebihi 45 km/jam).
-                        </p>
-                    </div>
-                </div>
-
-
-                <div class="feature-item">
-<div>
-                        <strong>
-                            Kendaraan Penggerak Motor Listrik
-                        </strong>
-
-                        <p>
-                            Skuter listrik, sepeda listrik, hoverboard,
-                            sepeda roda satu (unicycle), dan otopet.
-                        </p>
-                    </div>
+                <div class="image-caption">
+                    Skuter, Sepeda, dan Moda Mikromobilitas Lain di KIPP
                 </div>
 
             </div>
 
-        </div>
 
-    </section>
+            <!-- INFORMASI -->
+            <div class="bike-main-content">
 
+                <span class="small-label">
+                    DEFINISI &amp; CAKUPAN
+                </span>
 
+                <h2>
+                    Apa yang Termasuk Mikromobilitas?
+                </h2>
 
-    <!-- ==================================================
-         BAGIAN 2
-         PRINSIP PENGEMBANGAN DESAIN INFRASTRUKTUR SEPEDA
-    =================================================== -->
-
-    <section class="micro-card docking-card">
-
-        <!-- KIRI -->
-        <div class="docking-content">
-
-            <span class="small-label">
-                RANCANGAN
-            </span>
-
-            <h2>
-                Prinsip Pengembangan Desain
-                Infrastruktur Sepeda
-            </h2>
-
-            <p class="description">
-                Peta rancangan lokasi infrastruktur bike hub disiapkan
-                sebagai tempat kumpulan fasilitas bike-sharing, mengikuti
-                empat prinsip pengembangan desain infrastruktur sepeda
-                berikut ini.
-            </p>
+                <p class="description">
+                    Micromobility dapat berupa kendaraan bertenaga manusia atau
+                    listrik, milik pribadi atau digunakan bersama-sama, secara
+                    umum berkecepatan rendah (maksimal 25 km/jam), dan beberapa
+                    berkecepatan sedang (maksimal hingga 45 km/jam).
+                </p>
 
 
-            <div class="dock-features">
+                <div class="feature-list">
 
-                <div class="dock-feature">
-<div>
-                        <strong>Integrasi (Integration)</strong>
+                    <div class="feature-item">
+                        <div>
+                            <strong>
+                                Termasuk Mikromobilitas
+                            </strong>
 
-                        <p>
-                            Terintegrasi dengan moda transportasi lain
-                            di kawasan TOD dan simpul transfer.
-                        </p>
+                            <p>
+                                Skuter, sepeda, skateboard, dan sepeda kargo —
+                                baik unit pribadi maupun unit berbagi.
+                            </p>
+                        </div>
                     </div>
-                </div>
 
 
-                <div class="dock-feature">
-<div>
-                        <strong>Keamanan (Safety)</strong>
+                    <div class="feature-item">
+                        <div>
+                            <strong>
+                                Tidak Termasuk Mikromobilitas
+                            </strong>
 
-                        <p>
-                            Jalur dan fasilitas dirancang untuk menjaga
-                            keselamatan pengguna sepeda dan mikromobilitas.
-                        </p>
+                            <p>
+                                Kendaraan bermotor konvensional seperti mobil
+                                dan moped, serta kendaraan berkecepatan tinggi
+                                (melebihi 45 km/jam).
+                            </p>
+                        </div>
                     </div>
-                </div>
 
 
-                <div class="dock-feature">
-<div>
-                        <strong>Konektivitas (Connectivity)</strong>
+                    <div class="feature-item">
+                        <div>
+                            <strong>
+                                Kendaraan Penggerak Motor Listrik
+                            </strong>
 
-                        <p>
-                            Menghubungkan kawasan hunian dan perkantoran
-                            ke simpul transportasi massal.
-                        </p>
+                            <p>
+                                Skuter listrik, sepeda listrik, hoverboard,
+                                sepeda roda satu (unicycle), dan otopet.
+                            </p>
+                        </div>
                     </div>
-                </div>
 
-
-                <div class="dock-feature">
-<div>
-                        <strong>Penunjuk Arah (Wayfinding)</strong>
-
-                        <p>
-                            Sistem penunjuk arah yang jelas di sepanjang
-                            jaringan bike hub KIPP.
-                        </p>
-                    </div>
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
 
-        <!-- KANAN FOTO -->
-        <div class="docking-image">
+        <!-- ==============================================
+             BAGIAN 2
+             PRINSIP PENGEMBANGAN DESAIN INFRASTRUKTUR SEPEDA
+        =============================================== -->
 
-            <img
-                src="../assets/images/intrakota/gowes-ikn.jpg"
-                alt="Rancangan Bike Hub IKN"
-            >
+        <section class="micro-card docking-card">
 
-            <div class="solar-badge">
-                Peta Rancangan Lokasi Bike Hub
+            <!-- FOTO -->
+            <div class="docking-image">
+
+                <img
+                    src="../assets/images/intrakota/gowes-ikn.jpg"
+                    alt="Rancangan Bike Hub IKN"
+                >
+
+                <div class="solar-badge">
+                    Peta Rancangan Lokasi Bike Hub
+                </div>
+
+                <div class="image-caption">
+                    Kumpulan Fasilitas Bike-Sharing di Kawasan KIPP
+                </div>
+
             </div>
 
-            <div class="image-caption">
-                Kumpulan Fasilitas Bike-Sharing di Kawasan KIPP
+
+            <!-- INFORMASI -->
+            <div class="docking-content">
+
+                <span class="small-label">
+                    RANCANGAN
+                </span>
+
+                <h2>
+                    Prinsip Pengembangan Desain
+                    Infrastruktur Sepeda
+                </h2>
+
+                <p class="description">
+                    Peta rancangan lokasi infrastruktur bike hub disiapkan
+                    sebagai tempat kumpulan fasilitas bike-sharing, mengikuti
+                    empat prinsip pengembangan desain infrastruktur sepeda
+                    berikut ini.
+                </p>
+
+
+                <div class="dock-features">
+
+                    <div class="dock-feature">
+                        <div>
+                            <strong>Integrasi (Integration)</strong>
+
+                            <p>
+                                Terintegrasi dengan moda transportasi lain
+                                di kawasan TOD dan simpul transfer.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="dock-feature">
+                        <div>
+                            <strong>Keamanan (Safety)</strong>
+
+                            <p>
+                                Jalur dan fasilitas dirancang untuk menjaga
+                                keselamatan pengguna sepeda dan mikromobilitas.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="dock-feature">
+                        <div>
+                            <strong>Konektivitas (Connectivity)</strong>
+
+                            <p>
+                                Menghubungkan kawasan hunian dan perkantoran
+                                ke simpul transportasi massal.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="dock-feature">
+                        <div>
+                            <strong>Penunjuk Arah (Wayfinding)</strong>
+
+                            <p>
+                                Sistem penunjuk arah yang jelas di sepanjang
+                                jaringan bike hub KIPP.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
-        </div>
+        </section>
 
-    </section>
+    </div>
+    <!-- /micro-duo -->
 
 
 
     <!-- ==================================================
          BAGIAN 3
          TAHAPAN PENGEMBANGAN SISTEM SEPEDA (2025-2045)
+         FOTO KIRI - TEKS KANAN
     =================================================== -->
 
     <section class="micro-card scooter-card">
@@ -387,6 +396,7 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
     <!-- ==================================================
          BAGIAN 4
          HIERARKI MODE SHARE MOBILITAS AKTIF
+         FOTO KIRI - TEKS KANAN
     =================================================== -->
 
     <section class="micro-card gowes-card">
@@ -420,8 +430,8 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
             <div class="gowes-image">
 
                 <img
-                    src="../assets/images/intrakota/spx.jpg"
-                    alt="Hierarki Mobilitas Aktif IKN"
+                    src="../assets/images/intrakota/piramidamobilitas.jpeg"
+                    alt="Piramida Mobilitas Aktif IKN"
                 >
 
                 <div class="image-caption">
@@ -432,7 +442,7 @@ $parent_page = 'intrakota'; // Penanda bahwa halaman ini bagian dari Layanan Int
             </div>
 
 
-            <!-- JADWAL -->
+            <!-- DAFTAR PRIORITAS -->
             <div class="gowes-schedule">
 
                 <h3>
