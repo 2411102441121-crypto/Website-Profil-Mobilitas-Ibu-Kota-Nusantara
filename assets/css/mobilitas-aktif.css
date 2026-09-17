@@ -55,8 +55,9 @@ body {
 
 .active-header h1 {
     margin: 0 0 12px;
-    font-family: "Sutasoma Display", Georgia, serif;
-    font-size: 42px;
+    font-family: 'Sutasoma Display', Georgia, serif;
+    font-size: 55px;
+    font-weight: 700;
     line-height: 1.15;
     color: #172a1d;
 }
@@ -64,8 +65,9 @@ body {
 .active-header p {
     max-width: 850px;
     margin: 0;
-    font-family: 'Sutasoma Text', Arial, sans-serif;
-    font-size: 16px;
+    font-family: 'Sutasoma Text', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
     line-height: 1.65;
     color: #56605a;
 }
@@ -132,7 +134,7 @@ body {
     max-width: 750px;
     margin: 0;
     font-family: 'Sutasoma Text', Arial, sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.6;
 }
 
@@ -284,8 +286,9 @@ body {
     background: transparent;
     padding: 9px 14px;
     border-radius: 6px;
-    font-family: 'Sutasoma Text', Arial, sans-serif;
-    font-size: 13px;
+    font-family: 'Sutasoma Display', Georgia, serif;
+    font-weight: 600;
+    font-size: 14px;
     color: #69746d;
     cursor: pointer;
 }
@@ -337,7 +340,7 @@ body {
 .corridor-card p {
     margin: 4px 0;
     font-family: 'Sutasoma Text', Arial, sans-serif;
-    font-size: 13.5px;
+    font-size: 12px;
     line-height: 1.55;
     color: #69736c;
 }
@@ -413,9 +416,9 @@ body {
     background: white;
     color: var(--intra-green-light);
     text-decoration: none;
-    font-family: 'Sutasoma Text', Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 700;
+    font-family: 'Sutasoma Display', Georgia, serif;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 
@@ -474,7 +477,7 @@ body {
 .principle-card > p {
     margin: 14px 0;
     font-family: 'Sutasoma Text', Arial, sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.65;
     color: #d0dfd3;
 }
@@ -513,9 +516,9 @@ body {
     background: #ffffff;
     color: var(--intra-green);
     text-decoration: none;
-    font-family: 'Sutasoma Text', Arial, sans-serif;
+    font-family: 'Sutasoma Display', Georgia, serif;
+    font-weight: 600;
     font-size: 14px;
-    font-weight: 700;
 }
 
 
@@ -577,7 +580,7 @@ body {
 .feature-item p {
     margin: 0;
     font-family: 'Sutasoma Text', Arial, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.55;
     color: #707d76;
 }
@@ -635,7 +638,7 @@ body {
 .connectivity-card p {
     margin: 4px 0 0;
     font-family: 'Sutasoma Text', Arial, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.5;
     color: #707d76;
 }
@@ -644,9 +647,9 @@ body {
     margin-left: auto;
     color: var(--intra-green);
     text-decoration: none;
-    font-family: 'Sutasoma Text', Arial, sans-serif;
+    font-family: 'Sutasoma Display', Georgia, serif;
+    font-weight: 600;
     font-size: 14px;
-    font-weight: 700;
     white-space: nowrap;
 }
 
@@ -713,7 +716,7 @@ body {
     margin: 0;
     color: #626d67;
     font-family: 'Sutasoma Text', Arial, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.6;
 }
 
@@ -746,7 +749,8 @@ body {
     }
 
     .active-header h1 {
-        font-size: 30px;
+        font-size: 32px;
+        line-height: 1.2;
     }
 
     .active-header p {
