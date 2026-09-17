@@ -384,48 +384,6 @@ ob_start();
         <?php endif; ?>
 
     </div>
-
-    <!-- LAYANAN EKSPRES -->
-    <div class="service-column">
-
-        <h3>
-            <span class="service-line"></span>
-            KORIDOR PENGHUBUNG
-        </h3>
-
-        <?php if(!empty($grupEkspres)): ?>
-
-            <?php foreach($grupEkspres as $r): ?>
-                <?php 
-                    $kodeTerang = ['2E', '3', '1EM', '2EM']; 
-                    $warnaTeks = in_array(strtoupper(trim($r['kode'])), $kodeTerang) ? '#000000' : '#ffffff';
-                ?>
-
-                <div class="service-item">
-
-                    <span class="service-badge" style="background:<?=e($r['warna'] ?? '#64748B')?>; color: <?= $warnaTeks ?> !important;">
-                        <?=e($r['kode'])?>
-                    </span>
-
-                    <p>
-                        <strong><?=e($r['nama_layanan'])?></strong><br>
-                        <?=e($r['deskripsi'])?>
-                    </p>
-
-                </div>
-
-            <?php endforeach; ?>
-
-        <?php else: ?>
-
-            <div class="service-item">
-                <p>Belum ada layanan ekspres.</p>
-            </div>
-
-        <?php endif; ?>
-
-    </div>
-
     <!-- LAYANAN KOMUTER -->
     <div class="service-column">
 

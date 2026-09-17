@@ -420,6 +420,7 @@ table { width:100%; min-width:850px; border-collapse:separate; border-spacing:0 
 th { padding:0 8px 6px; color:#98a2b3; font-size:9px; text-align:left; }
 td { padding:0 5px; vertical-align:middle; }
 .kode { width:46px; height:44px; display:flex; align-items:center; justify-content:center; border-radius:8px; color:#fff; font-size:12px; font-weight:700; }
+.kode[style*="#f4c20d"] { color:#000!important; }
 .kode-name { display:flex; align-items:center; gap:9px; }
 .service-name { font-size:12px; font-weight:600; }
 .data-box { height:46px; display:flex; align-items:center; padding:0 13px; border:1px solid #e1e5ea; border-radius:8px; background:#fff; color:#475467; font-size:13px; white-space:nowrap; }
@@ -548,7 +549,7 @@ td { padding:0 5px; vertical-align:middle; }
                         <tr>
 
                             <td>
-                                <div class="kode" style="background:<?=e($r['warna'] ?? '#64748B')?>">
+                                <div class="kode" style="background:<?=e($r['warna'] ?? '#64748B')?>;color:<?=strtolower(trim($r['kode']))==='2em'?'#000':'#fff'?>;">
                                     <?=e($r['kode'])?>
                                 </div>
                             </td>
@@ -665,7 +666,9 @@ td { padding:0 5px; vertical-align:middle; }
             <tr>
                 <td>
                     <div class="kode-name">
-                        <div class="kode" style="background:<?=e($r['warna'] ?? '#64748B')?>"><?=e($r['kode'])?></div>
+                               <div class="kode" style="background:<?=e($r['warna'] ?? '#64748B')?>;color:<?=strtolower(trim($r['kode']))==='2em'?'#000':'#fff'?>;">
+                                    <?=e($r['kode'])?>
+                                </div>
                         <div class="service-name"><?=e($r['nama_layanan'])?></div>
                     </div>
                 </td>
