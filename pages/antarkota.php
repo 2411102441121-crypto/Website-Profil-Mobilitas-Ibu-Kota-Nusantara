@@ -2,27 +2,76 @@
 // pages/antarkota.php
 $title = "Layanan Antarkota - Profil Mobilitas IKN";
 require_once '../admin/koneksi.php';
-// 1. KONEKSI KE DATABASE (DENGAN PENANGANAN ERROR)
-require_once '../config/database.php';
+if (!isset($koneksi) || !$koneksi) die('Koneksi database gagal.');
 
-// Cek variabel koneksi (menyesuaikan nama $conn atau $koneksi dari database.php)
-if (!isset($conn) && isset($koneksi)) {
-    $conn = $koneksi;
-}
-
-// Tentukan Base URL
 $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
 
-// 2. QUERY DATABASE DENGAN PENGECEKAN AMAN
-$result_layanan = false;
-if (isset($conn) && $conn) {
-    $query_layanan = "SELECT * FROM antarkota_layanan ORDER BY id ASC";
-    $result_layanan = @mysqli_query($conn, $query_layanan);
+function e($value){ return htmlspecialchars((string)($value ?? ''), ENT_QUOTES, 'UTF-8'); }
+function tableRows($db,$table,$order='id ASC'){
+    $rows=[];
+    $q=mysqli_query($db,"SELECT * FROM `$table` ORDER BY $order");
+    if(!$q) die('Query '.$table.' gagal: '.mysqli_error($db));
+    while($r=mysqli_fetch_assoc($q)) $rows[]=$r;
+    return $rows;
+}
+function firstField($row,$fields){
+    foreach($fields as $field){ if(array_key_exists($field,$row)) return $field; }
+    return null;
+}
+function normalizeItem($row){
+    $nameField=firstField($row,['nama_layanan','nama_infrastruktur','nama','judul','title','nama_fasilitas']);
+    $descField=firstField($row,['deskripsi_singkat','deskripsi','keterangan','description','uraian']);
+    $imgField=firstField($row,['gambar','image','foto','foto_gambar','file_gambar','gambar_layanan']);
+    return [
+        'id'=>(int)($row['id']??0),
+        'nama_layanan'=>$nameField?(string)$row[$nameField]:'',
+        'deskripsi_singkat'=>$descField?(string)$row[$descField]:'',
+        'gambar'=>$imgField?(string)$row[$imgField]:'',
+        '_raw'=>$row
+    ];
+}
+function kategoriKey($value){
+    $value=strtolower(trim((string)$value));
+    $value=str_replace(['&amp;','&'],' ',$value);
+    $value=preg_replace('/\s+/',' ',$value);
+    if(str_contains($value,'bandara')||str_contains($value,'udara')) return 'bandara';
+    if(str_contains($value,'bus')||str_contains($value,'travel')) return 'bus_travel';
+    if(str_contains($value,'perairan')||str_contains($value,'pelabuhan')||str_contains($value,'laut')) return 'perairan';
+    if(str_contains($value,'infrastruktur')) return 'infrastruktur';
+    return '';
+}
+function imageUrl($base,$file){
+    $file=trim((string)$file);
+    if($file==='') return '';
+    if(preg_match('#^https?://#i',$file)) return $file;
+    $file=ltrim(str_replace('\\','/',$file),'/');
+    if(str_starts_with($file,'assets/')) return $base.$file;
+    return $base.'assets/images/uploads/'.$file;
 }
 
-// Buffer Konten Utama
+$layananKategori=['bandara'=>[],'bus_travel'=>[],'perairan'=>[],'infrastruktur'=>[]];
+
+/* =========================================================
+   DATA DARI ADMIN
+   Tabel utama: antarkota
+   Kolom yang dipakai: id, kategori, judul, deskripsi, gambar
+========================================================= */
+$rows=tableRows($koneksi,'antarkota','id DESC');
+foreach($rows as $row){
+    $statusField=firstField($row,['status','status_layanan']);
+    if($statusField && in_array(strtolower(trim((string)$row[$statusField])),['0','nonaktif','tidak aktif','inactive','draft'],true)) continue;
+    $kategori=kategoriKey($row['kategori']??'');
+    if($kategori && isset($layananKategori[$kategori])) $layananKategori[$kategori][]=normalizeItem($row);
+}
+
+$infrastrukturAdmin=$layananKategori['infrastruktur'];
+$bandaraAdmin=$layananKategori['bandara'];
+$busTravelAdmin=$layananKategori['bus_travel'];
+$perairanAdmin=$layananKategori['perairan'];
+
 ob_start();
 ?>
+
 
 <style>
 
@@ -141,7 +190,7 @@ ob_start();
         border-radius: 12px;
         padding: 12px 28px;
         text-decoration: none;
-        transition: all 0.25 ease;
+        transition: all 0.25s ease;
         display: inline-block;
     }
     .btn-hero-white:hover {
@@ -165,7 +214,7 @@ ob_start();
         border-radius: 12px;
         padding: 12px 28px;
         text-decoration: none;
-        transition: all 0.25 ease;
+        transition: all 0.25s ease;
         display: inline-block;
     }
     .btn-hero-trans:hover {
@@ -627,7 +676,7 @@ ob_start();
         font-family: 'Sutasoma Display', serif, sans-serif !important;
         color: #785A1A;
         font-weight: 500;
-        font-size: 1.16px;
+        font-size: 16px;
         letter-spacing: 0.5px;
         margin-bottom: 16px;
     }
@@ -708,7 +757,7 @@ ob_start();
             <!-- Card 4: Terintegrasi (Hijau Tua) -->
             <div class="col-md-3 col-6">
                 <div class="stat-card-green-solid">
-                    <i class="fas fa-check-circle" style="font-size: 28px; color: #caba84;" style="color: #caba84;"></i>
+                    <i class="fas fa-check-circle" style="font-size:28px;color:#caba84;"></i>
                     <h4 class="fw-bold">Terintegrasi</h4>
                     <small class="d-block">Sistem Konektivitas</small>
                 </div>
@@ -831,76 +880,25 @@ ob_start();
 <section id="infrastruktur" class="py-6 bg-light">
     <div class="container py-1">
         <div class="text-center mb-5">
-            <h2 class="fw-bold mb-3" style="font-size: 32px;">Infrastruktur Konektivitas</h2>
-            <p class="mx-auto mb-4" style="max-width: 800px; color: #666666; font-size: 16px;">Jaringan Utama</p>
+            <h2 class="fw-bold mb-3" style="font-size:32px;">Infrastruktur Konektivitas</h2>
+            <p class="mx-auto mb-4" style="max-width:800px;color:#666;font-size:16px;">Jaringan Utama</p>
         </div>
-        
         <div class="row g-4">
-            <!-- Card 1 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card-infra-custom">
-                    <img src="<?= $base_url; ?>assets/images/antarkota/tol_balsam.jpeg" alt="Tol Balsam" onerror="this.src='https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=800&q=80';">
-                    <div class="p-content">
-                        <h4>Jalan Tol Balikpapan – Samarinda (Tol Balsam)</h4>
-                        <p>Jalan Tol Balikpapan–Samarinda atau Tol Balsam merupakan koridor bebas hambatan utama sepanjang 99,02 km yang menghubungkan Balikpapan dan Samarinda sebagai dua kota mitra utama IKN. Koridor ini berperan penting dalam mendukung konektivitas regional, pergerakan logistik, akses menuju Bandara Sepinggan, serta distribusi perjalanan dari dan menuju kawasan IKN. Dalam kerangka mobilitas Nusantara, Tol Balsam menjadi bagian dari jaringan regional yang perlu diintegrasikan dengan simpul transportasi, park and ride, dan layanan angkutan umum lanjutan menuju KIPP dan WP IKN.</p>
+            <?php if (!empty($infrastrukturAdmin)): ?>
+                <?php foreach ($infrastrukturAdmin as $row): ?>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-infra-custom">
+                            <img src="<?= e(imageUrl($base_url, $row['gambar'] ?? '')) ?>" alt="<?= e($row['nama_layanan'] ?? 'Infrastruktur') ?>" onerror="this.src='../assets/images/antarkota/tol_balsam.jpeg';">
+                            <div class="p-content">
+                                <h4><?= e($row['nama_layanan'] ?? '') ?></h4>
+                                <p><?= e($row['deskripsi_singkat'] ?? '') ?></p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card-infra-custom">
-                    <img src="<?= $base_url; ?>assets/images/antarkota/pulau_balang.jpeg" alt="Pulau Balang" onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80';">
-                    <div class="p-content">
-                        <h4>Jalan Tol Balikpapan - IKN (via Pulau Balang)</h4>
-                        <p>Jalan Tol Balikpapan–Pulau Balang–IKN merupakan koridor akses strategis sepanjang 52 km yang dirancang untuk mempercepat konektivitas dari Balikpapan menuju kawasan inti IKN melalui Jembatan Pulau Balang. Koridor ini menjadi salah satu pintu masuk utama dari sisi selatan IKN, terutama untuk pergerakan ASN, pekerja, pengunjung, investor, serta layanan logistik. Jalan tol ini masih berfungsi secara fungsional terbatas.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card-infra-custom">
-                    <img src="<?= $base_url; ?>assets/images/antarkota/samboja-ikn.jpeg" alt="Bandara VVIP IKN" onerror="this.src='https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80';">
-                    <div class="p-content">
-                        <h4>Jalan Nasional Samboja – IKN</h4>
-                        <p>Jalan Nasional Samboja–IKN merupakan koridor arteri non-tol sepanjang 100km yang menghubungkan kawasan Samboja dan jaringan Balikpapan–Samarinda menuju IKN. Jalan ini juga terhubung dengan tol Balsam pada kilometer ke-38. Koridor ini berperan sebagai akses alternatif sekaligus jalur pendukung mobilitas barang, pekerja konstruksi, dan pergerakan masyarakat dari kawasan sekitar menuju KIPP.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card-infra-custom">
-                    <img src="<?= $base_url; ?>assets/images/antarkota/bpp-smd.jpeg" alt="Pulau Balang" onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80';">
-                    <div class="p-content">
-                        <h4>Jalan Trans Kalimantan (Balikpapan – Samarinda)</h4>
-                        <p>Jalan Trans Kalimantan (Poros Balikpapan–Samarinda) merupakan jalur arteri nasional non-tol utama sepanjang sekitar 115 km yang menghubungkan Kota Balikpapan (via Jl. Soekarno-Hatta) dan Kota Samarinda. Jalur ini melintasi kawasan Bukit Soeharto dan terhubung langsung dengan Jalan Nasional Samboja–IKN (Km 38) sebagai gerbang masuk alternatif non-tol menuju kawasan Ibu Kota Nusantara (IKN). Berperan vital sebagai jalur logistik, rute ini menyediakan akses intermoda tanpa batas bagi kendaraan umum, roda dua, hingga angkutan barang berat nonstop 24 jam.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card-infra-custom">
-                    <img src="<?= $base_url; ?>assets/images/antarkota/sepaku-penajam.jpeg" alt="Bandara VVIP IKN" onerror="this.src='https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80';">
-                    <div class="p-content">
-                        <h4>Jalan Trans Kalimantan (Sepaku – Penajam)</h4>
-                        <p>Jalan Trans Kalimantan (Poros Sepaku–Penajam) merupakan rute arteri nasional non-tol utama yang menghubungkan pusat Ibu Kota Nusantara di Kecamatan Sepaku dengan pusat pemerintahan Kabupaten Penajam Paser Utara (PPU) di Simpang Silkar Petung. Berperan vital sebagai salah satu akses logistik darat selatan IKN, jalur lintas negara ini menjadi penghubung mobilitas masyarakat lokal, pekerja konstruksi, dan suplai logistik dari arah Pelabuhan Penajam. Saat ini, tata kelola dan peningkatan kualitas infrastruktur di koridor Jalan Negara ini secara bertahap dialihkan ke bawah pengawasan Otorita IKN demi mendukung integrasi ekosistem wilayah penyangga KIPP.</p>
-                    </div>
-                </div>
-            </div>
-
-             <!-- Card 6 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card-infra-custom">
-                    <img src="<?= $base_url; ?>assets/images/antarkota/muarajawa.jpeg" alt="Bandara VVIP IKN" onerror="this.src='https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80';">
-                    <div class="p-content">
-                        <h4>Jalan Nasional Samboja – Muara Jawa</h4>
-                        <p>Jalan Nasional Samboja–Muara Jawa merupakan koridor non-tol berkisar panjang 30 km yang menghubungkan kawasan pesisir timur Kalimantan Timur dengan wilayah perencanaan IKN bagian timur. Ruas ini berperan sebagai jalur pendukung bagi konektivitas kawasan Samboja, Muara Jawa, dan Kuala Samboja, termasuk pergerakan logistik, komoditas lokal, serta akses masyarakat ke pusat kegiatan baru. Dalam jangka menengah, koridor ini penting untuk memperkuat pemerataan akses menuju wilayah pengembangan IKN di luar KIPP, sekaligus mendukung konektivitas ekonomi pesisir dan kawasan penyangga.</p>
-                    </div>
-                </div>
-            </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <div class="col-12"><div class="text-center text-muted py-4">Belum ada data infrastruktur dari Admin.</div></div>
+            <?php endif; ?>
         </div>
     </div>
 </section>
@@ -914,102 +912,78 @@ ob_start();
         </div>
 
         <div class="mb-5">
-            <h5 class="sub-category-title mb-3">
-                <img src="<?= $base_url; ?>assets/images/antarkota/ikon_pesawat.png" alt="Ikon Mobil" class="sub-category-icon-img">
-                <span>Bandara</span>
-            </h5>
-            <div class="row g-4">
-                <?php 
-                if ($result_layanan && mysqli_num_rows($result_layanan) > 0): 
-                    while ($row = mysqli_fetch_assoc($result_layanan)):
-                ?>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card-moda-green">
-                            <div>
-                                <img src="<?= $base_url; ?>uploads/<?= $row['gambar']; ?>" alt="<?= htmlspecialchars($row['nama_layanan']); ?>" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80';">
-                                <h5><?= htmlspecialchars($row['nama_layanan']); ?></h5>
-                                <p><?= htmlspecialchars($row['deskripsi_singkat']); ?></p>
-                            </div>
-                            <a href="<?= $base_url; ?>detail/antarkota-detail.php?id=<?= $row['id']; ?>" class="btn-card-detail">Lihat Detail</a>
-                        </div>
-                    </div>
-                <?php 
-                    endwhile;
-                else: 
-                ?>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card-moda-green">
-                            <div>
-                                <img src="<?= $base_url; ?>assets/images/antarkota/VVIP_IKN.jpeg" alt="Bandara VVIP" onerror="this.src='https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80';">
-                                <h5>Bandar Udara Internasional Nusantara</h5>
-                                <p>Akses penerbangan internasional dan kenegaraan untuk Nusantara di masa depan.</p>
-                            </div>
-                            <a href="<?= $base_url; ?>detail/antarkota-bandara.php?id=bandara-vvip" class="btn-card-detail">Lihat Detail</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card-moda-green">
-                            <div>
-                                <img src="<?= $base_url; ?>assets/images/antarkota/sams_sepinggan.jpeg" alt="Sinar Jaya" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80';">
-                                <h5>Bandar Udara Internasional Sultan Aji Muhammad Sulaiman Sepinggan</h5>
-                                <p>Pintu masuk utama dari beragam kota-kota di Indonesia dan Internasional menuju Kalimantan Timur melalui kota Balikpapan.</p>
-                            </div>
-                            <a href="<?= $base_url; ?>detail/antarkota-bandara.php?id=sams-sepinggan" class="btn-card-detail">Lihat Detail</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card-moda-green">
-                            <div>
-                                <img src="<?= $base_url; ?>assets/images/antarkota/apt_pranoto.jpeg" alt="Sinar Jaya" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80';">
-                                <h5>Bandar Udara Internasional Aji Pangeran Tumenggung Pranoto</h5>
-                                <p>Pintu masuk sekunder menuju Ibu Kota Nusantara melalui kota Samarinda.</p>
-                            </div>
-                            <a href="<?= $base_url; ?>detail/antarkota-bandara.php?id=apt-pranoto" class="btn-card-detail">Lihat Detail</a>
-                        </div>
-                    </div>
-                <?php endif; ?>
-                
-            </div>
-        </div>
-    
-        
-        <!-- KELOMPOK BUS ANTARKOTA & TRAVEL -->
-        <div class="mb-5">
-            <!-- Judul Kategori Gabungan -->
-            <h5 class="sub-category-title mb-3">
-                <img src="<?= $base_url; ?>assets/images/antarkota/ikon_bus.png" alt="Ikon Bus" class="sub-category-icon-img">
-                <img src="<?= $base_url; ?>assets/images/antarkota/ikon_kendaraan.png" alt="Ikon Travel" class="sub-category-icon-img" style="margin-left: -4px;">
-                <span>Bus Antarkota & Travel</span>
-            </h5>
-
-            <div class="row g-4">
-                <!-- Card 1: Bus Antarkota -->
-                <div class="col-lg-6 col-md-6">
+    <h5 class="sub-category-title mb-3">
+        <img src="<?= $base_url; ?>assets/images/antarkota/ikon_pesawat.png" alt="Ikon Bandara" class="sub-category-icon-img">
+        <span>Bandara</span>
+    </h5>
+    <div class="row g-4">
+        <?php if (!empty($bandaraAdmin)): ?>
+            <?php foreach ($bandaraAdmin as $row): ?>
+                <div class="col-lg-4 col-md-6">
                     <div class="card-moda-green">
                         <div>
-                            <img src="<?= $base_url; ?>assets/images/antarkota/bus_sinarjaya.jpeg" alt="Bus Antarkota" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80';">
-                            <h5>Bus Antarkota</h5>
-                            <p>Layanan bus antarkota yang menghubungkan sejumlah simpul transportasi dengan kawasan Ibu Kota Nusantara.</p>
+                            <img src="<?= e(imageUrl($base_url, $row['gambar'] ?? '')) ?>" alt="<?= e($row['nama_layanan'] ?? '') ?>" onerror="this.src='../assets/images/antarkota/VVIP_IKN.jpeg';">
+                            <h5><?= e($row['nama_layanan'] ?? '') ?></h5>
+                            <p><?= e($row['deskripsi_singkat'] ?? '') ?></p>
                         </div>
-                        <a href="<?= $base_url; ?>detail/antarkota-bus.php?id=bus-antarkota" class="btn-card-detail">Lihat Detail</a>
+                        <a href="<?= $base_url; ?>detail/antarkota-detail.php?id=<?= (int)($row['id'] ?? 0); ?>" class="btn-card-detail">Lihat Detail</a>
                     </div>
                 </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <div class="col-lg-4 col-md-6"><div class="card-moda-green"><div>
+                <img src="<?= $base_url; ?>assets/images/antarkota/VVIP_IKN.jpeg" alt="Bandar Udara Internasional Nusantara">
+                <h5>Bandar Udara Internasional Nusantara</h5>
+                <p>Akses penerbangan internasional dan kenegaraan untuk Nusantara di masa depan.</p>
+            </div><a href="<?= $base_url; ?>detail/antarkota-bandara.php?id=bandara-vvip" class="btn-card-detail">Lihat Detail</a></div></div>
+            <div class="col-lg-4 col-md-6"><div class="card-moda-green"><div>
+                <img src="<?= $base_url; ?>assets/images/antarkota/sams_sepinggan.jpeg" alt="Bandar Udara Internasional Sultan Aji Muhammad Sulaiman Sepinggan">
+                <h5>Bandar Udara Internasional Sultan Aji Muhammad Sulaiman Sepinggan</h5>
+                <p>Pintu masuk utama dari beragam kota di Indonesia dan internasional menuju Kalimantan Timur.</p>
+            </div><a href="<?= $base_url; ?>detail/antarkota-bandara.php?id=sams-sepinggan" class="btn-card-detail">Lihat Detail</a></div></div>
+            <div class="col-lg-4 col-md-6"><div class="card-moda-green"><div>
+                <img src="<?= $base_url; ?>assets/images/antarkota/apt_pranoto.jpeg" alt="Bandar Udara Internasional Aji Pangeran Tumenggung Pranoto">
+                <h5>Bandar Udara Internasional Aji Pangeran Tumenggung Pranoto</h5>
+                <p>Pintu masuk sekunder menuju Ibu Kota Nusantara melalui Ibu Kota Provinsi Kalimantan Timur.</p>
+            </div><a href="<?= $base_url; ?>detail/antarkota-bandara.php?id=apt-pranoto" class="btn-card-detail">Lihat Detail</a></div></div>
+        <?php endif; ?>
+    </div>
+</div>
 
-                <!-- Card 2: Travel -->
+<!-- KELOMPOK BUS ANTARKOTA & TRAVEL -->
+<div class="mb-5">
+    <h5 class="sub-category-title mb-3">
+        <img src="<?= $base_url; ?>assets/images/antarkota/ikon_bus.png" alt="Ikon Bus" class="sub-category-icon-img">
+        <img src="<?= $base_url; ?>assets/images/antarkota/ikon_kendaraan.png" alt="Ikon Travel" class="sub-category-icon-img" style="margin-left:-4px;">
+        <span>Bus Antarkota & Travel</span>
+    </h5>
+    <div class="row g-4">
+        <?php if (!empty($busTravelAdmin)): ?>
+            <?php foreach ($busTravelAdmin as $row): ?>
                 <div class="col-lg-6 col-md-6">
-                    <div class="card-moda-green">
-                        <div>
-                            <img src="<?= $base_url; ?>assets/images/antarkota/travel_cititrans.png" alt="Travel" onerror="this.src='https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=800&q=80';">
-                            <h5>Travel</h5>
-                            <p>Pilihan perjalanan darat yang menghubungkan Samarinda, Balikpapan, dan Penajam dengan Kawasan Ibu Kota Nusantara.</p>
-                        </div>
-                        <a href="<?= $base_url; ?>detail/antarkota-travel.php?id=travel" class="btn-card-detail">Lihat Detail</a>
-                    </div>
+                    <div class="card-moda-green"><div>
+                        <img src="<?= e(imageUrl($base_url, $row['gambar'] ?? '')) ?>" alt="<?= e($row['nama_layanan'] ?? '') ?>" onerror="this.src='../assets/images/antarkota/bus_sinarjaya.jpeg';">
+                        <h5><?= e($row['nama_layanan'] ?? '') ?></h5>
+                        <p><?= e($row['deskripsi_singkat'] ?? '') ?></p>
+                    </div><a href="<?= $base_url; ?>detail/antarkota-detail.php?id=<?= (int)($row['id'] ?? 0); ?>" class="btn-card-detail">Lihat Detail</a></div>
                 </div>
-            </div>
-        </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <div class="col-lg-6 col-md-6"><div class="card-moda-green"><div>
+                <img src="<?= $base_url; ?>assets/images/antarkota/bus_sinarjaya.jpeg" alt="Bus Antarkota">
+                <h5>Bus Antarkota</h5>
+                <p>Layanan bus antarkota yang menghubungkan sejumlah simpul transportasi dengan kawasan Ibu Kota Nusantara.</p>
+            </div><a href="<?= $base_url; ?>detail/antarkota-bus.php?id=bus-antarkota" class="btn-card-detail">Lihat Detail</a></div></div>
+            <div class="col-lg-6 col-md-6"><div class="card-moda-green"><div>
+                <img src="<?= $base_url; ?>assets/images/antarkota/travel_cititrans.png" alt="Travel">
+                <h5>Travel</h5>
+                <p>Pilihan perjalanan darat yang menghubungkan Samarinda, Balikpapan, dan Penajam dengan Kawasan Ibu Kota Nusantara.</p>
+            </div><a href="<?= $base_url; ?>detail/antarkota-travel.php?id=travel" class="btn-card-detail">Lihat Detail</a></div></div>
+        <?php endif; ?>
+    </div>
+</div>
 
-        <!-- KELOMPOK KERETA API (PERENCANAAN) -->
+<!-- KELOMPOK KERETA API (PERENCANAAN) -->
         <div class="mb-5">
             <!-- Judul Kategori Kereta Api dengan Badge Perencanaan -->
             <div class="d-flex align-items-center gap-3 mb-3">
@@ -1021,7 +995,7 @@ ob_start();
             </div>
 
             <!-- Deskripsi Pengantar Kereta Api -->
-            <p class="text-muted mb-4" style="max-width: 900px; line-height: 1.6; font-size: 14px;" style="max-width: 900px; line-height: 1.6;">
+            <p class="text-muted mb-4" style="max-width:900px;line-height:1.6;font-size:14px;">
                 Pengembangan jaringan kereta api di Kalimantan dan Ibu Kota Nusantara direncanakan untuk memperkuat konektivitas antarkawasan, mendukung mobilitas masyarakat, serta meningkatkan integrasi transportasi menuju IKN.
             </p>
 
@@ -1066,52 +1040,40 @@ ob_start();
         </div>
 
         <!-- KELOMPOK TRANSPORTASI PERAIRAN -->
-        <div class="mb-5">
-            <h5 class="sub-category-title mb-3">
-                <i class="fas fa-ship me-2"></i>
-                <span>Transportasi Perairan</span>
-            </h5>
-
-            <div class="row g-4">
-                <!-- Card 1: Pelabuhan Semayang -->
+<div class="mb-5">
+    <h5 class="sub-category-title mb-3"><i class="fas fa-ship me-2"></i><span>Transportasi Perairan</span></h5>
+    <div class="row g-4">
+        <?php if (!empty($perairanAdmin)): ?>
+            <?php foreach ($perairanAdmin as $row): ?>
                 <div class="col-lg-4 col-md-6">
-                    <div class="card-moda-green">
-                        <div>
-                            <img src="<?= $base_url; ?>assets/images/antarkota/pelabuhan_semayang2.webp" alt="Pelabuhan Semayang" onerror="this.src='https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80';">
-                            <h5>Pelabuhan Semayang Balikpapan</h5>
-                            <p>Pelabuhan penumpang utama di Balikpapan yang mendukung konektivitas antarkota dan antarpulau, serta berperan sebagai salah satu gerbang mobilitas laut menuju ekosistem IKN.</p>
-                        </div>
-                        <a href="<?= $base_url; ?>detail/antarkota-perairan.php?id=pelabuhan-semayang" class="btn-card-detail">Lihat Detail</a>
-                    </div>
+                    <div class="card-moda-green"><div>
+                        <img src="<?= e(imageUrl($base_url, $row['gambar'] ?? '')) ?>" alt="<?= e($row['nama_layanan'] ?? '') ?>" onerror="this.src='../assets/images/antarkota/pelabuhan_semayang2.webp';">
+                        <h5><?= e($row['nama_layanan'] ?? '') ?></h5>
+                        <p><?= e($row['deskripsi_singkat'] ?? '') ?></p>
+                    </div><a href="<?= $base_url; ?>detail/antarkota-detail.php?id=<?= (int)($row['id'] ?? 0); ?>" class="btn-card-detail">Lihat Detail</a></div>
                 </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <div class="col-lg-4 col-md-6"><div class="card-moda-green"><div>
+                <img src="<?= $base_url; ?>assets/images/antarkota/pelabuhan_semayang2.webp" alt="Pelabuhan Semayang Balikpapan">
+                <h5>Pelabuhan Semayang Balikpapan</h5>
+                <p>Pelabuhan penumpang utama di Balikpapan yang mendukung konektivitas antarkota dan antarpulau.</p>
+            </div><a href="<?= $base_url; ?>detail/antarkota-perairan.php?id=pelabuhan-semayang" class="btn-card-detail">Lihat Detail</a></div></div>
+            <div class="col-lg-4 col-md-6"><div class="card-moda-green"><div>
+                <img src="<?= $base_url; ?>assets/images/antarkota/pelabuhan_kariangau.webp" alt="Pelabuhan Penyeberangan Kariangau">
+                <h5>Pelabuhan Penyeberangan Kariangau</h5>
+                <p>Simpul penyeberangan utama di Balikpapan yang melayani koneksi feri menuju Penajam.</p>
+            </div><a href="<?= $base_url; ?>detail/antarkota-perairan.php?id=pelabuhan-kariangau" class="btn-card-detail">Lihat Detail</a></div></div>
+            <div class="col-lg-4 col-md-6"><div class="card-moda-green"><div>
+                <img src="<?= $base_url; ?>assets/images/antarkota/pelabuhan_penajam.webp" alt="Pelabuhan Penyeberangan Penajam">
+                <h5>Pelabuhan Penyeberangan Penajam</h5>
+                <p>Simpul penyeberangan di Penajam yang menghubungkan Balikpapan dengan akses darat menuju IKN.</p>
+            </div><a href="<?= $base_url; ?>detail/antarkota-perairan.php?id=pelabuhan-penajam" class="btn-card-detail">Lihat Detail</a></div></div>
+        <?php endif; ?>
+    </div>
+</div>
 
-                <!-- Card 2: Pelabuhan Kariangau -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card-moda-green">
-                        <div>
-                            <img src="<?= $base_url; ?>assets/images/antarkota/pelabuhan_kariangau.webp" alt="Pelabuhan Kariangau" onerror="this.src='https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80';">
-                            <h5> Pelabuhan Penyeberangan Kariangau</h5>
-                            <p>Simpul penyeberangan utama di Balikpapan yang melayani koneksi feri menuju Penajam dan mendukung akses dari sisi selatan menuju kawasan IKN.</p>
-                        </div>
-                        <a href="<?= $base_url; ?>detail/antarkota-perairan.php?id=pelabuhan-kariangau" class="btn-card-detail">Lihat Detail</a>
-                    </div>
-                </div>
-
-                <!-- Card 3: Pelabuhan Penajam -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card-moda-green">
-                        <div>
-                            <img src="<?= $base_url; ?>assets/images/antarkota/pelabuhan_penajam.webp" alt="Pelabuhan Penajam" onerror="this.src='https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80';">
-                            <h5> Pelabuhan Penyeberangan Penajam</h5>
-                            <p>Simpul penyeberangan di Penajam yang menghubungkan arus pergerakan dari Balikpapan dengan akses darat menuju Sepaku dan kawasan IKN.</p>
-                        </div>
-                        <a href="<?= $base_url; ?>detail/antarkota-perairan.php?id=pelabuhan-penajam" class="btn-card-detail">Lihat Detail</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- KELOMPOK PARK AND RIDE -->
+<!-- KELOMPOK PARK AND RIDE -->
         <div class="mb-4">
             <h5 class="sub-category-title mb-3">
                 <img src="<?= $base_url; ?>assets/images/antarkota/ikon_pnr.jpg" alt="Ikon Park and Ride" class="sub-category-icon-img" onerror="this.src='https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=100&q=80';">

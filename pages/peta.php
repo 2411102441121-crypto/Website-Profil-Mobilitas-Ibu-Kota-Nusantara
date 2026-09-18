@@ -51,12 +51,10 @@ while($row = mysqli_fetch_assoc($qKondisional)){
 // =====================================================
 // KELOMPOK LAYANAN (Disesuaikan dengan Peta IKN & Ramadan)
 // =====================================================
-$utama   = ['1E', '2', '3', '4'];
-$ekspres = ['2E', '3E'];
+$utama   = ['1E', '2', '2E', '3', '3E', '4'];
 $komuter = ['1EM', '2EM', '2M']; // <-- Tambahkan '2M' di sini
 
 $grupUtama   = [];
-$grupEkspres = [];
 $grupKomuter = [];
 
 foreach($layanan as $r){
@@ -64,12 +62,8 @@ foreach($layanan as $r){
 
     if(in_array($kode, $utama, true)){
         $grupUtama[] = $r;
-    } elseif(in_array($kode, $ekspres, true)){
-        $grupEkspres[] = $r;
-    } elseif(in_array($kode, $komuter, true)){
-        $grupKomuter[] = $r;
     } else {
-        // Jika ada layanan baru tambahan lainnya, masukkan ke grup komuter/kondisional
+        // Semua rute pagi / komuter / tambahan lainnya
         $grupKomuter[] = $r;
     }
 }
