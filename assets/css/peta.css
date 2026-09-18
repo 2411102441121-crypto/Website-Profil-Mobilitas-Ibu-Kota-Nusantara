@@ -18,7 +18,7 @@
 .map-caption { display: flex; flex-direction: column; padding: 10px 14px; background: #fafafa; border-top: 1px solid #eee; }
 .map-caption strong { font-size: 16px; color: #333; }
 .map-caption span { margin-top: 2px; font-size: 12px; color: #777; }
-
+.bus-map-card{border:0!important;box-shadow:none!important;background:transparent!important}
 /* KODE LAYANAN */
 
 .map-code { margin-top: 15px; padding: 0 10px; }
@@ -77,3 +77,222 @@
 .green-bg { background: #20b974; }
 .orange-bg { background: #f0a000; }
 .lime-bg { background: #d5e500; color: #333; }
+/* =====================================================
+   TOMBOL PETA RAMADAN
+===================================================== */
+
+.cond-map-tabs{
+    display:flex!important;
+    justify-content:center!important;
+    align-items:center!important;
+    gap:6px!important;
+    width:max-content!important;
+    max-width:100%!important;
+    margin:0 auto 15px!important;
+    padding:4px!important;
+    background:#f3f6f2!important;
+    border:1px solid #e2e9e1!important;
+    border-radius:14px!important;
+    box-shadow:0 4px 12px rgba(18,75,43,.06)!important;
+}
+
+.btn-sub-map{
+    appearance:none!important;
+    -webkit-appearance:none!important;
+    position:relative!important;
+    display:flex!important;
+    align-items:center!important;
+    gap:7px!important;
+    width:260px!important;
+    min-height:54px!important;
+    margin:0!important;
+    padding:6px 9px!important;
+    border:1px solid #dce4dc!important;
+    border-radius:10px!important;
+    background:#fff!important;
+    color:#18552f!important;
+    font-family:inherit!important;
+    font-size:inherit!important;
+    font-weight:normal!important;
+    line-height:normal!important;
+    text-align:left!important;
+    cursor:pointer!important;
+    box-shadow:none!important;
+    transition:all .25s ease!important;
+}
+
+.btn-sub-map:hover{
+    transform:translateY(-2px)!important;
+    border-color:#a9c0ad!important;
+    background:#fff!important;
+    color:#18552f!important;
+    box-shadow:0 6px 14px rgba(18,75,43,.10)!important;
+}
+
+.btn-sub-map.active{
+    background:#18552f!important;
+    border-color:#18552f!important;
+    color:#fff!important;
+    box-shadow:0 6px 14px rgba(18,75,43,.16)!important;
+}
+
+/* ICON */
+.sub-map-icon{
+    width:32px!important;
+    height:32px!important;
+    min-width:32px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    border-radius:8px!important;
+    background:#edf4ee!important;
+    color:#18552f!important;
+    font-size:15px!important;
+}
+
+.btn-sub-map.active .sub-map-icon{
+    background:rgba(255,255,255,.15)!important;
+    color:#fff!important;
+}
+
+/* TEKS */
+.sub-map-text{
+    flex:1!important;
+    display:flex!important;
+    flex-direction:column!important;
+    gap:1px!important;
+    min-width:0!important;
+}
+
+.sub-map-text strong{
+    display:block!important;
+    color:inherit!important;
+    font-size:12px!important;
+    font-weight:700!important;
+    line-height:1.2!important;
+}
+
+.sub-map-text small{
+    display:block!important;
+    color:#7b8a7e!important;
+    font-size:9px!important;
+    font-weight:400!important;
+    line-height:1.2!important;
+}
+
+.btn-sub-map.active .sub-map-text small{
+    color:rgba(255,255,255,.75)!important;
+}
+
+/* RESPONSIVE */
+@media(max-width:750px){
+    .cond-map-tabs{
+        width:100%!important;
+        flex-direction:column!important;
+        align-items:stretch!important;
+        gap:6px!important;
+    }
+
+    .btn-sub-map{
+        width:100%!important;
+        min-height:50px!important;
+        padding:6px 8px!important;
+    }
+
+    .sub-map-icon{
+        width:30px!important;
+        height:30px!important;
+        min-width:30px!important;
+        font-size:14px!important;
+    }
+
+    .sub-map-text strong{
+        font-size:11px!important;
+    }
+
+    .sub-map-text small{
+        font-size:8px!important;
+    }
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN MOBILE (PETA & JADWAL BUS)
+===================================================== */
+
+@media (max-width: 991px) {
+    .schedule-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 kolom untuk tablet */
+    }
+
+    .bus-services {
+        grid-template-columns: 1fr !important; /* Stack 1 kolom */
+        gap: 20px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Adjustment Padding & Font Header */
+    .bus-page {
+        padding: 0 10px 30px 10px !important;
+    }
+
+    .bus-header h1 {
+        font-size: 28px !important; /* Perkecil judul di HP */
+    }
+
+    .bus-header p {
+        font-size: 14px !important;
+    }
+
+    .section-heading {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+    }
+
+    /* Grid Jadwal di HP dibuat 1 kolom agar teks jam lengkap dan tidak terpotong */
+    .schedule-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .schedule-card {
+        padding: 10px !important;
+    }
+
+    .route-info h3 {
+        font-size: 14px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .schedule-row {
+        font-size: 11px !important;
+    }
+
+    /* Penyesuaian Kolom Layanan */
+    .bus-services {
+        grid-template-columns: 1fr !important;
+        padding: 15px 10px !important;
+    }
+
+    .service-column h3 {
+        font-size: 14px !important;
+    }
+
+    .service-item p {
+        font-size: 11px !important;
+    }
+
+    /* Penyesuaian Tombol Hubungi di Mobile agar tidak menutupi konten */
+    .btn-floating-contact {
+        bottom: 16px !important;
+        right: 16px !important;
+        padding: 8px 16px !important;
+        font-size: 0.85rem !important;
+        border-radius: 8px !important;
+    }
+
+    .btn-floating-contact i {
+        font-size: 1rem !important;
+    }
+}
