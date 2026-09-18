@@ -1046,10 +1046,38 @@ ob_start();
                             <h5>KA Perkotaan K-IKN</h5>
                             <p>Jaringan kereta api perkotaan yang direncanakan untuk mendukung pergerakan antarkawasan di IKN, memperkuat konektivitas harian, integrasi simpul transportasi, serta mengurangi ketergantungan pada kendaraan pribadi.</p>
                         </div>
-                        <!-- Diarahkan ke file PDF di folder assets/pdf/ -->
+                        <!-- Tombol ini memicu pembukaan Modal lewat data-bs-target="#pdfModalKaPerkotaan" -->
                         <a href="#" class="btn-card-detail" data-bs-toggle="modal" data-bs-target="#pdfModalKaPerkotaan">Lihat Rencana</a>
                     </div>
                 </div>
+
+                <!-- Modal Document Preview KA Perkotaan -->
+                <div class="modal fade" id="pdfModalKaPerkotaan" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content border-0 shadow-lg">
+                            <!-- Modal Header -->
+                            <div class="modal-header text-white" style="background-color: #204420;">
+                                <h5 class="modal-header-title fs-6 fw-bold mb-0" id="pdfModalLabel">
+                                    <i class="fas fa-file-pdf me-2"></i> Dokumen Rencana KA Perkotaan K-IKN
+                                </h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            
+                            <!-- Modal Body (Embed Google Drive Viewer) -->
+                            <div class="modal-body p-0" style="height: 80vh; background-color: #525659;">
+                                <iframe 
+                                    src="https://drive.google.com/file/d/1DYUWRuzQGwudkGLw_kTOJaHMZEPb-uVS/preview" 
+                                    width="100%" 
+                                    height="100%" 
+                                    style="border: none;"
+                                    allow="autoplay">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
 
                 <!-- Card 3: KA Trans Kalimantan -->
                 <div class="col-lg-4 col-md-6">

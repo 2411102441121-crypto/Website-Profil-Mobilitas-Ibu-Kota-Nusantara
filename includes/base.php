@@ -550,6 +550,35 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
         .accordion-item { border-radius: 8px !important; margin-bottom: 12px; border: 1px solid #ddd; }
 
         footer { background-color: #111; color: #aaa; font-size: 0.85rem; }
+
+        /* Styling Tombol Melayang Hubungi Kami */
+        .btn-floating-contact {
+            position: fixed;
+            bottom: 28px;               /* Jarak dari bawah */
+            right: 28px;                /* Jarak dari kanan */
+            z-index: 9999;
+            background-color: #204420;
+            color: #ffffff !important;
+            
+            /* UBAH BAGIAN INI UNTUK MEMPERBESAR TOMBOL */
+            padding: 14px 26px;         /* Diperbesar dari 10px 20px -> 14px 26px */
+            font-size: 17px;        
+            border-radius: 10px;        /* Sudut lekukan sedikit lebih luas */
+            
+            font-weight: 400;
+            text-decoration: none !important;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        /* Ukuran Ikon */
+        .btn-floating-contact i {
+            font-size: 19px;         
+        }
     </style>
 </head>
 <body>
@@ -872,5 +901,11 @@ $base_url = "http://" . $_SERVER['HTTP_HOST'] . "/ikn-mobility/";
         border: none !important;
     }
 </style>
+
+<!-- Floating Button Hubungi Kami (Model Website IKN) -->
+<a href="https://ikn.go.id/id/hubungi-kami" target="_blank" rel="noopener noreferrer" class="btn-floating-contact">
+    <i class="fas fa-headset me-2"></i>
+    <span>Hubungi</span>
+</a>
 </body>
 </html>
