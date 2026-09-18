@@ -134,7 +134,7 @@ $result = mysqli_stmt_get_result($stmt);
                     </a>
                 <?php endforeach; ?>
             </div>
-            <a href="create.php" class="btn-create"><i class="fa-solid fa-plus me-1"></i> Create New Post</a>
+            <a href="tambah.php" class="btn-create"><i class="fa-solid fa-plus me-1"></i> Create New Post</a>
         </div>
 
         <!-- Daftar Card Data -->
@@ -159,7 +159,7 @@ $result = mysqli_stmt_get_result($stmt);
                             <!-- Tombol Aksi Edit & Hapus -->
                             <div class="d-flex align-items-center gap-2 flex-shrink-0">
                                 <a href="edit.php?id=<?= $row['id'] ?>" class="action-icon edit" title="Edit"><i class="fa-regular fa-pen-to-square"></i></a>
-                                <a href="delete.php?id=<?= $row['id'] ?>" class="action-icon delete" title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa-regular fa-trash-can"></i></a>
+                                <a href="hapus.php?id=<?= $row['id'] ?>" class="action-icon delete" title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa-regular fa-trash-can"></i></a>
                             </div>
                         </div>
                     </div>
